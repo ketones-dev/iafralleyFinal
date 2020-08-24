@@ -1,0 +1,696 @@
+/* --------------------------------------------------
+customized style
+------------------------------------------------- */
+div.shadow {
+	width: 300px;
+	margin: 20px 0px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	-moz-box-shadow: 0 0 5px rgba(0, 128, 128, .5);
+	/* -webkit-box-shadow: 0 0 5px rgba(0, 128, 128, .5);
+	box-shadow: 0 0 5px rgba(0, 128, 128, .5); */
+}
+
+div.shadow:hover {
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	/* -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+}
+/*
+.txt{
+
+color       : #3185ce;
+font-weight:400;
+<!-- text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15); */
+}
+
+/* vg */
+
+
+
+.slide-wrapper {
+	position: relative
+}
+
+.red {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.red-content {
+	width: 100%;
+	height: 300px;
+	background: red;
+	color: #fff;
+}
+
+@media ( min-width : 768px) {
+	.carousel-caption {
+		text-align: left;
+		padding-right: 300px;
+	}
+	.red {
+		width: 250px;
+		position: relative;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		/*  padding: 20px 0; */
+		margin-left: -375px;
+	}
+	.red-content {
+		width: 150px;
+		float: right;
+		height: auto;
+		background: red;
+		color: #fff;
+		margin-right: 15px; /* width of .container gutter */
+	}
+}
+
+@media ( min-width : 992px) {
+	.red {
+		width: 970px;
+		margin-left: -485px;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.red {
+		width: 1170px;
+		margin-left: -585px;
+	}
+}
+
+/* MISC */
+#homepage-feature .item {
+	overflow: hidden;
+	height: 300px;
+	background-color: transparent;
+	background-size: cover;
+}
+
+#homepage-feature>.carousel-control {
+	width: 30px;
+	font-size: 40px;
+	color: #fff;
+	text-shadow: none;
+	filter: none;
+	opacity: 1;
+}
+
+#homepage-feature>.carousel-control span {
+	position: relative;
+	top: 50%;
+	margin-top: -30px;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+
+/*------------------------
+rankstructure ,training institution page
+-------------------------------*/
+.myclass {
+	color: #ffffff;
+	font-weight: 400;
+}
+
+.myimg {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 50px;
+	bottom: 0;
+}
+
+.backgroundcolor {
+	background-color: #4db8ff;
+}
+
+.divspace {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.divwidth {
+	width: 200px;
+}
+
+.header {
+	position: absolute;
+	top: 0;
+	/*width: 260px;*/
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
+}
+
+.headerbackground {
+	background-color: #3185ce;
+}
+
+.pweight {
+	font-weight: 200;
+}
+
+.divborder {
+	border-style: solid;
+	border-color: #3185ce;
+	border-width: 1px;
+}
+/*------------------------------
+		careerprogression
+-------------------------------*/
+.myclassh4 {
+	font-weight: 300;
+	color: black;
+}
+/*----------------------
+		breadcrumb for all
+-------------------------*/
+.modbreadcrumb {
+	font-size: 11px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+.modbreadcrumb a {
+	color: #3185ce;
+}
+
+/* ---------------------------
+ *  gallentry awards
+ * --------------------------- */
+.contact-detail {
+	border-top:;
+	border-bottom:;
+}
+
+.contact-detail .promo-block-wrapper {
+	background: #ffffff;
+	display: table;
+	width: 100%;
+}
+
+@media ( max-width : 992px) {
+	.contact-detail .promo-block-wrapper {
+		margin-bottom: 1px;
+	}
+}
+
+.contact-detail .promo-icon {
+	width: 82px;
+	color: #dadada;
+	font-size: 30px;
+	text-align: center;
+	padding: 0 10px;
+	display: table-cell;
+	vertical-align: middle;
+	border: 1px solid #f1f1f1;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+
+.contact-detail .promo-icon-blue {
+	background: #4d6de3;
+	color: #ffffff;
+}
+
+.contact-detail .promo-icon-green {
+	background: #7AC38F;
+	color: #ffffff;
+}
+
+.contact-detail .promo-icon-yellow {
+	background: #FCE38A;
+	color: #ffffff;
+}
+
+.contact-detail .promo-content {
+	padding: 30px 10px;
+	border: 1px solid #f1f1f1;
+	border-left: 0;
+}
+
+@media ( min-width : 992px) and (max-width: 1024px) {
+	.contact-detail .promo-content {
+		padding: 20px 20px;
+	}
+}
+
+.contact-detail .promo-content h3 {
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+
+.contact-detail .promo-content address {
+	line-height: 25px;
+}
+
+.menu_links {
+	cursor: pointer;
+}
+
+/* p {
+    margin-bottom: px;
+}
+
+
+
+ */
+#imgaediv img {
+	width: 104px !important;
+	heifght: 190px !important;
+}
+
+#imgaediv h6 {
+	color: #3a4750 !important;
+}
+
+*
+
+@media only screen and (max-width: 400px) {
+	#imgaediv div {
+		margin-left: 70px !important;
+	}
+}
+
+}
+
+/* ---------------------------
+ *  eligibility page
+ * --------------------------- */
+.contact-detail .promo-content h3 {
+	margin-bottom: 9px !important;
+}
+
+#eduQual:hover {
+	color: #3a4750 !important;
+}
+
+#phyMedStan:hover {
+	color: #3a4750 !important;
+}
+
+#visStan:hover {
+	color: #3a4750 !important;
+}
+
+.menu_links {
+	cursor: pointer;
+}
+
+/* ---------------------------
+ *  tradestask page
+ * --------------------------- */
+#groupXTech:hover {
+	color: #3a4750 !important;
+}
+
+#GroupXNTexh:hover {
+	color: #3a4750 !important;
+}
+
+#GroupYTech:hover {
+	color: #3a4750 !important;
+}
+
+#GroupYNonTech:hover {
+	color: #3a4750 !important;
+}
+
+#cont-wrapDiv h5 {
+	color: #3a4750 !important;
+}
+
+#iconsDiv h5 {
+	font-size: 16px;
+}
+
+.section-content-left-icon .content {
+	padding-left: 7px !important;;
+}
+
+.section-content-left-icon .icon {
+	width: 60px !important;
+}
+
+.section-content-left-icon .icon i {
+	width: 60px !important;
+	height: 60px !important;
+	line-height: 60px !important;
+	text-align: center !important;
+	border: 1px solid #eee !important;
+	border-radius: 25px !important;
+	display: block !important;
+}
+
+.left-icon-wraper.shadow {
+	width: 280px !important;
+	margin: 20px 0px !important;
+	border: 1px solid #ccc;
+	padding: 5px 2px 5px 2px !important;
+}
+
+#iafname {
+	padding-bottom: 4px;
+}
+
+@media ( max-width :415px) {
+	.margin-xs {
+		margin-left: 38px;
+	}
+}
+
+@media ( max-width :450px) and (min-width:416px) {
+	.margin-xs1 {
+		margin-left: 38px;
+	}
+}
+
+@media ( max-width :991px) {
+	.medium-only {
+		display: block !important;
+	}
+}
+
+@media ( min-width :992px) {
+	.large-only {
+		display: block !important;
+	}
+}
+
+@media ( min-width :768px) {
+	.hindi-font {
+		padding-left: 0px;
+		padding-right: 100px;
+	}
+}
+
+/* /*******To display side toggle menu******/
+@media ( max-width : 991px) {
+	.navbar-toggle {
+		display: block;
+	}
+	.div-width {
+		width: 100%
+	}
+}
+
+******Not display Nav bars for small screen*********
+@media screen and (max-width : 991px) {
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+} */
+
+
+/****start of css for index page links**/
+ .grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+.section-content-left-icon .icon i{
+border: 0px solid #eee  !important;
+}
+
+.left-icon-wraper.shadow.redborder{
+
+border: 1px solid rgb(255, 94, 98) ;
+
+}
+
+.left-icon-wraper.shadow.greenborder{
+
+border: 1px solid rgb(38,174,170) ;
+
+}
+
+.left-icon-wraper.shadow.greyborder{
+
+border: 1px solid rgb(73,88,93) ;
+
+}
+
+.whitecolor{
+color: #ffffff;
+
+}
+#grad1 {
+
+
+    background: linear-gradient(to left, rgb(255, 153, 102), rgb(255, 94, 98)); /* Standard syntax (must be last) */
+}
+
+
+
+
+#grad2{
+
+background: linear-gradient(to right, rgb(38,174,170), rgb(150, 222, 218));
+
+}
+
+
+#grad3{
+
+background: linear-gradient(to right, rgb(73,88,93), rgb(168,176,178));
+
+}
+
+
+.icon-white{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/****end of css for index page links**/
+
+/*****media queries for headers start*****************/
+
+@media  (min-width:1368px){
+
+	.right-align{
+	float: right;
+		padding-right: 50px;
+
+
+	}
+
+	.left-align{
+	float: left;
+	margin-left:90px;
+	}
+}
+
+@media  (max-width:1367px){
+
+
+
+	.left-padding{
+
+	margin-left: 50px;
+	}
+}
+
+@media  (min-width:1787px){
+
+	.right-align{
+	float: right;
+		padding-right: 300px;
+
+
+	}
+
+	.left-padding{
+	float: left;
+	margin-left:300px;
+	}
+}
+
+/*****media queries for headers end*****************/
+/********background color for instruction online****************/
+.row-bgcolor{
+	background-color: yellow;
+
+
+}
+.links {
+	display: block;
+	margin: 0 0 30px 0;
+	overflow: hidden;
+}
+
+.links .button {
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.links .button.blue {
+	background: #1f497d;
+	border: 2px solid #10253f;
+}
+
+@media (min-width:992px){
+	.button-margin-bottom{
+	padding-bottom:13% !important;
+
+	}
+
+}
+/********end background color for instruction online****************/
+/**********fix div for instruction online ************/
+#left-fix{
+	overflow:auto;
+   position:relative;
+
+}
+
+.right-scroll{
+
+	overflow-y: auto;
+	height: 500px;
+
+}
+
+/********end fix div for instruction online****************/
+
+/***********Menu**********  */
+#index     	     {
+		list-style: none;
+	     }
+
+#index li:before {
+		content: "\00BB \0020";
+	     }
+
+	     #arrow p:before {
+		content: "\00BB \0020";
+	     }
+
+ /************end menu********************/
+ /* CSS for  error page */
+
+.error-bg{
+
+background: #F5F5F5;
+
+}
+
+
+
+.nohover a:hover {
+    text-decoration : none;
+    color: black;
+    }
+/*end CSS for  error page  */
+
+/* css for landing page tab */
+
+ .landing-margin{
+ 		margin-left: 230px ;
+ 	}
+ @media (max-width:1199px) and (min-width:992px){
+
+ 	.landing-margin{
+ 		margin-left: 50px !important;
+ 	}
+ }
+ /* end of css for landing page tab */
+
+ /* css for pop window */
+
+
+   /* The Modal (background) */
+     .modal {
+       display: none; /* Hidden by default */
+       position: fixed; /* Stay in place */
+       z-index: 1; /* Sit on top */
+       padding-top: 100px; /* Location of the box */
+       left: 0;
+       top: 0;
+       width: 100%; /* Full width */
+       height: 100%; /* Full height */
+       overflow: auto; /* Enable scroll if needed */
+       background-color: rgb(0,0,0) !important; /* Fallback color */
+       background-color: rgba(0,0,0,0.6) !important; /* Black w/ opacity */
+     }
+
+     /* Modal Content */
+     .modal-content {
+       background-color:  white;
+       margin: auto;
+       padding: 20px;
+       top: 5%;
+       border: 1px solid #888;
+       width: 80%;
+       height:80%;
+       overflow: auto;
+     }
+
+     /* Add Animation */
+     .modal-content, #caption {
+         -webkit-animation-name: zoom;
+         -webkit-animation-duration: 0.6s;
+         animation-name: zoom;
+         animation-duration: 0.6s;
+     }
+
+     @-webkit-keyframes zoom {
+         from {-webkit-transform:scale(0)}
+         to {-webkit-transform:scale(1)}
+     }
+
+     @keyframes zoom {
+         from {transform:scale(0)}
+         to {transform:scale(1)}
+     }
+
+     /* 100% Image Width on Smaller Screens */
+     @media only screen and (max-width: 700px){
+         .modal-content {
+             width: 100%;
+         }
+     }
+     /* The Close Button */
+     .close {
+       color: #000000;
+       float: right;
+       font-size: 28px;
+       font-weight: bold;
+     }
+     .close:hover,
+     .close:focus {
+       color: #000;
+       text-decoration: none;
+       cursor: pointer;
+     }
+
+  /* end of css for pop window */

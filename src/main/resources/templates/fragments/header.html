@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>header</title>
+</head>
+<body>
+<!-- Header -->
+<div th:fragment="header">
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" >
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" th:href="@{/Dashboard/home}">IAF Rally Registration</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+        <!-- Add a logout button -->
+		<form th:action="@{/logout}" 
+			   method="POST">
+	
+		<input class="nav-link btn" id="logout"  type="submit" value="Logout" />
+	
+	</form>	
+         
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid" th:fragment="sidebar">
+      <div class="row">
+        <nav class="col-md-2  d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" th:href="@{/Dashboard/home}">
+                  <span data-feather="home"></span>
+                  Dashboard <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/Dashboard/ShowRalleyDetails}">
+                  <span data-feather="file"></span>
+                  Create Rally
+                </a>
+              </li>
+              
+              <!-- <li class="nav-item">
+                <a class="nav-link" th:href="@{/Dashboard/ShowRegisteredStudentData}">
+                  <span data-feather="users"></span>
+                  Student Data
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" th:href="@{/Dashboard/ShowRegisteredStudentDataForAllocation}">
+                  <span data-feather="users"></span>
+                  Allocate Student
+                </a>
+              </li>
+             <!--  <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="bar-chart-2"></span>
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                 
+                </a>
+              </li> -->
+            </ul>
+            </div>
+ 				</nav>
+            
+            </div>
+          </div>
+       
+</div>
+<!-- ends Header -->
+</body>
+</html>

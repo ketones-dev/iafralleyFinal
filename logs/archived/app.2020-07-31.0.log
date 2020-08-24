@@ -1,0 +1,133 @@
+01:23:23.826 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 13052 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+01:23:23.917 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+01:23:29.620 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+01:23:29.621 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+01:23:29.673 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+01:23:29.737 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:23:30.404 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+01:23:31.669 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:23:32.517 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 9.766 seconds (JVM running for 7195.532)
+01:50:07.629 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+01:50:07.631 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+01:50:10.314 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+01:50:10.315 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+01:50:10.597 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+01:50:11.278 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:50:11.528 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+01:50:12.157 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+01:50:13.262 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+01:50:14.931 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:50:17.585 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 10.266 seconds (JVM running for 11.369)
+01:50:49.230 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:50:49.832 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:53:19.214 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:54:03.197 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:56:03.919 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+01:56:03.930 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+01:56:04.953 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+01:56:04.953 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+01:56:04.974 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+01:56:05.162 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+01:56:05.687 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+01:56:05.942 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01:56:06.195 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.431 seconds (JVM running for 359.979)
+01:56:06.656 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+01:56:06.691 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:57:33.591 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:58:19.088 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:17:32.129 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+02:17:32.168 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+02:17:38.330 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+02:17:38.331 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+02:17:38.380 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+02:17:38.448 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:17:39.478 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+02:17:41.276 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:17:43.485 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 12.033 seconds (JVM running for 1657.269)
+02:18:18.262 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+02:18:18.262 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+02:18:18.655 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+02:18:18.655 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+02:18:18.719 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+02:18:18.766 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:18:19.553 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+02:18:19.668 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:18:19.891 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.686 seconds (JVM running for 1693.676)
+02:20:26.751 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:20:26.817 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:43:30.449 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:57:42.195 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+02:57:42.196 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+02:57:45.840 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+02:57:45.840 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+02:57:45.888 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+02:57:46.038 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+02:57:46.654 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+02:57:47.649 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+02:57:47.979 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 6.101 seconds (JVM running for 4061.764)
+02:57:53.730 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:57:53.795 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:59:15.523 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:02:14.827 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:09:09.311 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:09:50.599 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:09:50.599 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:09:50.979 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:09:50.980 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:09:51.043 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:09:51.125 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:09:51.519 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:09:51.676 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:09:51.941 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.421 seconds (JVM running for 4785.726)
+03:09:51.984 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:09:51.999 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:09:56.532 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:15:06.753 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:15:06.753 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:15:07.095 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:15:07.095 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:15:07.105 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:15:07.191 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:15:07.590 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:15:07.708 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:15:07.900 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.178 seconds (JVM running for 5101.684)
+03:19:39.117 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:19:39.117 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:19:39.476 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:19:39.477 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:19:39.488 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:19:39.534 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:19:40.050 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:19:40.181 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:19:40.488 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.41 seconds (JVM running for 5374.273)
+03:20:26.583 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:20:26.583 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:20:26.950 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:20:26.950 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:20:26.961 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:20:27.001 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:20:27.311 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:20:27.418 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:20:27.613 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.058 seconds (JVM running for 5421.398)
+03:20:31.839 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:20:31.852 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+03:21:27.646 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:21:27.646 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:21:27.953 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:21:27.953 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:21:27.965 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:21:28.047 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:21:28.491 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:21:28.592 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:21:28.785 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.185 seconds (JVM running for 5482.569)
+03:22:37.977 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 5252 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+03:22:37.977 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+03:22:38.288 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+03:22:38.288 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+03:22:38.298 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+03:22:38.341 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+03:22:38.993 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+03:22:39.112 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+03:22:39.328 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.378 seconds (JVM running for 5553.112)
+03:22:42.157 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+03:22:42.171 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]

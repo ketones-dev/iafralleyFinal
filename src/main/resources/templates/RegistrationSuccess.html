@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="_csrf" th:content="${_csrf.token}" />
+<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+<title>Ralley Registration</title>
+
+<!-- off-canvas -->
+
+<!-- font-awesome -->
+<link th:href="@{/vendor/css/font-awesome.min.css}" rel="stylesheet">
+
+<link th:href="@{/vendor/fonts/flaticon/flaticon.css}" rel="stylesheet">
+<!-- Bootstrap -->
+<link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+<!-- Style CSS -->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/w3.css}">
+<link rel="stylesheet" th:href="@{/css/customcss.css}" type="text/css">
+
+<!--
+         Favicons
+         =============================================
+         -->
+<link rel="icon" type="image/png" sizes="16x16"
+	href="resources/img/favicons/iaf-logo.png">
+<style>
+hr {
+	border-top: 1px solid #7c7171;
+}
+
+.card {
+	background-color: white;
+	width: 85%;
+	margin: 0 auto;
+	border-radius: 0px;
+}
+
+#ralleyform {
+	background-color: #5b6e74;
+}
+</style>
+
+</head>
+<body>
+	<div id="main-wrapper"
+		class="uc-offcanvas-wrapper uc-offcanvas-left slide-along">
+
+		<!-- Page Preloader -->
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"></div>
+			</div>
+		</div>
+
+
+
+		<div class="content-wrapper">
+			<!-- Header Top -->
+			<div class="header-top visible-md visible-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<span id="ct"
+								style="color: white; font-size: 11px; float: left; width: 100%; height: auto; display: inline-block; padding-top: 2px;"></span>
+
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<ul class="top-contact pull-right">
+								<li class="phone"><i class="fa fa-phone-square"
+									aria-hidden="true"></i> 011-2569-9606/4209</li>
+								<li class="email"><i class="fa fa-envelope"
+									aria-hidden="true"></i> <img style="padding-bottom: 4px;"
+									alt="" th:src="@{/vendor/image/email/headercasb.PNG}"></li>
+
+
+								<!-- <li class="get-a-quote"><a href="#" title="">TEXT</a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="iafname" class="container-fluid  visible-lg visible-md"
+				style="background: linear-gradient(#c8e5ff, #ffffff);">
+				<div class="row">
+					<div class="col-sm-8 col-md-8 ">
+						<div class="navbar-header left-align left-padding"
+							style="clear: both;">
+							<a class="logo pull-left" href="index.html"><img
+								th:src="@{/vendor/image/logo/casblg.png}"
+								style="height: 65px; margin-top: 5px;"></a> <span
+								class="name pull-left">
+								<h4 class="txt"
+									style="color: #022261; text-weight: bold; margin-left: 15px; margin-top: 5px; font-weight: 700;">CENTRAL
+									AIRMEN SELECTION BOARD</h4>
+							</span> <br> <span class="name pull-left">
+								<h4 class="txt"
+									style="color: #022261; text-weight: bold; margin-left: 15px; margin-top: 5px; font-weight: 700;">केन्द्रीय
+									वायु सैनिक चयन बोर्ड</h4>
+							</span>
+						</div>
+					</div>
+					<!-- 	<div class="col-sm-2 col-md-2"></div> -->
+					<div class="col-sm-4 col-md-4 ">
+						<div class="navbar-header right-align" style="margin-left: 0px;">
+							<div>
+								<a class="logo pull-right"
+									href="http://www.careerindianairforce.cdac.in"><img
+									th:src="@{/vendor/image/iafanimatelogo.gif}"
+									style="height: 61px; margin-top: 5px;"></a> <span
+									class="name pull-right">
+									<h4 class="txt"
+										style="color: #022261; text-weight: bold; margin-right: 15px; margin-top: 5px; font-weight: 700;">INDIAN
+										AIR FORCE</h4>
+								</span> <br> <span class="name pull-right">
+									<h4 class="txt"
+										style="color: #022261; text-weight: bold; margin-right: 15px; margin-top: 5px; font-weight: 700;">भारतीय
+										वायु सेना</h4>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- .navbar-top -->
+			<!-- Navigation -->
+
+
+			<nav class="navbar navbar-expand-lg navbar-dark  sticky-top"
+				style="background-color: #4a595e;">
+				<div class="container">
+					<a class="navbar-brand" href="#"> <img src="" alt="">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarResponsive" aria-controls="navbarResponsive"
+						aria-expanded="true" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ">
+							<li class="nav-item active"><a class="nav-link" href="#">Home
+									<span class="sr-only">(current)</span>
+							</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<section style="background-color: #e9ecef;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<nav>
+								<ul class="breadcrumb modbreadcrumb">
+									<li><a href="index.html"><span
+											class="glyphicon glyphicon-home"></span> Home/ </a></li>
+
+									<li>Rally Registration</li>
+								</ul>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- .nav -->
+			<section>
+			<div class="jumbotron jumbotron-fluid " style="background-image:linear-gradient(-155deg, #fff 32%, #5899e2 187%);">
+  <div class="container">
+
+				<h1 style="color:black;">Thank you for Registering</h1> 
+				<h3 style="color:black;">A email has been sent at  your registered mail
+				id <p style="color:black;" th:text="': ' + ${candidateDetails.emailid}" /> 
+				<!-- you can  download Provisional admit card by clicking Download button also. -->	</h3>
+				<!-- <p th:text="'id: ' + ${candidateDetails.name}" />
+				<p th:text="'content: ' + ${candidateDetails.fathername}" />
+				<p th:text="'content: ' + ${candidateDetails.emailid}" />
+				<p th:text="'content: ' + ${candidateDetails.ralleyregistrationNo}" /> -->
+
+				<!-- <a th:href="@{'/pdf/fileName=HelloWorld'">Download</a> -->
+				<!-- <a class="btn btn-success"
+					th:href="@{/pdf(fileName=${candidateDetails.ralleyregistrationNo})}">
+					Download Provisional Admit Card</a> -->
+
+</div>
+</div>
+
+
+			</section>
+			
+			
+			<!--  footer start -->
+			
+			
+			<div id="footerContent">
+				<footer class="footer" id="footerContent">
+					<!-- Footer Widget Section -->
+					<div class="footer-widget-section"
+						style="padding-top: 30px; padding-bottom: 30px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4>Get in touch with us</h4>
+										<address>
+											<strong>President</strong><br>Central Airmen Selection
+											Board<br> Brar Square,Delhi Cantt,<br /> New Delhi-110
+											010
+										</address>
+										<p>
+											CASB Reception (24/7) contact No. - <br /> <i
+												class="icon-phone"></i> (011) 25699606, (011) 25694209 <br>
+											<i class="icon-envelope-alt"></i> email:<img
+												style="padding-bottom: 6px;" alt=""
+												src="resources/img/email/emailfooter.PNG"> <br> <i
+												class="icon-envelope-alt"></i>www.airmenselection.cdac.in<br />
+											www.careerindianairforce.cdac.in
+										</p>
+										<a style="color: white; text-decoration: underline;"
+											target="_blank" href="https://casbcms.cdac.in">Help &
+											Support</a>
+									</div>
+
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4 style="padding-right: 50px;">Popular Links</h4>
+										<ul class="link-list" style="text-align: left;">
+											<li><a href="aboutcasb.html">About CASB</a></li>
+											<li><a href="rankstructure.html">Rank Structure</a></li>
+											<li><a href="eligibilityCriteria.html">Eligibility
+													Criteria</a></li>
+											<li><a href="trades_task.html">Trades &amp; Task</a></li>
+											<li><a href="pay_perks.html">Pay &amp; Perks</a></li>
+											<li><a href="airmenselectioncenter.html">Airmen
+													Selection Centres</a></li>
+											<li><a href="traininginstitution.html"> Training
+													Institutes</a></li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left; padding-right: 50px;">
+									<div class="widget">
+										<h4>Social</h4>
+										<div id="share-buttons">
+											Buffer
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.facebook.com/IndianAirForce/"
+														target="_blank"> <img
+														th:src="@{vendor/image/Facebook.png}" alt="Facebook" />@IndianAirForce
+													</a>
+												</div>
+											</div>
+											Twitter
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://twitter.com/iaf_mcc" target="_blank">
+														<img th:src="@{vendor/image/twitter.png}" alt="Twitter" />@iaf_mcc
+													</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.instagram.com/IndianAirForce_mcc"
+														target="_blank"> <img
+														th:src="@{vendor/image/insta.png}" alt="" />@IndianAirForce_mcc
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.Footer Widget Section -->
+					<div class="copyright-section">
+						<div class="container clearfix">
+							<span class="copytext">Copyright &copy; 2018 | <a
+								href="https://careerindianairforce.cdac.in/" target="_blank"
+								style="color: #3185ce">CASB, Indian Air Force</a> Designed And
+								Developed By: <strong style="color: #3185ce"> <abbr
+									style="border-bottom: none;"
+									title="Centre for Development of Advanced Computing &#xA; A Scientific Society of Ministry of Electronics &  Information Technology,Government of India"><a
+										target="_blank" href="http://www.cdac.in">C-DAC</a></abbr>
+							</strong></span>
+							<ul class="list-inline pull-right" style="display: flex;">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="aboutcasb.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</div>
+						<!-- .container -->
+					</div>
+					<!-- .copyright-section -->
+				</footer>
+			</div>
+			<!-- .footer -->
+		</div>
+
+		<!-- .content-wrapper -->
+	</div>
+	<!-- .offcanvas-pusher -->
+
+
+
+
+
+
+
+
+	<!-- Script -->
+	<script th:src="@{/vendor/js/customjs.js}"></script>
+	<script th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/vendor/js/bootstrap.min.js}"></script>
+
+	<
+	<!-- <script src="resources/js/smoothscroll.js"></script> -->
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<script th:src="@{/vendor/js/scripts.js}"></script>
+	<script th:src="@{/vendor/js/plusminus.js}"></script>
+	<script th:src="@{/js/validation.js}"></script>
+
+
+
+</body>
+</html>

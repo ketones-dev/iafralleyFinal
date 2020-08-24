@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/vendor/css/datatables.min.css}" rel="stylesheet">
+<link th:href="@{/css/dashboard.css}" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+	<title>IAF-Ralley Dashboard</title>
+	
+
+</head>
+
+<body>
+
+<!-- header -->
+
+<div th:replace="fragments/header.html :: header"> </div>
+
+<!-- end header -->
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+	<div
+		class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+		<h1 class="h2">Welcome to Dashboard</h1>
+		
+	</div>
+	
+	<div class="container">
+	<div>
+		User: <span sec:authentication="name"></span>
+		<br><br>
+		Role(s): <span sec:authentication="principal.authorities"></span>
+		<br><br>
+
+		<!-- Check for login error -->																	
+		<div th:if="${session.user}" >
+			<p th:text="'First name: ' + ${session.user.firstName} + ', Last name: ' + ${session.user.lastName} + ', Email: ' + ${session.user.email}"></p>
+		</div>		
+	</div>
+	
+	</div>
+
+	
+
+	<!-- display user name and role -->
+	
+	
+	<hr>
+	
+	<!-- <a th:href="@{/Dashboard/ShowRalleyDetails}">Create Ralley</a>
+	<a th:href="@{/Dashboard/ShowRegisteredStudentData}">ShowRegisterdStudentData</a> -->
+	
+	
+	
+	
+	</main>
+	
+	<script type="text/javascript"
+		th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/datatables.min.js}"></script>
+	 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+	
+</body>
+
+</html>

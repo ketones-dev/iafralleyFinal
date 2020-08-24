@@ -1,0 +1,8 @@
+22:30:54.279 [main] INFO  c.c.i.IafralleyApplicationTests:55 - Starting IafralleyApplicationTests on DESKTOP-0VP0BSJ with PID 11032 (started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+22:30:54.284 [main] INFO  c.c.i.IafralleyApplicationTests:655 - The following profiles are active: local
+22:30:59.993 [main] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+22:31:00.483 [main] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+22:31:01.961 [main] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+22:31:05.580 [main] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+22:31:10.742 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+22:31:15.986 [main] INFO  c.c.i.IafralleyApplicationTests:61 - Started IafralleyApplicationTests in 24.726 seconds (JVM running for 30.509)

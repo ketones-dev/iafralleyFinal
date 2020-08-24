@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<meta name="_csrf" th:content="${_csrf.token}" />
+<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add User</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/vendor/css/datatables.min.css}" rel="stylesheet">
+<link th:href="@{/css/dashboard.css}" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+<body>
+<!-- header -->
+
+<div th:replace="fragments/header.html :: header"> </div>
+
+<!-- end header -->
+
+<!-- main body -->
+
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+	<div
+		class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+		<h1 class="h2">Create Rally</h1>
+	</div>
+	
+	
+	<div>
+	
+	<!-- Tab navigation -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link custom active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Rally Details</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link custom" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rally Criteria </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link custom" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Rally Schedule</a>
+  </li>
+</ul>
+
+<div class="container-fluid" style="margin-top:2%;">
+		<h3></h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-12">
+				<form action="#" th:action="@{/Dashboard/CreateRalley}"
+						th:object="${ralleyDetails}" method="post" id="form">
+
+<!-- Tab content -->
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h3>Add Rally Details</h3>
+    <hr>
+    
+						<div class="row">
+						<div class="form-group  col-md-12">
+						
+						<label class="col-form-label">Select Group/Trade : </label>
+						<div class="form-check form-check-inline">
+						 <input type="checkbox" class="form-check-input" name="roles" th:each="groups : ${allgroups}"
+									th:text="${groups.group_name}" th:value="${groups.id}"
+									th:field="*{ralleyForGroup}" style="margin-left: 0.9rem;" />
+									
+						</div>			
+
+							</div>
+							<div class="form-group col-md-12">
+								<label for="ralley_details" class="col-form-label">Rally Name</label>
+								<input type="text" th:field="*{ralley_details}"
+									class="form-control" id="name" placeholder="Name or Details" required>
+								<span th:if="${#fields.hasErrors('ralley_details')}"
+									th:errors="*{ralley_details}" class="text-danger"></span>
+							</div>
+							<div class="form-group col-md-12">
+								<label for="venue_details" class="col-form-label">Rally Venue
+									Details</label> <input type="text" th:field="*{venue_details}"
+									class="form-control" id="venue_details"
+									placeholder="Venue Details" required> <span
+									th:if="${#fields.hasErrors('venue_details')}"
+									th:errors="*{venue_details}" class="text-danger"></span>
+							</div>
+
+							
+
+							<div class="form-group col-md-6">
+								<label for="state" class="col-form-label">State</label> <select
+									th:field="*{state_id}" id="stateSelect" class="form-control"
+									required="true">
+									<option th:value="''">---Select State----</option>
+									<option th:each="state : ${allStates}"
+										th:value="${state.state_id}" th:text="${state.state}"></option>
+								</select>
+							</div>
+							<input type="hidden" th:field="*{state_name}" id="statename">
+							<input type="hidden" th:field="*{city_name}" id="cityname">
+							<input type="hidden" th:field="*{ralley_id}" id="ralley_id" />
+							<input type="hidden" th:field="*{no_OfDays}" id="noofDays" />
+							
+							<input type="hidden" th:value="${ralleyDetails.city_id}" id="optcity">
+							
+							
+
+							<div class="form-group col-md-6">
+								<label for="city" class="col-form-label">City</label> <select
+									th:field="*{city_id}" id="citySelect" class="form-control" required="true">
+									<option value="">---Select City----</option>
+
+
+								</select>
+							</div>
+
+
+
+							
+<a class="nexttab btn btn-success">Next</a>
+
+						</div>
+
+
+						
+						
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h3>Rally Criteria </h3>
+    <hr>
+    <div class="row">
+    <div class="form-group col-md-6">
+								<label for="minDobDate" class="col-form-label">Min Date
+									of Birth</label> <input type="date" th:field="*{min_dob}"
+									class="form-control" id="min_dob" placeholder="Enter Date" required>
+								<span th:if="${#fields.hasErrors('min_dob')}"
+									th:errors="*{min_dob}" class="text-danger"></span>
+							</div>
+
+
+							<div class="form-group col-md-6">
+								<label for="maxDobDate" class="col-form-label">Max Date
+									of Birth </label> <input type="date" th:field="*{max_dob}"
+									class="form-control" id="max_dob" placeholder="Enter Date" required>
+								<span th:if="${#fields.hasErrors('max_dob')}"
+									th:errors="*{max_dob}" class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-4">
+								<label for="passpercent" class="col-form-label">Min
+									passing percent</label> <input type="number"
+									th:field="*{min_passing_percentage}" class="form-control"
+									id="pass_percent" placeholder="Enter Percentage" min="0" max="100" required> <span
+									th:if="${#fields.hasErrors('min_passing_percentage')}"
+									th:errors="*{min_passing_percentage}" class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-4">
+								<label for="engpasspercent" class="col-form-label">Min
+									english passing percent</label> <input type="number"
+									th:field="*{min_eng_percentage}" class="form-control"
+									id="pass_engpercent" placeholder="Enter Percentage" min="0" max="100" required> <span
+									th:if="${#fields.hasErrors('min_eng_percentage')}"
+									th:errors="*{min_eng_percentage}" class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-4">
+								<label for="height" class="col-form-label">Min
+									height(cm)</label> <input type="number" th:field="*{min_height}"
+									class="form-control" id="min_height"
+									placeholder="Enter height(in cm)" min="0" required> <span
+									th:if="${#fields.hasErrors('min_height')}"
+									th:errors="*{min_height}" class="text-danger"></span>
+							</div>
+							
+							<div class="row">
+							<div class="form-group col-md-4">
+							<a class="prevtab btn btn-success">Prev</a></div>
+							<div class="form-group col-md-4"><a class="nexttab btn btn-success">Next</a></div>
+							</div>
+							</div>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <h3>Rally Schedule</h3>
+    <hr>
+   <div class="row">
+   <div class="form-group col-md-6">
+								<label for="startDate" class="col-form-label">Start Date</label>
+								<input type="date" th:field="*{start_date}" class="form-control"
+									id="start_date" placeholder="Enter Start Date" required> <span
+									th:if="${#fields.hasErrors('start_date')}"
+									th:errors="*{start_date}" class="text-danger" ></span>
+							</div>
+
+
+							<div class="form-group col-md-6">
+								<label for="endDate" class="col-form-label">End Date</label> <input
+									type="date" th:field="*{end_date}" class="form-control"
+									id="end_date" placeholder="Enter End Date" required> <span
+									th:if="${#fields.hasErrors('end_date')}"
+									th:errors="*{end_date}" class="text-danger" ></span>
+							</div>
+
+
+							<div class="col-lg-12" id="table-slot1"></div>
+
+
+							<div class="col-lg-12" id="table-slot2">
+								<span th:text="${ralleyDetails.ralleydaywiseSlot}"></span>
+								<h2 th:if="${ralleyDetails.ralleydaywiseSlot} == null"><!-- hello --></h2>
+								<div th:unless="${ralleyDetails.ralleydaywiseSlot} == null">
+									<table class="table table-striped table-responsive-md">
+										<thead>
+											<tr>
+												<th>Days</th>
+												<th>Time of Reporting</th>
+												<th>slot</th>
+												<th>Number of intake</th>
+
+
+
+											</tr>
+										</thead>
+										<tbody>
+
+											<th:block
+												th:each="list, status :  ${ralleyDetails.ralleydaywiseSlot}">
+												<tr class="col">
+												<input type="hidden" th:field="*{ralleydaywiseSlot[__${status.index}__].slot_id}">
+													<td class="form-group"><input
+														th:field="*{ralleydaywiseSlot[__${status.index}__].day_date}"
+														type="date" class="form-control" readonly required></td>
+													<td class="form-group"><input
+														th:field="*{ralleydaywiseSlot[__${status.index}__].time_of_reporting}"
+														type="time" class="form-control" required></td>
+
+													<td th:text="${status.index}+1">-Slot</td>
+
+													<td class="form-group"><input
+														th:field="*{ralleydaywiseSlot[__${status.index}__].no_of_intake}"
+														type="number" class="form-control" required></td>
+												<tr>
+											</th:block>
+
+											<!--  <tr th:each=" ralley : ${ralleyDetails.ralleydaywiseSlot}">
+                                   
+                                        <td>
+                                        <input type="date" th:field="*{ralley.day_date}"
+									class="form-control" id="day_date" >
+                                        </td>
+                                        <td >
+                                        <input type="time" th:field="*{ralley.time_of_reporting}"
+									class="form-control" id="tor" >
+                                        </td>
+                                        <td th:field="*{ralley.slot_id}">-Slot</td>
+                                        <td><input type="number" min="1" th:field="*{ralley.no_of_intake}"
+									class="form-control" id="intake" ></td>
+                                        
+                                        
+                                         </tr> -->
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+   
+   
+   <div class="col-md-6">
+							<input type="submit" class="btn btn-primary" value="Add Rally">
+						</div>
+
+						<div class="form-group col-md-8"></div>
+						
+   </div>
+   <a class="prevtab btn btn-success">Prev</a>
+  </div>
+</div>
+
+<!-- Tab carousel -->
+
+
+</form>
+</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	</div>
+	
+	
+	
+	
+					
+				
+	
+	</main>
+
+<!-- end main body -->
+	<script type="text/javascript"
+		th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/datatables.min.js}"></script>
+
+	<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+	<script type="text/javascript" th:src="@{/js/createralleys.js}"></script>
+
+
+
+	<!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+<script>
+$(document).ready(function() {
+	function bootstrapTabControl(){
+		  var i, items = $('.custom'), pane = $('.tab-pane');
+		  // next
+		  $('.nexttab').on('click', function(){
+		      for(i = 0; i < items.length; i++){
+		          if($(items[i]).hasClass('active') == true){
+		              break;
+		          }
+		      }
+		      if(i < items.length - 1){
+		          // for tab
+		          $(items[i]).removeClass('active');
+		          $(items[i+1]).addClass('active');
+		          // for pane
+		          $(pane[i]).removeClass('show active');
+		          $(pane[i+1]).addClass('show active');
+		      }
+
+		  });
+		  // Prev
+		  $('.prevtab').on('click', function(){
+		      for(i = 0; i < items.length; i++){
+		          if($(items[i]).hasClass('active') == true){
+		              break;
+		          }
+		      }
+		      if(i != 0){
+		          // for tab
+		          $(items[i]).removeClass('active');
+		          $(items[i-1]).addClass('active');
+		          // for pane
+		          $(pane[i]).removeClass('show active');
+		          $(pane[i-1]).addClass('show active');
+		      }
+		  });
+		}
+		bootstrapTabControl();
+
+});
+</script>
+</body>
+
+</html>

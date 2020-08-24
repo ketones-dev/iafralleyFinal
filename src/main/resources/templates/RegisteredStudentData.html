@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="_csrf" th:content="${_csrf.token}" />
+<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+<title>Registered Student Data</title>
+
+<link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/datatables.min.css}" rel="stylesheet">
+<link th:href="@{/css/dashboard.css}" rel="stylesheet">
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  }
+
+</style>
+</head>
+<body>
+
+<div th:replace="fragments/header.html :: header"> </div>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+<div class="container">
+
+
+<!-- display section -->
+<button id="btn-show-all-children" type="button">Expand All</button>
+<button id="btn-hide-all-children" type="button">Collapse All</button>
+
+<table cellspacing="5" cellpadding="5" border="0">
+        <tbody>
+        <form action="#">
+        <tr>
+		<td>Date of Calculation: </td>
+		<td><input type="date" id="dob" name="dob"></td>
+       <td><span>Total Count:<span id="totalcount"></span>    </span></td>
+       <td><span>Filtered Count:<span id="count"></span></span></td>
+        </tr>
+        
+        <tr>
+         <td>Minimum age:</td>
+        <td><input type="text" id="min" name="min"></td>
+            <td>Maximum age:</td>
+            <td><input type="text" id="max" name="max"></td>
+        
+        </tr>
+        <tr><td>City</td><td><select id="citylist" ><option value="">--Select City--</option></select></td></tr>
+        <tr><td>Slot</td><td><select id="citylistslot" ><option value="">--Select Slot--</option></select></td></tr>
+        <tr><input type="reset" id="resetb" value="reset"></tr>
+        </form>
+    </tbody>
+        
+    </tbody></table>
+    
+<table id="example" class="display table" style="width:100%;"> 
+
+<thead style="display: table-row-group;">
+
+<th></th>
+<!-- <th>Id</th> -->
+<th>EmailID</th>
+<th>Candidate Name</th>
+<th class="none">Father's Name</th>
+<th>DOB</th>
+<th class="none">Mobile No</th>
+<th>Ralley Registration</th>
+<th class="none">time of reporting</th>
+<th>Opted State</th>
+<th>Opted City</th>
+
+<th class="none">Married</th>
+<th class="none">Height</th>
+<th class="none">Passed Exam </th>
+<th class="none">Other Details</th>
+<th class="none">Passed Exam Percentage</th>
+<th class="none">English Exam Percentage</th>
+<th class="none">Candidate's State</th>
+<th class="none">Candidate's City</th>
+<th class="none">Subcribed On</th>
+<th>10th Marksheet</th>
+<th>12th Marksheet</th>
+
+
+</thead>
+<tbody>
+
+<tr th:each="student : ${studentdata}">
+<td></td>
+<!-- <td th:text="${student.id}"> </td> -->
+<td th:text="${student.emailid}"> </td>
+<td th:text="${student.name}"> </td>
+<td th:text="${student.fathername}"> </td>
+<td th:text="${student.dateOfBirth}"> </td>
+<td th:text="${student.contactno}"> </td>
+<td th:text="${student.ralleyregistrationNo}"> </td>
+<td th:text="${student.dateTimeOfReporting}"> </td>
+<td th:text="${student.opt_state_name}"> </td>
+<td th:text="${student.opt_city_name}"> </td>
+<td th:text="${student.maritial_status}"> </td>
+<td th:text="${student.height}"> </td>
+<td th:text="${student.passed_exam_detail}"> </td>
+<td th:text="${student.otherDetailPassedDetail}"> </td>
+<td th:text="${student.passed_exam_percentage}"> </td>
+<td th:text="${student.english_percentage}"> </td>
+<td th:text="${student.state}"> </td>
+<td th:text="${student.city}"> </td>
+<td th:text="${student.subscirbed_on}"> </td>
+<td><img alt="" th:src="@{/upload/} + ${student.ximagePath}" width="100px" onclick="ShowImage(this);"/></td>
+<td><img alt="" th:src="@{/upload/} + ${student.xiiimagePath}" width="100px"/></td>
+
+</tr>
+
+
+
+
+</tbody>
+
+<tfoot style="display:table-header-group;">
+
+<th></th>
+<!-- <th>Id</th> -->
+<th><!-- EmailID --></th>
+<th><!-- Candidate Name --></th>
+<th><!-- Father's Name --></th>
+<th><!-- DOB --></th>
+<th class="none">Mobile No</th>
+<th>Ralley Registration</th>
+<th class="none">time of reporting</th>
+<th>Opted State</th>
+<th>Opted City</th>
+
+<th class="none">Married</th>
+<th class="none">Height</th>
+<th class="none">Passed Exam </th>
+<th class="none">Other Details</th>
+<th class="none">Passed Exam Percentage</th>
+<th class="none">English Exam Percentage</th>
+<th class="none">Candidate's State</th>
+<th class="none">Candidate's City</th>
+<th class="none">Subcribed On</th>
+<th>10th Marksheet</th>
+<th>12th Marksheet</th>
+
+</tfoot>
+
+
+</table> 
+
+<!-- display section -->
+
+</div>
+
+</main>
+
+<script type="text/javascript" th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/datatables.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/dataTables.buttons.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/jszip.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/pdfmake.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/vfs_fonts.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/buttons.html5.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+ <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+<script>
+const http = new easyHTTP;
+
+
+$(document).ready(function() {
+	$(document).ready(function (){
+	    var table = $('#example').DataTable({
+	    	 initComplete: function () {
+	             this.api().columns([5,6,7,8,9,10,11]).every( function () {
+	                 var column = this;
+	                 var select = $('<select><option value=""></option></select>')
+	                     .appendTo( $(column.footer()).empty() )
+	                     .on( 'change', function () {
+	                         var val = $.fn.dataTable.util.escapeRegex(
+	                             $(this).val()
+	                         );
+	  
+	                         column
+	                             .search( val ? '^'+val+'$' : '', true, false )
+	                             .draw();
+	                     } );
+	  
+	                 column.data().unique().sort().each( function ( d, j ) {
+	                     select.append( '<option value="'+d+'">'+d+'</option>' )
+	                 } );
+	             } );
+	         },
+	         "autoWidth": false,
+	        'responsive': true,
+	        dom: 'lBfrtip',
+	        buttons: [
+	        	
+	            'copyHtml5',
+	            'excelHtml5',
+	            'csvHtml5',
+	            'print'
+	           /*  {
+	                extend: 'pdfHtml5',
+	                orientation: 'potrait',
+	                pageSize: 'A2',
+	                exportOptions: {
+	                    columns: [ 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 ]
+	               }
+	            } */
+	        ],
+	       
+	    });
+	    
+	    
+	    
+	    
+	    
+	    $.fn.dataTable.ext.search.push(
+	    	    function( settings, data, dataIndex ) {
+	    	        var min = parseInt( $('#min').val(), 10 );
+	    	        var max = parseInt( $('#max').val(), 10 );
+	    	        var calculate= $('#dob').val();
+	    	        var age =  getAge(data[4],calculate);
+	    	        console.log(age);
+	    	        
+	    	        
+	    	        
+	    	        if ( ( isNaN( min ) && isNaN( max ) ) || 
+	    	             ( isNaN( min ) && age <= max ) ||
+	    	             ( min <= age   && isNaN( max ) ) ||
+	    	             ( min <= age   && age <= max ) )
+	    	        {
+	    	            return true;
+	    	        }
+	    	        
+	    	       
+	    	        
+	    	        
+	    	        return false;
+	    	        
+	    	    }
+	    	);
+	    	 
+	    	 $('#min, #max').keyup( function() {
+	    		 if($('#min').val() === "" && $('#max').val() === "")
+    			 {
+    			 table.columns('').search('').draw();c();
+    			 }
+	    		 else if(document.getElementById('dob').value === "")
+	    			 {
+	    			 alert("please set base count first");
+	    			 document.getElementById('min').value ="";
+	    			 document.getElementById('max').value ="";
+	    			 
+	    			 }
+	    		 else{
+	    	        table.draw();
+	    	        c();
+	    		 }
+	    		 
+	    	    } );
+	    	    
+	    	 
+	    	  function c(){
+	    	// var total_row_count = table.Settings().RecordsTotal();
+	    	 //var filtered_row_count = table.Settings().RecordsDisplay();
+	    	 //console.log(total_row_count + " total rows filtered down to " + filtered_row_count);
+	    	 document.getElementById('count').innerText = table.page.info().recordsDisplay;
+	    	 } 
+
+	    	  document.getElementById('totalcount').innerText = table.page.info().recordsTotal;
+	    	  
+	    	  
+	    	  var data = table.rows().data();
+	    	  data.each(function (value, index) {
+	    	      console.log(`For index ${index}, data value is ${value[5]}`);
+	    	  });
+	    	  
+	    	  
+	    	  
+	    	  
+	   
+	    
+	     $('#citylist').on('change', function () {
+	    	console.log(this.value === "");
+	    	if(this.value === "")
+	    	{
+	    		table.columns('').search('').draw();
+	    		 c();
+	    	}
+	    	else{
+	        table.columns(9).search($(this).find("option:selected").text()).draw();
+	        c();
+	    	}
+	} );  
+
+	$('#citylistslot').on('change', function () {
+		
+	       table.columns(7).search( this.value).draw();
+	       c();
+	} ); 
+	    
+	$('#resetb').on('click',function(){
+		console.log("in");
+		table.columns('').search('').draw();
+		c();
+		$('#citylistslot option:not(:first)').remove();
+		 
+	});
+	    
+
+	    // Handle click on "Expand All" button
+	    $('#btn-show-all-children').on('click', function(){
+	        // Expand row details
+	        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+	    });
+
+	    // Handle click on "Collapse All" button
+	    $('#btn-hide-all-children').on('click', function(){
+	        // Collapse row details
+	        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+	    });
+	    
+	    var myJson;
+	    // code
+	     http.get('getralleyallotCities', function(err, get) {
+				  if(err) {
+				    console.log(err);
+				  } else {
+				    console.log(get);
+				   myJson=JSON.parse(get);
+				    $.each(myJson, function (index, value) {
+				    	$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
+				    	});
+				    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
+				  }
+	     });
+	    
+	    
+	    
+	    $('#citylist').on('change', function(){
+	    	console.log($(this).val());
+	    	console.log(myJson.length);
+	    	$('#citylistslot option:not(:first)').remove();
+	    	for(var i=0 ; i < myJson.length ; i++)
+	    		{
+	    		var s=myJson[i];
+	    		/* console.log(s.ralleydaywiseSlot.length);
+	    		console.log(s.ralleydaywiseSlot);
+	    		console.log(s.city_id == $(this).val()); */
+	    		
+	    		 for(var j=0;j < s.ralleydaywiseSlot.length;j++)
+	    			{
+	    			var t=s.ralleydaywiseSlot;
+	    		if(s.city_id == $(this).val())
+	    			{
+	    			console.log(t[j].day_date);
+	    			var d=t[j];
+	    			console.log(d);
+	    			
+	    			var date=d.day_date;
+	    			var time=d.time_of_reporting;
+	    			console.log(date+" "+time+":00.0");
+	    			var rep=date+" "+time+":00.0";
+                  console.log(j);
+                	 $("#citylistslot").append('<option value="'+rep+'">'+rep+'<option>');
+                	 $('#citylistslot option').filter(function(){
+                	        return ($(this).val()=="" && $(this).text()=="");
+                	    }).remove();
+	                      
+	                  
+	                }
+	    			} 
+	    		
+	    		}
+	    	
+	    });
+	    
+	    
+	});
+});
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+
+function getAge(DOB,calculate) {
+    var today = new Date(calculate);
+    var birthDate = new Date(DOB);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age = age - 1;
+    }
+
+console.log(age);
+    return age;
+}
+
+window.onload = function() {
+	
+};
+//Get the modal
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+ function ShowImage(e)
+ {
+	  modal.style.display = "block";
+	  modalImg.src = e.src;
+	  console.log(e.src);
+	  captionText.innerHTML = e.alt;
+	};
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	} 
+</script>
+
+</body>
+</html>

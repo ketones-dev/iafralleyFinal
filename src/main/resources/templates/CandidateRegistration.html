@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="_csrf" th:content="${_csrf.token}"/>
+<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+<title>Ralley Registration</title>
+
+<!-- off-canvas -->
+
+<!-- font-awesome -->
+<link th:href="@{/vendor/css/font-awesome.min.css}" rel="stylesheet">
+<!-- 
+<link th:href="/fonts/flaticon/flaticon.css" rel="stylesheet"> -->
+<!-- Bootstrap -->
+<link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
+<!-- Style CSS -->
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/w3.css}">
+<link rel="stylesheet" th:href="@{/css/customcss.css}" type="text/css">
+
+<!--
+         Favicons
+         =============================================
+         -->
+<link rel="icon" type="image/png" sizes="16x16"
+	href="resources/img/favicons/iaf-logo.png">
+<style>
+hr {
+	border-top: 1px solid #7c7171;
+}
+
+.card {
+	background-color: white;
+	width: 85%;
+	margin: 0 auto;
+	border-radius: 0px;
+}
+
+
+
+#ralleyform {
+	
+	background-color: #5b6e74;
+}
+
+#headingtitle {
+	font-size: 25px;
+	
+	font-weight: bold;
+	
+}
+.form-table{
+
+display:none;
+
+
+}
+.message{
+display:none;
+}
+
+.show{
+display:inline-block;
+}
+</style>
+
+</head>
+<body>
+	<div id="main-wrapper"
+		class="uc-offcanvas-wrapper uc-offcanvas-left slide-along">
+		
+		<!-- Page Preloader -->
+		<div id="preloader">
+			<div id="status">
+				<div class="status-mes"></div>
+			</div>
+		</div>
+
+
+
+		<div class="content-wrapper">
+			<!-- Header Top -->
+			<div class="header-top visible-md visible-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+							<span id="ct"
+								style="color: white; font-size: 11px; float: left; width: 100%; height: auto; display: inline-block; padding-top: 2px;"></span>
+
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<ul class="top-contact pull-right">
+								<li class="phone"><i class="fa fa-phone-square"
+									aria-hidden="true"></i> 011-2569-9606/4209</li>
+								<li class="email"><i class="fa fa-envelope"
+									aria-hidden="true"></i> <img style="padding-bottom: 4px;"
+									alt="" th:src="@{/vendor/image/email/headercasb.PNG}"></li>
+
+
+								<!-- <li class="get-a-quote"><a href="#" title="">TEXT</a></li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="iafname" class="container-fluid  visible-lg visible-md"
+				style="background: linear-gradient(#c8e5ff, #ffffff);">
+				<div class="row">
+					<div class="col-sm-8 col-md-8 ">
+						<div class="navbar-header left-align left-padding"
+							style="clear: both;">
+							<a class="logo pull-left" href="index.html"><img
+								th:src="@{/vendor/image/logo/casblg.png}"
+								style="height: 65px; margin-top: 5px;"></a> <span
+								class="name pull-left">
+								<h4 class="txt"
+									style="color: #022261; text-weight: bold; margin-left: 15px; margin-top: 5px; font-weight: 700;">CENTRAL
+									AIRMEN SELECTION BOARD</h4>
+							</span> <br> <span class="name pull-left">
+								<h4 class="txt"
+									style="color: #022261; text-weight: bold; margin-left: 15px; margin-top: 5px; font-weight: 700;">केन्द्रीय
+									वायु सैनिक चयन बोर्ड</h4>
+							</span>
+						</div>
+					</div>
+					<!-- 	<div class="col-sm-2 col-md-2"></div> -->
+					<div class="col-sm-4 col-md-4 ">
+						<div class="navbar-header right-align" style="margin-left: 0px;">
+							<div>
+								<a class="logo pull-right"
+									href="http://www.careerindianairforce.cdac.in"><img
+									th:src="@{/vendor/image/iafanimatelogo.gif}"
+									style="height: 61px; margin-top: 5px;"></a> <span
+									class="name pull-right">
+									<h4 class="txt"
+										style="color: #022261; text-weight: bold; margin-right: 15px; margin-top: 5px; font-weight: 700;">INDIAN
+										AIR FORCE</h4>
+								</span> <br> <span class="name pull-right">
+									<h4 class="txt"
+										style="color: #022261; text-weight: bold; margin-right: 15px; margin-top: 5px; font-weight: 700;">भारतीय
+										वायु सेना</h4>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- .navbar-top -->
+			<!-- Navigation -->
+
+
+			<nav class="navbar navbar-expand-lg navbar-dark  sticky-top" style="background-color: #4a595e;">
+				<div class="container">
+					<a class="navbar-brand" href="#"> <img
+						src="" alt="">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarResponsive" aria-controls="navbarResponsive"
+						aria-expanded="true" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ">
+							<li class="nav-item active"><a class="nav-link" href="#">Home
+									<span class="sr-only">(current)</span>
+							</a></li>
+
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<section style="background-color: #e9ecef;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<nav>
+								<ul class="breadcrumb modbreadcrumb">
+									<li><a href="index.html"><span
+											class="glyphicon glyphicon-home"></span> Home/ </a></li>
+
+									<li>Rally Registration</li>
+								</ul>
+							</nav>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- .nav -->
+			
+				<section id="ralleyform">
+					<div class="container">
+						
+
+					</div>
+					<div class="container text-justify" style="padding: 25px 0;">
+						<div class="card"
+							style="padding: 4%; box-shadow: 0px 8px 10px 0px rgb(0, 0, 0, 2.5);">
+
+							<h3 style="color: #2f4f6b;" id="contextshow">Please Select State and City for Rally Details</h3>
+
+							
+							<h4 style="color: #2f4f6b;" >
+								
+							</h4>
+
+						<form action="#" th:action="@{/registerCandidate}"
+							th:object="${ralleyCandidateDetails}" method="post" id="form" class="needs-validation" enctype="multipart/form-data" novalidate>
+							<input type="hidden" th:value="${error}" id="error"> 
+							<input type="hidden" th:value="${optcity}" id="optcity">
+							<input type="hidden" th:value="${msgsavingerror}" id="error2"> 
+							<div class="row" id="perRequest">
+
+
+								
+								<div class="form-group col-md-5 ">
+									<label for="state" class="col-form-label">Select State</label>
+									<select th:field="*{opt_state}" id="ralleystateSelect"
+										required="true" class="form-control" >
+										<option th:value="''">---Select State----</option>
+										<option th:each="ralleystate : ${ralleyAllState}"
+											th:value="${ralleystate.state_id}"
+											th:text="${ralleystate.state}"></option>
+									</select> <label th:if="${#fields.hasErrors('opt_state')}"
+										th:class="'error'" th:errors="*{opt_state}" class="text-danger">Select
+										state</label>
+								</div>
+								<input type="hidden" th:field="*{opt_state_name}" id="optedstatename">
+								<input type="hidden" th:field="*{opt_city_name}" id="optedcityname"> 
+
+								<div class="form-group col-md-5 ">
+									<label for="city" class="col-form-label">Select City</label>
+										
+										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" required>
+												<option  selected  value="">---Select City----</option>
+
+
+										</select>
+										<label th:if="${#fields.hasErrors('city')}"
+											th:class="'error'" th:errors="*{city}" class="text-danger">Select city</label>
+									</div>
+									
+									
+									<div id="proceed" class="form-group col-md-2 " style="margin-top: 3.5%;">
+									<a class="btn btn-primary" style="color:white;">Proceed</a>
+									
+									</div>
+
+								
+
+							
+							<div id="message" class="message"></div>
+							</div>
+							<div id="form-table" class="form-table">
+							
+							<div id="ralleyoptdetails" class="jumbotron" style="padding:3px 15px;">
+							
+							
+							</div>
+							<div class="promo-content">
+							
+							<h4 id="headingtitle">Rally Registration Form</h4>
+							<hr>
+						</div>
+						<h5>Personal Details:</h5>
+							<!--  form row -->
+							<div class="row" >
+							
+							<div class="form-group col-md-6">
+								<label for="Candidate Full Name:" class="col-form-label">Candidate Full Name (As per 10th Markseet)</label>
+								<input type="text" th:field="*{name}" 
+									class="form-control" id="name"  pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
+									<div id="errorname"  class="invalid-feedback">Please provide a valid Name.</div>
+									<span th:if="${#fields.hasErrors('name')}"  th:errors="*{name}" class="text-danger"></span>
+									<p id="verrorn"></p>
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="Father Name:" class="col-form-label">Father Full Name</label>
+								<input type="text" th:field="*{fathername}" 
+									class="form-control" id="fathername" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
+									<div class="invalid-feedback">Please provide a valid Name.</div>
+								<span th:if="${#fields.hasErrors('fathername')}"    th:errors="*{fathername}" class="text-danger"></span>
+								<p id="verrorf"></p>
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="emailid" class="col-form-label">Email id:</label>
+								<input type="email" th:field="*{emailid}" 
+									class="form-control" id="emailid" placeholder="Enter Email-Id" data-error="please enter valid Email" required>
+									<div class="invalid-feedback">Please provide a valid Email.</div>
+								<span th:if="${#fields.hasErrors('emailid')}"    th:errors="*{emailid}" class="text-danger"></span>
+								<p id="verrore"></p>
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="date" class="col-form-label">Date of Birth:</label>
+								<input type="date" th:field="*{dateOfBirth}" 
+									class="form-control" id="dateOfBirth" placeholder="Enter DOB" data-error="please enter valid DOB" required>
+									<div class="invalid-feedback">Please provide a valid DOB.</div>
+								<span th:if="${#fields.hasErrors('dateOfBirth')}"    th:errors="*{dateOfBirth}" class="text-danger"></span>
+								<p id="verrordob"></p>
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="mobile" class="col-form-label">Enter Mobile/Contact No.:</label>
+								<input type="text" th:field="*{contactno}" 
+									class="form-control" id="contactno" pattern="^[6-9]\d{9}$" placeholder="Enter contactno" data-error="please enter valid contactno" required>
+									<div class="invalid-feedback">Please provide a valid contactno.</div>
+								<span th:if="${#fields.hasErrors('contactno')}"    th:errors="*{contactno}" class="text-danger"></span>
+								<p id="verrormo"></p>
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="mobile" class="col-form-label">Enter Addhar No.:</label>
+								<input type="text" 
+									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" required>
+									<div class="invalid-feedback">Please provide a valid addhar.</div>
+								<span th:if="${#fields.hasErrors('aadhar_details')}"    th:errors="*{aadhar_details}" class="text-danger"></span>
+							</div>
+							
+							</div>
+							<div class="row">
+							<div class="form-group col-md-6">
+								<label for="height" class="col-form-label">Height (in cm):</label>
+								<input type="number" th:field="*{height}" 
+									class="form-control" id="height" placeholder="Enter height" data-error="please enter valid height" required>
+									<div class="invalid-feedback">Please provide a valid height.</div>
+								<span th:if="${#fields.hasErrors('height')}"    th:errors="*{height}" class="text-danger"></span>
+								<p id="verrorh"></p>
+							</div>
+								
+							<div class="form-group col-md-6">
+									<label for="martital" class="col-form-label">Maritial Status:</label>
+									<div style="padding:2% 1%;">
+									<div class="form-check form-check-inline col-3">
+										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${true}"  value="true">
+										 <label class="form-check-label" for="married">Married</label>
+									</div>
+									<div class="form-check form-check-inline col-8">
+										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${false}"  value="false">
+										 <label
+											class="form-check-label" for="unmarried"> Un-Married
+											 </label>
+											 <span th:if="${#fields.hasErrors('passed_exam_detail')}"
+											th:class="'error'">Select passing detail</span>
+										<div class="invalid-feedback">You need to select either
+											a option</div>
+											
+									</div>
+									</div>
+
+								</div>
+								
+								
+							
+							
+							<div class="form-group col-md-6">
+							<label for="state" class="col-form-label">State:</label> 
+							<select th:field="*{state}" id="stateSelect" class="form-control" required="true" >
+							<option th:value="''">---Select State----</option>
+							<option th:each="ralleystate : ${allStates}" th:value="${ralleystate.state_id}"
+								th:text="${ralleystate.state}">
+								</option>
+					</select>
+					<label th:if="${#fields.hasErrors('state')}"  th:class="'error'" th:errors="*{state}" >Select state</label>
+					</div>
+
+							<div class=" col-md-6">
+								<label for="city" class="col-form-label">City:</label> 
+								<select th:field="*{city}" id="citySelect" class="custom-select" required>
+									<option selected="selected" disabled="disabled"  value="">---Select City----</option>
+
+
+								</select>
+								<label th:if="${#fields.hasErrors('city')}"  th:class="'error'" th:errors="*{city}">Select city</label>
+							</div>
+								
+								
+							</div>
+							<h4>Educational Qualification.</h4>
+							
+								
+								
+							
+							
+							<div class="row">
+							
+								
+								
+								<div class="form-group col-md-6" id="grptrade">
+									<label for="pass">Select Group/Trade:</label>
+									<select class="form-control" id="selectgroup">
+									</select>
+									</div>
+									
+									
+									
+									
+									
+									<input type="hidden" th:field="*{opt_group_id}" id="groupSelectedValue"> 
+									<input type="hidden" th:field="*{optedGroupTrade}" id="groupSelectedText"> 
+									
+								
+								
+								
+								</div>
+								
+								<div>
+								
+								<div  style="padding-left: 1.5%;display:none;" id="upload" >
+								
+								
+								
+								<div class="row">
+							
+								<div class="form-group col-md-12">
+								Please Upload 10th Marksheet:
+								<div class="row">
+								<div class="form-group col-md-8">
+								<label class="col-form-label">
+								10th  Marksheet:<input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
+								</label>
+								</div>
+								
+								<div class="form-group col-md-4">
+								<p><label for="file" style="cursor: pointer;"></label></p>
+								<p><img id="output"  width="125px" /></p></div>
+								</div>
+								</div>
+								
+								</div>
+								
+								<div class="form-group col-md-6">
+									<label for="pass">Qualification Details:</label>
+									<div class="form-check ">
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}"
+										value="12th"  required> <label class="form-check-label" for="12th">12th passed </label>
+									</div>
+									<div class="form-check ">
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="other" required> <label
+											class="form-check-label" for="other"> Other/Diploma
+											 </label>
+											 <span th:if="${#fields.hasErrors('passed_exam_detail')}"
+											th:class="'error'">Select passing detail</span>
+										<div class="invalid-feedback">You need to select either
+											a option</div>
+											
+									</div>
+									
+									
+									
+
+								</div>
+								
+								
+								<div class="row">
+								
+								
+								
+								<span style="padding-left: 16px;">12th Pass Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
+								<div class="form-group col-md-8" style="padding-top: 1%;">
+								<label class="col-form-label">
+								<input type="file" name="XIIMarksheet" accept="image/*" id="XII_marksheet" onchange="loadFile(event)" class="form-control" required>
+								</label>
+								</div>
+								
+								<div class="form-group col-md-4">
+								<p><label for="file" style="cursor: pointer;"></label></p>
+								<p><img id="output2"  width="125px" /></p>
+								</div>
+								
+								</div>
+								
+								</div>
+								
+								
+								</div>
+								
+								
+								
+								
+								<div class="row">
+								
+								
+								<div class="row col-md-12">
+								<div class="form-group col-md-4">
+								<label for="Qualification Details:" class="col-form-label">Qualifying Degree <br/>Details:</label>
+								<input type="text" th:field="*{otherDetailPassedDetail}" 
+									class="form-control" id="other" placeholder="Qualification Details" data-error="please Qualification Details" required>
+									<div class="invalid-feedback">Please provide a valid Details.</div>
+								<span th:if="${#fields.hasErrors('otherDetailPassedDetail')}"    th:errors="*{otherDetailPassedDetail}" class="text-danger"></span>
+							<p id="verrordet"></p>
+							</div>
+							
+							<div class="form-group col-md-4">
+								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying Degree):</label>
+								<input type="number" th:field="*{passed_exam_percentage}" 
+									class="form-control" id="passed_exam" placeholder="Enter passing percentage" min="36" data-error="please enter valid passing percentage" required>
+									<div class="invalid-feedback">Please provide a valid passing percentage.</div>
+								<span th:if="${#fields.hasErrors('passed_exam_percentage')}"    th:errors="*{passed_exam_percentage}" class="text-danger"></span>
+							<p id="verrorpp"></p>
+							</div>
+							
+							<div class="form-group col-md-4">
+								<label for="engpassper" class="col-form-label">English Passing <br/>Percentage:</label>
+								<input type="number" th:field="*{english_percentage}" 
+									class="form-control" id="eng_passed_exam" placeholder="Enter english passing percentage" min="36" data-error="please enter valid english passing percentage" required>
+									<div class="invalid-feedback">Please provide a valid english passing percentage.</div>
+								<span th:if="${#fields.hasErrors('english_percentage')}"    th:errors="*{english_percentage}" class="text-danger"></span>
+							<p id="verrorepp"></p>
+							</div>
+							</div>
+							
+							
+							</div>
+							
+
+							<div class="row">
+							<div class="form-group col-12" style="margin: 16px 0;">
+								<div class="form-check" style="margin: 5px;font-weight: bold;">
+									<input class="form-check-input" type="checkbox" value=""
+										id="defaultCheck1" required> <label class="form-check-label"
+										for="defaultCheck1"> I have not filled up online registration form for the subject recruitment rally earlier.</label>
+								</div>
+
+										<div class="form-check" style="margin: 5px;font-weight: bold;">
+											<input class="form-check-input" type="checkbox" value=""
+												id="defaultCheck2" required> <label
+												class="form-check-label" for="defaultCheck2">
+												The information furnished
+												by me in the online registration form are correct to the
+												best of my knowledge. Further, I understand that my
+												candidature will be cancelled in case any information given
+												by me is found to be false or incorrect. </label>
+											<div class="invalid-feedback"></div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+								<div class="col-md-12">
+							<button type="submit" class="btn btn-primary" id="subform">Submit</button>
+							<button type="reset" class="btn btn-warning" id="remove">Reset</button>
+							</div>
+							</div>
+							</form>
+						</div>	
+
+						<!-- end form row -->
+					
+						
+						<!-- <div id="backlink" style="margin-top: 3%;">
+								<a href="homepage"> << Back to List page</a>
+							</div> -->
+						</div>
+					
+				
+
+				</section>
+				
+				
+  
+
+
+
+
+			
+
+
+
+			<div id="footerContent">
+				<footer class="footer" id="footerContent">
+					<!-- Footer Widget Section -->
+					<div class="footer-widget-section"
+						style="padding-top: 30px; padding-bottom: 30px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4>Get in touch with us</h4>
+										<address>
+											<strong>President</strong><br>Central Airmen Selection
+											Board<br> Brar Square,Delhi Cantt,<br /> New Delhi-110
+											010
+										</address>
+										<p>
+											CASB Reception (24/7) contact No. - <br /> <i
+												class="icon-phone"></i> (011) 25699606, (011) 25694209 <br>
+											<i class="icon-envelope-alt"></i> email:<img
+												style="padding-bottom: 6px;" alt=""
+												src="resources/img/email/emailfooter.PNG"> <br> <i
+												class="icon-envelope-alt"></i>www.airmenselection.cdac.in<br />
+											www.careerindianairforce.cdac.in
+										</p>
+										<a style="color: white; text-decoration: underline;"
+											target="_blank" href="https://casbcms.cdac.in">Help &
+											Support</a>
+									</div>
+
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4 style="padding-right: 50px;">Popular Links</h4>
+										<ul class="link-list" style="text-align: left;">
+											<li><a target="_blank" href="https://airmenselection.cdac.in/CASB/aboutcasb.html">About CASB</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/rankstructure.html">Rank Structure</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/eligibilityCriteria.html">Eligibility Criteria</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/trades_task.html">Trades &#38; Task</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/pay_perks.html">Pay &#38; Perks</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/airmenselectioncenter.html">Airmen Selection Centres</a></li> 
+            <li><a target="_blank" href="https://airmenselection.cdac.in/CASB/traininginstitution.html"> Training Institutes</a></li> 
+
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left; padding-right: 50px;">
+									<div class="widget">
+										<h4>Social</h4>
+										<div id="share-buttons">
+											
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.facebook.com/IndianAirForce/"
+														target="_blank"> <img th:src="@{vendor/image/Facebook.png}"
+														alt="Facebook" />@IndianAirForce
+													</a>
+												</div>
+											</div>
+											
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://twitter.com/iaf_mcc" target="_blank">
+														<img th:src="@{vendor/image/twitter.png}" alt="Twitter" />@iaf_mcc
+													</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.instagram.com/IndianAirForce_mcc"
+														target="_blank"> <img th:src="@{vendor/image/insta.png}"
+														alt="" />@IndianAirForce_mcc
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.Footer Widget Section -->
+					<div class="copyright-section">
+						<div class="container clearfix">
+							<span class="copytext">Copyright &copy; 2018 | <a
+								href="https://careerindianairforce.cdac.in/" target="_blank"
+								style="color: #3185ce">CASB, Indian Air Force</a> Designed And
+								Developed By: <strong style="color: #3185ce"> <abbr
+									style="border-bottom: none;"
+									title="Centre for Development of Advanced Computing &#xA; A Scientific Society of Ministry of Electronics &  Information Technology,Government of India"><a
+										target="_blank" href="http://www.cdac.in">C-DAC</a></abbr>
+							</strong></span>
+							<ul class="list-inline pull-right" style="display:flex;">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="aboutcasb.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</div>
+						<!-- .container -->
+					</div>
+					<!-- .copyright-section -->
+				</footer>
+			</div>
+			<!-- .footer -->
+		</div>
+
+		<!-- .content-wrapper -->
+	</div>
+	<!-- .offcanvas-pusher -->
+
+
+
+
+
+
+
+
+	<!-- Script -->
+	<script th:src="@{/vendor/js/customjs.js}"></script>
+	<script th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/vendor/js/bootstrap.min.js}"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+		<
+	<!-- <script src="resources/js/smoothscroll.js"></script> -->
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<script th:src="@{/vendor/js/scripts.js}"></script>
+	<script th:src="@{/vendor/js/plusminus.js}"></script>
+	<script th:src="@{/js/validation.js}"></script>
+	<script th:src="@{/js/validateaadhar.js}"></script>
+	<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+	<script type="text/javascript" th:src="@{/js/candidateRegistration.js}"></script>
+	<script>
+	$(document).ready(function() {
+	    
+	    $('#remove').on('click', function () {
+	    	 var forms = document.getElementById('form');
+	    	 forms.classList.remove('was-validated');
+	    	
+	    	
+	    });
+	    
+	    $('#aadhar').on("change, blur", function(e) {
+	    	var p=new RegExp("^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$");
+	    	var reg=p.test(e.target.value);
+	    	var aadhar =document.getElementById('aadhar');
+	    	if(!reg )
+	    		{
+	    		alert("Enter aadhar card no:"+e.target.value+" is invalid please type again");
+	    		e.target.value = "";
+	    		
+	    		}
+	    	else if(validate(e.target.value) === false)
+	    		{
+	    		
+		    		alert("Enter aadhar card no:"+e.target.value+" is invalid please type again");
+		    		e.target.value = "";
+		    		
+		    		
+	    		}
+	    	
+	    });
+	    
+	    
+	});
+	</script>
+	<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+    	 
+    		
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<script type="text/javascript">
+
+
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	var image2 = document.getElementById('output2');
+	
+    if(event.target.id === "X_marksheet")
+       image.src = URL.createObjectURL(event.target.files[0]);
+    else
+    	 image2.src = URL.createObjectURL(event.target.files[0]);
+    	
+};
+
+</script>
+
+</body>
+</html>

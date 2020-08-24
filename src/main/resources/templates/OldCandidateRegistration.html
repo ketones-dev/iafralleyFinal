@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="_csrf" th:content="${_csrf.token}"/>
+<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+<title>Create New Ralley</title>
+<style>
+.form-table{
+
+display:none;
+
+
+}
+.message{
+display:none;
+}
+
+.show{
+display:inline-block;
+}
+
+</style>
+
+</head>
+<body>
+	<div align="center" >
+		<h1>Ralley Registration Form</h1>
+		<br />
+		<form action="#" th:action="@{/registerCandidate}"
+			th:object="${ralleyCandidateDetails}" method="post">
+			<input type="hidden" th:value="${error}" id="error">
+			<input type="hidden" th:value="${optcity}" id="optcity">
+			<table border="1" cellpadding="3">
+			<tr>
+					<td>State</td>
+					<td><select th:field="*{opt_state}" id="ralleystateSelect" required="true" >
+							<option disabled selected th:value="''">---Select State----</option>
+							<option th:each="ralleystate : ${ralleyAllState}" th:value="${ralleystate.state_id}"
+								th:text="${ralleystate.state}"></option>
+					</select></td>
+					<td><label th:if="${#fields.hasErrors('opt_state')}"  th:class="'error'" th:errors="*{opt_state}" >Select state</label></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><select th:field="*{opt_city}" id="ralleycitySelect">
+							<option disabled selected value="">---Select City----</option>
+							
+							
+					</select>
+					</td>
+					<td><label th:if="${#fields.hasErrors('city')}"  th:class="'error'" th:errors="*{city}">Select city</label></td>
+				</tr>
+			
+			</table>
+			<div id="message" class="message"></div>
+
+			<table border="1" cellpadding="3" id="form-table" class="form-table">
+				<tr>
+					<td>Candidate Full Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+					<td><label th:if="${#fields.hasErrors('name')}"  th:class="'error'" th:errors="*{name}"></label></td>
+				</tr>
+
+				<tr>
+					<td>Father Name:</td>
+					<td><input type="text" th:field="*{fathername}" /></td>
+					<td><label th:if="${#fields.hasErrors('fathername')}"  th:class="'error'" th:errors="*{fathername}"></label></td>
+				</tr>
+				<tr>
+					<td>EmailID:</td>
+					<td><input type="email" th:field="*{emailid}" /></td>
+					<td><label th:if="${#fields.hasErrors('emailid')}"  th:class="'error'" th:errors="*{emailid}"></label></td>
+				</tr>
+				<tr>
+					<td>Date Of Birth:</td>
+					<td><input type="date" th:field="*{dateOfBirth}" /></td>
+					<td><label th:if="${#fields.hasErrors('dateOfBirth')}"  th:class="'error'" th:errors="*{dateOfBirth}"></label></td>
+				</tr>
+				<tr>
+					<td>Mobile/Contact No.:</td>
+					<td><input type="number" th:field="*{contactno}" /></td>
+					<td><label th:if="${#fields.hasErrors('contactno')}"  th:class="'error'" th:errors="*{contactno}"></label></td>
+					
+				</tr>
+
+				<tr>
+					<td>Qualification Detail</td>
+					<td><input type="radio" th:field="*{passed_exam_detail}"
+						value="12th" /><label>12th pass</label> <input type="radio"
+						th:field="*{passed_exam_detail}" value="other" /><label>Other</label>
+					</td>
+				
+				<td>
+					<label th:if="${#fields.hasErrors('passed_exam_detail')}"
+						th:class="'error'">Select passing detail</label>
+					</td>
+				</tr>
+				<tr>
+
+					<td>Other Qualification Detail:</td>
+					<td><input type="text" th:field="*{otherDetailPassedDetail}" id="other"  /></td>
+					 <td><label th:if="${#fields.hasErrors('otherDetailPassedDetail')}"  th:class="'error'" th:errors="*{otherDetailPassedDetail}"></label></td>
+
+				</tr>
+				<tr>
+
+					<td>Passing percentage:</td>
+					<td><input type="number" th:field="*{passed_exam_percentage}" /></td>
+					<td><label th:if="${#fields.hasErrors('passed_exam_percentage')}"  th:class="'error'" th:errors="*{passed_exam_percentage}"></label></td>
+
+				</tr>
+				<tr>
+
+					<td>English subject passing %:</td>
+					<td><input type="number" th:field="*{english_percentage}" /></td>
+					<td><label th:if="${#fields.hasErrors('english_percentage')}"  th:class="'error'" th:errors="*{english_percentage}"></label></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Married?</td>
+					<td><input type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${true}"     value="true"/>true
+					<input type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == false} ? ${true}" value="false"/>false</td>
+					
+				</tr>
+
+
+				<tr>
+					
+					<td>Height(in cm)</td>
+					<td><input type="number" th:field="*{height}" /></td>
+					<td><label th:if="${#fields.hasErrors('height')}"  th:class="'error'" th:errors="*{height}"></label></td>
+					
+
+				</tr>
+				<tr>
+					<td>State</td>
+					<td><select th:field="*{state}" id="stateSelect" required="true" >
+							<option th:value="''">---Select State----</option>
+							<option th:each="ralleystate : ${allStates}" th:value="${ralleystate.state_id}"
+								th:text="${ralleystate.state}"></option>
+					</select></td>
+					<td><label th:if="${#fields.hasErrors('state')}"  th:class="'error'" th:errors="*{state}" >Select state</label></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><select th:field="*{city}" id="citySelect">
+							<option disabled selected value="0">---Select City----</option>
+							
+							
+					</select>
+					</td>
+					<td><label th:if="${#fields.hasErrors('city')}"  th:class="'error'" th:errors="*{city}">Select city</label></td>
+				</tr>
+
+
+				<tr>
+					<td colspan="1"><button type="submit">Save</button></td>
+					<td colspan="1"><button type="reset">reset</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+	<script type="text/javascript" th:src="@{/js/candidateRegistration.js}"></script>
+	<script>
+	
+	</script>
+</body>
+</html>

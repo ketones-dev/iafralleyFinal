@@ -1,0 +1,11 @@
+23:58:30.048 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19460 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+23:58:30.074 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+23:58:37.237 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+23:58:37.238 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+23:58:37.673 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+23:58:38.614 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:58:38.889 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+23:58:39.592 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+23:58:41.862 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+23:58:46.073 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23:58:47.709 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Stopping service [Tomcat]

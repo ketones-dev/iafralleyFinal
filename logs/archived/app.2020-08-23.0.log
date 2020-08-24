@@ -1,0 +1,1043 @@
+13:09:26.728 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+13:09:26.820 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+13:09:28.204 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+13:09:28.205 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+13:09:28.281 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+13:09:28.908 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:09:30.822 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+13:09:32.362 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+13:09:33.897 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+13:09:37.425 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13:09:41.386 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+13:09:42.603 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 16.722 seconds (JVM running for 17.789)
+13:09:45.987 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:10:06.802 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:10:07.566 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:11:36.014 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:11:36.210 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:14:38.637 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:14:39.005 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:15:45.617 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:15:45.858 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:17:01.565 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:17:02.675 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:20:43.640 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:20:44.089 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:22:35.520 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:22:35.905 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:27:05.906 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:27:06.925 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:27:58.036 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:27:58.389 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:28:16.161 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:28:16.549 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:30:16.814 [http-nio-9091-exec-10] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:30:17.130 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:30:38.397 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:30:38.694 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:31:25.847 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:31:26.130 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:32:01.808 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:32:02.435 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:33:20.840 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:33:21.309 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:34:35.951 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:34:36.323 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:35:42.441 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:35:43.158 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:40:00.126 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:40:00.513 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:40:11.832 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:40:12.293 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:41:35.298 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:41:35.689 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:42:02.734 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:42:03.288 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:42:18.429 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:42:18.798 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:43:25.810 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:43:26.048 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:43:37.161 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:43:37.407 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:45:51.928 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:45:52.199 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:46:44.679 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:46:44.926 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:51:51.310 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:51:51.717 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+13:54:17.569 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:54:17.818 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:02:19.171 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:02:19.697 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:03:01.203 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:03:01.440 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:03:44.302 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:03:45.525 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:04:10.391 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+14:04:15.173 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:04:15.446 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:07:09.845 [http-nio-9091-exec-10] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:07:10.164 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:09:57.541 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:09:57.805 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:10:45.684 [http-nio-9091-exec-10] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:10:45.930 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:12:51.686 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:12:51.982 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:13:13.211 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:13:13.494 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:16:19.063 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:16:19.418 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:16:38.481 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:16:38.762 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:18:16.139 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:18:16.404 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:18:30.676 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:18:31.090 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:19:12.225 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:19:12.477 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:19:35.366 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:19:35.638 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:20:04.902 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:20:05.168 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:20:28.635 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:20:28.984 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:21:52.526 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:21:52.829 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:22:20.255 [http-nio-9091-exec-8] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:22:20.507 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+14:22:26.274 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:22:26.799 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:22:52.898 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:22:53.301 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:23:25.114 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+14:25:15.239 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:25:15.465 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:25:32.023 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:25:47.200 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:25:47.238 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:25:47.546 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:32:35.463 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:32:40.428 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:32:40.437 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:32:40.449 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:34:12.407 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:34:16.318 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:34:16.328 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:34:16.339 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:35:18.781 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:35:25.227 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:35:25.267 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:35:25.352 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:35:41.231 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:35:46.327 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:35:46.369 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:35:46.450 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:38:01.099 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:38:01.371 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:38:18.135 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:38:18.355 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:38:36.579 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:38:36.979 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:43:47.524 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:43:47.946 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:45:00.283 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:45:00.519 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:46:38.452 [http-nio-9091-exec-3] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:46:38.712 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:47:29.304 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:47:29.571 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:48:15.011 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:48:20.069 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:600and registred students:13
+14:48:20.080 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Recruitment Ralley  Indore</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-20</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:52:16.155 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+14:53:39.915 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:53:45.014 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+14:53:45.024 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:53:45.035 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+14:53:59.116 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:53:59.654 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:54:39.864 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:54:40.165 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+14:54:59.772 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=6, city=Jaipur]]
+14:55:59.742 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:56:07.037 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:700and registred students:2
+14:56:07.050 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Jaipur</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:56:07.149 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [3, 4]
+14:59:01.266 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:59:08.145 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:700and registred students:2
+14:59:08.229 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Jaipur</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:59:08.270 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [3, 4]
+15:01:45.902 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:01:50.602 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:3500and registred students:1
+15:01:50.681 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-24</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:01:50.695 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+15:04:27.808 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:04:32.627 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+15:04:32.646 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:04:32.758 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+15:05:08.724 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:05:13.078 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:3500and registred students:1
+15:05:13.108 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-24</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:05:13.120 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+15:06:11.814 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:06:16.351 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+15:06:16.366 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:06:16.396 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+15:06:44.245 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:06:47.808 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:3500and registred students:1
+15:06:47.819 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-24</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:06:47.861 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+15:07:04.827 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+15:07:04.907 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:07:04.922 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+15:07:14.288 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:700and registred students:2
+15:07:14.326 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Jaipur</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:07:14.342 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [3, 4]
+15:07:33.021 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+15:07:33.067 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:07:33.079 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+15:09:07.659 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:09:10.550 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:820and registred students:25
+15:09:10.563 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-21</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:09:10.574 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+15:09:20.045 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:3500and registred students:1
+15:09:20.059 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-24</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:09:20.072 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+15:09:27.740 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:22:13.730 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:22:13.731 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:22:18.326 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:22:18.327 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:22:18.363 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:22:18.421 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:22:19.166 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:22:20.471 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:22:20.956 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:22:21.059 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 7.708 seconds (JVM running for 7975.956)
+15:25:14.238 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:25:14.239 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:25:14.727 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:25:14.727 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:25:14.741 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:25:14.792 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:25:15.121 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:25:15.298 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:25:15.557 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:25:15.630 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.454 seconds (JVM running for 8150.526)
+15:26:17.197 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:26:17.197 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:26:17.609 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:26:17.609 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:26:17.621 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:26:17.671 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:26:18.095 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:26:18.269 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:26:18.396 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Stopping service [Tomcat]
+15:26:23.555 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:26:23.555 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:26:23.970 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:26:23.970 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:26:23.982 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:26:24.049 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:26:24.614 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:26:25.108 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:26:25.348 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:26:25.423 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.901 seconds (JVM running for 8220.318)
+15:31:58.837 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:31:58.837 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:31:59.250 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:31:59.250 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:31:59.263 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:31:59.319 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:31:59.726 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:31:59.884 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:32:00.171 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:32:00.244 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.436 seconds (JVM running for 8555.139)
+15:35:05.613 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:35:05.613 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:35:06.114 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:35:06.114 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:35:06.125 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:35:06.177 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:35:06.642 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:06.807 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:35:07.062 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:35:07.157 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.575 seconds (JVM running for 8742.052)
+15:35:15.193 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:35:15.193 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:35:16.110 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:35:16.111 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:35:16.135 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:35:16.253 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:35:16.611 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:16.764 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:35:17.467 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:35:17.541 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.408 seconds (JVM running for 8752.436)
+15:35:52.908 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:35:52.908 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:35:53.766 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:35:53.766 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:35:53.792 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:35:53.910 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:35:54.672 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:35:55.030 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:35:55.480 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:35:55.562 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.689 seconds (JVM running for 8790.456)
+15:36:30.020 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:36:30.020 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:36:30.475 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:36:30.475 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:36:30.488 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:36:30.542 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:36:30.929 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:36:31.085 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:36:31.332 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:36:31.412 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.421 seconds (JVM running for 8826.307)
+15:37:34.868 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:37:34.868 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:37:36.014 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:37:36.015 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:37:36.027 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:37:36.077 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:37:36.381 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:37:36.534 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:37:36.785 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:37:36.858 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.024 seconds (JVM running for 8891.752)
+15:37:40.453 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:37:51.625 [http-nio-9091-exec-10] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:37:52.086 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+15:38:04.818 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+15:38:05.868 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+15:39:01.160 [http-nio-9091-exec-5] INFO  c.c.i.e.GlobalExceptionHandler:37 - inside
+15:39:43.727 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+15:39:43.727 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+15:39:44.145 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+15:39:44.145 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+15:39:44.198 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+15:39:44.261 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:39:44.655 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+15:39:44.807 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:39:45.049 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+15:39:45.143 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.446 seconds (JVM running for 9020.037)
+15:39:50.277 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:49:15.661 [http-nio-9091-exec-10] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:49:16.022 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+15:49:23.278 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:49:48.378 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+15:52:37.286 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:52:37.655 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+15:52:49.707 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+15:52:50.319 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+15:54:27.772 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:54:34.045 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+15:54:34.065 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:54:34.089 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+15:59:07.266 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+15:59:13.489 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+15:59:13.571 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+15:59:13.620 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:02:33.250 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:02:39.426 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:02:39.463 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:02:39.591 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:02:39.591 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:05:26.526 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:05:29.873 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:05:29.884 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:05:29.955 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:06:09.802 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:06:13.677 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:06:13.689 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:06:13.690 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:06:48.657 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:06:51.827 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:06:51.839 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:06:51.840 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:06:57.107 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:07:15.770 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:07:19.226 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:07:19.239 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:07:19.239 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:07:31.843 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:07:35.104 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:07:35.113 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:07:35.130 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:09:10.997 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:09:15.201 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:09:15.211 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:09:15.223 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:09:15.223 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:09:26.189 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:09:35.888 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:09:35.905 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:09:36.034 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:09:36.035 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:11:21.276 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:11:25.413 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:11:25.431 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:11:25.494 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:12:04.090 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:12:09.088 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:12:09.103 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:12:09.118 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:13:28.422 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+16:13:28.423 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+16:13:30.352 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+16:13:30.352 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+16:13:30.377 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+16:13:30.499 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:13:31.030 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:13:31.299 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:13:31.671 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+16:13:31.756 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 3.487 seconds (JVM running for 11046.643)
+16:13:38.023 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:13:38.037 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:13:43.555 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:13:43.572 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:13:43.592 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:15:52.782 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+16:15:52.783 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+16:15:53.463 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+16:15:53.463 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+16:15:53.476 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+16:15:53.527 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:15:53.877 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:15:54.047 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:15:54.413 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+16:15:54.511 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.764 seconds (JVM running for 11189.398)
+16:15:54.671 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:15:54.685 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:15:59.589 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:15:59.609 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:15:59.681 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:17:24.211 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:17:28.814 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:17:28.831 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:17:28.846 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:19:33.569 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:19:36.262 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:19:36.279 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:19:36.345 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:19:36.346 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:20:34.189 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:20:37.873 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:20:37.888 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:20:37.905 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:21:39.239 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:21:42.447 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:21:42.463 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:21:42.480 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:23:21.324 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:23:24.575 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:23:24.590 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:23:24.620 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:23:24.621 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:23:52.866 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:23:56.705 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:23:56.718 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:23:56.753 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:23:56.753 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:25:15.803 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:25:20.923 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:25:20.942 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:25:21.052 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:25:21.209 [http-nio-9091-exec-8] INFO  c.c.i.e.GlobalExceptionHandler:46 - inside
+16:29:48.291 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:29:57.755 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:29:57.784 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:29:57.858 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:30:15.516 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+16:30:15.517 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+16:30:17.082 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+16:30:17.083 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+16:30:17.121 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+16:30:17.312 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:30:18.002 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:30:18.197 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:30:18.488 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+16:30:18.569 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 3.202 seconds (JVM running for 12053.454)
+16:30:18.595 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:30:18.608 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:30:23.647 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:30:23.662 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:30:23.679 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:30:23.771 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:30:23.772 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:31:33.463 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:31:37.537 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:31:37.554 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:31:37.572 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:31:37.698 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:31:37.699 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:32:02.554 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:32:05.539 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:25
+16:32:05.550 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:32:05.567 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:32:05.584 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:32:05.584 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+16:33:27.486 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+16:33:34.817 [http-nio-9091-exec-5] INFO  c.c.i.c.RalleyRegistrationFormController:135 - error:false
+16:33:34.818 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+16:33:34.845 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+16:33:34.846 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+16:33:34.846 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+16:33:34.965 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+16:33:34.983 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:rahul@gmail.com Genrated Candidate registration ID:PE201500058
+16:33:34.983 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+16:33:35.088 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+16:33:35.089 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+16:33:35.089 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+16:33:36.286 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:33:36.286 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:33:36.439 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:33:36.439 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:33:36.440 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+16:33:36.440 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:109 - file1:PE201500058_X_marksheet.jpeg file2:PE201500058_XII_marksheet.jpeg
+16:33:36.440 [http-nio-9091-exec-5] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+16:33:36.478 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Rahul, fathername=Mishra, emailid=rahul@gmail.com, dateOfBirth=Fri Jun 01 00:00:00 IST 2018, contactno=9763930238, passed_exam_detail=12th, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=903992853980, passed_exam_percentage=60, english_percentage=60, maritial_status=true, height=150, city=Pune, state=Maharashtra, opt_city=1, opt_state=1, opt_city_name=Pune, opt_state_name=Maharashtra,opt_group_id=2, venu_details=null, ximagePath=PE201500058/PE201500058_X_marksheet.jpeg, xiiimagePath=PE201500058/PE201500058_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=PE201500058]
+16:33:36.721 [http-nio-9091-exec-5] INFO  c.c.i.c.RalleyRegistrationFormController:184 - Form submitted successfully.
+16:33:40.710 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:35:47.374 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:35:53.336 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:1
+16:35:53.457 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-10-09 to 2020-10-10</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:35:53.537 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [3, 4]
+16:35:53.548 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-01-01
+16:35:53.549 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-01
+16:40:49.734 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:40:50.115 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+16:41:31.132 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:41:31.313 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+16:43:23.350 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:43:23.531 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+16:44:09.510 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:11.522 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:13.374 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:15.557 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:17.087 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:21.448 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:22.753 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:24.538 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+16:44:29.988 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+16:44:30.004 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+16:44:30.053 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+16:44:30.075 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+16:44:30.076 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+17:08:32.891 [http-nio-9091-exec-1] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:08:33.710 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+17:10:33.281 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:10:44.377 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+17:10:44.392 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+17:10:44.442 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+17:10:44.486 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+17:10:44.486 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+17:14:13.676 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:14:51.962 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+17:14:52.010 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+17:14:52.025 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+17:14:52.046 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+17:14:52.047 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+18:09:26.898 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:12:15.844 [http-nio-9091-exec-7] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:12:16.100 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+18:15:22.457 [http-nio-9091-exec-2] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:15:23.061 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+18:16:56.675 [http-nio-9091-exec-4] INFO  c.c.i.e.GlobalExceptionHandler:37 - inside
+18:16:59.730 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:17:05.226 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+18:17:05.249 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+18:17:05.319 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+18:17:05.388 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+18:17:05.389 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+18:41:40.058 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:51:20.512 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+18:51:20.527 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+18:51:20.544 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+18:51:20.592 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+18:51:20.592 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:05:58.266 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:06:30.485 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:06:30.496 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:06:30.506 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:06:30.526 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:06:30.527 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:06:46.929 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:09:48.323 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:09:59.414 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:09:59.426 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:09:59.452 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:09:59.552 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:09:59.553 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:10:05.952 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:11:40.740 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:13:26.313 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:14:35.566 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:15:03.319 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:15:18.496 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:15:18.510 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:15:18.559 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:15:18.606 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:15:18.633 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:18:35.606 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:18:44.068 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:18:58.122 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:19:20.017 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:19:47.155 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:20:00.542 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:21:02.147 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:21:08.283 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:21:08.300 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:21:08.316 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:21:08.382 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:21:08.382 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:22:15.330 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:22:19.442 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:22:19.455 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:22:19.465 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:22:19.476 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:22:19.477 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:22:43.158 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:22:52.884 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:23:22.312 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:23:59.594 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:24:13.308 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:24:13.335 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:24:13.376 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:24:13.386 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:24:13.387 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:24:18.393 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:24:23.811 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:24:23.828 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Ralley details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:24:23.845 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:24:23.909 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:24:23.909 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:26:22.639 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+19:26:22.639 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+19:26:25.253 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+19:26:25.254 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+19:26:25.301 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+19:26:25.380 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:26:25.951 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:26:26.399 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:26:26.807 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+19:26:26.895 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 4.618 seconds (JVM running for 22621.78)
+19:26:30.788 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:26:31.322 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:26:36.173 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:26:36.189 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:26:36.204 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:26:36.309 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:26:36.310 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:26:39.916 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:26:45.859 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:26:45.878 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:26:45.893 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:26:45.944 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:26:45.945 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:29:20.299 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:29:25.605 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:29:25.933 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:29:25.949 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:29:25.966 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:29:25.967 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:31:11.023 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:31:13.891 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:31:13.901 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:31:13.909 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:31:13.920 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:31:13.921 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:49:03.320 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:49:06.706 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:49:06.721 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:49:06.733 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:49:06.743 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:49:06.743 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:51:11.321 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:51:16.199 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:51:16.213 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:51:16.226 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:51:16.238 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:51:16.239 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:53:35.936 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:53:38.819 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:53:38.829 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:53:38.838 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:53:38.850 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:53:38.850 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:57:56.470 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:58:00.012 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:58:00.023 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:58:00.036 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:58:00.053 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:58:00.053 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+19:59:17.463 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:59:20.904 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+19:59:20.913 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+19:59:20.923 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+19:59:20.935 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+19:59:20.936 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:01:45.172 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:01:47.679 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:01:47.690 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:01:47.700 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:01:47.709 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:01:47.710 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:02:57.758 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:03:00.397 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:03:00.407 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:03:00.416 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:03:00.427 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:03:00.427 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:03:09.526 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:03:11.977 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:03:11.987 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:03:11.995 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:03:12.006 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:03:12.007 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:04:20.772 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:04:23.264 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:04:23.274 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:04:23.285 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:04:23.297 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:04:23.297 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:08:10.219 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:08:13.691 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:08:13.702 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:08:13.711 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:08:13.724 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:08:13.724 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:09:22.447 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:09:24.936 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:09:24.945 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:09:24.956 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:09:24.968 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:09:24.969 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:10:21.454 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:10:23.708 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:10:23.721 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:10:23.733 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:10:23.744 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:10:23.744 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:11:16.400 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:11:20.459 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:11:20.471 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:11:20.483 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:11:20.507 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:11:20.508 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:28:39.730 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:28:44.094 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:28:44.118 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:28:44.145 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:28:44.165 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:28:44.166 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:32:31.852 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:32:36.755 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:32:36.768 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:32:36.793 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:32:36.816 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:32:36.816 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:37:14.917 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:37:19.357 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:37:19.377 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:37:19.394 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:37:19.446 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:37:19.447 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:57:45.720 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:57:50.674 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:57:50.692 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:57:50.705 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:57:50.843 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:57:50.879 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+20:59:16.538 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:59:22.527 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+20:59:22.541 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+20:59:22.586 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+20:59:22.627 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+20:59:22.627 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:04:39.917 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:04:43.621 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:04:43.637 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:04:43.653 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:04:43.679 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:04:43.680 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:09:30.814 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:09:38.845 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:09:38.867 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:09:38.940 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:09:39.011 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:09:39.012 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:15:30.281 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:15:33.954 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:15:33.967 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:15:33.980 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:15:33.992 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:15:33.993 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:17:39.169 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:17:43.435 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:17:43.451 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:17:43.462 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:17:43.474 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:17:43.474 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:19:23.789 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:19:29.835 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:22:53.067 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:23:00.382 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:23:44.489 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:29:08.632 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:29:11.714 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:29:11.733 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:29:11.750 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:29:11.782 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:29:11.782 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:29:56.394 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:30:00.167 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:30:00.190 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:30:00.227 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:30:00.246 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:30:00.247 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:30:58.354 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:31:03.271 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:31:03.288 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:31:03.305 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:31:03.361 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:31:03.362 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:32:22.360 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:32:25.816 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:32:25.831 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:32:25.847 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:32:26.020 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:32:26.021 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:35:45.778 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:35:50.173 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:35:50.194 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:35:50.237 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:35:50.262 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:35:50.263 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:38:47.116 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:38:52.675 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:38:52.691 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:38:52.707 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:38:52.738 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:38:52.738 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:40:57.884 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:41:02.028 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:41:02.045 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:41:02.061 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:41:02.083 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:41:02.083 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:42:06.383 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:42:09.978 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:42:09.991 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:42:10.010 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:42:10.039 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:42:10.039 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:43:10.693 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:43:15.067 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:43:15.080 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:43:15.098 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:43:15.121 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:43:15.121 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:43:38.147 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:43:42.932 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:43:42.952 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:43:42.979 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:43:42.998 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:43:42.998 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:46:08.756 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:46:12.789 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:46:12.816 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:46:12.831 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:46:12.857 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:46:12.857 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:47:30.976 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:47:34.409 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:47:34.472 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:47:34.556 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:47:34.635 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:47:34.636 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+21:53:46.137 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+21:53:50.744 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+21:53:50.761 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+21:53:50.787 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+21:53:50.808 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+21:53:50.809 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+22:36:30.301 [http-nio-9091-exec-10] WARN  o.a.c.util.SessionIdGeneratorBase:173 - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [122] milliseconds.
+22:36:43.114 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+22:58:37.915 [http-nio-9091-exec-5] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+22:58:41.796 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:00:47.228 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:00:47.587 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:01:36.825 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:01:37.035 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:04:00.006 [http-nio-9091-exec-10] INFO  c.c.i.e.GlobalExceptionHandler:37 - inside
+23:04:03.730 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:04:09.142 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:04:09.175 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:04:09.259 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:04:09.278 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:04:09.278 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:04:35.011 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:04:39.184 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:04:39.203 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:04:39.212 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:04:39.225 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:04:39.225 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:13:55.452 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:13:56.011 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:19:12.358 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:24:57.122 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:25:23.764 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:25:31.292 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:25:31.306 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:25:31.318 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:25:31.331 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:25:31.331 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:26:52.176 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:27:32.764 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:28:06.280 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:28:16.108 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:28:16.119 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:28:16.131 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:28:16.143 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:28:16.144 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:28:32.920 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:28:32.932 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:28:32.946 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:28:32.958 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:28:32.958 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:34:48.849 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:34:53.485 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:26
+23:34:53.501 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:34:53.517 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:34:53.535 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:34:53.535 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:36:43.496 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+23:36:51.229 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:135 - error:false
+23:36:51.230 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+23:36:51.277 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+23:36:51.278 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+23:36:51.278 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+23:36:51.368 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+23:36:51.699 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketooo@gmail.com Genrated Candidate registration ID:PE201500059
+23:36:51.700 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+23:36:51.893 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+23:36:51.894 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+23:36:51.895 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+23:36:52.920 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:36:52.921 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:36:53.162 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:36:53.162 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:36:53.174 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+23:36:53.175 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:109 - file1:PE201500059_X_marksheet.jpeg file2:PE201500059_XII_marksheet.jpeg
+23:36:53.175 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+23:36:53.275 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=ketan tank, fathername=Manish Tank, emailid=ketooo@gmail.com, dateOfBirth=Fri Jul 01 00:00:00 IST 2011, contactno=9763930238, passed_exam_detail=12th, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=644393383428, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150, city=Pune, state=Maharashtra, opt_city=1, opt_state=1, opt_city_name=Pune, opt_state_name=Maharashtra,opt_group_id=1, venu_details=null, ximagePath=PE201500059/PE201500059_X_marksheet.jpeg, xiiimagePath=PE201500059/PE201500059_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=PE201500059]
+23:36:53.955 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:184 - Form submitted successfully.
+23:44:08.206 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+23:44:08.206 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+23:44:14.486 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+23:44:14.486 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+23:44:14.514 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+23:44:14.575 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:44:15.048 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+23:44:16.133 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23:44:17.045 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+23:44:17.128 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 9.327 seconds (JVM running for 38091.884)
+23:44:42.074 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:44:42.133 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:44:49.565 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:27
+23:44:49.896 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:44:49.911 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:44:49.988 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:44:49.989 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:45:57.479 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+23:46:03.858 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+23:46:03.858 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+23:46:03.861 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+23:46:03.862 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+23:46:03.862 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+23:46:03.865 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+23:46:03.867 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketankdjf@g.com Genrated Candidate registration ID:PE201500060
+23:46:03.868 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+23:46:03.871 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+23:46:03.872 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+23:46:03.872 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+23:46:04.306 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:46:04.306 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:46:04.354 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:46:04.354 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:46:04.355 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+23:46:04.355 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:109 - file1:PE201500060_X_marksheet.jpeg file2:PE201500060_XII_marksheet.jpg
+23:46:04.355 [http-nio-9091-exec-3] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+23:46:04.358 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=keekd, fathername=kdkd, emailid=ketankdjf@g.com, dateOfBirth=Wed Jun 01 00:00:00 IST 2016, contactno=9763930238, passed_exam_detail=12th, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=644393383428, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150, city=Pune, state=Maharashtra, opt_city=1, opt_state=1, opt_city_name=Pune, opt_state_name=Maharashtra,opt_group_id=1, venu_details=null, ximagePath=PE201500060/PE201500060_X_marksheet.jpeg, xiiimagePath=PE201500060/PE201500060_XII_marksheet.jpg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=PE201500060]
+23:46:04.425 [http-nio-9091-exec-3] INFO  c.c.i.mailConfig.MailingService:49 - Data saved for candidate+ketankdjf@g.comprepraring for sending mail using server:smtpb.pune.cdac.in
+23:46:04.425 [http-nio-9091-exec-3] INFO  c.c.i.mailConfig.MailingService:65 - Setting message in mimeMessage for candidate:ketankdjf@g.com
+23:46:04.798 [http-nio-9091-exec-3] INFO  c.c.i.mailConfig.MailingService:103 - sending mail via server with host:smtpb.pune.cdac.in
+23:46:04.956 [http-nio-9091-exec-3] INFO  c.c.i.mailConfig.MailingService:107 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+23:46:13.247 [http-nio-9091-exec-3] INFO  c.c.i.mailConfig.MailingService:116 - error in sending mail via server with host:smtp.cdac.in
+ pepare alternate server to send mail
+23:46:15.877 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:185 - Form submitted successfully.
+23:46:56.487 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:50:08.773 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:28
+23:50:08.819 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:50:08.870 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:50:08.890 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:50:08.891 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:50:58.606 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+23:51:04.576 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+23:51:04.577 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+23:51:04.580 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+23:51:04.581 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+23:51:04.582 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+23:51:05.206 [http-nio-9091-exec-8] INFO  c.c.i.a.a.PointCutLogTraceImplServiceLayer:19 - Exception in class:com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl ::method:save: with cause:Either emailid:ketutankqwqw11@gmail.comor aadhar644393383428 is already registered on this portal
+23:51:05.209 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:51:13.963 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:28
+23:51:13.973 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:51:13.982 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:51:13.992 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:51:13.993 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
+23:52:33.585 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+23:52:39.289 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+23:52:39.289 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+23:52:39.293 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+23:52:39.294 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+23:52:39.294 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+23:52:39.296 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+23:52:39.296 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:kqwerfvbu@g.com Genrated Candidate registration ID:PE201500061
+23:52:39.297 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+23:52:39.297 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+23:52:39.298 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+23:52:39.298 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+23:52:40.255 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:52:40.256 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:52:40.408 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:52:40.408 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:52:40.408 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+23:52:40.408 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:109 - file1:PE201500061_X_marksheet.jpeg file2:PE201500061_XII_marksheet.jpeg
+23:52:40.409 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+23:52:40.494 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan tank, fathername=kjkj, emailid=kqwerfvbu@g.com, dateOfBirth=Wed Jun 04 00:00:00 IST 2014, contactno=9763930238, passed_exam_detail=12th, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=644393383428, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150, city=Pune, state=Maharashtra, opt_city=1, opt_state=1, opt_city_name=Pune, opt_state_name=Maharashtra,opt_group_id=1, venu_details=null, ximagePath=PE201500061/PE201500061_X_marksheet.jpeg, xiiimagePath=PE201500061/PE201500061_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=PE201500061]
+23:52:40.641 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:49 - Data saved for candidate+kqwerfvbu@g.comprepraring for sending mail using server:smtpb.pune.cdac.in
+23:52:40.642 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:65 - Setting message in mimeMessage for candidate:kqwerfvbu@g.com
+23:52:40.693 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:103 - sending mail via server with host:smtpb.pune.cdac.in
+23:52:40.806 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:107 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+23:52:42.812 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:116 - error in sending mail via server with host:smtp.cdac.in
+ pepare alternate server to send mail
+23:52:45.484 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:185 - Form submitted successfully.
+23:57:49.504 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 9892 (C:\Users\Ketan\Downloads\New folder\iafralley\iafralley\target\classes started by Ketan in C:\Users\Ketan\Downloads\New folder\iafralley\iafralley)
+23:57:49.505 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+23:57:50.987 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+23:57:50.987 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+23:57:51.004 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring embedded WebApplicationContext
+23:57:51.058 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:57:51.656 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+23:57:52.297 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23:57:52.665 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+23:57:52.745 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 3.417 seconds (JVM running for 38907.501)
+23:58:25.132 [http-nio-9091-exec-2] INFO  o.a.c.c.C.[.[localhost].[/IAFRalley]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:58:26.114 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:58:30.558 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:1000and registred students:29
+23:58:30.570 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Pune</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-19</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+23:58:30.582 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2]
+23:58:30.647 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1995-10-11
+23:58:30.648 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2020-01-08
