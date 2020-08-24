@@ -225,7 +225,7 @@ display:inline-block;
 								<div class="form-group col-md-5 ">
 									<label for="state" class="col-form-label">Select State</label>
 									<select th:field="*{opt_state}" id="ralleystateSelect"
-										required="true" class="form-control" >
+										 class="form-control" >
 										<option th:value="''">---Select State----</option>
 										<option th:each="ralleystate : ${ralleyAllState}"
 											th:value="${ralleystate.state_id}"
@@ -240,7 +240,7 @@ display:inline-block;
 								<div class="form-group col-md-5 ">
 									<label for="city" class="col-form-label">Select City</label>
 										
-										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" required>
+										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" >
 												<option  selected  value="">---Select City----</option>
 
 
