@@ -323,7 +323,7 @@ display:inline-block;
 							<div class="form-group col-md-6">
 								<label for="mobile" class="col-form-label">Enter Addhar No.:</label>
 								<input type="text" 
-									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" required>
+									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" >
 									<div class="invalid-feedback">Please provide a valid addhar.</div>
 								<span th:if="${#fields.hasErrors('aadhar_details')}"    th:errors="*{aadhar_details}" class="text-danger"></span>
 							</div>
