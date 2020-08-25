@@ -66,6 +66,28 @@ display:none;
 .show{
 display:inline-block;
 }
+
+.section-heading{
+
+color: white;
+background-image: linear-gradient(145deg, #5ca0f2 0%, #f5f7f6 108%);
+padding: 3px 0px 5px 12px;
+font-variant-caps: small-caps;
+
+}
+
+.upload-section{
+border: 2px solid #969696b0;
+padding: 2rem;
+
+}
+
+.extra-info{
+
+style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
+
+}
+
 </style>
 
 </head>
@@ -261,8 +283,28 @@ display:inline-block;
 							<div id="message" class="message"></div>
 							</div>
 							<div id="form-table" class="form-table">
-							
-							<div id="ralleyoptdetails" class="jumbotron" style="padding:3px 15px;">
+								<div class="container-fluid">
+									<div class="row"
+										style="padding: 15px; align-content: center; align-items: center;">
+										<div class="col-lg-2">
+											<img
+												src="https://www.eqmagpro.com/wp-content/uploads/2019/02/INVITATION-OF-QUOTATION-FOR-SUPPLY-AND-INSTALLATION-OF-OFF-GRID-SOLAR-POWER-SYSTEM.png"
+												alt="logo" style="width: 100px;">
+										</div>
+										<div class="" style="margin: 0 auto;">
+											<h2 style="text-align: center; color: black;">
+												Indian Air Force offers opportunities for<br> <b>MALE
+													INDIAN CITIZENS</b>
+											</h2>
+										</div>
+										<div class="col-md-2">
+											<img alt="logo" style="width: 100px;"
+												src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Roundel_of_India.svg/240px-Roundel_of_India.svg.png">
+										</div>
+									</div>
+								</div>
+
+								<div id="ralleyoptdetails" class="jumbotron" style="padding:3px 15px;">
 							
 							
 							</div>
@@ -271,7 +313,7 @@ display:inline-block;
 							<h4 id="headingtitle">Rally Registration Form</h4>
 							<hr>
 						</div>
-						<h5>Personal Details:</h5>
+						<h5 class="section-heading">Personal Details:</h5>
 							<!--  form row -->
 							<div class="row" >
 							
@@ -387,21 +429,25 @@ display:inline-block;
 								
 								
 							</div>
-							<h4>Educational Qualification.</h4>
+							
+							<hr>
+							<h4 class="section-heading">Educational Qualification.</h4>
 							
 								
 								
 							
 							
-							<div class="row">
+							<div class="row" style="padding: 10px;">
 							
 								
 								
-								<div class="form-group col-md-6" id="grptrade">
-									<label for="pass">Select Group/Trade:</label>
-									<select class="form-control" id="selectgroup">
+								<div id="grptrade" style="padding: 5px 0px 0px 2%;" class="col-md-6">
+									<label for="pass" style="font-size: 16px;">Select Group/Trade:</label></div>
+									<div class="form-group col-md-6" >
+									<select class="form-control" id="selectgroup" required="required">
 									</select>
 									</div>
+									
 									
 									
 									
@@ -421,80 +467,68 @@ display:inline-block;
 								
 								
 								
-								<div class="row">
+								<div class="row upload-section">
 							
 								<div class="form-group col-md-12">
-								Please Upload 10th Marksheet:
+							    <h5><b><u>UPLOAD SECTION:</u></b></h5>
 								<div class="row">
-								<div class="form-group col-md-8">
+								<div class="form-group col-md-8" >
 								<label class="col-form-label">
-								10th  Marksheet:<input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
+								<h6 style="color:black;padding-bottom:1%;">10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
 								</label>
 								</div>
 								
 								<div class="form-group col-md-4">
-								<p><label for="file" style="cursor: pointer;"></label></p>
-								<p><img id="output"  width="125px" /></p></div>
+								<p style="margin-bottom: 0;text-align: center;"><label for="file" style="cursor: pointer;" id="label-pass">Upload Passing Certificate</label></p>
+								<p style="text-align: center;"><img id="output"  width="125px" src="https://hotpot.ai/images/site/graphicIcon.svg"/></p></div>
 								</div>
 								</div>
 								
 								</div>
-								
-								<div class="form-group col-md-6">
-									<label for="pass">Qualification Details:</label>
-									<div class="form-check ">
+								<div class="row">
+								<h4 for="pass">Select Educational Qualification Details:</h4>
+								<div class="form-group row" style="padding: 0 15px;">
+									
+									<div class="form-check col-md-6">
 										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}"
-										value="12th"  required> <label class="form-check-label" for="12th">12th passed </label>
+										value="12th"  required> <label class="form-check-label" for="12th">12th / Intermediate passed or Equivalent examination</label>
+									<div class="invalid-feedback">You need to select either
+											a option</div>
 									</div>
-									<div class="form-check ">
-										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="other" required> <label
-											class="form-check-label" for="other"> Other/Diploma
+									
+									<!-- <div class="form-check col-md-6">
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}"
+										value="others"  required> <label class="form-check-label" for="12th">Other/Equivalent examination</label>
+									<div class="invalid-feedback">You need to select either
+											a option</div>
+									</div> -->
+									
+									
+									<div class="form-check col-md-6" id="diploma_y">
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="Diploma" required> <label
+											class="form-check-label" for="other"> Three years Diploma Course in Engineering in any stream
 											 </label>
 											 <span th:if="${#fields.hasErrors('passed_exam_detail')}"
 											th:class="'error'">Select passing detail</span>
-										<div class="invalid-feedback">You need to select either
-											a option</div>
+										
 											
+									</div>
+									<div class="col-md-12">
 									</div>
 									
 									
 									
 
-								</div>
-								
-								
-								<div class="row">
-								
-								
-								
-								<span style="padding-left: 16px;">12th Pass Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
-								<div class="form-group col-md-8" style="padding-top: 1%;">
-								<label class="col-form-label">
-								<input type="file" name="XIIMarksheet" accept="image/*" id="XII_marksheet" onchange="loadFile(event)" class="form-control" required>
-								</label>
-								</div>
-								
-								<div class="form-group col-md-4">
-								<p><label for="file" style="cursor: pointer;"></label></p>
-								<p><img id="output2"  width="125px" /></p>
-								</div>
-								
-								</div>
-								
-								</div>
-								
-								
-								</div>
-								
-								
+								</div></div>
 								
 								
 								<div class="row">
 								
 								
 								<div class="row col-md-12">
-								<div class="form-group col-md-4">
-								<label for="Qualification Details:" class="col-form-label">Qualifying Degree <br/>Details:</label>
+								<div class="form-group col-md-6">
+								<label for="Qualification Details:" class="col-form-label">Qualifying Degree Details:</label>
+								</div><div class="form-group col-md-6">
 								<input type="text" th:field="*{otherDetailPassedDetail}" 
 									class="form-control" id="other" placeholder="Qualification Details" data-error="please Qualification Details" required>
 									<div class="invalid-feedback">Please provide a valid Details.</div>
@@ -502,8 +536,10 @@ display:inline-block;
 							<p id="verrordet"></p>
 							</div>
 							
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying Degree):</label>
+								</div><div class="form-group col-md-6">
+								
 								<input type="number" th:field="*{passed_exam_percentage}" 
 									class="form-control" id="passed_exam" placeholder="Enter passing percentage" min="36" data-error="please enter valid passing percentage" required>
 									<div class="invalid-feedback">Please provide a valid passing percentage.</div>
@@ -511,8 +547,10 @@ display:inline-block;
 							<p id="verrorpp"></p>
 							</div>
 							
-							<div class="form-group col-md-4">
-								<label for="engpassper" class="col-form-label">English Passing <br/>Percentage:</label>
+							<div class="form-group col-md-6">
+								<label for="engpassper" class="col-form-label">English Passing Percentage:</label>
+								<label class="extra-info">If English is not a Subject in Vocational/Qualifying course then provide 10th/Matriculation English percentage.</label>
+								</div><div class="form-group col-md-6">
 								<input type="number" th:field="*{english_percentage}" 
 									class="form-control" id="eng_passed_exam" placeholder="Enter english passing percentage" min="36" data-error="please enter valid english passing percentage" required>
 									<div class="invalid-feedback">Please provide a valid english passing percentage.</div>
@@ -523,6 +561,38 @@ display:inline-block;
 							
 							
 							</div>
+								
+								
+								
+								<div class="row upload-section" >
+								
+								
+								<div class="col-md-12">
+								<h5><b><u>UPLOAD SECTION:</u></b></h5>
+								<span>12th Pass Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
+								</div>
+								<div class="form-group col-md-8" style="padding-top: 1%;">
+								<label class="col-form-label">
+								<input type="file" name="XIIMarksheet" accept="image/*" id="XII_marksheet" onchange="loadFile(event)" class="form-control" required>
+								</label>
+								</div>
+								
+								<div class="form-group col-md-4">
+								<p style="margin-bottom: 0;text-align: center;"><label for="file" style="cursor: pointer;" id="label-mark">Upload Marksheet</label></p>
+								<p style="text-align: center;"><img id="output2"  width="125px" src="https://hotpot.ai/images/site/graphicIcon.svg"/></p>
+								</div>
+								
+								</div>
+								
+								</div>
+								
+								
+								</div>
+								
+								
+								
+								
+								
 							
 
 							<div class="row">
@@ -753,7 +823,7 @@ display:inline-block;
 	</script>
 	<script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+ (function() {
   'use strict';
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -771,7 +841,7 @@ display:inline-block;
       }, false);
     });
   }, false);
-})();
+})(); 
 </script>
 <script type="text/javascript">
 
@@ -779,11 +849,18 @@ display:inline-block;
 var loadFile = function(event) {
 	var image = document.getElementById('output');
 	var image2 = document.getElementById('output2');
+	var lblpc = document.getElementById('label-pass');
+	var lblm = document.getElementById('label-mark');
 	
-    if(event.target.id === "X_marksheet")
+    if(event.target.id === "X_marksheet"){
        image.src = URL.createObjectURL(event.target.files[0]);
-    else
+       lblpc.style.display = 'none';
+    }
+    
+    else{
     	 image2.src = URL.createObjectURL(event.target.files[0]);
+    	 lblm.style.display = 'none';
+    }
     	
 };
 

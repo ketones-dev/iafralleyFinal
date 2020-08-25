@@ -28,6 +28,7 @@ let proceed= document.getElementById("proceed");
 
 
 let grp_tradeSelect = document.getElementById("selectgroup");
+let diploma_y=document.getElementById("diploma_y");
 
 let duplicateerror= document.getElementById("error2");
 
@@ -54,8 +55,10 @@ window.addEventListener('load', function() {
 			    
 			  }
 			 });
+    	 ralley_stateSelectedValue.selectedIndex=0;
     	stateSelectedValue.selectedIndex = 0;
-    	alert("please check input values...")
+    	alert("please check input values...");
+    	window.location.reload();
     	}
     
     if(duplicateerror.value !== "")
@@ -134,7 +137,7 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 					   		    	opt.text = data[s].group_name;
 					   		    	dropdown.options.add(opt);
 					   		    	}
-					   		    document.getElementById("grptrade").appendChild(dropdown);
+					   		   // document.getElementById("grptrade").appendChild(dropdown);
 					   		 if(cities === true){
 					   		 http.post('getralleyValidationDetailsOnBasisOfAdminCities', {cityid : validid} , function(err, post) {
 						   		  if(err) {
@@ -299,6 +302,7 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("diploma").style.display ="inline-block";
 			document.getElementById("vocational").style.display ="none";
 			document.getElementById("othercourse").style.display ="none";
+			diploma_y.style.visibility ="";
 			
 			}
 		else if(data === "2")
@@ -306,11 +310,13 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("diploma").style.display ="none";
 			document.getElementById("vocational").style.display ="inline-block";
 			document.getElementById("othercourse").style.display ="none";
+			diploma_y.style.visibility ="hidden";
 			}
 		else{
 			document.getElementById("diploma").style.display ="none";
 			document.getElementById("vocational").style.display ="none";
 			document.getElementById("othercourse").style.display ="inline-block";
+			diploma_y.style.visibility ="hidden";
 			
 		}
 		console.log(document.getElementById("groupSelectedValue").value);
