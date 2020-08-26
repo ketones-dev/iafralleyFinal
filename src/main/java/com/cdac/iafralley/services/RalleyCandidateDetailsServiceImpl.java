@@ -371,7 +371,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		
 		for(RalleyDetails p:rd)
 		{
-			details +="<h2>Rally details: </h2><h3>"+p.getRalley_details()+"</h2><h3>Conducting Dates: "+p.getStart_date()+" to "+p.getEnd_date()+"</h3><h4>"+p.getVenue_details()+"</h4><hr>";
+			details +="<h3 class='p-contents'>"+p.getRalley_details()+"</h3><h4 class='p-contents'>From "+DateFormatter(p.getStart_date()).toUpperCase()+" to "+DateFormatter(p.getEnd_date())+"</h4><h4 class='p-contents'>AT "+p.getVenue_details()+"</h4>";
 		}
 		
 		logger.info(details);
@@ -432,5 +432,21 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		rgt.stream().forEach(System.out::print);
 		return rgt;
 	}
+	}
+	
+	public String DateFormatter(Date d)
+	{
+		
+		Date convertDate=d;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd");
+
+	   String date =simpleDateFormat.format(convertDate).toUpperCase()+" ";
+
+	    simpleDateFormat = new SimpleDateFormat("MMMM");
+	    date +=simpleDateFormat.format(convertDate).toUpperCase()+" ";
+
+	    simpleDateFormat = new SimpleDateFormat("YYYY");
+	    date +=simpleDateFormat.format(convertDate).toUpperCase();
+		return date;
 	}
 }

@@ -19,6 +19,7 @@
 <link rel="stylesheet" th:href="@{/vendor/css/bootstrap.min.css}">
 <!-- Style CSS -->
 <link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/vendor/css/jquery-ui.min.css}" rel="stylesheet">
 <link rel="stylesheet" th:href="@{/css/w3.css}">
 <link rel="stylesheet" th:href="@{/css/customcss.css}" type="text/css">
 
@@ -51,7 +52,13 @@ hr {
 	font-size: 25px;
 	
 	font-weight: bold;
+	text-align:center;
 	
+}
+.p-contents{
+color:black;
+text-transform:uppercase;
+text-align:center
 }
 .form-table{
 
@@ -244,7 +251,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 
 								
-								<div class="form-group col-md-5 ">
+								<div class="col-md-5 ">
 									<label for="state" class="col-form-label">Select State</label>
 									<select th:field="*{opt_state}" id="ralleystateSelect"
 										 class="form-control" >
@@ -259,7 +266,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<input type="hidden" th:field="*{opt_state_name}" id="optedstatename">
 								<input type="hidden" th:field="*{opt_city_name}" id="optedcityname"> 
 
-								<div class="form-group col-md-5 ">
+								<div class="col-md-5 ">
 									<label for="city" class="col-form-label">Select City</label>
 										
 										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" >
@@ -288,29 +295,29 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 										style="padding: 15px; align-content: center; align-items: center;">
 										<div class="col-lg-2">
 											<img
-												src="https://www.eqmagpro.com/wp-content/uploads/2019/02/INVITATION-OF-QUOTATION-FOR-SUPPLY-AND-INSTALLATION-OF-OFF-GRID-SOLAR-POWER-SYSTEM.png"
+												th:src="@{/vendor/image/badge.png}"
 												alt="logo" style="width: 100px;">
 										</div>
 										<div class="" style="margin: 0 auto;">
-											<h2 style="text-align: center; color: black;">
-												Indian Air Force offers opportunities for<br> <b>MALE
-													INDIAN CITIZENS</b>
+											<h2 style="text-align: center; color: black;font-weight:bold;font-size:35px">
+												भारतीय वायु सेना / Indian Air Force<br> 
 											</h2>
 										</div>
 										<div class="col-md-2">
 											<img alt="logo" style="width: 100px;"
-												src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Roundel_of_India.svg/240px-Roundel_of_India.svg.png">
+												th:src="@{/vendor/image/logo/iaflogo.png}">
 										</div>
 									</div>
 								</div>
 
-								<div id="ralleyoptdetails" class="jumbotron" style="padding:3px 15px;">
-							
-							
-							</div>
+								
 							<div class="promo-content">
 							
 							<h4 id="headingtitle">Rally Registration Form</h4>
+							<div id="ralleyoptdetails" class="col-md-12" style="padding:3px 15px;text-align:center;text-transform: capitalize;">
+							
+							
+							</div>
 							<hr>
 						</div>
 						<h5 class="section-heading">Personal Details:</h5>
@@ -318,7 +325,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="row" >
 							
 							<div class="form-group col-md-6">
-								<label for="Candidate Full Name:" class="col-form-label">Candidate Full Name (As per 10th Markseet)</label>
+								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name (As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{name}" 
 									class="form-control" id="name"  pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
 									<div id="errorname"  class="invalid-feedback">Please provide a valid Name.</div>
@@ -327,7 +334,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="Father Name:" class="col-form-label">Father Full Name</label>
+								<label for="Father Name:" class="col-form-label">Father’s Full Name (As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{fathername}" 
 									class="form-control" id="fathername" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
 									<div class="invalid-feedback">Please provide a valid Name.</div>
@@ -345,7 +352,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="date" class="col-form-label">Date of Birth:</label>
+								<label for="date" class="col-form-label">Date of Birth: (As per 10th Passing Certificate):</label>
 								<input type="date" th:field="*{dateOfBirth}" 
 									class="form-control" id="dateOfBirth" placeholder="Enter DOB" data-error="please enter valid DOB" required>
 									<div class="invalid-feedback">Please provide a valid DOB.</div>
@@ -354,7 +361,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="mobile" class="col-form-label">Enter Mobile/Contact No.:</label>
+								<label for="mobile" class="col-form-label">Mobile/Contact No:</label>
 								<input type="text" th:field="*{contactno}" 
 									class="form-control" id="contactno" pattern="^[6-9]\d{9}$" placeholder="Enter contactno" data-error="please enter valid contactno" required>
 									<div class="invalid-feedback">Please provide a valid contactno.</div>
@@ -363,7 +370,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="mobile" class="col-form-label">Enter Addhar No.:</label>
+								<label for="mobile" class="col-form-label">Aadhaar No:</label>
 								<input type="text" 
 									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" >
 									<div class="invalid-feedback">Please provide a valid addhar.</div>
@@ -372,8 +379,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 							</div>
 							<div class="row">
-							<div class="form-group col-md-6">
-								<label for="height" class="col-form-label">Height (in cm):</label>
+							<div class="form-group col-md-4">
+								<label for="height" class="col-form-label">Height (in cm) (Not less than 152.5 Cms):</label>
 								<input type="number" th:field="*{height}" 
 									class="form-control" id="height" placeholder="Enter height" data-error="please enter valid height" required>
 									<div class="invalid-feedback">Please provide a valid height.</div>
@@ -381,14 +388,14 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<p id="verrorh"></p>
 							</div>
 								
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-4">
 									<label for="martital" class="col-form-label">Maritial Status:</label>
-									<div style="padding:2% 1%;">
-									<div class="form-check form-check-inline col-3">
+									<div style="padding:9% 1%;">
+									<div class="form-check form-check-inline col-6" style="display:inline;">
 										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${true}"  value="true">
 										 <label class="form-check-label" for="married">Married</label>
 									</div>
-									<div class="form-check form-check-inline col-8">
+									<div class="form-check form-check-inline col-6">
 										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${false}"  value="false">
 										 <label
 											class="form-check-label" for="unmarried"> Un-Married
@@ -402,11 +409,27 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									</div>
 
 								</div>
-								
-								
+									<div class="form-group col-md-4" style="padding-top:1%;">
+									<label class="label-col">Gender</label>
+									<div class="custom-control custom-radio custom-control">
+										<input type="radio" id="customRadioInline1"
+											name="customRadioInline1" class="custom-control-input" checked>
+										<label class="custom-control-label" for="customRadioInline1">Male</label>
+									</div>
+									<div class="custom-control custom-radio custom-control">
+										<input type="radio" id="customRadioInline2"
+											name="customRadioInline1" class="custom-control-input"
+											disabled> <label class="custom-control-label"
+											for="customRadioInline2">Female</label>
+									</div>
+									</div>
+
+									<div class="form-group col-md-4" style="display: flex;justify-content: center;align-content: center;flex-direction: column;">
+							<label>I am a Domicile of (State)</label>
+							</div>
 							
 							
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-4">
 							<label for="state" class="col-form-label">State:</label> 
 							<select th:field="*{state}" id="stateSelect" class="form-control" required="true" >
 							<option th:value="''">---Select State----</option>
@@ -417,21 +440,21 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 					<label th:if="${#fields.hasErrors('state')}"  th:class="'error'" th:errors="*{state}" >Select state</label>
 					</div>
 
-							<div class=" col-md-6">
-								<label for="city" class="col-form-label">City:</label> 
+							<div class=" col-md-4">
+								<label for="city" class="col-form-label">District:</label> 
 								<select th:field="*{city}" id="citySelect" class="custom-select" required>
-									<option selected="selected" disabled="disabled"  value="">---Select City----</option>
+									<option selected="selected" disabled="disabled"  value="">---Select District----</option>
 
 
 								</select>
-								<label th:if="${#fields.hasErrors('city')}"  th:class="'error'" th:errors="*{city}">Select city</label>
+								<label th:if="${#fields.hasErrors('city')}"  th:class="'error'" th:errors="*{city}">Select District</label>
 							</div>
 								
 								
 							</div>
 							
 							<hr>
-							<h4 class="section-heading">Educational Qualification.</h4>
+							<h4 class="section-heading">Educational Qualification Details</h4>
 							
 								
 								
@@ -474,7 +497,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row">
 								<div class="form-group col-md-8" >
 								<label class="col-form-label">
-								<h6 style="color:black;padding-bottom:1%;">10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
+								<h6 style="color:black;padding-bottom:1%;">Upload 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
 								</label>
 								</div>
 								
@@ -503,17 +526,27 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 											a option</div>
 									</div> -->
 									
+									<div class="form-check col-md-6" id="vocational_v" >
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="Vocational" required> <label
+											class="form-check-label" for="voc"> Passed 2 years Vocational Course
+											 </label>
+											 
+										
+											
+									</div>
+									
 									
 									<div class="form-check col-md-6" id="diploma_y">
 										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="Diploma" required> <label
-											class="form-check-label" for="other"> Three years Diploma Course in Engineering in any stream
+											class="form-check-label" for="Diploma"> Three years Diploma Course in Engineering in any stream
 											 </label>
-											 <span th:if="${#fields.hasErrors('passed_exam_detail')}"
-											th:class="'error'">Select passing detail</span>
+											 
 										
 											
 									</div>
 									<div class="col-md-12">
+									<span th:if="${#fields.hasErrors('passed_exam_detail')}"
+											th:class="'error'">Select passing detail</span>
 									</div>
 									
 									
@@ -774,6 +807,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	<!-- Script -->
 	<script th:src="@{/vendor/js/customjs.js}"></script>
 	<script th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/jquery-ui.min.js}"></script>
 	<script th:src="@{/vendor/js/bootstrap.min.js}"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
@@ -789,10 +823,25 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	<script type="text/javascript" th:src="@{/js/candidateRegistration.js}"></script>
 	<script>
 	$(document).ready(function() {
+		
+		
+		/* $('#dateOfBirth').datepicker({ 
+	        changeMonth: true, 
+	        changeYear: true
+	    });  */
+		
 	    
 	    $('#remove').on('click', function () {
 	    	 var forms = document.getElementById('form');
 	    	 forms.classList.remove('was-validated');
+	    	 
+	    	 $('#ralleystateSelect option').map(function () {
+	                if ($(this).text() == $('#optedstatename').val()) return this;
+	            }).attr('selected', 'selected');
+	    	 
+	    	 $('#ralleycitySelect option').map(function () {
+	                if ($(this).text() == $('#optedcityname').val()) return this;
+	            }).attr('selected', 'selected');
 	    	
 	    	
 	    });
@@ -803,7 +852,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	    	var aadhar =document.getElementById('aadhar');
 	    	if(!reg )
 	    		{
-	    		alert("Enter aadhar card no:"+e.target.value+" is invalid please type again");
+	    		//alert("Enter aadhar card no:"+e.target.value+" is invalid please type again");
+	    		console.log("No aadhar Details given");
 	    		e.target.value = "";
 	    		
 	    		}

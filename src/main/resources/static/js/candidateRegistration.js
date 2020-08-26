@@ -29,7 +29,8 @@ let proceed= document.getElementById("proceed");
 
 let grp_tradeSelect = document.getElementById("selectgroup");
 let diploma_y=document.getElementById("diploma_y");
-
+let vocational_v=document.getElementById("vocational_v");
+vocational_v.style.left="10%";
 let duplicateerror= document.getElementById("error2");
 
 window.addEventListener('load', function() {
@@ -128,15 +129,27 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 					   		 var dropdown = document.getElementById("selectgroup");
 					   		
 					   		 dropdown.setAttribute("required","required");
-					   		 dropdown.innerHTML="<option value='' selected>---Select Group/trade----</option>";
-					   		    for(var s=0;s<data.length;s++)
+					   		
+					   		 if(data.length === 1)
+					   			 {
+					   			var opt = document.createElement("option"); 
+				   		    	opt.value = data[0].id;
+				   		    	opt.text = data[0].group_name;
+				   		    	dropdown.options.add(opt);
+				   		    	dropdown.selectedIndex = 0;
+				   		    	ShowQualificationOnSingleValue();
+					   			 }
+					   		 else{
+					   			dropdown.innerHTML="<option value='' selected>---Select Group/trade----</option>";
+					   		 for(var s=0;s<data.length;s++)
 					   		    	{
-					   		    	
+					   			 
 					   		    	var opt = document.createElement("option"); 
 					   		    	opt.value = data[s].id;
 					   		    	opt.text = data[s].group_name;
 					   		    	dropdown.options.add(opt);
 					   		    	}
+					   		 }
 					   		   // document.getElementById("grptrade").appendChild(dropdown);
 					   		 if(cities === true){
 					   		 http.post('getralleyValidationDetailsOnBasisOfAdminCities', {cityid : validid} , function(err, post) {
@@ -302,7 +315,8 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("diploma").style.display ="inline-block";
 			document.getElementById("vocational").style.display ="none";
 			document.getElementById("othercourse").style.display ="none";
-			diploma_y.style.visibility ="";
+			diploma_y.style.display ="block";
+			vocational_v.style.display="none";
 			
 			}
 		else if(data === "2")
@@ -310,13 +324,15 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("diploma").style.display ="none";
 			document.getElementById("vocational").style.display ="inline-block";
 			document.getElementById("othercourse").style.display ="none";
-			diploma_y.style.visibility ="hidden";
+			diploma_y.style.display ="none";
+			vocational_v.style.display="block";
 			}
 		else{
 			document.getElementById("diploma").style.display ="none";
 			document.getElementById("vocational").style.display ="none";
 			document.getElementById("othercourse").style.display ="inline-block";
-			diploma_y.style.visibility ="hidden";
+			diploma_y.style.display ="none";
+			vocational_v.style.display="block";
 			
 		}
 		console.log(document.getElementById("groupSelectedValue").value);
@@ -325,7 +341,51 @@ grp_tradeSelect.addEventListener("change", function(e) {
 	
 });
 
-
+function ShowQualificationOnSingleValue(){
+	console.log(this);
+	let data =grp_tradeSelect.options[grp_tradeSelect.selectedIndex].value;
+	let text=grp_tradeSelect.options[grp_tradeSelect.selectedIndex].text;
+	
+	if(data === "")
+		{
+		document.getElementById("upload").style.display ="none";
+		return;
+		}
+	
+	if(data !== "")
+		{
+		document.getElementById("upload").style.display ="block";
+		document.getElementById("groupSelectedValue").value=data;
+		document.getElementById("groupSelectedText").value=text;
+		if(data === "1")
+			{
+			document.getElementById("diploma").style.display ="inline-block";
+			document.getElementById("vocational").style.display ="none";
+			document.getElementById("othercourse").style.display ="none";
+			diploma_y.style.display ="block";
+			vocational_v.style.display="none";
+			
+			}
+		else if(data === "2")
+			{
+			document.getElementById("diploma").style.display ="none";
+			document.getElementById("vocational").style.display ="inline-block";
+			document.getElementById("othercourse").style.display ="none";
+			diploma_y.style.display ="none";
+			vocational_v.style.display="block";
+			}
+		else{
+			document.getElementById("diploma").style.display ="none";
+			document.getElementById("vocational").style.display ="none";
+			document.getElementById("othercourse").style.display ="inline-block";
+			diploma_y.style.display ="none";
+			vocational_v.style.display="block";
+			
+		}
+		console.log(document.getElementById("groupSelectedValue").value);
+		console.log(document.getElementById("groupSelectedText").value);
+		}
+}
  
  function addActivityItem(data,id){
 	 if(id === "stateSelect"){
@@ -411,3 +471,5 @@ function removecitiesExcetFirstOption(citiesArrays,id){
 	  // citySelectedValue.append("<option value='0'>---Select City----</option>");
 	
 }
+
+

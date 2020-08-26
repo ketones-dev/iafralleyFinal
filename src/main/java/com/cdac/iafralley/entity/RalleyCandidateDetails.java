@@ -68,7 +68,7 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="degree_detail")
 	private String otherDetailPassedDetail;
 	
-	@NotEmpty
+	
 	@Column(name="aadhar_details")
 	private String aadhar_details;
 	
