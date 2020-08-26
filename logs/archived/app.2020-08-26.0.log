@@ -1,0 +1,925 @@
+00:10:48.372 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:10:53.946 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:10:54.500 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:10:54.518 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:10:54.539 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:10:54.540 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:12:58.527 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:13:14.917 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:13:14.934 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:13:14.951 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:13:14.965 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:13:14.965 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:14:13.053 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:14:16.609 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:14:16.624 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:14:16.636 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:14:16.651 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:14:16.652 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:15:13.976 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:15:21.143 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:15:21.167 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:15:21.218 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:15:21.320 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:15:21.321 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:17:44.514 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:17:48.364 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:17:48.437 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:17:48.450 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:17:48.462 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:17:48.462 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:19:28.857 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:19:35.830 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:19:35.851 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:19:35.867 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:19:35.917 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:19:35.918 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:21:30.554 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:21:34.605 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:21:34.619 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:21:34.632 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:21:34.644 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:21:34.645 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:25:26.628 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:25:34.096 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:25:34.110 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:25:34.125 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:25:34.178 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:25:34.178 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:28:27.115 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:28:31.185 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:28:31.252 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:28:31.315 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:28:31.403 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:28:31.403 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:28:37.660 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:28:37.661 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:28:37.666 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:28:48.781 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:28:59.821 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:28:59.841 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:28:59.853 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:28:59.900 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:28:59.900 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:31:08.230 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:31:12.646 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:31:12.660 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:31:12.676 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:31:12.726 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:31:12.726 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:33:29.094 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:33:34.661 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:33:34.676 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:33:34.694 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:33:34.742 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:33:34.742 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:36:13.512 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:36:16.548 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:36:16.562 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:36:16.612 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:36:16.626 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:36:16.626 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:41:49.270 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:42:02.064 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:42:02.126 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:42:02.164 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:42:02.208 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:42:02.209 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:48:51.346 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+00:49:19.445 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+00:49:19.476 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+00:49:19.563 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+00:49:19.565 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+00:49:19.587 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+00:49:20.227 [http-nio-9091-exec-6] INFO  c.c.i.a.a.PointCutLogTraceImplServiceLayer:19 - Exception in class:com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl ::method:save: with cause:Either emailid:ketan@g.comor aadhar644393383428 is already registered on this portal
+00:49:20.311 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:49:32.419 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:49:32.461 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:49:32.504 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:49:32.548 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:49:32.549 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:50:20.175 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:50:23.459 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:50:23.479 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:50:23.494 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:50:23.514 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:50:23.515 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:50:32.245 [http-nio-9091-exec-7] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:50:32.245 [http-nio-9091-exec-7] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:50:32.249 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:51:53.973 [http-nio-9091-exec-5] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:51:53.974 [http-nio-9091-exec-5] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:51:54.006 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:52:11.678 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:52:11.680 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:52:11.684 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:54:03.424 [http-nio-9091-exec-4] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:54:03.425 [http-nio-9091-exec-4] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:54:03.429 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:54:29.056 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:55:22.231 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:55:22.328 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:55:22.367 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:55:22.434 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:55:22.436 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:55:27.977 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:55:27.978 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:55:27.983 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:55:30.782 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:55:43.146 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:55:43.241 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:55:43.357 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:55:43.646 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:55:43.648 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:55:48.147 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:55:48.148 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:55:48.151 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:55:51.662 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:56:01.627 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:56:01.694 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:56:01.721 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:56:01.803 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:56:01.805 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:56:05.639 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+00:56:05.641 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+00:56:05.767 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:56:10.248 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:56:46.450 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:56:46.488 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:56:46.586 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:56:46.654 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:56:46.654 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+00:57:05.570 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+00:57:32.216 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+00:57:32.217 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+00:57:32.224 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+00:57:32.225 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+00:57:32.226 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+00:57:33.611 [http-nio-9091-exec-6] INFO  c.c.i.a.a.PointCutLogTraceImplServiceLayer:19 - Exception in class:com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl ::method:save: with cause:Either emailid:ketutank11@gmail.comor aadhar644393383428 is already registered on this portal
+00:57:33.624 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+00:57:57.045 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+00:57:57.183 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+00:57:57.329 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+00:57:57.475 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+00:57:57.476 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+01:27:44.333 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:27:47.686 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+01:27:47.729 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+01:27:47.770 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+01:27:47.812 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+01:27:47.814 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+01:31:00.470 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:31:04.987 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+01:31:05.033 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+01:31:05.087 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+01:31:05.136 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+01:31:05.139 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+01:33:13.806 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:33:19.279 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+01:33:19.324 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+01:33:19.370 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+01:33:19.417 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+01:33:19.419 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+01:37:15.462 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:37:19.181 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+01:37:19.231 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+01:37:19.340 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+01:37:19.464 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+01:37:19.466 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+01:44:32.319 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+01:44:39.504 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+01:44:39.531 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+01:44:39.589 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+01:44:39.693 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+01:44:39.695 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+02:17:00.394 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:17:05.334 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+02:17:05.429 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+02:17:05.511 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+02:17:05.605 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+02:17:05.607 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+02:22:37.259 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+02:22:46.554 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+02:22:46.575 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+02:22:46.645 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+02:22:46.667 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+02:22:46.668 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+12:38:30.945 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+12:38:30.969 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+12:38:33.138 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+12:38:33.139 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+12:38:33.207 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+12:38:33.817 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:38:33.994 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+12:38:34.164 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+12:38:34.926 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+12:38:36.672 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:38:38.096 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+12:38:39.203 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 9.288 seconds (JVM running for 12.88)
+12:39:01.747 [http-nio-9091-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:39:02.854 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+12:39:14.909 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+12:39:15.022 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+12:39:15.072 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+12:39:15.110 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+12:39:15.110 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+12:48:45.292 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+12:48:49.091 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+12:48:49.105 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+12:48:49.121 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+12:48:49.142 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+12:48:49.143 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:04:57.437 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:05:00.934 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:05:01.044 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:05:01.152 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:05:01.275 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:05:01.276 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:05:07.238 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:05:20.536 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:05:44.515 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:05:44.536 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:05:44.547 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:05:44.565 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:05:44.566 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:09:25.965 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:09:29.449 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:09:29.460 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:09:29.470 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:09:29.483 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:09:29.483 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:09:46.394 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:09:49.602 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:09:49.635 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:09:49.650 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:09:49.665 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:09:49.666 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:10:52.875 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:10:55.826 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:10:55.840 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:10:55.854 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:10:55.869 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:10:55.870 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:12:04.143 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:12:07.053 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:12:07.068 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:12:07.094 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:12:07.131 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:12:07.131 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:12:24.817 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:12:27.979 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:12:28.000 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:12:28.014 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:12:28.060 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:12:28.060 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:13:48.604 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:13:48.731 [http-nio-9091-exec-8] ERROR org.thymeleaf.TemplateEngine:1136 - [THYMELEAF][http-nio-9091-exec-8] Exception processing template "CandidateRegistration": An error happened during template parsing (template: "class path resource [templates/CandidateRegistration.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/CandidateRegistration.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: Could not parse as expression: "/vendor/image/logo/rsz_1iaf-logo.png" (template: "CandidateRegistration" - line 302, col 13)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 86 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "/vendor/image/logo/rsz_1iaf-logo.png" (template: "CandidateRegistration" - line 302, col 13)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 88 common frames omitted
+13:13:48.808 [http-nio-9091-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/CandidateRegistration.html]")] with root cause
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "/vendor/image/logo/rsz_1iaf-logo.png" (template: "CandidateRegistration" - line 302, col 13)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+13:14:10.568 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:14:14.470 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:14:14.494 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:14:14.527 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:14:14.544 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:14:14.544 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:16:02.871 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:16:05.662 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:16:06.244 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:16:06.259 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:16:06.276 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:16:06.278 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:24:03.903 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+13:40:24.667 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+13:40:36.121 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+13:40:36.149 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+13:40:36.199 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+13:40:36.215 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:40:36.215 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+14:13:55.233 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:14:10.475 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+14:14:10.513 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+14:14:10.559 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+14:14:10.606 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+14:14:10.607 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+14:32:51.716 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+14:32:52.286 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+17:02:06.031 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:02:25.939 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+17:02:26.193 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h2>Rally details: </h2><h3>Ralley Conduction in Bhopal</h2><h3>Conducting Dates: 2020-09-18 to 2020-09-18</h3><h4>near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+17:02:26.210 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+17:02:26.307 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+17:02:26.308 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+17:15:49.757 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+17:15:49.757 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+17:15:54.980 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+17:15:54.981 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+17:15:55.108 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+17:15:55.171 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+17:15:55.919 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:15:57.382 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:15:57.726 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+17:15:57.809 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 8.372 seconds (JVM running for 16651.53)
+17:16:00.640 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:16:00.969 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:16:05.252 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+17:16:05.268 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3>Ralley Conduction in Bhopal</h3><h4>From 2020-09-18 to 2020-09-18</h4><h4>AT near bus Stand ,Nehru Ground,Indore 444602</h4><hr>
+17:16:05.282 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+17:16:05.326 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+17:16:05.327 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+17:58:10.767 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+17:58:10.768 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+17:58:13.106 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+17:58:13.107 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+17:58:13.179 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+17:58:13.253 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+17:58:14.087 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:58:14.898 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:58:15.202 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+17:58:15.278 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 4.715 seconds (JVM running for 19188.999)
+17:58:22.672 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+17:58:22.673 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+17:58:23.086 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+17:58:23.086 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+17:58:23.118 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+17:58:23.172 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+17:58:23.516 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:58:23.765 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:58:24.091 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+17:58:24.166 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.528 seconds (JVM running for 19197.886)
+17:58:24.506 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:58:24.553 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:58:31.535 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+17:58:31.549 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>Ralley Conduction in Bhopal</h3><h4 class='p-contents'>From 2020-09-18 to 2020-09-18</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+17:58:31.563 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+17:58:31.605 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+17:58:31.605 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+17:59:53.715 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+17:59:56.632 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+17:59:56.644 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>Ralley Conduction in Bhopal</h3><h4 class='p-contents'>From 2020-09-18 to 2020-09-18</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+17:59:56.656 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+17:59:56.675 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+17:59:56.676 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:03:18.547 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:03:22.281 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:1
+18:03:22.295 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>Ralley Conduction in Bhopal</h3><h4 class='p-contents'>From 2020-09-18 to 2020-09-18</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:03:22.313 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+18:03:22.343 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:03:22.344 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:03:47.937 [http-nio-9091-exec-4] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:03:48.595 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+18:05:02.166 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:05:06.890 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:05:06.931 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 2020-09-18 to 2020-09-18</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:05:06.945 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:05:06.998 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:05:06.998 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:08:28.542 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+18:08:28.542 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+18:08:30.714 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+18:08:30.714 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+18:08:30.728 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+18:08:30.794 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:08:31.505 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:08:32.089 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:08:32.334 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+18:08:32.412 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 3.953 seconds (JVM running for 19806.133)
+18:08:33.068 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:08:33.085 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:08:37.635 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:08:37.730 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From SEPTEMBER to 2020-09-18</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:08:37.745 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:08:37.764 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:08:37.764 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:14:41.731 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+18:14:41.731 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+18:14:42.194 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+18:14:42.194 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+18:14:42.208 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+18:14:42.281 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:14:42.786 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:14:42.995 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:14:43.238 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+18:14:43.310 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.612 seconds (JVM running for 20177.031)
+18:14:48.021 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:14:48.037 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:14:51.644 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:14:51.718 [http-nio-9091-exec-9] INFO  c.c.i.a.a.PointCutLogTraceImplServiceLayer:19 - Exception in class:com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl ::method:showOptRalleyDetailstoCandidate: with cause:Cannot format given Object as a Date
+18:14:51.915 [http-nio-9091-exec-9] INFO  c.c.i.e.GlobalExceptionHandler:46 - inside
+18:14:51.932 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:14:51.955 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:14:51.955 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:16:28.487 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+18:16:28.488 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+18:16:29.035 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+18:16:29.036 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+18:16:29.069 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+18:16:29.229 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:16:30.024 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:16:30.506 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:16:31.126 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+18:16:31.207 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.753 seconds (JVM running for 20284.927)
+18:16:31.214 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:16:31.230 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:16:35.391 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:16:35.408 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From NULLFRIDAY SEPTEMBER 2020 to nullFRIDAY SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:16:35.424 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:16:35.443 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:16:35.444 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:16:55.858 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+18:16:55.859 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+18:16:56.267 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+18:16:56.267 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+18:16:56.321 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+18:16:56.684 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:16:57.331 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:16:57.516 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:16:57.799 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+18:16:57.875 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.056 seconds (JVM running for 20311.595)
+18:17:01.787 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:17:01.803 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:17:04.619 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:17:04.634 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From NULL262 SEPTEMBER 2020 to null262 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:17:04.649 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:17:04.669 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:17:04.669 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:17:57.672 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+18:17:57.673 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+18:17:58.667 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+18:17:58.668 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+18:17:58.701 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+18:17:58.847 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+18:17:59.533 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:17:59.730 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:17:59.986 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+18:18:00.091 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 2.489 seconds (JVM running for 20373.811)
+18:18:00.184 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:18:00.202 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:18:03.158 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:18:03.172 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:18:03.185 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:18:03.203 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:18:03.203 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:40:02.777 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:40:07.291 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:40:07.318 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:40:07.374 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:40:07.400 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:40:07.401 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:41:26.329 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:41:30.579 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:41:30.699 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:41:30.747 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:41:30.791 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:41:30.792 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:42:38.189 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:42:42.246 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:42:42.272 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:42:42.320 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:42:42.362 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:42:42.363 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:43:41.099 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:43:45.065 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:43:45.083 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:43:45.098 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:43:45.143 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:43:45.144 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:44:04.293 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+18:44:09.335 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+18:44:09.366 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+18:44:09.383 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+18:44:09.400 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+18:44:09.401 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+18:45:32.590 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+19:01:36.571 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+19:01:36.588 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+19:01:36.691 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:01:40.956 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:09:15.841 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:09:20.074 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+19:09:20.225 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:09:20.243 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:09:20.268 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+19:09:20.268 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+19:14:19.548 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:14:23.875 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+19:14:23.965 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:14:24.019 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:14:24.112 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+19:14:24.113 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+19:15:09.015 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+19:15:47.437 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:true
+19:15:47.439 [http-nio-9091-exec-3] INFO  c.c.i.c.RalleyRegistrationFormController:139 - Validation errors while submitting form.
+19:15:47.445 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:15:51.538 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:17:31.495 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+19:17:31.496 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+19:17:37.977 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+19:17:37.980 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+19:17:38.033 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+19:17:38.171 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:17:40.226 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:17:41.720 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:17:42.983 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+19:17:43.342 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 12.217 seconds (JVM running for 23957.063)
+19:18:39.341 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:18:41.497 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:13
+19:18:41.637 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:18:41.701 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:18:41.803 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+19:18:41.805 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+19:23:04.396 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19880 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+19:23:04.397 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+19:23:07.051 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+19:23:07.053 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+19:23:07.105 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+19:23:07.289 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:23:08.272 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:23:09.826 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:23:10.531 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+19:23:10.673 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 6.598 seconds (JVM running for 24284.394)
+19:24:30.157 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+19:24:30.234 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+19:25:07.962 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+19:25:07.964 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+19:25:07.996 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+19:25:07.996 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+19:25:07.998 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+19:25:08.213 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+19:25:08.239 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:qwedcvbnfj@dd.com Genrated Candidate registration ID:IE201500066
+19:25:08.240 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+19:25:08.396 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+19:25:08.398 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+19:25:08.400 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+19:25:11.534 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+19:25:11.536 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+19:25:12.363 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+19:25:12.365 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+19:25:12.366 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+19:25:12.367 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500066_X_marksheet.jpeg file2:IE201500066_XII_marksheet.jpeg
+19:25:12.367 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+19:25:12.399 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=kllklk, fathername=klklk, emailid=qwedcvbnfj@dd.com, dateOfBirth=Mon Sep 27 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=12th, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=151, city=Pune, state=Maharashtra, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=1, venu_details=null, ximagePath=IE201500066/IE201500066_X_marksheet.jpeg, xiiimagePath=IE201500066/IE201500066_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500066]
+19:25:13.117 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:49 - Data saved for candidate+qwedcvbnfj@dd.comprepraring for sending mail using server:smtpb.pune.cdac.in
+19:25:13.119 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:65 - Setting message in mimeMessage for candidate:qwedcvbnfj@dd.com
+19:25:13.607 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:103 - sending mail via server with host:smtpb.pune.cdac.in
+19:25:13.795 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:107 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+19:25:26.240 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:185 - Form submitted successfully.
+19:25:35.297 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:25:39.790 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+19:25:39.846 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:25:39.915 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:25:39.980 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+19:25:39.981 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+19:56:22.220 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:56:27.181 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+19:56:27.238 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:56:27.278 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:57:53.016 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+19:57:58.648 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+19:57:58.767 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+19:57:58.913 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+19:57:59.110 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+19:57:59.112 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+20:02:44.408 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+20:02:49.584 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+20:02:49.626 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+20:02:49.654 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+20:02:49.765 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+20:02:49.766 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:16:25.017 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 21320 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+23:16:25.058 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+23:16:32.009 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+23:16:32.010 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+23:16:32.368 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+23:16:33.023 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:16:33.185 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+23:16:33.719 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+23:16:34.836 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+23:16:37.576 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23:16:39.995 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+23:16:41.027 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 16.398 seconds (JVM running for 21.907)
+23:18:06.200 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:18:06.515 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:18:15.622 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:18:16.159 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:18:16.204 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1]
+23:18:16.275 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:18:16.275 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:19:15.930 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:19:17.158 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:19:22.228 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:19:22.834 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+23:20:09.317 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:20:14.416 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:20:14.427 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:20:14.439 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+23:20:14.453 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:20:14.453 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:22:09.754 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:22:14.544 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:22:14.562 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:22:14.580 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+23:22:14.601 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:22:14.601 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:25:57.657 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:26:01.882 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:26:01.929 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:26:01.943 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+23:26:01.958 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:26:01.958 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:29:24.598 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:29:28.807 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:29:28.820 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:29:28.834 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+23:29:28.848 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:29:28.849 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:31:55.683 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:32:00.686 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:32:00.700 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:32:00.749 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [1, 2, 3]
+23:32:00.769 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:32:00.770 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:32:35.367 [http-nio-9091-exec-6] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:32:36.490 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=4, city=Indore], RalleyCities [city_id=5, city=Bhopal]]
+23:32:54.334 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:32:59.528 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:14
+23:32:59.543 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:32:59.557 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+23:32:59.636 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:32:59.637 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:37:10.864 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[RalleyCities [city_id=1, city=Pune], RalleyCities [city_id=2, city=Nashik], RalleyCities [city_id=3, city=Kolhapur]]
+23:37:48.658 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:136 - error:false
+23:37:48.658 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+23:37:48.664 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Maharashtra city:Pune
+23:37:48.664 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+23:37:48.665 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+23:37:48.698 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+23:37:48.701 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:aswert@g.com Genrated Candidate registration ID:IE201500067
+23:37:48.701 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+23:37:48.805 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+23:37:48.805 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+23:37:48.806 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+23:37:49.997 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:37:49.997 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:37:50.152 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+23:37:50.153 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+23:37:50.153 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+23:37:50.153 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500067_X_marksheet.jpeg file2:IE201500067_XII_marksheet.jpeg
+23:37:50.153 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+23:37:50.188 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=ketan, fathername=jkjkj, emailid=aswert@g.com, dateOfBirth=Wed Aug 25 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=kjk, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150, city=Pune, state=Maharashtra, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500067/IE201500067_X_marksheet.jpeg, xiiimagePath=IE201500067/IE201500067_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500067]
+23:37:50.471 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:49 - Data saved for candidate+aswert@g.comprepraring for sending mail using server:smtpb.pune.cdac.in
+23:37:50.472 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:65 - Setting message in mimeMessage for candidate:aswert@g.com
+23:37:50.605 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:103 - sending mail via server with host:smtpb.pune.cdac.in
+23:37:51.378 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:107 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+23:37:57.283 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:185 - Form submitted successfully.
+23:38:03.155 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:39:12.701 [http-nio-9091-exec-9] INFO  c.c.i.services.RalleyDetailsService:100 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:39:13.377 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:166 - showing all conducting ralley cities:[]
+23:46:54.111 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:46:57.275 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:15
+23:46:57.288 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:46:57.319 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+23:46:57.332 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:46:57.333 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:48:18.795 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:48:23.233 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:15
+23:48:23.243 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:48:23.254 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+23:48:23.266 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:48:23.266 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:48:58.152 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:49:01.027 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:15
+23:49:01.037 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:49:01.047 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+23:49:01.057 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:49:01.058 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+23:49:40.174 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:153 - showing all conducting ralley states:[RalleyStates [state_id=1, state=Maharashtra], RalleyStates [state_id=2, state=Madhya Pradesh], RalleyStates [state_id=3, state=Rajasthan]]
+23:49:42.975 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:15
+23:49:43.727 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ - INDORE </h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4>
+23:49:43.737 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+23:49:43.748 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+23:49:43.749 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
