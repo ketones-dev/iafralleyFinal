@@ -69,6 +69,7 @@ public class RalleyCandidateDetails implements Serializable {
 	private String otherDetailPassedDetail;
 	
 	
+	
 	@Column(name="aadhar_details")
 	private String aadhar_details;
 	
@@ -130,13 +131,13 @@ public class RalleyCandidateDetails implements Serializable {
 	private String optedGroupTrade;
 	
 	@Column(name="is_allocated")
-	private Boolean isAllocated;
+	private Boolean isAllocated=false;
 	
 	@Column(name="is_admit_card_genrated")
-	private Boolean isAdminCardGenrated;
+	private Boolean isAdminCardGenrated=false;
 	
 	@Column(name="is_email_send")
-	private Boolean isEmailSend;
+	private Boolean isEmailSend=false;
 	
 	
 	
@@ -151,6 +152,10 @@ public class RalleyCandidateDetails implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreationTimestamp
 	private java.util.Date subscirbed_on;
+	
+	@NotEmpty
+	@Column(name="rally_id")
+	private String rally_id;
 	
 
 //	 @Id
@@ -522,6 +527,18 @@ public class RalleyCandidateDetails implements Serializable {
 
 	public void setOpt_group_id(Long opt_group_id) {
 		this.opt_group_id = opt_group_id;
+	}
+
+
+
+	public String getRally_id() {
+		return rally_id;
+	}
+
+
+
+	public void setRally_id(String rally_id) {
+		this.rally_id = rally_id;
 	}
 
 

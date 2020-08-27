@@ -30,7 +30,7 @@ let proceed= document.getElementById("proceed");
 let grp_tradeSelect = document.getElementById("selectgroup");
 let diploma_y=document.getElementById("diploma_y");
 let vocational_v=document.getElementById("vocational_v");
-vocational_v.style.left="10%";
+
 let duplicateerror= document.getElementById("error2");
 
 window.addEventListener('load', function() {
@@ -109,7 +109,7 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 			   		    console.log(post);
 			   		    let ra=post;
 			   		 document.getElementById("ralleyoptdetails").innerHTML= ra;
-			   		 
+			   		
 			   		
 			   		if(cities === true)
 			   			{
@@ -183,9 +183,10 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 		    	
 		    			    	
 		    	
-		    	
-		    	
 		    	}
+		   
+	    	
+	    	
 		  }
 		 });
 		 }

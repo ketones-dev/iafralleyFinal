@@ -30,6 +30,36 @@
 <link rel="icon" type="image/png" sizes="16x16"
 	href="resources/img/favicons/iaf-logo.png">
 <style>
+
+#m-iaf{
+text-align: center;
+color: black;
+font-weight: bold;
+font-size: 35px;
+}
+
+#vocational_v{
+
+left:10%;
+
+}
+
+@media (max-width: 992px)   {
+
+#vocational_v{
+
+left:0%;
+
+}
+
+
+
+}
+
+
+
+
+
 hr {
 	border-top: 1px solid #7c7171;
 }
@@ -293,17 +323,17 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="container-fluid">
 									<div class="row"
 										style="padding: 15px; align-content: center; align-items: center;">
-										<div class="col-lg-2">
+										<div class="col-sm-2 col-md-2col-lg-2" style="text-align:center">
 											<img
 												th:src="@{/vendor/image/badge.png}"
 												alt="logo" style="width: 100px;">
 										</div>
-										<div class="" style="margin: 0 auto;">
-											<h2 style="text-align: center; color: black;font-weight:bold;font-size:35px">
+										<div class="col-sm-6 col-md-6 col-lg-6" style="margin: 0 auto;">
+											<h2 id="m-iaf">
 												भारतीय वायु सेना / Indian Air Force<br> 
 											</h2>
 										</div>
-										<div class="col-md-2">
+										<div class="col-sm-2 col-md-2 col-lg-2 "  style="text-align:center">
 											<img alt="logo" style="width: 100px;"
 												th:src="@{/vendor/image/logo/iaflogo.png}">
 										</div>
@@ -882,7 +912,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
     	 
-    		
+    	  
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
