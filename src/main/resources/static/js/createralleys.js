@@ -17,35 +17,78 @@ let min_dob=document.getElementById("min_dob");
 let max_dob=document.getElementById("max_dob");
 let check_input=document.getElementsByName("ralleyForGroup");
 let NoOfDays=document.getElementById("noofDays");
+let candidaterestrictStateSelect =document.getElementById("candidaterestrictStateSelect");
+let cityMultipleSelectData=document.getElementById("second");
+let mulselectDist=document.getElementById('mulselectDist');
 
 window.addEventListener('load', function() {
+	
 	 let data = stateSelectedValue.options[stateSelectedValue.selectedIndex].value;
 	 state_name.value = stateSelectedValue.options[stateSelectedValue.selectedIndex].text;
+	 
+	 let cnrestState=candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].value;
+	  
+    
     console.log('All assets are loaded');
     
     if(ralley_id.value !== "")
     	{
     	start_date.readOnly =true;
     	end_date.readOnly =true;
+    	var str_array=[];
+    	for ( var i = 0; i < cityMultipleSelectData.options.length; i++ ) {
+            
+    		
+    		
+    		str_array[i]=cityMultipleSelectData.options[i].value;
+            	
+               
+            
+        }
+
+    	console.log(str_array);
+    	    $(".chosen-select").val(str_array).trigger("chosen:updated");
     	}
+    
+    
+    
+   
     
  http.post('getCitiesonbasisofStateSeclected', {stateid : data} , function(err, post) {
 			  if(err) {
 			    console.log(err);
 			  } else {
+				  
 			    console.log(post);
 			    let cities=JSON.parse(post);
 			    createCitydropdownData(cities);
 			    console.log(optcity.value);
+			    
+			     
+			    
 			        for ( var i = 0; i < citySelectedValue.options.length; i++ ) {
 			            if ( citySelectedValue.options[i].value === optcity.value ) {
 			            	citySelectedValue.options[i].selected = true;
-			                return;
+			               return;
 			            }
 			        }
+			        
+			      
+			       
 			    
 			  }
-});
+			  
+			 
+			  
+			 
+}
+);
+
+ 
+ 
+ 
+ 
+ 
 });
 
 
@@ -70,6 +113,17 @@ stateSelectedValue.addEventListener("change", function() {
 	    //console.log(activities.value);
 	});
 
+candidaterestrictStateSelect.addEventListener("change", function() {
+	 console.log(this);
+	 let data = candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].value;
+	 state_name.value = candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].text;
+	    if(data.text !== "0")
+	    {
+	        addActivityrestrictStateSelect(data);
+	    }
+	    //console.log(activities.value);
+	});
+
 function addActivityItem(data){
 	 console.log(data);
 	 
@@ -82,6 +136,25 @@ function addActivityItem(data){
 	    console.log(post);
 	    let cities=JSON.parse(post);
 	    createCitydropdownData(cities);
+	  }
+	 });
+
+	 
+}
+
+function addActivityrestrictStateSelect(data){
+	 console.log(data);
+	 
+	// Create Post
+	 
+	 http.post('getCitiesonbasisofStateSeclected', {stateid : data} , function(err, post) {
+	  if(err) {
+	    console.log(err);
+	  } else {
+	    console.log(post);
+	    let cities=JSON.parse(post);
+	    createCityMultipleSelectData(cities);
+	    $(".chosen-select").val('').trigger("chosen:updated");
 	  }
 	 });
 
@@ -105,6 +178,29 @@ function createCitydropdownData(citiesArrays)  {
        citySelectedValue.appendChild(option);
    }
 }
+
+function createCityMultipleSelectData(citiesArrays)  {
+	//console.log(JSON.parse(citiesArrays).length);
+	removecitiesExcetFirstOption2(citiesArrays);
+	
+	//Add the Options to the DropDownList.
+   for (var i = 0; i < citiesArrays.length; i++) {
+       var option = document.createElement("option");
+       console.log(citiesArrays[i].city_id);
+       //Set Customer Name in Text part.
+       option.text = citiesArrays[i].city;
+
+       //Set CustomerId in Value part.
+       option.value = citiesArrays[i].city_id;
+
+       //Add the Option element to DropDownList.
+       cityMultipleSelectData.appendChild(option);
+      
+       
+       
+   }
+  
+}
 	
 function removecitiesExcetFirstOption(citiesArrays){
 	
@@ -113,6 +209,18 @@ function removecitiesExcetFirstOption(citiesArrays){
 		   citySelectedValue.remove(i);
 	   }
 	   
+	  // citySelectedValue.append("<option value='0'>---Select City----</option>");
+	
+}
+
+function removecitiesExcetFirstOption2(citiesArrays){
+	
+	var i, L = cityMultipleSelectData.length;
+	 $(".chosen-select").val('').trigger("chosen:updated");
+	   for(i = L; i >= 0; i--) {
+		   cityMultipleSelectData.remove(i);
+	   }
+	  
 	  // citySelectedValue.append("<option value='0'>---Select City----</option>");
 	
 }
@@ -312,6 +420,16 @@ document.getElementById('form').addEventListener('submit', function(evt){
 	var dob1=new Date(min_dob.value);
 	var dob2=new Date(max_dob.value);
 	var check=false;
+	
+	
+		var ar = [];
+		$('#second option:selected').each(function(index,valor){
+			if(valor.value === ""){alert("select District"); return false;}
+		    ar.push(valor.value);
+		});
+		console.log(ar);
+		mulselectDist.value = ar;
+		
 	console.log(d1>d2 );
 	if(d1>d2 || dob1>dob2){
 		evt.preventDefault();

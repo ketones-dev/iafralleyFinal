@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -87,6 +88,7 @@ public class AdminController {
 		mv.addObject("ralleyDetails", rd);
 		mv.addObject("slotlist", rd.getRalleydaywiseSlot());
 		mv.addObject("allStates", rdservice.getallState());
+		mv.addObject("candidateRestrictAllStates",rdservice.getallState());
 		mv.addObject("allgroups",rdservice.getAllgroups());
 		return mv;
 		
@@ -111,11 +113,14 @@ public class AdminController {
 		String prefixvalue=String.valueOf(std.getMonth()).substring(0, 3).toUpperCase()+String.valueOf(std.getDayOfMonth())+String.valueOf(std.getYear()).substring(2)+rd.getCity_name().substring(0, 2).toUpperCase();
 		String custid=ralleyIdGenrator.RalleyCustomId(prefixvalue);
 		
+		rd.getCandidateRestrictFromDistrictIds().stream().forEach(System.out::println);
+		
 		RalleyDetails ralleyDetails = new RalleyDetails(rd.getRalley_id(),rd.getState_id(), rd.getCity_id(), rd.getRalley_details(),
 				rd.getVenue_details(), rd.getStart_date(), rd.getEnd_date(), rd.getNo_OfDays(), rd.getMin_dob(),
-				rd.getMax_dob(), rd.getMin_passing_percentage(), rd.getMin_eng_percentage(), rd.getMin_height(),rd.getCity_name(),rd.getState_name(),custid);
+				rd.getMax_dob(), rd.getMin_passing_percentage(), rd.getMin_eng_percentage(), rd.getMin_height(),rd.getCity_name(),rd.getState_name(),custid,rd.getCandidateRestrictFromStateId());
 
 		ralleyDetails.setRalleyForGroup(rd.getRalleyForGroup());
+		ralleyDetails.setCandidateRestrictFromDistrictIds(rd.getCandidateRestrictFromDistrictIds());
 		
 		List<RalleyDaywiseSlotDetails> slotlist = rd.getRalleydaywiseSlot();
 
@@ -154,6 +159,8 @@ public class AdminController {
         model.addAttribute("ralleyDetails", rs);
         model.addAttribute("allStates", rdservice.getallState());
         model.addAttribute("allgroups",rdservice.getAllgroups());
+        model.addAttribute("candidateRestrictAllStates",rdservice.getallState());
+        model.addAttribute("districtlist",rdservice.getMultipleCitesByState(id));
         return "CreateRalley";
     }
 
@@ -225,7 +232,9 @@ public class AdminController {
 		   
 		    return new ResponseEntity<List<RalleyCities>>(entityList, HttpStatus.OK);
 		}
-	 
+		
+		
+		
 	 
 	 @RequestMapping(value="/getralleyallotCities", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody

@@ -281,7 +281,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 
 								
-								<div class="col-md-5 ">
+								<div class="col-md-6 ">
 									<label for="state" class="col-form-label">Select State</label>
 									<select th:field="*{opt_state}" id="ralleystateSelect"
 										 class="form-control" >
@@ -296,7 +296,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<input type="hidden" th:field="*{opt_state_name}" id="optedstatename">
 								<input type="hidden" th:field="*{opt_city_name}" id="optedcityname"> 
 
-								<div class="col-md-5 ">
+								<div class="col-md-6 ">
 									<label for="city" class="col-form-label">Select City</label>
 										
 										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" >
@@ -309,7 +309,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									</div>
 									
 									
-									<div id="proceed" class="form-group col-md-2 " style="margin-top: 3.5%;">
+									<div id="proceed" class="form-group col-md-4 " style="margin-top: 3.5%;">
 									<a class="btn btn-primary" style="color:white;">Proceed</a>
 									
 									</div>
@@ -421,7 +421,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="form-group col-md-4">
 									<label for="martital" class="col-form-label">Maritial Status:</label>
 									<div style="padding:9% 1%;">
-									<div class="form-check form-check-inline col-6" style="display:inline;">
+									<div class="form-check form-check-inline col-6" style="display:inline-flex;">
 										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${true}"  value="true">
 										 <label class="form-check-label" for="married">Married</label>
 									</div>
@@ -495,7 +495,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								
 								<div id="grptrade" style="padding: 5px 0px 0px 2%;" class="col-md-6">
-									<label for="pass" style="font-size: 16px;">Select Group/Trade:</label></div>
+									<label for="pass" style="font-size: 16px;">Group/Trade:</label></div>
 									<div class="form-group col-md-6" >
 									<select class="form-control" id="selectgroup" required="required">
 									</select>
@@ -527,7 +527,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row">
 								<div class="form-group col-md-8" >
 								<label class="col-form-label">
-								<h6 style="color:black;padding-bottom:1%;">Upload 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"  onchange="loadFile(event)" class="form-control" required>
+								<h6 style="color:black;padding-bottom:1%;">Upload 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"   class="form-control"  required>
 								</label>
 								</div>
 								
@@ -557,7 +557,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									</div> -->
 									
 									<div class="form-check col-md-6" id="vocational_v" >
-										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="Vocational" required> <label
+										<input class="form-check-input" type="radio" th:field="*{passed_exam_detail}" value="Vocational"  required> <label
 											class="form-check-label" for="voc"> Passed 2 years Vocational Course
 											 </label>
 											 
@@ -593,7 +593,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<label for="Qualification Details:" class="col-form-label">Qualifying Degree Details:</label>
 								</div><div class="form-group col-md-6">
 								<input type="text" th:field="*{otherDetailPassedDetail}" 
-									class="form-control" id="other" placeholder="Qualification Details" data-error="please Qualification Details" required>
+									class="form-control" id="other" placeholder="Qualification Details" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$" data-error="please Qualification Details" required>
 									<div class="invalid-feedback">Please provide a valid Details.</div>
 								<span th:if="${#fields.hasErrors('otherDetailPassedDetail')}"    th:errors="*{otherDetailPassedDetail}" class="text-danger"></span>
 							<p id="verrordet"></p>
@@ -632,11 +632,11 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								<div class="col-md-12">
 								<h5><b><u>UPLOAD SECTION:</u></b></h5>
-								<span>12th Pass Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
+								<span>12th Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
 								</div>
 								<div class="form-group col-md-8" style="padding-top: 1%;">
 								<label class="col-form-label">
-								<input type="file" name="XIIMarksheet" accept="image/*" id="XII_marksheet" onchange="loadFile(event)" class="form-control" required>
+								<input type="file" name="XIIMarksheet" accept="image/*" id="XII_marksheet"  class="form-control" required>
 								</label>
 								</div>
 								
@@ -899,6 +899,36 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	    });
 	    
 	    
+	    $('#X_marksheet').bind('change', function() {
+	    	var sizeInKB = this.files[0].size/1024; //Normally files are in bytes but for KB divide by 1024 and so on
+	    	var sizeLimitmin = 30;
+			var sizeLimitmax = 100;
+	    	if (sizeInKB > sizeLimitmax || sizeInKB < sizeLimitmin ) {
+	    	    alert("Max file size 50KB to 100KB");
+	    	    $('#X_marksheet').val('');
+	    	    return false;
+	    	}
+	    	else{
+	    		loadFile("X_marksheet");
+	    	}
+           
+        });
+	    
+	    $('#XII_marksheet').bind('change', function() {
+	    	var sizeInKB = this.files[0].size/1024; //Normally files are in bytes but for KB divide by 1024 and so on
+	    	var sizeLimitmin = 30;
+			var sizeLimitmax = 100;
+	    	if (sizeInKB > sizeLimitmax || sizeInKB < sizeLimitmin ) {
+	    	    alert("Max file size 50KB to 100KB");
+	    	    $('#XII_marksheet').val('');
+	    	    return false;
+	    	}
+	    	else{
+	    		loadFile("XII_marksheet");
+	    	}
+        });
+	    
+	    
 	});
 	</script>
 	<script>
@@ -926,13 +956,13 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 <script type="text/javascript">
 
 
-var loadFile = function(event) {
+var loadFile = function(id) {
 	var image = document.getElementById('output');
 	var image2 = document.getElementById('output2');
 	var lblpc = document.getElementById('label-pass');
 	var lblm = document.getElementById('label-mark');
 	
-    if(event.target.id === "X_marksheet"){
+    if(id === "X_marksheet"){
        image.src = URL.createObjectURL(event.target.files[0]);
        lblpc.style.display = 'none';
     }

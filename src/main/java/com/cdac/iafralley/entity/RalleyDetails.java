@@ -107,6 +107,12 @@ public class RalleyDetails {
 	@Column(name="ralley_for_Groups")
 	private List<String> ralleyForGroup;
 	
+	@Column(name="candidateRestrictFromStateId")
+	private Long candidateRestrictFromStateId;
+	
+	@Convert(converter = StringListConverter.class)
+	@Column(name="candidateRestrictFrom_district_ids")
+	private List<String> candidateRestrictFromDistrictIds;
 	
 	@OneToMany(fetch = FetchType.LAZY,mappedBy = "ralleydetails",cascade = CascadeType.ALL)
 	private List<RalleyDaywiseSlotDetails> ralleydaywiseSlot;
@@ -120,7 +126,7 @@ public class RalleyDetails {
 
 	public RalleyDetails(Long ralley_id,Long state_id, Long city_id, String ralley_details, String venue_details, Date start_date,
 			Date end_date, int no_OfDays, Date min_dob, Date max_dob, Long min_passing_percentage,
-			Long min_eng_percentage, Long min_height,String city_name,String state_name,String ralley_cust_id) {
+			Long min_eng_percentage, Long min_height,String city_name,String state_name,String ralley_cust_id,Long candidateRestrictFromStateId) {
 		super();
 		this.ralley_id=ralley_id;
 		this.state_id = state_id;
@@ -138,6 +144,7 @@ public class RalleyDetails {
 		this.city_name=city_name;
 		this.state_name=state_name;
 		this.ralley_cust_id=ralley_cust_id;
+		this.candidateRestrictFromStateId =candidateRestrictFromStateId;
 	}
 
 
@@ -360,6 +367,32 @@ public class RalleyDetails {
 
 	public void setRalley_cust_id(String ralley_cust_id) {
 		this.ralley_cust_id = ralley_cust_id;
+	}
+
+
+	
+
+	public Long getCandidateRestrictFromStateId() {
+		return candidateRestrictFromStateId;
+	}
+
+
+
+	public void setCandidateRestrictFromStateId(Long candidateRestrictFromStateId) {
+		this.candidateRestrictFromStateId = candidateRestrictFromStateId;
+	}
+
+
+	
+
+	public List<String> getCandidateRestrictFromDistrictIds() {
+		return candidateRestrictFromDistrictIds;
+	}
+
+
+
+	public void setCandidateRestrictFromDistrictIds(List<String> candidateRestrictFromDistrictIds) {
+		this.candidateRestrictFromDistrictIds = candidateRestrictFromDistrictIds;
 	}
 
 

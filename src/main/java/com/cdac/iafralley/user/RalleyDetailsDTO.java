@@ -80,6 +80,10 @@ public class RalleyDetailsDTO {
 	
 	private List<RalleyDaywiseSlotDetails> ralleydaywiseSlot;
 	
+	
+	private Long candidateRestrictFromStateId;
+	
+	private List<String> candidateRestrictFromDistrictIds;
 
 	
 
@@ -225,6 +229,22 @@ public class RalleyDetailsDTO {
 
 	public void setRalleyForGroup(List<String> ralleyForGroup) {
 		this.ralleyForGroup = ralleyForGroup;
+	}
+
+	public Long getCandidateRestrictFromStateId() {
+		return candidateRestrictFromStateId;
+	}
+
+	public void setCandidateRestrictFromStateId(Long candidateRestrictFromStateId) {
+		this.candidateRestrictFromStateId = candidateRestrictFromStateId;
+	}
+
+	public List<String> getCandidateRestrictFromDistrictIds() {
+		return candidateRestrictFromDistrictIds;
+	}
+
+	public void setCandidateRestrictFromDistrictIds(List<String> candidateRestrictFromDistrictIds) {
+		this.candidateRestrictFromDistrictIds = candidateRestrictFromDistrictIds;
 	}
 	
 	

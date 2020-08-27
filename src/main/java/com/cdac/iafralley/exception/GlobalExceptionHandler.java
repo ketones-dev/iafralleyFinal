@@ -28,6 +28,7 @@ public class GlobalExceptionHandler {
     	ErrorDetails errorDetails = new ErrorDetails(new Date(), e.getMessage(), request.getRequestURI());
     	ModelAndView modal= new ModelAndView("error/404");
     	modal.addObject("error", errorDetails);
+    	e.printStackTrace();
         return modal;
     }
     
@@ -37,6 +38,7 @@ public class GlobalExceptionHandler {
 		logger.info("inside");
 		ModelAndView modal= new ModelAndView("error");
     	modal.addObject("error", errorDetails);
+    	e.printStackTrace();
         return modal;
     }
     

@@ -15,7 +15,15 @@
 	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
 	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
 <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+<style>
+#second_chosen{
+
+width:100%;
+}
+
+</style>
 </head>
 
 <body>
@@ -178,8 +186,46 @@
 									th:if="${#fields.hasErrors('min_height')}"
 									th:errors="*{min_height}" class="text-danger"></span>
 							</div>
-							
-							<div class="row">
+
+								<div class="form-group col-md-12" style="display:flex;flex-direction:row;">
+								
+								<div class="form-group col-md-6">
+								<label for="state" class="col-form-label">State(s) Covered</label> <select
+									th:field="*{candidateRestrictFromStateId}" id="candidaterestrictStateSelect" class="form-control"
+									required="true">
+									<option th:value="''">---Select State----</option>
+									<option th:each="state : ${candidateRestrictAllStates}"
+										th:value="${state.state_id}" th:text="${state.state}"></option>
+								</select>
+							</div>
+
+								<div class="form-group col-md-6">
+								<label class="col-form-label">District Covered </label>
+												<select id="second"  data-placeholder="Choose a District" 
+													class="chosen-select" multiple 
+													>
+													
+												<th:block th:each="ralley :  ${districtlist}">
+												<option  th:value="${ralley.city_id}"
+														 th:text="${ralley.city}"></option>
+												
+												</th:block>
+												
+													
+													
+ 												
+													
+												</select>
+												
+												<input type="hidden" name="candidateRestrictFromDistrictIds" value="" id="mulselectDist">
+												</div>
+
+													
+
+
+										</div>
+
+										<div class="row">
 							<div class="form-group col-md-4">
 							<a class="prevtab btn btn-success">Prev</a></div>
 							<div class="form-group col-md-4"><a class="nexttab btn btn-success">Next</a></div>
@@ -313,7 +359,7 @@
 	<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
 	<script type="text/javascript" th:src="@{/js/createralleys.js}"></script>
 
-
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
 
 	<!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
@@ -322,7 +368,20 @@
     </script>
 
 <script>
+
+$(".chosen-select").chosen();
+
+document.getElementById('second_chosen').style.width="100%";
+
 $(document).ready(function() {
+	
+
+	 
+	 
+	
+	
+	
+	
 	function bootstrapTabControl(){
 		  var i, items = $('.custom'), pane = $('.tab-pane');
 		  // next

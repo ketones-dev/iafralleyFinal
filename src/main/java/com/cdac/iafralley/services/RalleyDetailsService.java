@@ -1,8 +1,10 @@
 package com.cdac.iafralley.services;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -126,4 +128,25 @@ public class RalleyDetailsService {
 		List<RalleyGroup_trade> groups=ralley_grp.findAll();
 		return groups;
 	}
+
+	public List<RalleyCities> getMultipleCitesByState(Long long1) {
+		// TODO Auto-generated method stub
+		Optional<RalleyDetails> details =ralleydetaildao.findById(long1);
+		List<String> citiesid=new ArrayList<String>();
+		if(details.isPresent())
+		{
+		   citiesid=details.get().getCandidateRestrictFromDistrictIds();
+		}
+		
+List<Long> intList = citiesid.stream()
+                               .map(Long::valueOf)
+                               .collect(Collectors.toList());
+
+
+		
+		List<RalleyCities> lists=conductingCities.getAllotCities(intList);
+		return lists;
+	}
+
+	
 }
