@@ -14,9 +14,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.security.web.session.HttpSessionEventPublisher;
 
 import com.cdac.iafralley.appsecurity.config.*;
+import com.cdac.iafralley.filters.SameSiteFilter;
 import com.cdac.iafralley.services.UserService;
 
 @Configuration
@@ -58,6 +60,8 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.NEVER).maximumSessions(1)
 				.maxSessionsPreventsLogin(true);
              
+		http.addFilterAfter(new SameSiteFilter(), BasicAuthenticationFilter.class);
+
 		
 	}
 	

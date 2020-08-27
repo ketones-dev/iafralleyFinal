@@ -103,7 +103,7 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 	     table2.addCell(leftCell);
 
 	     Font myFonColor = FontFactory.getFont(FontFactory.TIMES_ROMAN, 18, BaseColor.WHITE);
-	     PdfPCell middleCell = new PdfPCell(new Paragraph("IAF Ralley Registration",myFonColor));
+	     PdfPCell middleCell = new PdfPCell(new Paragraph("IAF RALLY RECRUITMENT ",myFonColor));
 	     middleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
 	     middleCell.setPaddingTop(15.0f);
 	     middleCell.setBackgroundColor(new BaseColor (135,206,250));
@@ -121,7 +121,7 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 	     table.setWidthPercentage(100f);
 	     
 	     
-	     PdfPCell cell = new PdfPCell (new Paragraph ("RALLEY REGISTRATION NUMBER:"));
+	     PdfPCell cell = new PdfPCell (new Paragraph ("RALLY REGISTRATION NUMBER:"));
 	     PdfPCell regno = new PdfPCell (new Paragraph (candidate.getRalleyregistrationNo()));
 	     cell.setColspan (2);
 	     regno.setColspan(2);
@@ -205,11 +205,11 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 		      table.addCell(cell3);
 		      
 		      table.addCell("Date of Reporting");
-		      table.addCell(convertDate(candidate.getDateTimeOfReporting()));
+		     // table.addCell(convertDate(candidate.getDateTimeOfReporting()));
 		      table.addCell("Time of Reporting");
 		      
-		      table.addCell(convertTimeStampDate(candidate.getDateTimeOfReporting()));
-		      PdfPCell venucell=new PdfPCell(new Phrase("Venu Details: "+candidate.getVenu_details()));
+		     // table.addCell(convertTimeStampDate(candidate.getDateTimeOfReporting()));
+		      PdfPCell venucell=new PdfPCell(new Phrase("Venu Details: "/*+candidate.getVenu_details()*/));
 		      venucell.setColspan(4);
 		      venucell.setRowspan(2);
 		      table.addCell(venucell);

@@ -36,6 +36,7 @@ import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.mailConfig.MailingService;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
+import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
 
 
 
