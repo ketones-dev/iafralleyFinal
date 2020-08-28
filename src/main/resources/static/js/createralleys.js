@@ -421,14 +421,12 @@ document.getElementById('form').addEventListener('submit', function(evt){
 	var dob2=new Date(max_dob.value);
 	var check=false;
 	
-	
-		var ar = [];
-		$('#second option:selected').each(function(index,valor){
-			if(valor.value === ""){alert("select District"); return false;}
-		    ar.push(valor.value);
-		});
-		console.log(ar);
-		mulselectDist.value = ar;
+	if(mulselectDist.value == ""){
+		console.log(mulselectDist.value);
+		alert("Provide Districts");
+		evt.preventDefault();
+		return false;
+	}
 		
 	console.log(d1>d2 );
 	if(d1>d2 || dob1>dob2){

@@ -282,7 +282,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 								
 								<div class="col-md-6 ">
-									<label for="state" class="col-form-label">Select State</label>
+									<label for="state" class="col-form-label">Rally conducted at (State)</label>
 									<select th:field="*{opt_state}" id="ralleystateSelect"
 										 class="form-control" >
 										<option th:value="''">---Select State----</option>
@@ -297,7 +297,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<input type="hidden" th:field="*{opt_city_name}" id="optedcityname"> 
 
 								<div class="col-md-6 ">
-									<label for="city" class="col-form-label">Select City</label>
+									<label for="city" class="col-form-label">Rally Venue (City)</label>
 										
 										<select th:field="*{opt_city}" id="ralleycitySelect" class="custom-select" >
 												<option  selected  value="">---Select City----</option>
@@ -357,7 +357,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="form-group col-md-6">
 								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name (As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{name}" 
-									class="form-control" id="name"  pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
+									class="form-control" id="name"  pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
 									<div id="errorname"  class="invalid-feedback">Please provide a valid Name.</div>
 									<span th:if="${#fields.hasErrors('name')}"  th:errors="*{name}" class="text-danger"></span>
 									<p id="verrorn"></p>
@@ -366,7 +366,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="form-group col-md-6">
 								<label for="Father Name:" class="col-form-label">Father’s Full Name (As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{fathername}" 
-									class="form-control" id="fathername" pattern="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
+									class="form-control" id="fathername" pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
 									<div class="invalid-feedback">Please provide a valid Name.</div>
 								<span th:if="${#fields.hasErrors('fathername')}"    th:errors="*{fathername}" class="text-danger"></span>
 								<p id="verrorf"></p>
@@ -412,7 +412,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="form-group col-md-4">
 								<label for="height" class="col-form-label">Height (in cm) (Not less than 152.5 Cms):</label>
 								<input type="number" th:field="*{height}" 
-									class="form-control" id="height" placeholder="Enter height" data-error="please enter valid height" required>
+									class="form-control" id="height" pattern="^[1-4][0-9][0-9](?:\.[0-9]{1,1})?$" placeholder="Enter height" data-error="please enter valid height" required>
 									<div class="invalid-feedback">Please provide a valid height.</div>
 								<span th:if="${#fields.hasErrors('height')}"    th:errors="*{height}" class="text-danger"></span>
 								<p id="verrorh"></p>
@@ -604,7 +604,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								</div><div class="form-group col-md-6">
 								
 								<input type="number" th:field="*{passed_exam_percentage}" 
-									class="form-control" id="passed_exam" placeholder="Enter passing percentage" min="36" data-error="please enter valid passing percentage" required>
+									class="form-control" id="passed_exam" placeholder="Enter passing percentage" min="36" pattern="^[3-9][0-9]?$|^100$" data-error="please enter valid passing percentage" required>
 									<div class="invalid-feedback">Please provide a valid passing percentage.</div>
 								<span th:if="${#fields.hasErrors('passed_exam_percentage')}"    th:errors="*{passed_exam_percentage}" class="text-danger"></span>
 							<p id="verrorpp"></p>
@@ -615,7 +615,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<label class="extra-info">If English is not a Subject in Vocational/Qualifying course then provide 10th/Matriculation English percentage.</label>
 								</div><div class="form-group col-md-6">
 								<input type="number" th:field="*{english_percentage}" 
-									class="form-control" id="eng_passed_exam" placeholder="Enter english passing percentage" min="36" data-error="please enter valid english passing percentage" required>
+									class="form-control" id="eng_passed_exam" placeholder="Enter english passing percentage" min="36"  pattern="^[3-9][0-9]?$|^100$" data-error="please enter valid english passing percentage" required>
 									<div class="invalid-feedback">Please provide a valid english passing percentage.</div>
 								<span th:if="${#fields.hasErrors('english_percentage')}"    th:errors="*{english_percentage}" class="text-danger"></span>
 							<p id="verrorepp"></p>

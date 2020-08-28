@@ -14,6 +14,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -38,10 +40,14 @@ public class RalleyCandidateDetails implements Serializable {
 	private Long id;
 	
 	@NotBlank(message="is required")
+	@Size(max = 50, min = 3, message = "Candidate Name must be  3 to 50 character long ")
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="Please provide valid Name values")
 	@Column(name="name")
 	private String name;
 	
 	@NotBlank(message="is required")
+	@Size(max = 50, min = 3, message = "Candidate Name must be  3 to 50 character long ")
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="Please provide valid Father Name values")
 	@Column(name="father_name")
 	private String fathername;
 	
@@ -57,44 +63,55 @@ public class RalleyCandidateDetails implements Serializable {
 	private java.util.Date dateOfBirth;
 	
 	@NotEmpty
+	
+	@Pattern(regexp="^[6-9]\\d{9}$",message ="Please provide valid mobile number")
 	@Column(name="mobile")
 	private String contactno;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z0-9]+$",message="invalid input data")
 	@Column(name="passed_exam_detail")
 	private String passed_exam_detail;
 	
 	@NotNull(message="is required")
+	@Pattern(regexp="^[^\\s]+[-a-zA-Z\\s]+([-a-zA-Z]+)*$",message="invalid Degree Details only Characters allowed")
 	@Column(name="degree_detail")
 	private String otherDetailPassedDetail;
 	
 	
 	
 	@Column(name="aadhar_details")
+	@Pattern(regexp="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$",message="Please provide valid aadhar Number")
 	private String aadhar_details;
 	
 	
 	@NotNull
+	@Pattern(regexp="^[1-9][0-9]?$|^100$",message="Should be a percentage value")
 	@Column(name="passed_exam_percentage")
 	private Integer passed_exam_percentage;
 	
 	@NotNull
+	@Pattern(regexp="^[1-9][0-9]?$|^100$",message="Should be a percentage value")
 	@Column(name="english_percentage")
 	private Integer english_percentage;
 	
-	
+	@NotEmpty
+	@Pattern(regexp = "^true$|^false$", message = "allowed input: true or false")
 	@Column(name="maritial_status")
 	private boolean maritial_status;
 	
 	@NotEmpty
+	@Pattern(regexp="^[1-4][0-9][0-9](?:\\.[0-9]{1,1})?$",message="Height input was invalid")
 	@Column(name="height")
 	private String height;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="city")
 	private String city;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="state")
 	private String state;
 	
@@ -107,10 +124,12 @@ public class RalleyCandidateDetails implements Serializable {
 	private Long opt_state;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="opt_city_name")
 	private String opt_city_name;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="opt_state_name")
 	private String opt_state_name;
 	
@@ -121,9 +140,11 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="allot_venu_details")
 	private String venu_details;
 	
+	@NotNull
 	@Column(name="x_imagepath")
 	private String ximagePath;
 	
+	@NotNull
 	@Column(name="xii_imagepath")
 	private String xiiimagePath;
 	
@@ -154,6 +175,7 @@ public class RalleyCandidateDetails implements Serializable {
 	private java.util.Date subscirbed_on;
 	
 	@NotEmpty
+	@Pattern(regexp = "^[a-zA-Z0-9]$",message="Ralley Id cannot contain special characters")
 	@Column(name="rally_id")
 	private String rally_id;
 	
