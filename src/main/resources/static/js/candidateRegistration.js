@@ -33,6 +33,8 @@ let vocational_v=document.getElementById("vocational_v");
 
 let duplicateerror= document.getElementById("error2");
 
+let restrictdistrictvalue;
+
 window.addEventListener('load', function() {
     console.log('All assets are loaded');
     if(error.value === "error")
@@ -109,6 +111,7 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 			   		    console.log(post);
 			   		    let ra=post;
 			   		 document.getElementById("ralleyoptdetails").innerHTML= ra;
+			   		 
 			   		
 			   		
 			   		if(cities === true)
@@ -165,6 +168,29 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 						   		dateOfBirth.setAttribute("min",data.mindob);
 						   		dateOfBirth.setAttribute("max",data.maxdob);
 						   		height.setAttribute("min",data.height);
+						   		
+						   	 if(cities === true){
+						   		 let data=document.getElementById("ralleyid_cust").value;
+						   		 http.post('getralleyStateandCities', {rallyid : data} , function(err, post) {
+							   		  if(err) {
+							   		    console.log(post);
+							   		  } else {
+							   			console.log(post);
+							   			let restvalues=JSON.parse(post);
+							   			restrictdistrictvalue=restvalues;
+							   			console.log(restvalues.value[1]+"and"+restvalues.value[2]);
+							   			for(var i=0;i<1;i++)
+							   				{
+							   				var option=document.createElement("option");
+							   			    option.value = restvalues.value[1];
+							   			    option.text = restvalues.value[2];
+							   				stateSelectedValue.append(option);
+							   				}
+							   			
+							   		  }
+							   		  });
+						   		 
+						   	 }
 						   		 
 						   		  }
 						    	 });
@@ -287,9 +313,15 @@ ralley_stateSelectedValue.addEventListener("change", function(e) {
 stateSelectedValue.addEventListener("change", function(e) {
 	 console.log(this);
 	 let data = stateSelectedValue.options[stateSelectedValue.selectedIndex].value;
-	    if(data !== "0")
+	    if(data !== "")
 	    {
-	        addActivityItem(data,e.target.id);
+	       // addActivityItem(data,e.target.id);
+	    	createCitydropdownData(restrictdistrictvalue.value[0],e.target.id);
+	    	
+	    }
+	    else{
+	    	removecitiesExcetFirstOption(restrictdistrictvalue.value[0],e.target.id);
+	    	
 	    }
 	    //console.log(activities.value);
 	});

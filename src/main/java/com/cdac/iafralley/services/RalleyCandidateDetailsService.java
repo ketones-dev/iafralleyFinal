@@ -40,6 +40,8 @@ public interface RalleyCandidateDetailsService {
 	public Map<String, String> showOptValidRalleyDetailstoCandidate(Long long1);
 
 	public List<RalleyGroup_trade> getralleyCreatedGroups(Long long1);
+
+	public Map<String, List<Object>> getralleyStateandCities(String rallyid);
 	
 	
 	

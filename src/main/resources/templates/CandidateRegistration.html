@@ -463,8 +463,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<label for="state" class="col-form-label">State:</label> 
 							<select th:field="*{state}" id="stateSelect" class="form-control" required="true" >
 							<option th:value="''">---Select State----</option>
-							<option th:each="ralleystate : ${allStates}" th:value="${ralleystate.state_id}"
-								th:text="${ralleystate.state}">
+							<!-- <option th:each="ralleystate : ${allStates}" th:value="${ralleystate.state_id}"
+								th:text="${ralleystate.state}"> -->
 								</option>
 					</select>
 					<label th:if="${#fields.hasErrors('state')}"  th:class="'error'" th:errors="*{state}" >Select state</label>

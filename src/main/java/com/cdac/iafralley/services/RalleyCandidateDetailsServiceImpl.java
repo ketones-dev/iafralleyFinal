@@ -449,4 +449,31 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 	    date +=simpleDateFormat.format(convertDate).toUpperCase();
 		return date;
 	}
+
+	@Override
+	public Map<String, List<Object>> getralleyStateandCities(String rallyid) {
+		// TODO Auto-generated method stub
+		logger.info("obtained rallyid="+rallyid);
+		RalleyDetails rd= ralleyDetailsRepo.findByRalley_cust_id(rallyid);
+		Long sid=rd.getCandidateRestrictFromStateId();
+		Optional<RalleyStates> rsid=conductingStates.findById(sid);
+		RalleyStates s=null;
+		if(rsid.isPresent())
+		{
+			s=rsid.get();
+		}
+		Map<String,List<Object>> details=new HashMap<String, List<Object>>();
+		List<Long> cid=rd.getCandidateRestrictFromDistrictIds().stream().map(Long::parseLong).collect(Collectors.toList());
+		List<RalleyCities> cities=conductingCities.getAllotCities(cid);
+		cities.stream().forEach(System.out::println);
+		//details.put("cities", cities);
+		List<Object> list = new ArrayList <>();
+		list.add(cities);
+		list.add(s.getState_id());
+		list.add(s.getState());
+		details.put("value", list);
+		
+		//details.put("state",  s);
+		return details;
+	}
 }

@@ -1,5 +1,6 @@
 package com.cdac.iafralley.controllers;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +35,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyGroup_trade;
+import com.cdac.iafralley.entity.RalleyStates;
 import com.cdac.iafralley.mailConfig.MailingService;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
 import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
@@ -105,7 +107,8 @@ public class RalleyRegistrationFormController {
 		ModelAndView modelAndView = new ModelAndView("CandidateRegistration");
 		 if (!model.containsAttribute("ralleyCandidateDetails")) {
 	        	modelAndView.addObject("ralleyCandidateDetails", new RalleyCandidateDetails());
-	        	modelAndView.addObject("allStates", candidateService.getallState());
+	        	//modelAndView.addObject("allStates", candidateService.getallState());
+	        	modelAndView.addObject("allStates", new RalleyStates());
 	        	modelAndView.addObject("ralleyAllState", candidateService.getralleyAllState());
 	        }
 		
@@ -149,7 +152,8 @@ public class RalleyRegistrationFormController {
 			  redirectAttributes.addFlashAttribute("optcity",ralleyCandidateDetails.getOpt_city());
 			 // modelAndView.addObject("ralleyCandidateDetails", ralleyCandidateDetails);
 			 // modelAndView.addObject("allStates", candidateService.getallState());
-			  redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
+			 // redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
+			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
 			  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
 			 
 			 
@@ -189,7 +193,8 @@ public class RalleyRegistrationFormController {
 		  
 			  modelAndView.setViewName("redirect:/showRegistrationForm");
 			  redirectAttributes.addFlashAttribute("ralleyCandidateDetails", new RalleyCandidateDetails());
-		  redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
+		 // redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
+			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
 		  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
 		  redirectAttributes.addFlashAttribute("msgsavingerror",e.getMessage());
 		  
@@ -220,10 +225,24 @@ public class RalleyRegistrationFormController {
 		System.out.println("in getcities"+stateid.get("stateid"));
 	   List<RalleyCities> entityList = candidateService.getallCitesByStateAdminAlloted(stateid.get("stateid"));
 	   
+	   
 		//List<RalleyCities> entityList=Collections.EMPTY_LIST;
 	    
 	   
 	    return new ResponseEntity<List<RalleyCities>>(entityList, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/getralleyStateandCities", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public  ResponseEntity<Map<String,List<Object>>> getralleyStateandCities(@RequestBody Map<String, String>  rallyid) {
+		
+		System.out.println("in getid:"+rallyid.get("rallyid"));
+		Map<String,List<Object>> entityList = candidateService.getralleyStateandCities(rallyid.get("rallyid"));
+	   
+		//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+	    
+	   
+	    return new ResponseEntity<Map<String,List<Object>>>(entityList, HttpStatus.OK);
 	}
 
 	@RequestMapping(value="/getralleyFormOnBasisOfAdminCities", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)

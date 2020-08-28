@@ -34,5 +34,8 @@ public interface RalleyDetailsDAO extends JpaRepository<RalleyDetails, Long> {
 	@Query("select max(SUBSTRING(a.ralley_cust_id,10,5)) from RalleyDetails a")
 	public String maxCount();
 	
+	@Query("from RalleyDetails r where r.ralley_cust_id= :id")
+	public RalleyDetails findByRalley_cust_id(@Param("id") String id);
+	
 
 }
