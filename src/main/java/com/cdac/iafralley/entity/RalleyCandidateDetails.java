@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -81,22 +82,20 @@ public class RalleyCandidateDetails implements Serializable {
 	
 	
 	@Column(name="aadhar_details")
-	@Pattern(regexp="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$",message="Please provide valid aadhar Number")
+	@Pattern(regexp="^$|^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$",message="Please provide valid aadhar Number")
 	private String aadhar_details;
 	
 	
 	@NotNull
-	@Pattern(regexp="^[1-9][0-9]?$|^100$",message="Should be a percentage value")
+	@Min(value = 35,message="value must be positive value")
 	@Column(name="passed_exam_percentage")
 	private Integer passed_exam_percentage;
 	
 	@NotNull
-	@Pattern(regexp="^[1-9][0-9]?$|^100$",message="Should be a percentage value")
+	@Min(value = 35,message="value must be positive value")
 	@Column(name="english_percentage")
 	private Integer english_percentage;
 	
-	@NotEmpty
-	@Pattern(regexp = "^true$|^false$", message = "allowed input: true or false")
 	@Column(name="maritial_status")
 	private boolean maritial_status;
 	
@@ -106,20 +105,20 @@ public class RalleyCandidateDetails implements Serializable {
 	private String height;
 	
 	@NotEmpty
-	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="city")
 	private String city;
 	
 	@NotEmpty
-	@Pattern(regexp = "^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$",message="input value should be string with spaces only")
 	@Column(name="state")
 	private String state;
 	
 	@NotNull
+	@Min(value=0 ,message="value should be positive number")
 	@Column(name="opt_city")
 	private Long opt_city;
 	
 	@NotNull
+	@Min(value=0 ,message="value should be positive number")
 	@Column(name="opt_state")
 	private Long opt_state;
 	
@@ -135,16 +134,17 @@ public class RalleyCandidateDetails implements Serializable {
 	
 	
 	@Column(name="opt_group_id")
+	@Min(value = 0L , message ="group no should be positive")
 	private Long opt_group_id;
 	
 	@Column(name="allot_venu_details")
 	private String venu_details;
 	
-	@NotNull
+	
 	@Column(name="x_imagepath")
 	private String ximagePath;
 	
-	@NotNull
+	
 	@Column(name="xii_imagepath")
 	private String xiiimagePath;
 	
@@ -175,7 +175,7 @@ public class RalleyCandidateDetails implements Serializable {
 	private java.util.Date subscirbed_on;
 	
 	@NotEmpty
-	@Pattern(regexp = "^[a-zA-Z0-9]$",message="Ralley Id cannot contain special characters")
+	//@Pattern(regexp = "^[a-zA-Z0-9]$",message="Ralley Id cannot contain special characters")
 	@Column(name="rally_id")
 	private String rally_id;
 	

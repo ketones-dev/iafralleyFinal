@@ -202,13 +202,15 @@ width:100%;
 								<div class="form-group col-md-6">
 								<label class="col-form-label">District Covered </label>
 												<select id="second"  data-placeholder="Choose a District" 
-													class="chosen-select" multiple 
+													class="chosen-select" multiple th:field="*{candidateRestrictFromDistrictIds}"
 													>
 													
+												<th:block th:if="${districtlist != null}">
 												<th:block th:each="ralley :  ${districtlist}">
 												<option  th:value="${ralley.city_id}"
 														 th:text="${ralley.city}"></option>
 												
+												</th:block>
 												</th:block>
 												
 													

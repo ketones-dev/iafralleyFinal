@@ -61,7 +61,12 @@ window.addEventListener('load', function() {
     	 ralley_stateSelectedValue.selectedIndex=0;
     	stateSelectedValue.selectedIndex = 0;
     	alert("please check input values...");
-    	window.location.reload();
+    	window.location.reload(true);
+    	}
+    if(error.value !== "" && error.value !== "error")
+    	{
+    	alert(error.value);
+    	window.location.reload(true);
     	}
     
     if(duplicateerror.value !== "")
@@ -69,6 +74,7 @@ window.addEventListener('load', function() {
     	ralley_stateSelectedValue.selectedIndex=0;
     	//stateSelectedValue.selectedIndex = 0;
     	alert(duplicateerror.value);
+    	window.location.reload(true);
     	}
     
 })
@@ -179,6 +185,8 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 							   			let restvalues=JSON.parse(post);
 							   			restrictdistrictvalue=restvalues;
 							   			console.log(restvalues.value[1]+"and"+restvalues.value[2]);
+							   			
+							   			stateSelectedValue.remove(1);
 							   			for(var i=0;i<1;i++)
 							   				{
 							   				var option=document.createElement("option");

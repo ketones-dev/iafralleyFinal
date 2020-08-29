@@ -31,8 +31,13 @@ window.addEventListener('load', function() {
     
     console.log('All assets are loaded');
     
+    
+    	
+    	
+    
     if(ralley_id.value !== "")
     	{
+    	
     	start_date.readOnly =true;
     	end_date.readOnly =true;
     	var str_array=[];
@@ -47,7 +52,11 @@ window.addEventListener('load', function() {
         }
 
     	console.log(str_array);
-    	    $(".chosen-select").val(str_array).trigger("chosen:updated");
+    	
+    	 
+    		
+    		
+    	   
     	}
     
     
@@ -58,7 +67,11 @@ window.addEventListener('load', function() {
 			  if(err) {
 			    console.log(err);
 			  } else {
-				  
+				  if(ralley_id.value !== "" && cnrestState != ""){
+					  
+			        	call(cnrestState,str_array);
+			        	
+			        	}
 			    console.log(post);
 			    let cities=JSON.parse(post);
 			    createCitydropdownData(cities);
@@ -73,7 +86,7 @@ window.addEventListener('load', function() {
 			            }
 			        }
 			        
-			      
+			       
 			       
 			    
 			  }
@@ -91,7 +104,20 @@ window.addEventListener('load', function() {
  
 });
 
-
+function call(cnrestState,str_array){
+	 http.post('getCitiesonbasisofStateSeclected', {stateid : cnrestState} , function(err, post) {
+		  if(err) {
+		    console.log(err);
+		  } else {
+			  
+		    console.log(post);
+		    let cities=JSON.parse(post);
+		  createCityMultipleSelectData(cities);
+		  $(".chosen-select").val(str_array).trigger("chosen:updated");
+		  
+		  }
+	});
+}
 
 citySelectedValue.addEventListener("change", function() {
 	
@@ -116,7 +142,7 @@ stateSelectedValue.addEventListener("change", function() {
 candidaterestrictStateSelect.addEventListener("change", function() {
 	 console.log(this);
 	 let data = candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].value;
-	 state_name.value = candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].text;
+	// state_name.value = candidaterestrictStateSelect.options[candidaterestrictStateSelect.selectedIndex].text;
 	    if(data.text !== "0")
 	    {
 	        addActivityrestrictStateSelect(data);
@@ -182,7 +208,7 @@ function createCitydropdownData(citiesArrays)  {
 function createCityMultipleSelectData(citiesArrays)  {
 	//console.log(JSON.parse(citiesArrays).length);
 	removecitiesExcetFirstOption2(citiesArrays);
-	
+	//console.log(citiesArrays.length);
 	//Add the Options to the DropDownList.
    for (var i = 0; i < citiesArrays.length; i++) {
        var option = document.createElement("option");
@@ -199,6 +225,7 @@ function createCityMultipleSelectData(citiesArrays)  {
        
        
    }
+  // console.log(cityMultipleSelectData);
   
 }
 	
@@ -421,12 +448,12 @@ document.getElementById('form').addEventListener('submit', function(evt){
 	var dob2=new Date(max_dob.value);
 	var check=false;
 	
-	if(mulselectDist.value == ""){
+	/*if(mulselectDist.value == ""){
 		console.log(mulselectDist.value);
 		alert("Provide Districts");
 		evt.preventDefault();
 		return false;
-	}
+	}*/
 		
 	console.log(d1>d2 );
 	if(d1>d2 || dob1>dob2){

@@ -371,7 +371,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		
 		for(RalleyDetails p:rd)
 		{
-			details +="<h3 class='p-contents'>"+p.getRalley_details()+"</h3><h4 class='p-contents'>From "+DateFormatter(p.getStart_date()).toUpperCase()+" to "+DateFormatter(p.getEnd_date())+"</h4><h4 class='p-contents'>AT "+p.getVenue_details()+"</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value="+p.getRalley_cust_id()+">";
+			details +="<h3 class='p-contents'>"+p.getRalley_details()+"-"+p.getCity_name().toUpperCase()+"</h3><h4 class='p-contents'>From "+DateFormatter(p.getStart_date()).toUpperCase()+" to "+DateFormatter(p.getEnd_date())+"</h4><h4 class='p-contents'>AT "+p.getVenue_details()+"</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value="+p.getRalley_cust_id()+">";
 		}
 		
 		logger.info(details);
@@ -476,4 +476,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		//details.put("state",  s);
 		return details;
 	}
+	
+	
+	
 }

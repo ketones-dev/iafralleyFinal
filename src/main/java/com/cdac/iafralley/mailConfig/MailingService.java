@@ -17,12 +17,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
+import com.cdac.iafralley.entity.RalleyDetails;
 
 
 public class MailingService {
@@ -38,7 +40,7 @@ private static final String ALTERNATE_MAIL_SERVER2= "personalMailServer";
 private static final Logger logger = LoggerFactory.getLogger(MailingService.class);
 
 	
-	public static void sendMail(final String mailServer, final String from, final String password,RalleyCandidateDetails candidate, final String subject, String message,String FILE_PATH) {
+	public static void sendMail(final String mailServer, final String from, final String password,RalleyCandidateDetails candidate, final String subject, String message,String FILE_PATH,RalleyDetails saverd) {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(JavaMailConfiguration.class);
 		
@@ -66,13 +68,36 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 		
 		MimeMessage mimeMessage = sender.createMimeMessage();
 		try {
-			MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
+			MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 		
 			mimeMessageHelper.setFrom(from);
 			mimeMessageHelper.setTo(candidate.getEmailid());
 			//mimeMessageHelper.setText(message, message);for plane and html text
 			mimeMessageHelper.setSubject(subject);
-			mimeMessageHelper.setText(message);
+			String contentId = ContentIdGenerator.getContentId();
+			 message=""+
+				       "<html>\n" + 
+				       "<body>\n" + 
+				       "<div style=\"margin: 0 auto;width: 70%;border: 1px solid;padding: 5px 18px;\">\n" + 
+				       "<p><h3>Dear candidate,</h3>\n" + 
+				       "<h4>1. You have successfully registered for "+saverd.getRalley_details()+"  at "+saverd.getCity_name().toUpperCase()+" and your registration number is "+ candidate.getRalleyregistrationNo() +"</h4>\n" + 
+				       "<h4>2. Provisional Admit Card would be mailed to the shortlisted candidates on their registered e-mail ID based on merit (Aggregate percentage obtained in Intermediate/10+2/Equivalent Exam/Diploma Courses as applicable).</h4>\n" + 
+				       "<h4>3. Only those candidates who would be issued with Provisional Admit Card will be allowed to appear in the said Recruitment Rally.</h4> \n" + 
+				       "<div>\n" + 
+				       "<div>\n" + 
+				       "<h4 style=\"margin:0 auto;1\">Regards,</h4>\n" + 
+				       "<h4 style=\"margin:0 auto;1\">CASB , IAF</h4>\n" + 
+				       " </div>\n" + 
+				       " </div>\n" + 
+				       "  </p>\n" + 
+				       "<div><img src=\"cid:"+ contentId +"\" width=\"100%\" height=\"400\"></div>\n" + 
+				       " </div>\n" + 
+				       "</body>\n" + 
+				       "</html>";
+			 
+			mimeMessageHelper.setText(message,true);
+			 ClassPathResource classPathResource = new ClassPathResource("static/vendor/image/banner.jpg");
+			 mimeMessageHelper.addInline(contentId, classPathResource);
 			//3) create MimeBodyPart object and set your message text        
 //            BodyPart messageBodyPart1 = new MimeBodyPart();     
 //            messageBodyPart1.setText(message);          

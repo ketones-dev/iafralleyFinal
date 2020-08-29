@@ -34,10 +34,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
+import com.cdac.iafralley.entity.RalleyDetails;
 import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.entity.RalleyStates;
+import com.cdac.iafralley.exception.CandidateInvalidInputAsPerCrietria;
+import com.cdac.iafralley.mailConfig.ContentIdGenerator;
 import com.cdac.iafralley.mailConfig.MailingService;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
+import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
 
 
@@ -54,6 +58,8 @@ public class RalleyRegistrationFormController {
 	
 	@Autowired
 	RalleyCandidateDetailsService candidateService;
+	@Autowired
+	RalleyDetailsService ralleyService;
 	
 	
 	
@@ -136,6 +142,39 @@ public class RalleyRegistrationFormController {
 		ModelAndView modelAndView = new ModelAndView();
 		
 		
+		try {
+			logger.info(ralleyCandidateDetails.toString());
+			logger.info(ralleyCandidateDetails.getState()+""+ralleyCandidateDetails.getCity());
+			RalleyDetails rd =ralleyService.findByCustomId(ralleyCandidateDetails.getRally_id());
+			//check Dob range within
+			logger.info("candidate dob "+ralleyCandidateDetails.getDateOfBirth() +"admin dob "+rd.getMin_dob() +" "+ (ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMin_dob()) >= 0) +""
+					+(ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMax_dob()) <= 0)+"exma:"+ralleyCandidateDetails.getPassed_exam_percentage());
+			
+			if(!(ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMin_dob()) >= 0 && ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMax_dob()) <= 0)){
+				throw new CandidateInvalidInputAsPerCrietria("Dob birth are Invalid as per Eligibilty Criteria");
+			}
+			if(!(ralleyCandidateDetails.getPassed_exam_percentage() < 0 || (ralleyCandidateDetails.getPassed_exam_percentage() >= rd.getMin_passing_percentage()   && ralleyCandidateDetails.getPassed_exam_percentage() <= 100)))
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Given Aggregate percentage are Invalid as per Eligibilty Criteria");
+			}
+			if(!(ralleyCandidateDetails.getEnglish_percentage() < 0 || (ralleyCandidateDetails.getEnglish_percentage() >= rd.getMin_eng_percentage()   && ralleyCandidateDetails.getEnglish_percentage() <= 100)))
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Given English percentage are Invalid as per Eligibilty Criteria");
+			}
+			
+		}catch(Exception e)
+		{
+			 modelAndView.setViewName("redirect:/showRegistrationForm");
+			  redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.ralleyCandidateDetails", result);
+			  redirectAttributes.addFlashAttribute("ralleyCandidateDetails", ralleyCandidateDetails);
+			  redirectAttributes.addFlashAttribute("error", e.getMessage()); 
+			  
+			  redirectAttributes.addFlashAttribute("optcity",ralleyCandidateDetails.getOpt_city());
+			
+			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
+			  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
+			  return modelAndView;
+		}
 		
 		logger.info("error:"+result.hasErrors());
 		if (result.hasErrors()) {
@@ -149,7 +188,7 @@ public class RalleyRegistrationFormController {
 			  redirectAttributes.addFlashAttribute("ralleyCandidateDetails", ralleyCandidateDetails);
 			  redirectAttributes.addFlashAttribute("error", "error");
 			  
-			  redirectAttributes.addFlashAttribute("optcity",ralleyCandidateDetails.getOpt_city());
+			 // redirectAttributes.addFlashAttribute("optcity",ralleyCandidateDetails.getOpt_city());
 			 // modelAndView.addObject("ralleyCandidateDetails", ralleyCandidateDetails);
 			 // modelAndView.addObject("allStates", candidateService.getallState());
 			 // redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
@@ -171,16 +210,19 @@ public class RalleyRegistrationFormController {
 		  //modelAndView.addObject("candidateDetails",candidateDetails );
 			
 		  //RegisterdCandidatePDFReport.createPDF(candidateDetails,FILE_PATH);
-			
+			logger.info(""+candidateDetails.getRally_id());
+			RalleyDetails saverd =ralleyService.findByCustomId(candidateDetails.getRally_id());
+			logger.info(""+saverd.getCity_name()+" "+saverd.getRalley_details());
 			  String to=candidateDetails.getEmailid(); 
-			  String subject="Ralley Registration Conformation"; 
-			  String message="Thank u for registring and Here is your register detail application form";
+			  String subject="IAF Rally Recruitment Conformation"; 
+			  String message="";
+			      
 			  
 			  
 			  try {
 			  
 			  MailingService.sendMail(mailserver, from, password, candidateDetails,
-			  subject, message,FILE_PATH); } catch(Exception e) { e.printStackTrace();
+			  subject, message,FILE_PATH,saverd); } catch(Exception e) { e.printStackTrace();
 			  
 			  }
 			 

@@ -54,6 +54,18 @@ public class RalleyDetailsService {
 		
 	}
 	
+	public RalleyDetails findByCustomId(String id)
+	{
+		RalleyDetails ralleyDetail=ralleydetaildao.findByRalley_cust_id(id); 
+		
+		if(ralleyDetail != null)
+		{
+			return ralleyDetail;
+		}
+		return ralleyDetail;
+		
+	}
+	
 	public List<RalleyDaywiseSlotDetails> getAllSlot(RalleyDetails rd){
 		List<RalleyDaywiseSlotDetails> rds=ralleyslotdetailsdao.findByRalleydetails(rd);
 		
