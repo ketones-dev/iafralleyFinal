@@ -31,6 +31,10 @@
 	href="resources/img/favicons/iaf-logo.png">
 <style>
 
+.compulsory{
+color:red;
+}
+
 #m-iaf{
 text-align: center;
 color: black;
@@ -355,7 +359,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="row" >
 							
 							<div class="form-group col-md-6">
-								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name (As per 10th Passing Certificate)</label>
+								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name<span class="compulsory">*</span>(As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{name}" 
 									class="form-control" id="name"  pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
 									<div id="errorname"  class="invalid-feedback">Please provide a valid Name.</div>
@@ -364,7 +368,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="Father Name:" class="col-form-label">Father’s Full Name (As per 10th Passing Certificate)</label>
+								<label for="Father Name:" class="col-form-label">Father’s Full Name<span class="compulsory">*</span> (As per 10th Passing Certificate)</label>
 								<input type="text" th:field="*{fathername}" 
 									class="form-control" id="fathername" pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
 									<div class="invalid-feedback">Please provide a valid Name.</div>
@@ -373,7 +377,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="emailid" class="col-form-label">Email id:</label>
+								<label for="emailid" class="col-form-label">Email id<span class="compulsory">*</span>:</label>
 								<input type="email" th:field="*{emailid}" 
 									class="form-control" id="emailid" placeholder="Enter Email-Id" data-error="please enter valid Email" required>
 									<div class="invalid-feedback">Please provide a valid Email.</div>
@@ -382,7 +386,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="date" class="col-form-label">Date of Birth: (As per 10th Passing Certificate):</label>
+								<label for="date" class="col-form-label">Date of Birth<span class="compulsory">*</span>: (As per 10th Passing Certificate):</label>
 								<input type="date" th:field="*{dateOfBirth}" 
 									class="form-control" id="dateOfBirth" placeholder="Enter DOB" data-error="please enter valid DOB" required>
 									<div class="invalid-feedback">Please provide a valid DOB.</div>
@@ -391,7 +395,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="mobile" class="col-form-label">Mobile/Contact No:</label>
+								<label for="mobile" class="col-form-label">Mobile/Contact No<span class="compulsory">*</span>:</label>
 								<input type="text" th:field="*{contactno}" 
 									class="form-control" id="contactno" pattern="^[6-9]\d{9}$" placeholder="Enter contactno" data-error="please enter valid contactno" required>
 									<div class="invalid-feedback">Please provide a valid contactno.</div>
@@ -403,6 +407,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<label for="mobile" class="col-form-label">Aadhaar No:</label>
 								<input type="text" 
 									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" >
+									<lable><b><u>Note:</u></b>Candidates who are providing Aadhaar Card Number while filling the application form need to carry their Aadhaar Card, when called for examination.</lable>
 									<div class="invalid-feedback">Please provide a valid addhar.</div>
 								<span th:if="${#fields.hasErrors('aadhar_details')}"    th:errors="*{aadhar_details}" class="text-danger"></span>
 							</div>
@@ -410,16 +415,16 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							<div class="row">
 							<div class="form-group col-md-4">
-								<label for="height" class="col-form-label">Height (in cm) (Not less than 152.5 Cms):</label>
+								<label for="height" class="col-form-label">Height (in cm)<span class="compulsory">*</span> (Not less than 152.5 Cms):</label>
 								<input type="number" th:field="*{height}" 
-									class="form-control" id="height" pattern="^[1-4][0-9][0-9](?:\.[0-9]{1,1})?$" placeholder="Enter height" data-error="please enter valid height" required>
+									class="form-control" id="height" step="0.1" placeholder="Enter height" data-error="please enter valid height" required>
 									<div class="invalid-feedback">Please provide a valid height.</div>
 								<span th:if="${#fields.hasErrors('height')}"    th:errors="*{height}" class="text-danger"></span>
 								<p id="verrorh"></p>
 							</div>
 								
 							<div class="form-group col-md-4">
-									<label for="martital" class="col-form-label">Maritial Status:</label>
+									<label for="martital" class="col-form-label">Maritial Status<span class="compulsory">*</span>:</label>
 									<div style="padding:9% 1%;">
 									<div class="form-check form-check-inline col-6" style="display:inline-flex;">
 										<input class="form-check-input" type="radio" th:field="*{maritial_status}" th:checked="${ralleyCandidateDetails.maritial_status == true} ? ${true}"  value="true">
@@ -460,7 +465,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 							
 							<div class="form-group col-md-4">
-							<label for="state" class="col-form-label">State:</label> 
+							<label for="state" class="col-form-label">State<span class="compulsory">*</span>:</label> 
 							<select th:field="*{state}" id="stateSelect" class="form-control" required="true" >
 							<option th:value="''">---Select State----</option>
 							<!-- <option th:each="ralleystate : ${allStates}" th:value="${ralleystate.state_id}"
@@ -471,7 +476,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 					</div>
 
 							<div class=" col-md-4">
-								<label for="city" class="col-form-label">District:</label> 
+								<label for="city" class="col-form-label">District<span class="compulsory">*</span>:</label> 
 								<select th:field="*{city}" id="citySelect" class="custom-select" required>
 									<option selected="selected" disabled="disabled"  value="">---Select District----</option>
 
@@ -495,7 +500,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								
 								<div id="grptrade" style="padding: 5px 0px 0px 2%;" class="col-md-6">
-									<label for="pass" style="font-size: 16px;">Group/Trade:</label></div>
+									<label for="pass" style="font-size: 16px;">Group/Trade<span class="compulsory">*</span>:</label></div>
 									<div class="form-group col-md-6" >
 									<select class="form-control" id="selectgroup" required="required">
 									</select>
@@ -527,7 +532,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row">
 								<div class="form-group col-md-8" >
 								<label class="col-form-label">
-								<h6 style="color:black;padding-bottom:1%;">Upload 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"   class="form-control"  required>
+								<h6 style="color:black;padding-bottom:1%;">Upload<span class="compulsory">*</span>: 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"   class="form-control"  required>
 								</label>
 								</div>
 								
@@ -590,7 +595,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								<div class="row col-md-12">
 								<div class="form-group col-md-6">
-								<label for="Qualification Details:" class="col-form-label">Qualifying Degree Details:</label>
+								<label for="Qualification Details:" class="col-form-label">Qualifying Degree Details<span class="compulsory">*</span>:</label>
 								</div><div class="form-group col-md-6">
 								<input type="text" th:field="*{otherDetailPassedDetail}" 
 									class="form-control" id="other" placeholder="Qualification Details" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$" data-error="please Qualification Details" required>
@@ -600,7 +605,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying Degree):</label>
+								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying Degree)<span class="compulsory">*</span>:</label>
 								</div><div class="form-group col-md-6">
 								
 								<input type="number" th:field="*{passed_exam_percentage}" 
@@ -611,7 +616,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="engpassper" class="col-form-label">English Passing Percentage:</label>
+								<label for="engpassper" class="col-form-label">English Passing Percentage<span class="compulsory">*</span>:</label>
 								<label class="extra-info">If English is not a Subject in Vocational/Qualifying course then provide 10th/Matriculation English percentage.</label>
 								</div><div class="form-group col-md-6">
 								<input type="number" th:field="*{english_percentage}" 
@@ -632,7 +637,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								<div class="col-md-12">
 								<h5><b><u>UPLOAD SECTION:</u></b></h5>
-								<span>12th Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
+								<span>Upload<span class="compulsory">*</span>:12th Marksheet</span><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
 								</div>
 								<div class="form-group col-md-8" style="padding-top: 1%;">
 								<label class="col-form-label">
@@ -675,7 +680,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 												best of my knowledge. Further, I understand that my
 												candidature will be cancelled in case any information given
 												by me is found to be false or incorrect. </label>
-											<div class="invalid-feedback"></div>
+											<div class="invalid-feedback">Please Check above Disclaimers</div>
 										</div>
 									</div>
 								</div>

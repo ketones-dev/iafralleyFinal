@@ -182,7 +182,7 @@ width:100%;
 								<label for="height" class="col-form-label">Min
 									height(cm)</label> <input type="number" th:field="*{min_height}"
 									class="form-control" id="min_height"
-									placeholder="Enter height(in cm)" min="0" required> <span
+									placeholder="Enter height(in cm)" min="0" step="0.1" required> <span
 									th:if="${#fields.hasErrors('min_height')}"
 									th:errors="*{min_height}" class="text-danger"></span>
 							</div>

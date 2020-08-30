@@ -43,6 +43,17 @@ hr {
 #ralleyform {
 	background-color: #5b6e74;
 }
+#ticket-effect{
+background: linear-gradient(135deg, transparent 5.68px, white 5.69px) top left, linear-gradient(45deg, white 2.8px, transparent 2.81px) top left, linear-gradient(135deg, white 2.8px, transparent 2.81px) bottom left, linear-gradient(45deg, transparent 5.68px, white 5.69px) bottom left;
+    background-repeat: repeat, repeat, repeat, repeat;
+    background-size: auto, auto, auto, auto;
+background-repeat: repeat, repeat, repeat, repeat;
+background-size: auto, auto, auto, auto;
+background-repeat: repeat-x;
+background-size: 16px 14px;
+padding: 4px 0;
+
+}
 </style>
 
 </head>
@@ -174,12 +185,27 @@ hr {
 
 			<!-- .nav -->
 			<section>
-			<div class="jumbotron jumbotron-fluid " style="background-image:linear-gradient(-155deg, #fff 32%, #5899e2 187%);">
-  <div class="container">
+			<div class="jumbotron jumbotron-fluid " style="background-image: linear-gradient(198deg, #fff -15%, #268cff 307%);margin-bottom:0px;">
+  <div class="container" id="ticket-effect">
+						<div style="padding: 18px;background: white;">
+							<h2 style="color:#4a595e">Thank you for Registering..</h2>
+							<hr>
+							<div style="margin: 0 auto; width: 80%;">
+								<div style="text-align: center; margin: 5px 0;">
+									<h3 th:text="${ralleydetails}"></h3>
+								</div>
+								<div style="margin: 3% 4%;">
+									<h4 style="color:#4a595e">1. Successfully registered</h4>
 
-				<h1 style="color:black;">Thank you for Registering</h1> 
-				<h3 style="color:black;">A email has been sent at  your registered mail
-				id <p style="color:black;" th:text="': ' + ${candidateDetails.emailid}" /> 
+									<h4 style="color:#4a595e;display:inline-flex;">2. YOUR REGISTRATION NUMBER -<h4 th:text="${candidateDetails.ralleyregistrationNo}" style="display:inline-flex;"></h4> </h4>
+
+									<h4 style="color:#4a595e">3. Provisional Admit Card would be mailed to the
+										shortlisted candidates on their registered e-mail ID.</h4>
+								</div>
+							</div>
+						</div>
+						<!-- <h3 style="color:black;">A email has been sent at  your registered mail
+				id <p style="color:black;" th:text="': ' + ${candidateDetails.emailid}" />  -->
 				<!-- you can  download Provisional admit card by clicking Download button also. -->	</h3>
 				<!-- <p th:text="'id: ' + ${candidateDetails.name}" />
 				<p th:text="'content: ' + ${candidateDetails.fathername}" />

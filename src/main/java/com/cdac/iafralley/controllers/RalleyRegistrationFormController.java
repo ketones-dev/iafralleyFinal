@@ -228,6 +228,7 @@ public class RalleyRegistrationFormController {
 			 
 		
 		 redirectAttributes.addFlashAttribute("candidateDetails", candidateDetails);
+		 redirectAttributes.addFlashAttribute("ralleydetails",saverd.getRalley_details()+"-"+saverd.getCity_name().toUpperCase());
 		  modelAndView.setViewName("redirect:/RegistrationSuccess");
 		  logger.info("Form submitted successfully.");
 		  
