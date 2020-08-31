@@ -33,6 +33,9 @@ let vocational_v=document.getElementById("vocational_v");
 
 let duplicateerror= document.getElementById("error2");
 
+//class field
+var tabmodev=document.getElementsByClassName("tabmode-vocational");
+var tabmodeD=document.getElementsByClassName("tabmode-Diploma");
 let restrictdistrictvalue;
 
 window.addEventListener('load', function() {
@@ -136,6 +139,11 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 					   		    let data=JSON.parse(post);
 					   		 document.getElementById("grptrade").style.display = "block";
 					   		 var dropdown = document.getElementById("selectgroup");
+					   		 
+					   		 for(let i=0;i<dropdown.childElementCount;i++)
+					   			 {
+					   			 dropdown.children[i].remove();
+					   			 }
 					   		
 					   		 dropdown.setAttribute("required","required");
 					   		
@@ -149,7 +157,10 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 				   		    	ShowQualificationOnSingleValue();
 					   			 }
 					   		 else{
-					   			dropdown.innerHTML="<option value='' selected>---Select Group/trade----</option>";
+					   			var defopt = document.createElement("option"); 
+				   		    	defopt.value = '';
+				   		    	defopt.text = "---Select Group/trade---";
+				   		    	dropdown.options.add(defopt);
 					   		 for(var s=0;s<data.length;s++)
 					   		    	{
 					   			 
@@ -358,6 +369,14 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("othercourse").style.display ="none";
 			diploma_y.style.display ="block";
 			vocational_v.style.display="none";
+			for(let i=0;i<tabmodev.length;i++)
+				{
+				tabmodev[i].style.display="none";
+				}
+			for(let i=0;i<tabmodeD.length;i++)
+			{
+			tabmodeD[i].style.display="inline-flex";
+			}
 			
 			}
 		else if(data === "2")
@@ -367,6 +386,14 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("othercourse").style.display ="none";
 			diploma_y.style.display ="none";
 			vocational_v.style.display="block";
+			for(let i=0;i<tabmodev.length;i++)
+			{
+			tabmodev[i].style.display="inline-flex";
+			}
+		for(let i=0;i<tabmodeD.length;i++)
+		{
+		tabmodeD[i].style.display="none";
+		}
 			}
 		else{
 			document.getElementById("diploma").style.display ="none";
@@ -374,6 +401,14 @@ grp_tradeSelect.addEventListener("change", function(e) {
 			document.getElementById("othercourse").style.display ="inline-block";
 			diploma_y.style.display ="none";
 			vocational_v.style.display="block";
+			for(let i=0;i<tabmodev.length;i++)
+			{
+			tabmodev[i].style.display="inline-flex";
+			}
+		for(let i=0;i<tabmodeD.length;i++)
+		{
+		tabmodeD[i].style.display="none";
+		}
 			
 		}
 		console.log(document.getElementById("groupSelectedValue").value);
@@ -405,6 +440,14 @@ function ShowQualificationOnSingleValue(){
 			document.getElementById("othercourse").style.display ="none";
 			diploma_y.style.display ="block";
 			vocational_v.style.display="none";
+			for(let i=0;i<tabmodev.length;i++)
+			{
+			tabmodev[i].style.display="none";
+			}
+		for(let i=0;i<tabmodeD.length;i++)
+		{
+		tabmodeD[i].style.display="inline-flex";
+		}
 			
 			}
 		else if(data === "2")
@@ -414,6 +457,14 @@ function ShowQualificationOnSingleValue(){
 			document.getElementById("othercourse").style.display ="none";
 			diploma_y.style.display ="none";
 			vocational_v.style.display="block";
+			for(let i=0;i<tabmodev.length;i++)
+			{
+			tabmodev[i].style.display="inline-flex";
+			}
+		for(let i=0;i<tabmodeD.length;i++)
+		{
+		tabmodeD[i].style.display="none";
+		}
 			}
 		else{
 			document.getElementById("diploma").style.display ="none";
@@ -421,6 +472,14 @@ function ShowQualificationOnSingleValue(){
 			document.getElementById("othercourse").style.display ="inline-block";
 			diploma_y.style.display ="none";
 			vocational_v.style.display="block";
+			for(let i=0;i<tabmodev.length;i++)
+			{
+			tabmodev[i].style.display="inline-flex";
+			}
+		for(let i=0;i<tabmodeD.length;i++)
+		{
+		tabmodeD[i].style.display="none";
+		}
 			
 		}
 		console.log(document.getElementById("groupSelectedValue").value);

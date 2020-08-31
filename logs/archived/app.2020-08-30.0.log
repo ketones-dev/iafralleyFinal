@@ -1,0 +1,1218 @@
+12:49:30.097 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 18516 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+12:49:30.127 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+12:49:40.225 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+12:49:40.227 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+12:49:40.535 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+12:49:41.697 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:49:42.015 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+12:49:42.903 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+12:49:45.700 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+12:49:50.357 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:49:55.956 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+12:49:58.476 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 31.513 seconds (JVM running for 37.644)
+12:51:02.134 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:51:03.093 [http-nio-9091-exec-1] ERROR org.thymeleaf.TemplateEngine:1136 - [THYMELEAF][http-nio-9091-exec-1] Exception processing template "update-ralley": Error resolving template [update-ralley], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [update-ralley], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+12:51:03.109 [http-nio-9091-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [update-ralley], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [update-ralley], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+12:51:19.537 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+12:51:20.117 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+12:51:20.201 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+12:51:20.336 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+12:51:20.338 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+12:51:20.399 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+12:53:48.678 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 18516 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+12:53:48.678 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+12:53:49.148 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+12:53:49.148 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+12:53:49.180 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+12:53:49.328 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:53:49.842 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+12:53:50.053 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:53:50.395 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+12:53:50.477 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.834 seconds (JVM running for 269.645)
+12:55:54.963 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:55:58.080 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+12:55:58.097 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+12:55:58.109 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+12:55:58.126 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+12:55:58.127 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+12:55:58.137 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+12:59:20.794 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 18516 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+12:59:20.795 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+12:59:21.138 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+12:59:21.139 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+12:59:21.287 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+12:59:21.352 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:59:21.766 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+12:59:21.949 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:59:22.487 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+12:59:22.586 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.825 seconds (JVM running for 601.754)
+13:06:51.530 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:10:17.224 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:10:17.239 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:10:17.256 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:10:17.279 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:10:17.279 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:10:17.290 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:12:24.035 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:12:24.046 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:12:24.058 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:12:24.073 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:12:24.074 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:12:24.084 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:14:37.428 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:14:37.440 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:14:37.451 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:14:37.508 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:14:37.508 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:14:37.518 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:14:48.802 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:14:48.814 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:14:48.825 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:14:48.839 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:14:48.840 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:14:48.849 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:17:58.538 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:17:58.550 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:17:58.560 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:17:58.572 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:17:58.573 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:17:58.583 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:20:20.944 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:20:20.957 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:20:20.968 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:20:20.979 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:20:20.980 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:20:20.988 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:21:21.808 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:21:21.822 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:21:21.836 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:21:21.847 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:21:21.847 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:21:21.857 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:22:13.244 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+13:22:13.256 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+13:22:13.266 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+13:22:13.279 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+13:22:13.279 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+13:22:13.288 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+13:36:47.919 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 18516 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+13:36:47.919 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+13:36:48.414 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+13:36:48.414 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+13:36:48.457 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+13:36:48.556 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+13:36:49.140 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+13:36:49.400 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+13:36:49.727 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+13:36:49.811 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 1.93 seconds (JVM running for 2849.312)
+14:14:00.871 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 18516 (C:\Users\Ketan\git\iafralleyFinal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinal)
+14:14:00.873 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+14:14:02.605 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+14:14:02.605 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+14:14:02.621 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+14:14:02.678 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:14:03.251 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+14:14:03.793 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:14:04.107 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /IAFRalleyReport/applicantDetails/
+14:14:04.190 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 3.534 seconds (JVM running for 5083.962)
+14:15:11.690 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:15:15.863 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+14:15:15.916 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+14:15:15.964 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+14:15:16.017 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+14:15:16.018 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+14:15:16.034 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+14:16:06.068 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:25
+14:16:06.081 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+14:16:06.094 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+14:16:06.105 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+14:16:06.106 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+14:16:06.115 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+14:19:24.054 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:146 - RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Tue Sep 01 00:00:00 IST 1998, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=151.6, city=4, state=2, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+14:19:24.055 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:147 - 24
+14:19:24.077 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:150 - candidate dob Tue Sep 01 00:00:00 IST 1998admin dob 1993-06-02 truetrueexma:60
+14:19:24.077 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:179 - error:false
+14:19:24.078 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+14:19:24.083 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Madhya Pradesh city:Indore
+14:19:24.084 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+14:19:24.084 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+14:19:24.202 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+14:19:24.235 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketant@cdac.in Genrated Candidate registration ID:IE201500079
+14:19:24.236 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+14:19:24.314 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+14:19:24.315 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+14:19:24.316 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+14:19:24.969 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+14:19:24.970 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+14:19:25.161 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+14:19:25.162 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+14:19:25.162 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+14:19:25.162 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500079_X_marksheet.jpeg file2:IE201500079_XII_marksheet.jpeg
+14:19:25.162 [http-nio-9091-exec-10] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+14:19:25.211 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Tue Sep 01 00:00:00 IST 1998, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=151.6, city=Indore, state=Madhya Pradesh, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500079/IE201500079_X_marksheet.jpeg, xiiimagePath=IE201500079/IE201500079_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500079]
+14:19:25.626 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:213 - SEP1820IN00011
+14:19:25.627 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:215 - Indore IAF RECRUITMENT RALLY FOR GROUP ‘X’ 
+14:19:25.667 [http-nio-9091-exec-10] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+ketant@cdac.inprepraring for sending mail using server:smtpb.pune.cdac.in
+14:19:25.668 [http-nio-9091-exec-10] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:ketant@cdac.in
+14:19:25.841 [http-nio-9091-exec-10] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+14:19:25.994 [http-nio-9091-exec-10] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+14:19:31.434 [http-nio-9091-exec-10] INFO  c.c.i.c.RalleyRegistrationFormController:233 - Form submitted successfully.
+16:03:23.686 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:26
+16:03:24.086 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+16:03:24.212 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+16:03:24.302 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+16:03:24.302 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+16:03:24.318 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+16:04:36.212 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:146 - RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Thu Sep 30 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=151.9, city=4, state=2, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+16:04:36.213 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:147 - 24
+16:04:36.287 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:150 - candidate dob Thu Sep 30 00:00:00 IST 1999admin dob 1993-06-02 truetrueexma:60
+16:04:36.287 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:179 - error:false
+16:04:36.288 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+16:04:36.306 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Madhya Pradesh city:Indore
+16:04:36.307 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+16:04:36.307 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+16:04:36.464 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+16:04:36.493 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketant@cdac.in Genrated Candidate registration ID:IE201500080
+16:04:36.493 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+16:04:36.601 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+16:04:36.615 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+16:04:36.615 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+16:04:36.982 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:04:36.983 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:04:37.134 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:04:37.135 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:04:37.135 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+16:04:37.135 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500080_X_marksheet.jpeg file2:IE201500080_XII_marksheet.jpeg
+16:04:37.135 [http-nio-9091-exec-6] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+16:04:37.203 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Thu Sep 30 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=151.9, city=Indore, state=Madhya Pradesh, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500080/IE201500080_X_marksheet.jpeg, xiiimagePath=IE201500080/IE201500080_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500080]
+16:04:37.877 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:213 - SEP1820IN00011
+16:04:37.879 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:215 - Indore IAF RECRUITMENT RALLY FOR GROUP ‘X’ 
+16:04:38.229 [http-nio-9091-exec-6] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+ketant@cdac.inprepraring for sending mail using server:smtpb.pune.cdac.in
+16:04:38.230 [http-nio-9091-exec-6] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:ketant@cdac.in
+16:04:38.482 [http-nio-9091-exec-6] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+16:04:38.596 [http-nio-9091-exec-6] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+16:04:52.339 [http-nio-9091-exec-6] INFO  c.c.i.c.RalleyRegistrationFormController:233 - Form submitted successfully.
+16:10:37.489 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:27
+16:10:37.757 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+16:10:37.788 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+16:10:37.803 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+16:10:37.804 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+16:10:37.818 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+16:11:55.681 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:146 - RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Sat Aug 01 00:00:00 IST 1998, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.8, city=4, state=2, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+16:11:55.682 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:147 - 24
+16:11:55.685 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:150 - candidate dob Sat Aug 01 00:00:00 IST 1998admin dob 1993-06-02 truetrueexma:60
+16:11:55.685 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:179 - error:false
+16:11:55.686 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+16:11:55.690 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Madhya Pradesh city:Indore
+16:11:55.691 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+16:11:55.691 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+16:11:55.693 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+16:11:55.694 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketant@cdac.in Genrated Candidate registration ID:IE201500081
+16:11:55.694 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+16:11:55.710 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+16:11:55.710 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+16:11:55.711 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+16:11:55.932 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:11:55.932 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:11:56.107 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:11:56.107 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:11:56.108 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+16:11:56.108 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500081_X_marksheet.jpeg file2:IE201500081_XII_marksheet.jpeg
+16:11:56.108 [http-nio-9091-exec-8] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+16:11:56.111 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketant@cdac.in, dateOfBirth=Sat Aug 01 00:00:00 IST 1998, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.8, city=Indore, state=Madhya Pradesh, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500081/IE201500081_X_marksheet.jpeg, xiiimagePath=IE201500081/IE201500081_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500081]
+16:11:56.143 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:213 - SEP1820IN00011
+16:11:56.144 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:215 - Indore IAF RECRUITMENT RALLY FOR GROUP ‘X’ 
+16:11:56.269 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+ketant@cdac.inprepraring for sending mail using server:smtpb.pune.cdac.in
+16:11:56.269 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:ketant@cdac.in
+16:11:56.306 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+16:11:56.395 [http-nio-9091-exec-8] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+16:11:58.731 [http-nio-9091-exec-8] INFO  c.c.i.c.RalleyRegistrationFormController:233 - Form submitted successfully.
+16:11:58.868 [http-nio-9091-exec-10] ERROR org.thymeleaf.TemplateEngine:1136 - [THYMELEAF][http-nio-9091-exec-10] Exception processing template "RegistrationSuccess": An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 197, col 9)
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 197, col 9)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: (Line = 197, Column = 9) Incomplete structure: "<div style="style="margin: 3% 8%;">
+									<h4 style="color:#4a595e">1. Successfully registered</h4>
+
+									<h4 style="color:#4a595e" style="display:inline-flex;">2. YOUR REGISTRATION NUMBER -<h4 th:text="${candidateDetails.ralleyregistrationNo}" style="display:inline-flex;"></h4> </h4>
+
+									<h4 style="color:#4a595e">3. Provisional Admit Card would be mailed to the
+										shortlisted candidates on their registered e-mail ID.</h4>
+								</div>
+							</div>
+						</div>
+						<!-- <h3 style="color:black;">A email has been sent at  your registered mail
+				id <p style="color:black;" th:text="': ' + ${candidateDetails.emailid}" />  -->
+				<!-- you can  download Provisional admit card by clicking Download button also. -->	</h3>
+				<!-- <p th:text="'id: ' + ${candidateDetails.name}" />
+				<p th:text="'content: ' + ${candidateDetails.fathername}" />
+				<p th:text="'content: ' + ${candidateDetails.emailid}" />
+				<p th:text="'content: ' + ${candidateDetails.ralleyregistrationNo}" /> -->
+
+				<!-- <a th:href="@{'/pdf/fileName=HelloWorld'">Download</a> -->
+				<!-- <a class="btn btn-success"
+					th:href="@{/pdf(fileName=${candidateDetails.ralleyregistrationNo})}">
+					Download Provisional Admit Card</a> -->
+
+</div>
+</div>
+
+
+			</section>
+			
+			
+			<!--  footer start -->
+			
+			
+			<div id="footerContent">
+				<footer class="footer" id="footerContent">
+					<!-- Footer Widget Section -->
+					<div class="footer-widget-section"
+						style="padding-top: 30px; padding-bottom: 30px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4>Get in touch with us</h4>
+										<address>
+											<strong>President</strong><br>Central Airmen Selection
+											Board<br> Brar Square,Delhi Cantt,<br /> New Delhi-110
+											010
+										</address>
+										<p>
+											CASB Reception (24/7) contact No. - <br /> <i
+												class="icon-phone"></i> (011) 25699606, (011) 25694209 <br>
+											<i class="icon-envelope-alt"></i> email:<img
+												style="padding-bottom: 6px;" alt=""
+												src="resources/img/email/emailfooter.PNG"> <br> <i
+												class="icon-envelope-alt"></i>www.airmenselection.cdac.in<br />
+											www.careerindianairforce.cdac.in
+										</p>
+										<a style="color: white; text-decoration: underline;"
+											target="_blank" href="https://casbcms.cdac.in">Help &
+											Support</a>
+									</div>
+
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4 style="padding-right: 50px;">Popular Links</h4>
+										<ul class="link-list" style="text-align: left;">
+											<li><a href="aboutcasb.html">About CASB</a></li>
+											<li><a href="rankstructure.html">Rank Structure</a></li>
+											<li><a href="eligibilityCriteria.html">Eligibility
+													Criteria</a></li>
+											<li><a href="trades_task.html">Trades &amp; Task</a></li>
+											<li><a href="pay_perks.html">Pay &amp; Perks</a></li>
+											<li><a href="airmenselectioncenter.html">Airmen
+													Selection Centres</a></li>
+											<li><a href="traininginstitution.html"> Training
+													Institutes</a></li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left; padding-right: 50px;">
+									<div class="widget">
+										<h4>Social</h4>
+										<div id="share-buttons">
+											Buffer
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.facebook.com/IndianAirForce/"
+														target="_blank"> <img
+														th:src="@{vendor/image/Facebook.png}" alt="Facebook" />@IndianAirForce
+													</a>
+												</div>
+											</div>
+											Twitter
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://twitter.com/iaf_mcc" target="_blank">
+														<img th:src="@{vendor/image/twitter.png}" alt="Twitter" />@iaf_mcc
+													</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.instagram.com/IndianAirForce_mcc"
+														target="_blank"> <img
+														th:src="@{vendor/image/insta.png}" alt="" />@IndianAirForce_mcc
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.Footer Widget Section -->
+					<div class="copyright-section">
+						<div class="container clearfix">
+							<span class="copytext">Copyright &copy; 2018 | <a
+								href="https://careerindianairforce.cdac.in/" target="_blank"
+								style="color: #3185ce">CASB, Indian Air Force</a> Designed And
+								Developed By: <strong style="color: #3185ce"> <abbr
+									style="border-bottom: none;"
+									title="Centre for Development of Advanced Computing &#xA; A Scientific Society of Ministry of Electronics &  Information Technology,Government of India"><a
+										target="_blank" href="http://www.cdac.in">C-DAC</a></abbr>
+							</strong></span>
+							<ul class="list-inline pull-right" style="display: flex;">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="aboutcasb.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</div>
+						<!-- .container -->
+					</div>
+					<!-- .copyright-section -->
+				</footer>
+			</div>
+			<!-- .footer -->
+		</div>
+
+		<!-- .content-wrapper -->
+	</div>
+	<!-- .offcanvas-pusher -->
+
+
+
+
+
+
+
+
+	<!-- Script -->
+	<script th:src="@{/vendor/js/customjs.js}"></script>
+	<script th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/vendor/js/bootstrap.min.js}"></script>
+
+	<
+	<!-- <script src="resources/js/smoothscroll.js"></script> -->
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<script th:src="@{/vendor/js/scripts.js}"></script>
+	<script th:src="@{/vendor/js/plusminus.js}"></script>
+	<script th:src="@{/js/validation.js}"></script>
+
+
+
+</body>
+</html>"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 88 common frames omitted
+16:11:58.975 [http-nio-9091-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 197, col 9)] with root cause
+org.attoparser.ParseException: (Line = 197, Column = 9) Incomplete structure: "<div style="style="margin: 3% 8%;">
+									<h4 style="color:#4a595e">1. Successfully registered</h4>
+
+									<h4 style="color:#4a595e" style="display:inline-flex;">2. YOUR REGISTRATION NUMBER -<h4 th:text="${candidateDetails.ralleyregistrationNo}" style="display:inline-flex;"></h4> </h4>
+
+									<h4 style="color:#4a595e">3. Provisional Admit Card would be mailed to the
+										shortlisted candidates on their registered e-mail ID.</h4>
+								</div>
+							</div>
+						</div>
+						<!-- <h3 style="color:black;">A email has been sent at  your registered mail
+				id <p style="color:black;" th:text="': ' + ${candidateDetails.emailid}" />  -->
+				<!-- you can  download Provisional admit card by clicking Download button also. -->	</h3>
+				<!-- <p th:text="'id: ' + ${candidateDetails.name}" />
+				<p th:text="'content: ' + ${candidateDetails.fathername}" />
+				<p th:text="'content: ' + ${candidateDetails.emailid}" />
+				<p th:text="'content: ' + ${candidateDetails.ralleyregistrationNo}" /> -->
+
+				<!-- <a th:href="@{'/pdf/fileName=HelloWorld'">Download</a> -->
+				<!-- <a class="btn btn-success"
+					th:href="@{/pdf(fileName=${candidateDetails.ralleyregistrationNo})}">
+					Download Provisional Admit Card</a> -->
+
+</div>
+</div>
+
+
+			</section>
+			
+			
+			<!--  footer start -->
+			
+			
+			<div id="footerContent">
+				<footer class="footer" id="footerContent">
+					<!-- Footer Widget Section -->
+					<div class="footer-widget-section"
+						style="padding-top: 30px; padding-bottom: 30px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4>Get in touch with us</h4>
+										<address>
+											<strong>President</strong><br>Central Airmen Selection
+											Board<br> Brar Square,Delhi Cantt,<br /> New Delhi-110
+											010
+										</address>
+										<p>
+											CASB Reception (24/7) contact No. - <br /> <i
+												class="icon-phone"></i> (011) 25699606, (011) 25694209 <br>
+											<i class="icon-envelope-alt"></i> email:<img
+												style="padding-bottom: 6px;" alt=""
+												src="resources/img/email/emailfooter.PNG"> <br> <i
+												class="icon-envelope-alt"></i>www.airmenselection.cdac.in<br />
+											www.careerindianairforce.cdac.in
+										</p>
+										<a style="color: white; text-decoration: underline;"
+											target="_blank" href="https://casbcms.cdac.in">Help &
+											Support</a>
+									</div>
+
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left;">
+									<div class="widget">
+										<h4 style="padding-right: 50px;">Popular Links</h4>
+										<ul class="link-list" style="text-align: left;">
+											<li><a href="aboutcasb.html">About CASB</a></li>
+											<li><a href="rankstructure.html">Rank Structure</a></li>
+											<li><a href="eligibilityCriteria.html">Eligibility
+													Criteria</a></li>
+											<li><a href="trades_task.html">Trades &amp; Task</a></li>
+											<li><a href="pay_perks.html">Pay &amp; Perks</a></li>
+											<li><a href="airmenselectioncenter.html">Airmen
+													Selection Centres</a></li>
+											<li><a href="traininginstitution.html"> Training
+													Institutes</a></li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-4 col-md-4 col-lg-4 col-xs-12"
+									style="text-align: left; padding-right: 50px;">
+									<div class="widget">
+										<h4>Social</h4>
+										<div id="share-buttons">
+											Buffer
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.facebook.com/IndianAirForce/"
+														target="_blank"> <img
+														th:src="@{vendor/image/Facebook.png}" alt="Facebook" />@IndianAirForce
+													</a>
+												</div>
+											</div>
+											Twitter
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://twitter.com/iaf_mcc" target="_blank">
+														<img th:src="@{vendor/image/twitter.png}" alt="Twitter" />@iaf_mcc
+													</a>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12">
+													<a href="https://www.instagram.com/IndianAirForce_mcc"
+														target="_blank"> <img
+														th:src="@{vendor/image/insta.png}" alt="" />@IndianAirForce_mcc
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.Footer Widget Section -->
+					<div class="copyright-section">
+						<div class="container clearfix">
+							<span class="copytext">Copyright &copy; 2018 | <a
+								href="https://careerindianairforce.cdac.in/" target="_blank"
+								style="color: #3185ce">CASB, Indian Air Force</a> Designed And
+								Developed By: <strong style="color: #3185ce"> <abbr
+									style="border-bottom: none;"
+									title="Centre for Development of Advanced Computing &#xA; A Scientific Society of Ministry of Electronics &  Information Technology,Government of India"><a
+										target="_blank" href="http://www.cdac.in">C-DAC</a></abbr>
+							</strong></span>
+							<ul class="list-inline pull-right" style="display: flex;">
+								<li class="active"><a href="index.html">Home</a></li>
+								<li><a href="aboutcasb.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+							</ul>
+						</div>
+						<!-- .container -->
+					</div>
+					<!-- .copyright-section -->
+				</footer>
+			</div>
+			<!-- .footer -->
+		</div>
+
+		<!-- .content-wrapper -->
+	</div>
+	<!-- .offcanvas-pusher -->
+
+
+
+
+
+
+
+
+	<!-- Script -->
+	<script th:src="@{/vendor/js/customjs.js}"></script>
+	<script th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/vendor/js/bootstrap.min.js}"></script>
+
+	<
+	<!-- <script src="resources/js/smoothscroll.js"></script> -->
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+	<script th:src="@{/vendor/js/scripts.js}"></script>
+	<script th:src="@{/vendor/js/plusminus.js}"></script>
+	<script th:src="@{/js/validation.js}"></script>
+
+
+
+</body>
+</html>"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+16:13:03.342 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:28
+16:13:03.355 [http-nio-9091-exec-6] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+16:13:03.812 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+16:13:03.833 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+16:13:03.834 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+16:13:03.845 [http-nio-9091-exec-4] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+16:13:46.531 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:146 - RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketutank11@gmail.com, dateOfBirth=Wed Sep 01 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.4, city=4, state=2, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+16:13:46.531 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:147 - 24
+16:13:46.533 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:150 - candidate dob Wed Sep 01 00:00:00 IST 1999admin dob 1993-06-02 truetrueexma:60
+16:13:46.533 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:179 - error:false
+16:13:46.534 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+16:13:46.536 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Madhya Pradesh city:Indore
+16:13:46.537 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+16:13:46.537 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+16:13:46.655 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+16:13:46.658 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketutank11@gmail.com Genrated Candidate registration ID:IE201500082
+16:13:46.658 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+16:13:46.660 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+16:13:46.661 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+16:13:46.661 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+16:13:46.872 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:13:46.873 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:13:47.681 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:13:47.682 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:13:47.682 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+16:13:47.682 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500082_X_marksheet.jpeg file2:IE201500082_XII_marksheet.jpeg
+16:13:47.682 [http-nio-9091-exec-9] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+16:13:47.685 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketutank11@gmail.com, dateOfBirth=Wed Sep 01 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.4, city=Indore, state=Madhya Pradesh, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500082/IE201500082_X_marksheet.jpeg, xiiimagePath=IE201500082/IE201500082_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500082]
+16:13:47.723 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:213 - SEP1820IN00011
+16:13:47.724 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:215 - Indore IAF RECRUITMENT RALLY FOR GROUP ‘X’ 
+16:13:47.797 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+ketutank11@gmail.comprepraring for sending mail using server:smtpb.pune.cdac.in
+16:13:47.798 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:ketutank11@gmail.com
+16:13:47.843 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+16:13:47.851 [http-nio-9091-exec-9] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+16:13:49.940 [http-nio-9091-exec-9] INFO  c.c.i.c.RalleyRegistrationFormController:233 - Form submitted successfully.
+16:13:49.992 [http-nio-9091-exec-6] ERROR org.thymeleaf.TemplateEngine:1136 - [THYMELEAF][http-nio-9091-exec-6] Exception processing template "RegistrationSuccess": An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 200, col 36)
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 200, col 36)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.attoparser.ParseException: (Line = 200, Column = 36) Malformed markup: Attribute "style" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:275)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 88 common frames omitted
+16:13:49.993 [http-nio-9091-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/RegistrationSuccess.html]" - line 200, col 36)] with root cause
+org.attoparser.ParseException: (Line = 200, Column = 36) Malformed markup: Attribute "style" appears more than once in element
+	at org.attoparser.MarkupEventProcessorHandler.handleAttribute(MarkupEventProcessorHandler.java:549)
+	at org.attoparser.ParsingAttributeSequenceUtil.parseAttributeSequence(ParsingAttributeSequenceUtil.java:275)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:153)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.cdac.iafralley.filters.SameSiteFilter.doFilter(SameSiteFilter.java:18)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.ConcurrentSessionFilter.doFilter(ConcurrentSessionFilter.java:152)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+16:15:22.473 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:29
+16:15:22.486 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+16:15:22.497 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+16:15:22.508 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+16:15:22.508 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+16:15:22.518 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011
+16:16:10.063 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:146 - RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketutank11@gmail.com, dateOfBirth=Thu Sep 30 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.5, city=4, state=2, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+16:16:10.064 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:147 - 24
+16:16:10.065 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:150 - candidate dob Thu Sep 30 00:00:00 IST 1999admin dob 1993-06-02 truetrueexma:60
+16:16:10.065 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:179 - error:false
+16:16:10.066 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:90 - converting and getting candidate selected state and city name
+16:16:10.068 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:201 - state:Madhya Pradesh city:Indore
+16:16:10.068 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:96 - setting values
+16:16:10.068 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:98 - before genrating id checking registring emailid is already present in DB or not...
+16:16:10.071 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:106 - Registering emailid is not present in DB so proceeding further...
+16:16:10.074 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:123 - for candidate with emailid:ketutank11@gmail.com Genrated Candidate registration ID:IE201500083
+16:16:10.074 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:124 - storing certificate paths in db and writing in disk
+16:16:10.075 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:47 - in after create f 
+16:16:10.075 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:53 - checking X and XII  marksheet
+16:16:10.076 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+16:16:10.342 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:16:10.342 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:16:10.496 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:176 - set truncated false valid image
+16:16:10.496 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:179 - Image file is a non coruppted and vaid file
+16:16:10.496 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:101 - Renaming marksheet
+16:16:10.496 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:109 - file1:IE201500083_X_marksheet.jpeg file2:IE201500083_XII_marksheet.jpeg
+16:16:10.497 [http-nio-9091-exec-2] INFO  c.c.i.services.StoreImageFiles:112 - copying to Path...
+16:16:10.511 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:127 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=Ketan Tank, fathername=Manish Tank, emailid=ketutank11@gmail.com, dateOfBirth=Thu Sep 30 00:00:00 IST 1999, contactno=9763930238, passed_exam_detail=Vocational, otherDetailPassedDetail=Computer Science Vocational, aadhar_details=null, passed_exam_percentage=60, english_percentage=60, maritial_status=false, height=150.5, city=Indore, state=Madhya Pradesh, opt_city=4, opt_state=2, opt_city_name=Indore, opt_state_name=Madhya Pradesh,opt_group_id=2, venu_details=null, ximagePath=IE201500083/IE201500083_X_marksheet.jpeg, xiiimagePath=IE201500083/IE201500083_XII_marksheet.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=IE201500083]
+16:16:10.617 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:213 - SEP1820IN00011
+16:16:10.618 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:215 - Indore IAF RECRUITMENT RALLY FOR GROUP ‘X’ 
+16:16:10.657 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+ketutank11@gmail.comprepraring for sending mail using server:smtpb.pune.cdac.in
+16:16:10.658 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:ketutank11@gmail.com
+16:16:10.662 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+16:16:10.675 [http-nio-9091-exec-2] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+16:16:12.786 [http-nio-9091-exec-2] INFO  c.c.i.c.RalleyRegistrationFormController:233 - Form submitted successfully.
+16:22:02.772 [http-nio-9091-exec-3] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:238 - total slots sum:500and registred students:30
+16:22:02.786 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:377 - <h3 class='p-contents'>IAF RECRUITMENT RALLY FOR GROUP ‘X’ -INDORE</h3><h4 class='p-contents'>From 18 SEPTEMBER 2020 to 18 SEPTEMBER 2020</h4><h4 class='p-contents'>AT near bus Stand ,Nehru Ground,Indore 444602</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP1820IN00011>
+16:22:02.799 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:427 - [2]
+16:22:02.814 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string1993-06-02
+16:22:02.814 [http-nio-9091-exec-8] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:324 - in string2000-08-02
+16:22:02.824 [http-nio-9091-exec-9] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:456 - obtained rallyid=SEP1820IN00011

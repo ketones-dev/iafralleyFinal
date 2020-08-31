@@ -48,6 +48,13 @@ left:10%;
 
 }
 
+.tabmode-vocational{
+display:none;
+}
+
+.tabmode-Diploma{
+display:none;
+}
 @media (max-width: 992px)   {
 
 #vocational_v{
@@ -312,16 +319,19 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 											th:class="'error'" th:errors="*{city}" class="text-danger">Select city</label>
 									</div>
 									
-									
-									<div id="proceed" class="form-group col-md-4 " style="margin-top: 3.5%;">
+									<div class="col-md-2" style="margin-top: 3.5%;">
+									<div id="proceed" class="form-group" >
 									<a class="btn btn-primary" style="color:white;">Proceed</a>
 									
 									</div>
-
+									</div>
+									<div class="col-md-4" style="margin-top: 3.5%;">
+									<div id="message" class="message" style="color:red;"></div>
+									</div>
 								
 
 							
-							<div id="message" class="message"></div>
+							
 							</div>
 							<div id="form-table" class="form-table">
 								<div class="container-fluid">
@@ -503,6 +513,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									<label for="pass" style="font-size: 16px;">Group/Trade<span class="compulsory">*</span>:</label></div>
 									<div class="form-group col-md-6" >
 									<select class="form-control" id="selectgroup" required="required">
+									
 									</select>
 									</div>
 									
@@ -596,6 +607,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row col-md-12">
 								<div class="form-group col-md-6">
 								<label for="Qualification Details:" class="col-form-label">Qualifying Degree Details<span class="compulsory">*</span>:</label>
+								<lable style="display:inline-block;">(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable>
 								</div><div class="form-group col-md-6">
 								<input type="text" th:field="*{otherDetailPassedDetail}" 
 									class="form-control" id="other" placeholder="Qualification Details" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$" data-error="please Qualification Details" required>
@@ -606,6 +618,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 							<div class="form-group col-md-6">
 								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying Degree)<span class="compulsory">*</span>:</label>
+								<lable>(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable>
 								</div><div class="form-group col-md-6">
 								
 								<input type="number" th:field="*{passed_exam_percentage}" 
@@ -616,8 +629,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="engpassper" class="col-form-label">English Passing Percentage<span class="compulsory">*</span>:</label>
-								<label class="extra-info">If English is not a Subject in Vocational/Qualifying course then provide 10th/Matriculation English percentage.</label>
+								<label for="engpassper" class="col-form-label">English  Percentage in 12th/<span class="tabmode-vocational">Vocational</span><span class="tabmode-Diploma">Diploma</span><span class="compulsory">*</span>:</label>
+								<label class="extra-info">If English is not a Subject in <span class="tabmode-vocational">Vocational</span><span class="tabmode-Diploma">Diploma</span> course then provide 10th/Matriculation English percentage.</label>
 								</div><div class="form-group col-md-6">
 								<input type="number" th:field="*{english_percentage}" 
 									class="form-control" id="eng_passed_exam" placeholder="Enter english passing percentage" min="36"  pattern="^[3-9][0-9]?$|^100$" data-error="please enter valid english passing percentage" required>
