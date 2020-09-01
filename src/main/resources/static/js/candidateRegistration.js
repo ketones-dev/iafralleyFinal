@@ -152,6 +152,7 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 					   			var opt = document.createElement("option"); 
 				   		    	opt.value = data[0].id;
 				   		    	opt.text = data[0].group_name;
+				   		    	
 				   		    	dropdown.options.add(opt);
 				   		    	dropdown.selectedIndex = 0;
 				   		    	ShowQualificationOnSingleValue();

@@ -37,12 +37,14 @@ import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyDetails;
 import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.entity.RalleyStates;
+import com.cdac.iafralley.exception.AadharInvalid;
 import com.cdac.iafralley.exception.CandidateInvalidInputAsPerCrietria;
 import com.cdac.iafralley.mailConfig.ContentIdGenerator;
 import com.cdac.iafralley.mailConfig.MailingService;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
 import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
+import com.cdac.iafralley.util.VerhoeffAlgorithm;
 
 
 
@@ -75,6 +77,9 @@ public class RalleyRegistrationFormController {
 	
     @Value("${applicant.filepath}")
 	private String FILE_PATH;
+    
+    final long FIFTY_KB_IN_BYTES = 51200;
+	final long THIRTY_KB_IN_BYTES = 30720;
 
 	private static final Logger logger = LoggerFactory.getLogger(RalleyRegistrationFormController.class);
 	
@@ -146,6 +151,34 @@ public class RalleyRegistrationFormController {
 			logger.info(ralleyCandidateDetails.toString());
 			logger.info(ralleyCandidateDetails.getState()+""+ralleyCandidateDetails.getCity());
 			RalleyDetails rd =ralleyService.findByCustomId(ralleyCandidateDetails.getRally_id());
+			if(rd == null)
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Invalid input...!");
+			}
+			
+			if(ralleyCandidateDetails.getAadhar_details() !=null)
+			{
+				if(VerhoeffAlgorithm.validateAadharNumber(ralleyCandidateDetails.getAadhar_details()))
+				{}
+				else {
+					throw new AadharInvalid("Aadhar number is invalid");
+				}
+			}
+			
+			if(XMarksheet.isEmpty() || XIIMarksheet.isEmpty())
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Uploaded Certificate or Markheet is not Valid");
+			}
+			else if(XMarksheet.getSize() < THIRTY_KB_IN_BYTES || XMarksheet.getSize() > FIFTY_KB_IN_BYTES)
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Uploaded 10th Certificate size should in between be 30kb to 50kb ");
+			}
+			else if(XIIMarksheet.getSize() < THIRTY_KB_IN_BYTES || XIIMarksheet.getSize() > FIFTY_KB_IN_BYTES)
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Uploaded 12th/Voctional/Diploma Markseet size should in between be 30kb to 50kb ");
+			}
+			
+			
 			//check Dob range within
 			logger.info("candidate dob "+ralleyCandidateDetails.getDateOfBirth() +"admin dob "+rd.getMin_dob() +" "+ (ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMin_dob()) >= 0) +""
 					+(ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMax_dob()) <= 0)+"exma:"+ralleyCandidateDetails.getPassed_exam_percentage());

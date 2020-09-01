@@ -47,10 +47,11 @@ public class StoreImageFiles {
 			logger.info("in after create f ");
 		if (XMarksheet.isEmpty() || XIIMarksheet.isEmpty()) {
 	           logger.info("Please select a file to upload.");
-	            
+	       
 	        }
 			else {
 				logger.info("checking X and XII  marksheet");
+			
 				
 				String mime1 = XMarksheet.getContentType();
 				String mime2 = XIIMarksheet.getContentType();

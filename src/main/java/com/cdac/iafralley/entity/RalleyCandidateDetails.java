@@ -97,7 +97,7 @@ public class RalleyCandidateDetails implements Serializable {
 	private Integer english_percentage;
 	
 	@Column(name="maritial_status")
-	private boolean maritial_status;
+	private boolean maritial_status=false;
 	
 	@NotEmpty
 	@Pattern(regexp="^[1-4][0-9][0-9](?:\\.[0-9]{1,1})?$",message="Height input was invalid")
