@@ -121,6 +121,8 @@ public class AdminController {
 
 		ralleyDetails.setRalleyForGroup(rd.getRalleyForGroup());
 		ralleyDetails.setCandidateRestrictFromDistrictIds(rd.getCandidateRestrictFromDistrictIds());
+		ralleyDetails.setActive(rd.getActive());
+		ralleyDetails.setAscNumber(rd.getAscNumber());
 		
 		List<RalleyDaywiseSlotDetails> slotlist = rd.getRalleydaywiseSlot();
 

@@ -73,7 +73,7 @@ public class RalleyDetailsDTO {
 	private Long min_eng_percentage;
 	
 	@NotNull
-	private Long min_height;
+	private Double min_height;
 	
 	@NotNull
 	private List<String> ralleyForGroup;
@@ -82,6 +82,13 @@ public class RalleyDetailsDTO {
 	
 	
 	private Long candidateRestrictFromStateId;
+	
+	
+	private String ascNumber;
+	
+	
+	private boolean active;
+	
 	
 	private List<String> candidateRestrictFromDistrictIds;
 
@@ -175,11 +182,11 @@ public class RalleyDetailsDTO {
 		this.min_eng_percentage = min_eng_percentage;
 	}
 
-	public Long getMin_height() {
+	public Double getMin_height() {
 		return min_height;
 	}
 
-	public void setMin_height(Long min_height) {
+	public void setMin_height(Double min_height) {
 		this.min_height = min_height;
 	}
 
@@ -246,6 +253,23 @@ public class RalleyDetailsDTO {
 	public void setCandidateRestrictFromDistrictIds(List<String> candidateRestrictFromDistrictIds) {
 		this.candidateRestrictFromDistrictIds = candidateRestrictFromDistrictIds;
 	}
+
+	public String getAscNumber() {
+		return ascNumber;
+	}
+
+	public void setAscNumber(String ascNumber) {
+		this.ascNumber = ascNumber;
+	}
+
+	public boolean getActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
 	
 	
 

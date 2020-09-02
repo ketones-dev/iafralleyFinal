@@ -100,8 +100,9 @@ public class RalleyDetails {
 	private Long min_eng_percentage;
 	
 	@NotNull
-	@Column(name="min_height")
-	private Long min_height;
+	@Column(name="min_height",precision = 5,scale = 1)
+	
+	private Double min_height;
 	
 	@Convert(converter = StringListConverter.class)
 	@Column(name="ralley_for_Groups")
@@ -113,6 +114,12 @@ public class RalleyDetails {
 	@Convert(converter = StringListConverter.class)
 	@Column(name="candidateRestrictFrom_district_ids")
 	private List<String> candidateRestrictFromDistrictIds;
+	
+	@Column(name="ascNumber")
+	private String ascNumber;
+	
+	@Column(name="active")
+	private boolean active=false;
 	
 	@OneToMany(fetch = FetchType.LAZY,mappedBy = "ralleydetails",cascade = CascadeType.ALL)
 	private List<RalleyDaywiseSlotDetails> ralleydaywiseSlot;
@@ -126,7 +133,7 @@ public class RalleyDetails {
 
 	public RalleyDetails(Long ralley_id,Long state_id, Long city_id, String ralley_details, String venue_details, Date start_date,
 			Date end_date, int no_OfDays, Date min_dob, Date max_dob, Long min_passing_percentage,
-			Long min_eng_percentage, Long min_height,String city_name,String state_name,String ralley_cust_id,Long candidateRestrictFromStateId) {
+			Long min_eng_percentage, Double min_height,String city_name,String state_name,String ralley_cust_id,Long candidateRestrictFromStateId) {
 		super();
 		this.ralley_id=ralley_id;
 		this.state_id = state_id;
@@ -293,13 +300,13 @@ public class RalleyDetails {
 
 
 
-	public Long getMin_height() {
+	public Double getMin_height() {
 		return min_height;
 	}
 
 
 
-	public void setMin_height(Long min_height) {
+	public void setMin_height(Double min_height) {
 		this.min_height = min_height;
 	}
 
@@ -393,6 +400,31 @@ public class RalleyDetails {
 
 	public void setCandidateRestrictFromDistrictIds(List<String> candidateRestrictFromDistrictIds) {
 		this.candidateRestrictFromDistrictIds = candidateRestrictFromDistrictIds;
+	}
+
+
+	
+
+	public String getAscNumber() {
+		return ascNumber;
+	}
+
+
+
+	public void setAscNumber(String ascNumber) {
+		this.ascNumber = ascNumber;
+	}
+
+
+
+	public boolean getActive() {
+		return active;
+	}
+
+
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 

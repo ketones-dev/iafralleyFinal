@@ -16,10 +16,10 @@ public interface RalleyDetailsDAO extends JpaRepository<RalleyDetails, Long> {
 	
 	
 	
-	@Query("select distinct state_id from RalleyDetails")
+	@Query("select distinct r.state_id from RalleyDetails r where r.active=true")
 	public List<Long> findDistinctAllotStates();
 	
-	@Query("select distinct r.city_id from RalleyDetails r where r.state_id = :stateid")
+	@Query("select distinct r.city_id from RalleyDetails r where r.state_id = :stateid and r.active=true")
 	public List<Long> findDistinctAllotCities(@Param("stateid") Long stateid);
 	
 	@Query("select r.ralley_id from RalleyDetails r where r.city_id= :cityid")
@@ -36,6 +36,10 @@ public interface RalleyDetailsDAO extends JpaRepository<RalleyDetails, Long> {
 	
 	@Query("from RalleyDetails r where r.ralley_cust_id= :id")
 	public RalleyDetails findByRalley_cust_id(@Param("id") String id);
+	
+	@Query(nativeQuery = true,value = "select distinct on(city_id) * from ralley_details where active=true")
+	public List<RalleyDetails> findDistinctHeadingDetails();
+	
 	
 
 }

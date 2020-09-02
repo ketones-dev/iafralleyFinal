@@ -1,7 +1,9 @@
 package com.cdac.iafralley.services;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -41,6 +43,23 @@ public class RalleyDetailsService {
 	
 	@Autowired
 	private RalleyGroupDAO ralley_grp;
+	
+	
+	public String DateFormatter(Date d)
+	{
+		
+		Date convertDate=d;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd");
+
+	   String date =simpleDateFormat.format(convertDate).toUpperCase()+" ";
+
+	    simpleDateFormat = new SimpleDateFormat("MMM");
+	    date +=simpleDateFormat.format(convertDate).toUpperCase()+" ";
+
+	    simpleDateFormat = new SimpleDateFormat("YYYY");
+	    date +=simpleDateFormat.format(convertDate).toUpperCase();
+		return date;
+	}
 	
 	public RalleyDetails findById(Long id)
 	{
@@ -158,6 +177,26 @@ List<Long> intList = citiesid.stream()
 		
 		List<RalleyCities> lists=conductingCities.getAllotCities(intList);
 		return lists;
+	}
+	
+	public List<String> RalleyDetailsHeading(){
+		List<RalleyDetails> rd=ralleydetaildao.findDistinctHeadingDetails();
+		List<String> conductingrallyDetails=new ArrayList<String>();
+		if(rd == null || rd.isEmpty())
+		{
+			logger.info("No rallies are active for registration");
+			conductingrallyDetails.add("Seem Like there is No OnGoing Rally Recruitment ..");
+			return conductingrallyDetails;
+		}
+		
+		for(int i=0;i<rd.size();i++)
+		{
+			conductingrallyDetails.add((i+1)+". "+rd.get(i).getRalley_details()+"-"+rd.get(i).getCity_name().toUpperCase()+" (FROM "+
+					DateFormatter(rd.get(i).getStart_date()).toUpperCase()+" to "+ DateFormatter(rd.get(i).getEnd_date())+")");
+		}
+		
+		return conductingrallyDetails;
+		
 	}
 
 	

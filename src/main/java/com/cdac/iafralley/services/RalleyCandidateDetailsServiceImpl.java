@@ -98,9 +98,20 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		logger.info("before genrating id checking registring emailid is already present in DB or not...");
 		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailid(candidate.getEmailid());
 		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details());
-		if(result != null || result2 != null)
+		if(result != null && result2 != null)
 		{
-			throw new CandidateDuplicateEntry("Either emailid:"+candidate.getEmailid()+"or aadhar"+candidate.getAadhar_details()+" is already registered on this portal");
+			
+			throw new CandidateDuplicateEntry("Either emailid:"+candidate.getEmailid()+" or aadhar:"+candidate.getAadhar_details()+" is already registered on this portal");
+		}
+		if(result != null )
+		{
+			
+			throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered on this portal");
+		}
+		if(result2 != null)
+		{
+			
+			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered on this portal");
 		}
 		
 		logger.info("Registering emailid is not present in DB so proceeding further...");
@@ -371,7 +382,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		
 		for(RalleyDetails p:rd)
 		{
-			details +="<h3 class='p-contents'>"+p.getRalley_details()+"-"+p.getCity_name().toUpperCase()+"</h3><h4 class='p-contents'>From "+DateFormatter(p.getStart_date()).toUpperCase()+" to "+DateFormatter(p.getEnd_date())+"</h4><h4 class='p-contents'>AT "+p.getVenue_details()+"</h4><input type='hidden' id='ralleyid_cust' name='rally_id' value="+p.getRalley_cust_id()+">";
+			details +="<h3 class='p-contents'>"+p.getRalley_details()+"-"+p.getCity_name().toUpperCase()+"</h3><h4 class='p-contents'>From "+DateFormatter(p.getStart_date()).toUpperCase()+" to "+DateFormatter(p.getEnd_date())+"</h4><!--<h4 class='p-contents'>AT "+p.getVenue_details()+"</h4>--><input type='hidden' id='ralleyid_cust' name='rally_id' value="+p.getRalley_cust_id()+">";
 		}
 		
 		logger.info(details);

@@ -63,7 +63,7 @@ window.addEventListener('load', function() {
 			 });
     	 ralley_stateSelectedValue.selectedIndex=0;
     	stateSelectedValue.selectedIndex = 0;
-    	alert("please check input values...");
+    	alert("Please fill valid data");
     	window.location.reload(true);
     	}
     if(error.value !== "" && error.value !== "error")

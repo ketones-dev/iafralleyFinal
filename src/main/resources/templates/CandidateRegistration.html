@@ -140,6 +140,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 </head>
 <body>
+
 	<div id="main-wrapper"
 		class="uc-offcanvas-wrapper uc-offcanvas-left slide-along">
 		
@@ -238,7 +239,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav ">
-							<li class="nav-item active"><a class="nav-link" href="#">Home
+							<li class="nav-item active"><a class="nav-link" href="https://airmenselection.cdac.in/CASB/">Home
 									<span class="sr-only">(current)</span>
 							</a></li>
 
@@ -253,7 +254,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 						<div class="col-md-12">
 							<nav>
 								<ul class="breadcrumb modbreadcrumb">
-									<li><a href="index.html"><span
+									<li><a href="https://airmenselection.cdac.in/CASB/"><span
 											class="glyphicon glyphicon-home"></span> Home/ </a></li>
 
 									<li>Rally Registration</li>
@@ -276,7 +277,30 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 						<div class="card"
 							style="padding: 4%; box-shadow: 0px 8px 10px 0px rgb(0, 0, 0, 2.5);">
 
-							<h3 style="color: #2f4f6b;" id="contextshow">Please Select State and City for Rally Details</h3>
+							<div style="color: #2f4f6b;" id="contextshow">
+							<th:block th:if="${ongoingrallies} != null">
+							
+							<div class="col-md-12" style="border:1px solid black;border-radius:10px;padding:15px;">
+							<h3>OnGoing Rally Registration</h3>
+							
+							<th:block th:each="rallies:${ongoingrallies}">
+							<h5 style="color:black;" th:text="${rallies}">
+							
+							
+							</h5>
+							</th:block>
+							
+							
+							</div>
+							</th:block>
+							
+							
+							
+							
+							
+							
+							
+							<h3>Please Select State and City for Rally Details</h3></div>
 
 							
 							<h4 style="color: #2f4f6b;" >
@@ -336,19 +360,19 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div id="form-table" class="form-table">
 								<div class="container-fluid">
 									<div class="row"
-										style="padding: 15px; align-content: center; align-items: center;">
-										<div class="col-sm-2 col-md-2col-lg-2" style="text-align:center">
+										style="padding: 0 5% 0 0; align-content: center; align-items: center;">
+										<div class="col-sm-2 col-md-2col-lg-1" style="text-align:center">
 											<img
 												th:src="@{/vendor/image/badge.png}"
-												alt="logo" style="width: 100px;">
+												alt="logo" style="width: 80px;">
 										</div>
-										<div class="col-sm-6 col-md-6 col-lg-6" style="margin: 0 auto;">
+										<div class="col-sm-6 col-md-6 col-lg-9" style="margin: 0 auto;">
 											<h2 id="m-iaf">
 												भारतीय वायु सेना / Indian Air Force<br> 
 											</h2>
 										</div>
-										<div class="col-sm-2 col-md-2 col-lg-2 "  style="text-align:center">
-											<img alt="logo" style="width: 100px;"
+										<div class="col-sm-2 col-md-2 col-lg-1 "  style="text-align:center">
+											<img alt="logo" style="width: 80px;"
 												th:src="@{/vendor/image/logo/iaflogo.png}">
 										</div>
 									</div>
@@ -369,7 +393,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div class="row" >
 							
 							<div class="form-group col-md-6">
-								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name<span class="compulsory">*</span>(As per 10th Passing Certificate)</label>
+								<label for="Candidate Full Name:" class="col-form-label">Candidate’s Full Name<span class="compulsory">*</span><span style="font-style:italic;">(As per 10th Passing Certificate)</span></label>
 								<input type="text" th:field="*{name}" 
 									class="form-control" id="name"  pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Full Name" data-error="please enter name"  required>
 									<div id="errorname"  class="invalid-feedback">Please provide a valid Name.</div>
@@ -378,10 +402,10 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="Father Name:" class="col-form-label">Father’s Full Name<span class="compulsory">*</span> (As per 10th Passing Certificate)</label>
+								<label for="Father Name:" class="col-form-label">Father’s Full Name<span class="compulsory">*</span><span style="font-style:italic;"> (As per 10th Passing Certificate)</span></label>
 								<input type="text" th:field="*{fathername}" 
 									class="form-control" id="fathername" pattern="^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" placeholder="Father Name" data-error="please enter name" required>
-									<div class="invalid-feedback">Please provide a valid Name.</div>
+									<div class="invalid-feedback">Please provide a valid Father's Name.</div>
 								<span th:if="${#fields.hasErrors('fathername')}"    th:errors="*{fathername}" class="text-danger"></span>
 								<p id="verrorf"></p>
 							</div>
@@ -396,7 +420,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="date" class="col-form-label">Date of Birth<span class="compulsory">*</span>: (As per 10th Passing Certificate):</label>
+								<label for="date" class="col-form-label">Date of Birth<span class="compulsory">*</span><span style="font-style:italic;">(As per 10th Passing Certificate)</span>:</label>
 								<input type="date" th:field="*{dateOfBirth}" 
 									class="form-control" id="dateOfBirth" placeholder="Enter DOB" data-error="please enter valid DOB" required>
 									<div class="invalid-feedback">Please provide a valid DOB.</div>
@@ -417,15 +441,15 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<label for="mobile" class="col-form-label">Aadhaar No:</label>
 								<input type="text" 
 									class="form-control"  th:field="*{aadhar_details}" id="aadhar" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" placeholder="Enter aadhar Number" >
-									<lable><b><u>Note:</u></b>Candidates who are providing Aadhaar Card Number while filling the application form need to carry their Aadhaar Card, when called for examination.</lable>
-									<div class="invalid-feedback">Please provide a valid addhar.</div>
+									<lable><b><u>Note:</u></b> (<i>Candidates who are providing Aadhaar Card Number while filling the application form need to carry their Aadhaar Card, when called for examination.</i>)</lable>
+									<div class="invalid-feedback">Please provide a valid addhar.</i></div>
 								<span th:if="${#fields.hasErrors('aadhar_details')}"    th:errors="*{aadhar_details}" class="text-danger"></span>
 							</div>
 							
 							</div>
 							<div class="row">
 							<div class="form-group col-md-4">
-								<label for="height" class="col-form-label">Height (in cm)<span class="compulsory">*</span> (Not less than 152.5 Cms):</label>
+								<label for="height" class="col-form-label">Height <span style="font-style:italic;">(in cm)</span><span class="compulsory">*</span>:<span style="font-style:italic;display:flex;">(Not less than 152.5 Cms)</span></label>
 								<input type="number" th:field="*{height}" 
 									class="form-control" id="height" step="0.1" placeholder="Enter height" data-error="please enter valid height" required>
 									<div class="invalid-feedback">Please provide a valid height.</div>
@@ -470,7 +494,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									</div>
 
 									<div class="form-group col-md-4" style="display: flex;justify-content: center;align-content: center;flex-direction: column;">
-							<label>I am a Domicile of (State)</label>
+							<label>I am a Domicile of (<span style="font-style:italic;">State</span>)</label>
 							</div>
 							
 							
@@ -608,7 +632,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row col-md-12">
 								<div class="form-group col-md-6">
 								<label for="Qualification Details:" class="col-form-label">Qualifying Exam Details<span class="compulsory">*</span>:</label>
-								<lable style="display:inline-block;">(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable>
+								<lable style="display:inline-block;font-style:italic;">(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable>
 								</div><div class="form-group col-md-6">
 								<input type="text" th:field="*{otherDetailPassedDetail}" 
 									class="form-control" id="other" placeholder="Qualification Details" pattern="^[^\s]+[-a-zA-Z\s]+([-a-zA-Z]+)*$" data-error="please Qualification Details" required>
@@ -618,8 +642,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							</div>
 							
 							<div class="form-group col-md-6">
-								<label for="passper" class="col-form-label">Aggregate Percentage (As per Qualifying exam)<span class="compulsory">*</span>:</label>
-								<lable>(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable>
+								<label for="passper" class="col-form-label">Aggregate Percentage <span style="font-style:italic;">(As per Qualifying exam)</span><span class="compulsory">*</span>:</label>
+								<!-- <lable>(12th/Intermediate/ <span class="tabmode-vocational">Vocational)</span><span class="tabmode-Diploma">Diploma)</span></lable> -->
 								</div><div class="form-group col-md-6">
 								
 								<input type="number" th:field="*{passed_exam_percentage}" 
@@ -631,7 +655,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 							<div class="form-group col-md-6">
 								<label for="engpassper" class="col-form-label">English  Passing Percentage in 12th/<span class="tabmode-vocational">Vocational</span><span class="tabmode-Diploma">Diploma</span><span class="compulsory">*</span>:</label>
-								<label class="extra-info">If English is not a Subject in <span class="tabmode-vocational">Vocational Course</span><span class="tabmode-Diploma">Diploma Course</span>/Intermidiate  then provide 10th/Matriculation English percentage.</label>
+								<label class="extra-info" style="font-style:italic;">(If English is not a Subject in <span class="tabmode-vocational">Vocational Course</span><span class="tabmode-Diploma">Diploma Course</span>/Intermediate  then provide 10th/Matriculation English percentage.)</label>
 								</div><div class="form-group col-md-6">
 								<input type="number" th:field="*{english_percentage}" 
 									class="form-control" id="eng_passed_exam" placeholder="Enter english scored percentage" min="36"  pattern="^[3-9][0-9]?$|^100$" data-error="please enter valid english passing percentage" required>
@@ -895,7 +919,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	    	
 	    });
 	    
-	   /*  $('#aadhar').on("change, blur", function(e) {
+	     $('#aadhar').on("change, blur", function(e) {
 	    	var p=new RegExp("^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$");
 	    	var reg=p.test(e.target.value);
 	    	var aadhar =document.getElementById('aadhar');
@@ -915,8 +939,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 		    		
 	    		}
 	    	
-	    }); */
-	    
+	    }); 	    
 	    
 	    $('#X_marksheet').bind('change', function() {
 	    	var sizeInKB = this.files[0].size/1024; //Normally files are in bytes but for KB divide by 1024 and so on
@@ -955,26 +978,58 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
  (function() {
   'use strict';
   window.addEventListener('load', function() {
+	  
+	 
+	  
+	  
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
-    	 
+    	
+    	  var theInput = document.getElementById("aadhar");
+    	  
+    	  if(form.checkValidity() === true)
+    		  {
+    		  if(theInput.value === "")
+  			{
+  			if(confirm("Do you wish to submit form without Providing Aadhar Card Number ?"))
+  				{
+  				
+  				}
+  			else
+  				{
+  				theInput.setAttribute("required","true");
+  				}
+  			
+  			}
+    		  }
+    	  
     	  
         if (form.checkValidity() === false) {
-        	 
-
+        	
+		
           event.preventDefault();
           event.stopPropagation();
-          alert("Please Check Input Values...!");
+         
+          alert("Please fill form completely before submitting.");
         }
+        
+       
+        
+        
        
         form.classList.add('was-validated');
         $('html,body').animate({scrollTop: $('.was-validated .form-control:invalid').first().focus().offset().top - 150},'smooth');
       }, false);
     });
   }, false);
+  
+ 
+  
+  
+  
 })(); 
 </script>
 <script type="text/javascript">
@@ -997,6 +1052,11 @@ var loadFile = function(id) {
     }
     	
 };
+
+
+
+
+
 
 </script>
 

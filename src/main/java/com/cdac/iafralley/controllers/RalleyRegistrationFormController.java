@@ -121,6 +121,7 @@ public class RalleyRegistrationFormController {
 	        	//modelAndView.addObject("allStates", candidateService.getallState());
 	        	modelAndView.addObject("allStates", new RalleyStates());
 	        	modelAndView.addObject("ralleyAllState", candidateService.getralleyAllState());
+	        	modelAndView.addObject("ongoingrallies",ralleyService.RalleyDetailsHeading());
 	        }
 		
 		 
@@ -165,6 +166,19 @@ public class RalleyRegistrationFormController {
 				}
 			}
 			
+			if(ralleyCandidateDetails.getHeight() != null)
+			{
+				if(Double.valueOf(ralleyCandidateDetails.getHeight()) < rd.getMin_height())
+				{
+					throw new AadharInvalid("Height Should be as per Eligibility Criteria");
+				}
+			}
+			else if(ralleyCandidateDetails.getHeight() == null || ralleyCandidateDetails.getHeight() == "")
+					{
+				throw new AadharInvalid("Height Should be as per Eligibility Criteria");
+					}
+			
+			
 			if(XMarksheet.isEmpty() || XIIMarksheet.isEmpty())
 			{
 				throw new CandidateInvalidInputAsPerCrietria("Uploaded Certificate or Markheet is not Valid");
@@ -179,12 +193,13 @@ public class RalleyRegistrationFormController {
 			}
 			
 			
+			
 			//check Dob range within
 			logger.info("candidate dob "+ralleyCandidateDetails.getDateOfBirth() +"admin dob "+rd.getMin_dob() +" "+ (ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMin_dob()) >= 0) +""
 					+(ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMax_dob()) <= 0)+"exma:"+ralleyCandidateDetails.getPassed_exam_percentage());
 			
 			if(!(ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMin_dob()) >= 0 && ralleyCandidateDetails.getDateOfBirth().compareTo(rd.getMax_dob()) <= 0)){
-				throw new CandidateInvalidInputAsPerCrietria("Dob birth are Invalid as per Eligibilty Criteria");
+				throw new CandidateInvalidInputAsPerCrietria("Given Dob  are Invalid as per Eligibilty Criteria");
 			}
 			if(!(ralleyCandidateDetails.getPassed_exam_percentage() < 0 || (ralleyCandidateDetails.getPassed_exam_percentage() >= rd.getMin_passing_percentage()   && ralleyCandidateDetails.getPassed_exam_percentage() <= 100)))
 			{
@@ -206,6 +221,7 @@ public class RalleyRegistrationFormController {
 			
 			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
 			  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
+			  redirectAttributes.addFlashAttribute("ongoingrallies",ralleyService.RalleyDetailsHeading());
 			  return modelAndView;
 		}
 		
@@ -227,6 +243,7 @@ public class RalleyRegistrationFormController {
 			 // redirectAttributes.addFlashAttribute("allStates", candidateService.getallState());
 			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
 			  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
+			  redirectAttributes.addFlashAttribute("ongoingrallies",ralleyService.RalleyDetailsHeading());
 			 
 			 
 			return modelAndView;
@@ -273,6 +290,7 @@ public class RalleyRegistrationFormController {
 			  redirectAttributes.addFlashAttribute("allStates", new RalleyStates());
 		  redirectAttributes.addFlashAttribute("ralleyAllState", candidateService.getralleyAllState());
 		  redirectAttributes.addFlashAttribute("msgsavingerror",e.getMessage());
+		  redirectAttributes.addFlashAttribute("ongoingrallies",ralleyService.RalleyDetailsHeading());
 		  
 		  
 		  }
