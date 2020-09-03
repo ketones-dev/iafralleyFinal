@@ -96,22 +96,22 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			logger.info("setting values");
 		}
 		logger.info("before genrating id checking registring emailid is already present in DB or not...");
-		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailid(candidate.getEmailid());
-		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details());
+		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(candidate.getEmailid(),candidate.getRally_id());
+		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),candidate.getRally_id());
 		if(result != null && result2 != null)
 		{
 			
-			throw new CandidateDuplicateEntry("Either emailid:"+candidate.getEmailid()+" or aadhar:"+candidate.getAadhar_details()+" is already registered on this portal");
+			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
 		}
 		if(result != null )
 		{
 			
-			throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered on this portal");
+			throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered.Cannot register with same details.");
 		}
 		if(result2 != null)
 		{
 			
-			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered on this portal");
+			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
 		}
 		
 		logger.info("Registering emailid is not present in DB so proceeding further...");
@@ -486,6 +486,32 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		
 		//details.put("state",  s);
 		return details;
+	}
+
+	@Override
+	public List<String> getDuplicateValidation(String email, String aadhar, String id) {
+		// TODO Auto-generated method stub
+		List<String> ls=new ArrayList<String>();
+		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(email,id);
+		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(aadhar,id);
+		if(result !=null && result2 !=null)
+		{
+			ls.add("both");
+			return ls;
+		}
+		else if(result != null)
+		{
+			ls.add("email");
+			return ls;
+		}
+		else if(result2 !=null)
+		{
+			ls.add("aadhar");
+			return ls;
+		}
+		
+		ls.add("");
+		return ls;
 	}
 	
 	

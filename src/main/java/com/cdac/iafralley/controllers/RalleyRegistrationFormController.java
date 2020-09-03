@@ -1,5 +1,6 @@
 package com.cdac.iafralley.controllers;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -264,7 +265,7 @@ public class RalleyRegistrationFormController {
 			RalleyDetails saverd =ralleyService.findByCustomId(candidateDetails.getRally_id());
 			logger.info(""+saverd.getCity_name()+" "+saverd.getRalley_details());
 			  String to=candidateDetails.getEmailid(); 
-			  String subject="IAF Rally Recruitment Conformation"; 
+			  String subject="IAF RECRUITMENT RALLY REGISTRATION ACKNOWLEDGEMENT"; 
 			  String message="";
 			      
 			  
@@ -389,6 +390,22 @@ public class RalleyRegistrationFormController {
 	    
 	   
 	    return new ResponseEntity<List<RalleyGroup_trade>>(entityList, HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/getDuplicateValidation", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public  ResponseEntity<List<String>> getDuplicateValidation(@RequestBody Map<String, String>  values) {
+		
+		System.out.println("in getcities: "+values.get("emailid")+" "+values.get("aadhar")+ " "+values.get("id"));
+	  
+		List<String> entityList=candidateService.getDuplicateValidation(values.get("emailid"),values.get("aadhar"),values.get("id"));
+		
+		logger.info("validation msg"+entityList.get(0));
+		//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+		
+	    
+	   
+	    return new ResponseEntity<List<String>>(entityList, HttpStatus.OK);
 	}
 
 	

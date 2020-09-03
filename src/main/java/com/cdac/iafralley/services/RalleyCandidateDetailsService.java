@@ -42,6 +42,8 @@ public interface RalleyCandidateDetailsService {
 	public List<RalleyGroup_trade> getralleyCreatedGroups(Long long1);
 
 	public Map<String, List<Object>> getralleyStateandCities(String rallyid);
+
+	public List<String> getDuplicateValidation(String string, String string2, String string3);
 	
 	
 	

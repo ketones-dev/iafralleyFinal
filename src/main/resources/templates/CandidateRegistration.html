@@ -136,6 +136,25 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 }
 
+#pageloader
+{
+  background: rgba( 255, 255, 255, 0.8 );
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#pageloader img
+{
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
+  position: absolute;
+  top: 50%;
+}
+
 </style>
 
 </head>
@@ -143,7 +162,9 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 
 	<div id="main-wrapper"
 		class="uc-offcanvas-wrapper uc-offcanvas-left slide-along">
-		
+		<div id="pageloader">
+   <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+</div>
 		<!-- Page Preloader -->
 		<div id="preloader">
 			<div id="status">
@@ -269,6 +290,8 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 			<!-- .nav -->
 			
 				<section id="ralleyform">
+				
+				
 					<div class="container">
 						
 
@@ -276,6 +299,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 					<div class="container text-justify" style="padding: 25px 0;">
 						<div class="card"
 							style="padding: 4%; box-shadow: 0px 8px 10px 0px rgb(0, 0, 0, 2.5);">
+							
 
 							<div style="color: #2f4f6b;" id="contextshow">
 							<th:block th:if="${ongoingrallies} != null">
@@ -306,9 +330,11 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<h4 style="color: #2f4f6b;" >
 								
 							</h4>
+							
+							
 
 						<form action="#" th:action="@{/registerCandidate}"
-							th:object="${ralleyCandidateDetails}" method="post" id="form" class="needs-validation" enctype="multipart/form-data" novalidate>
+							th:object="${ralleyCandidateDetails}" method="post" id="form" class="needs-validation" enctype="multipart/form-data" autocomplete="off" novalidate>
 							<input type="hidden" th:value="${error}" id="error"> 
 							<input type="hidden" th:value="${optcity}" id="optcity">
 							<input type="hidden" th:value="${msgsavingerror}" id="error2"> 
@@ -988,7 +1014,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
     	
-    	  var theInput = document.getElementById("aadhar");
+			var theInput = document.getElementById("aadhar");
     	  
     	  if(form.checkValidity() === true)
     		  {
@@ -996,14 +1022,18 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
   			{
   			if(confirm("Do you wish to submit form without Providing Aadhar Card Number ?"))
   				{
-  				
+  				$("#pageloader").fadeIn();
   				}
   			else
   				{
   				theInput.setAttribute("required","true");
+  				document.getElementById('pageloader').style.display = 'none';
   				}
   			
   			}
+    		  else{
+    		  $("#pageloader").fadeIn();
+    		  }
     		  }
     	  
     	  
