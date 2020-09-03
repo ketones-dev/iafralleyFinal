@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -33,6 +35,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.cdac.iafralley.captcha.CaptchaGenerator;
+import com.cdac.iafralley.captcha.CaptchaUtils;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyDetails;
@@ -46,6 +50,8 @@ import com.cdac.iafralley.services.RalleyCandidateDetailsService;
 import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
 import com.cdac.iafralley.util.VerhoeffAlgorithm;
+
+import nl.captcha.Captcha;
 
 
 
@@ -63,6 +69,9 @@ public class RalleyRegistrationFormController {
 	RalleyCandidateDetailsService candidateService;
 	@Autowired
 	RalleyDetailsService ralleyService;
+	
+	@Autowired
+	private CaptchaGenerator captchaGenerator;
 	
 	
 	
@@ -111,7 +120,7 @@ public class RalleyRegistrationFormController {
 	 
 
 	@GetMapping(value = "/showRegistrationForm")
-	public ModelAndView createUserView(Model model) {
+	public ModelAndView createUserView(Model model,HttpSession httpSession) {
 		
 		
 		
@@ -123,6 +132,9 @@ public class RalleyRegistrationFormController {
 	        	modelAndView.addObject("allStates", new RalleyStates());
 	        	modelAndView.addObject("ralleyAllState", candidateService.getralleyAllState());
 	        	modelAndView.addObject("ongoingrallies",ralleyService.RalleyDetailsHeading());
+	        	Captcha captcha = captchaGenerator.createCaptcha(200, 50);
+	    		httpSession.setAttribute("captcha", captcha.getAnswer());
+	    		modelAndView.addObject("captchaEncode", CaptchaUtils.encodeBase64(captcha));
 	        }
 		
 		 
@@ -145,8 +157,9 @@ public class RalleyRegistrationFormController {
 	}
 	 
 	@PostMapping("/registerCandidate")
-	public ModelAndView createUser(@ModelAttribute("ralleyCandidateDetails") @Valid RalleyCandidateDetails ralleyCandidateDetails, BindingResult result,@RequestParam("XMarksheet") MultipartFile  XMarksheet,@RequestParam("XIIMarksheet") MultipartFile  XIIMarksheet,RedirectAttributes redirectAttributes) {
+	public ModelAndView createUser(@ModelAttribute("ralleyCandidateDetails") @Valid RalleyCandidateDetails ralleyCandidateDetails, BindingResult result,@RequestParam("XMarksheet") MultipartFile  XMarksheet,@RequestParam("XIIMarksheet") MultipartFile  XIIMarksheet,RedirectAttributes redirectAttributes,HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
+		
 		
 		
 		try {
@@ -157,6 +170,17 @@ public class RalleyRegistrationFormController {
 			{
 				throw new CandidateInvalidInputAsPerCrietria("Invalid input...!");
 			}
+			
+			
+			if(ralleyCandidateDetails.getCaptcha().equals(request.getSession().getAttribute("captcha"))) {
+			}
+			else
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Invalid Captcha value");
+			}
+			
+			
+			
 			
 			if(ralleyCandidateDetails.getAadhar_details() !=null)
 			{
@@ -214,6 +238,9 @@ public class RalleyRegistrationFormController {
 		}catch(Exception e)
 		{
 			 modelAndView.setViewName("redirect:/showRegistrationForm");
+			 
+			 
+			 
 			  redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.ralleyCandidateDetails", result);
 			  redirectAttributes.addFlashAttribute("ralleyCandidateDetails", ralleyCandidateDetails);
 			  redirectAttributes.addFlashAttribute("error", e.getMessage()); 

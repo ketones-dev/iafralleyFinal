@@ -179,6 +179,9 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="rally_id")
 	private String rally_id;
 	
+	@NotEmpty
+	private String captcha;
+	
 
 //	 @Id
 //	    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "registrationid_seq")
@@ -561,6 +564,19 @@ public class RalleyCandidateDetails implements Serializable {
 
 	public void setRally_id(String rally_id) {
 		this.rally_id = rally_id;
+	}
+
+
+	
+
+	public String getCaptcha() {
+		return captcha;
+	}
+
+
+
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
 	}
 
 

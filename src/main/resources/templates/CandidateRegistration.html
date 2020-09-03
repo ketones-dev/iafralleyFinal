@@ -721,7 +721,20 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								</div>
 								
+								<div class="row">
+								<div class="col-md-6">
+								<img th:src="@{'data:image/png;base64,'+${captchaEncode}}" alt="" />
 								
+								</div>
+								<div class="col-md-6">
+								<div class="form-group">
+								<input type="text" th:field="*{captcha}" placeholder="Enter Captcha" required="true">
+								
+								</div>
+								
+								</div>
+								
+								</div>
 								
 								
 								
