@@ -31,7 +31,8 @@ public class CaptchaGenerator implements InitializingBean {
 		return new Captcha.Builder(width, height)
 				.addBackground(backgroundProducer)
 				.addText(textProducer, wordRenderer)
-				.addNoise(noiseProducer).build();
+				.build();
+		//.addNoise(noiseProducer)
 	}
 
 	@Override
@@ -52,10 +53,10 @@ public class CaptchaGenerator implements InitializingBean {
 			this.wordRenderer = new DefaultWordRenderer();
 			//this.wordRenderer = new ColoredEdgesWordRenderer();
 		}
-		if(this.noiseProducer == null) {
-			this.noiseProducer = new CurvedLineNoiseProducer();
-			//this.noiseProducer = new StraightLineNoiseProducer();
-		}
+//		if(this.noiseProducer == null) {
+//			//this.noiseProducer = new CurvedLineNoiseProducer();
+//			//this.noiseProducer = new StraightLineNoiseProducer();
+//		}
 	}
 
 }

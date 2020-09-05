@@ -1,14 +1,21 @@
 package com.cdac.iafralley.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,7 +95,7 @@ public class RalleyRegistrationFormController {
     @Value("${applicant.filepath}")
 	private String FILE_PATH;
     
-    final long FIFTY_KB_IN_BYTES = 51200;
+    final long FIFTY_KB_IN_BYTES = 102400;
 	final long THIRTY_KB_IN_BYTES = 30720;
 
 	private static final Logger logger = LoggerFactory.getLogger(RalleyRegistrationFormController.class);
@@ -435,6 +442,30 @@ public class RalleyRegistrationFormController {
 	    return new ResponseEntity<List<String>>(entityList, HttpStatus.OK);
 	}
 
+	@RequestMapping(value="/getNewCapthcha", method=RequestMethod.GET)
+	 @ResponseBody
+	public  void getNewCapthcha(HttpSession httpSession,HttpServletResponse response) {
+		
+		Captcha captcha = captchaGenerator.createCaptcha(200, 50);
+		httpSession.setAttribute("captcha", captcha.getAnswer());
+		
+		 logger.info(captcha.toString());
+		 response.setContentType("image/png");
+		 
+			try {
+				OutputStream outputStream = response.getOutputStream();
+				ImageIO.write(captcha.getImage(), "png", outputStream);
+				outputStream.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+	      
+		
 	
+	   
+	   
+	}
 
 }

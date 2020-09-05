@@ -34,28 +34,32 @@ let lblenh=document.getElementById("verrorh");
 
 name.addEventListener("blur",function(e){
 	var re = /[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/;
-	mesg="invalid Name";
+	//mesg="invalid Name";
+	mesg="";
 	errotoogler(lblen,re,e,mesg);
 	
 });
 
 fathername.addEventListener("blur",function(e){
 	var re = /[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/;
-	mesg="invalid Name";
+	//mesg="invalid Father's Name";
+	mesg="";
 	errotoogler(lblef,re,e,mesg);
 	
 });
 
 emailid.addEventListener("blur",function(e){
 	var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/;
-	mesg="invalid email";
+	//mesg="invalid email";
+	mesg="";
 	errotoogler(lblee,re,e,mesg);
 	
 });
 
 mobile.addEventListener("blur",function(e){
 	var re = /^[6-9]\d{9}$/;
-	mesg="invalid mobile number";
+	//mesg="invalid mobile number";
+	mesg="";
 	errotoogler(lblemo,re,e,mesg);
 	
 });
