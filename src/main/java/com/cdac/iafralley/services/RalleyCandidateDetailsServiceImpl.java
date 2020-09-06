@@ -129,7 +129,8 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			char last = cityname.getCity().charAt(cityname.getCity().length()-1);
 			 VenuCode= (Character.toString(first) + Character.toString(last)).toUpperCase();
 		}
-		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode);
+		String ascvalue=ralleyDetailsRepo.findByRalley_cust_id(candidate.getRally_id()).getAscNumber();
+		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
 		candidate.setRalleyregistrationNo(regisrationid);
 		logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
 		logger.info("storing certificate paths in db and writing in disk");
@@ -465,24 +466,82 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 	public Map<String, List<Object>> getralleyStateandCities(String rallyid) {
 		// TODO Auto-generated method stub
 		logger.info("obtained rallyid="+rallyid);
+		Map<String,List<Object>> details=new HashMap<String, List<Object>>();
+		List<Object> list = new ArrayList <>();
 		RalleyDetails rd= ralleyDetailsRepo.findByRalley_cust_id(rallyid);
 		Long sid=rd.getCandidateRestrictFromStateId();
+		List<RalleyCities> utcities=new ArrayList<RalleyCities>();
+		List<RalleyStates> utstate=new ArrayList<RalleyStates>();
+		
+		
+		
+		
+		
 		Optional<RalleyStates> rsid=conductingStates.findById(sid);
 		RalleyStates s=null;
 		if(rsid.isPresent())
 		{
 			s=rsid.get();
 		}
-		Map<String,List<Object>> details=new HashMap<String, List<Object>>();
+	
 		List<Long> cid=rd.getCandidateRestrictFromDistrictIds().stream().map(Long::parseLong).collect(Collectors.toList());
 		List<RalleyCities> cities=conductingCities.getAllotCities(cid);
 		cities.stream().forEach(System.out::println);
 		//details.put("cities", cities);
-		List<Object> list = new ArrayList <>();
+		
+		
+		
+		
 		list.add(cities);
 		list.add(s.getState_id());
 		list.add(s.getState());
+		
+		if(!(rd.getUtStates() == null))
+			  
+		{
+	List<RalleyCities> c=new ArrayList<RalleyCities>();
+			
+			for (String id : rd.getUtStates()) {
+				
+				Long i=Long.parseLong(id);
+				//get state details
+				Optional<RalleyStates> stateut=conductingStates.findById(i);
+				if(stateut.isPresent())
+				{
+					logger.info("state"+stateut.get());
+					utstate.add(stateut.get());
+					list.add(stateut.get().getState_id());
+					list.add(stateut.get().getState());
+					
+				}
+				 c=conductingCities.getallCities(i);
+				if (c == null) {
+					
+				} else {
+					// get city details
+					for (RalleyCities rc : c) {
+						utcities.add(rc);
+					}
+					
+				}
+				
+			}
+			if (utcities == null) {
+				logger.info("no cities");
+			} else {
+				list.add(utcities);
+			}
+			
+			for(RalleyCities cc:utcities)
+			{
+				System.out.println(cc.toString());
+			}
+		}
+		
+		
 		details.put("value", list);
+		
+		
 		
 		//details.put("state",  s);
 		return details;

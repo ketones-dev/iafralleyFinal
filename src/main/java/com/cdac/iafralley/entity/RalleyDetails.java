@@ -115,6 +115,10 @@ public class RalleyDetails {
 	@Column(name="candidateRestrictFrom_district_ids")
 	private List<String> candidateRestrictFromDistrictIds;
 	
+	@Convert(converter = StringListConverter.class)
+	@Column(name="ut_states")
+	private List<String> utStates;
+	
 	@Column(name="ascNumber")
 	private String ascNumber;
 	
@@ -425,6 +429,19 @@ public class RalleyDetails {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+
+	
+
+	public List<String> getUtStates() {
+		return utStates;
+	}
+
+
+
+	public void setUtStates(List<String> utStates) {
+		this.utStates = utStates;
 	}
 
 

@@ -26,7 +26,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 
 	//add param as of candidate pref city for ralley and check if count for such city is there if 0 then send error message
 	@Override
-	public String RalleyRegistrationNumGenrator(String preFixValue) {
+	public String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
 		String regno=null;
 		String prefix_venu=preFixValue;
 		//get count of value
@@ -35,7 +35,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 		// checking it is first time registration number is genrated
 		if(count == null)
 		{
-			regno=prefix_venu+year_cycle+asc_value+R_NO_FIRST;
+			regno=prefix_venu+year_cycle+asc+R_NO_FIRST;
 		}
 		
 		// else get max count from db for such city and state of such day registerd count-acutal intake count
@@ -43,7 +43,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 		//FCFS
 		else {
 			String id= ConvertLongToStringwithPaddedzero(Long.parseLong(count)+1,5);
-			regno=prefix_venu+year_cycle+asc_value+id;
+			regno=prefix_venu+year_cycle+asc+id;
 		}
 		
 		

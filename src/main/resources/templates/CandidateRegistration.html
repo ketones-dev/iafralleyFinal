@@ -336,7 +336,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 
 						<form action="#" th:action="@{/registerCandidate}"
-							th:object="${ralleyCandidateDetails}" method="post" id="form" class="needs-validation" enctype="multipart/form-data" autocomplete="on" novalidate>
+							th:object="${ralleyCandidateDetails}" method="post" id="form" class="needs-validation" enctype="multipart/form-data" autocomplete="off" novalidate>
 							<input type="hidden" th:value="${error}" id="error"> 
 							<input type="hidden" th:value="${optcity}" id="optcity">
 							<input type="hidden" th:value="${msgsavingerror}" id="error2"> 
@@ -723,18 +723,22 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								</div>
 								
-								<div class="row">
+								<div class="row form-group" style="margin:10px 0;padding:12px 0;">
+								
+								
 								<div class="col-md-6">
-								<img th:src="@{'data:image/png;base64,'+${captchaEncode}}" alt="" id="captcha_image"/>
-								
-								<input type="button" value="refresh"  id="refresh_captcha" onclick="reloadCaptcha()" />
-								
+								<label>Enter Captcha:</label>
+								<span style="display:inline-block;"><img style="display:inline-block;" th:src="@{'data:image/png;base64,'+${captchaEncode}}" alt="" id="captcha_image"/>
+								</span>
+								<span style="display:inline-block;">
+								<input type="button" value="refresh"   id="refresh_captcha" onclick="reloadCaptcha()" />
+								</span>
 								</div>
-								<div class="col-md-6">
-								<div class="form-group">
-								<input type="text" class="form-control" th:field="*{captcha}" placeholder="Enter Captcha" required="true">
+								<div class="form-group col-md-6">
 								
-								</div>
+								<input type="text" class="form-control"  th:field="*{captcha}" placeholder="Enter Captcha" required="true">
+								<div class="invalid-feedback">Please Provide Valid Captcha</div>
+								
 								
 								</div>
 								

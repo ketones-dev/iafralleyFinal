@@ -231,6 +231,8 @@ width:100%;
 
 								<div class="form-group col-md-6">
 								<label class="col-form-label">District Covered </label>
+								<button type="button" class="chosen-toggle select">Select all</button>
+  								<button type="button" class="chosen-toggle deselect">Deselect all</button>
 												<select id="second"  data-placeholder="Choose a District" 
 													class="chosen-select" multiple th:field="*{candidateRestrictFromDistrictIds}"
 													>
@@ -402,6 +404,14 @@ width:100%;
 <script>
 
 $(".chosen-select").chosen();
+
+$('.chosen-toggle').each(function(index) {
+	console.log(index);
+	    $(this).on('click', function(){
+	    console.log($(this).parent().find('option').text());
+	         $(this).parent().find('option').prop('selected', $(this).hasClass('select')).parent().trigger('chosen:updated');
+	    });
+	});
 
 document.getElementById('second_chosen').style.width="100%";
 

@@ -37,6 +37,8 @@ let duplicateerror= document.getElementById("error2");
 var tabmodev=document.getElementsByClassName("tabmode-vocational");
 var tabmodeD=document.getElementsByClassName("tabmode-Diploma");
 let restrictdistrictvalue;
+//let arrayd=[];
+//let restarrayd=[];
 
 window.addEventListener('load', function() {
     console.log('All assets are loaded');
@@ -194,11 +196,18 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 							   		    console.log(post);
 							   		  } else {
 							   			console.log(post);
+							   			
 							   			let restvalues=JSON.parse(post);
+							   			console.log(restvalues.value.length);
+							   	//		if(restvalues.value.length === 3){
 							   			restrictdistrictvalue=restvalues;
+							   			
 							   			console.log(restvalues.value[1]+"and"+restvalues.value[2]);
 							   			
-							   			stateSelectedValue.remove(1);
+							   			for(var i=1;i<stateSelectedValue.options.length;i++){
+							   			stateSelectedValue.remove(i);}
+							   			
+							   			
 							   			for(var i=0;i<1;i++)
 							   				{
 							   				var option=document.createElement("option");
@@ -206,6 +215,60 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 							   			    option.text = restvalues.value[2];
 							   				stateSelectedValue.append(option);
 							   				}
+							   			
+							   			if(restvalues.value.length > 3){
+							   				
+							   				var option=document.createElement("option");
+							   			    option.value = 7;
+							   			    option.text = "UT OF DAMAN & DIU";
+							   				stateSelectedValue.append(option);
+							   				
+							   				var option=document.createElement("option");
+							   			    option.value = 8;
+							   			    option.text = "UT OF DADRA & NAGAR HAVELI";
+							   				stateSelectedValue.append(option);
+							   				
+							   			}
+							   			
+							   		//	}
+							   		//	else if(restvalues.value.length > 3){
+							   				
+								   			
+								   			/*console.log(restvalues.value[1]+"and"+restvalues.value[2]);
+								   			
+								   			stateSelectedValue.remove(1);
+								   			for(var i=0;i<1;i++)
+								   				{
+								   				var option=document.createElement("option");
+								   			    option.value = restvalues.value[1];
+								   			    
+								   			    option.text = restvalues.value[2];
+								   				stateSelectedValue.append(option);
+								   				arrayd.push(option.value);
+								   				restarrayd.push(restvalues.value[0]);
+								   				}
+							   				
+							   				for(var i=3;i<restvalues.value.length-1;i=i+2)
+							   					{
+							   					var option=document.createElement("option");
+								   			    option.value = restvalues.value[i];
+								   			    option.text = restvalues.value[i+1];
+								   				stateSelectedValue.append(option);
+								   				arrayd.push(option.value);
+								   				for(j=0;j<restvalues.value[restvalues.value.length-1].length;j++)
+								   				restarrayd.push(restvalues.value[restvalues.value.length-1][j]);
+								   				
+							   					}
+							   				console.log(arrayd);
+							   				
+							   				console.log(restarrayd);*/
+							   				
+							   		//	}
+							   			
+							   			
+							   			
+							   			
+							   			
 							   			
 							   		  }
 							   		  });
@@ -333,16 +396,31 @@ ralley_stateSelectedValue.addEventListener("change", function(e) {
 stateSelectedValue.addEventListener("change", function(e) {
 	 console.log(this);
 	 let data = stateSelectedValue.options[stateSelectedValue.selectedIndex].value;
+	
 	    if(data !== "")
 	    {
+	    	if(data === "7")
+	    		{
+	    		let citiesDD=[{"city_id":108,"city":"DAMAN"},{"city_id":109,"city":"DIU"}];
+	    		createCitydropdownData(citiesDD,e.target.id);
+	    		}
+	    	else if(data === "8")
+	    		{
+	    		let citesDH=[{"city_id":110,"city":"DADRA & NAGAR HAVELI"}];
+	    		createCitydropdownData(citesDH,e.target.id);
+	    		}
+	    	else{
 	       // addActivityItem(data,e.target.id);
 	    	createCitydropdownData(restrictdistrictvalue.value[0],e.target.id);
+	    	}
 	    	
 	    }
 	    else{
 	    	removecitiesExcetFirstOption(restrictdistrictvalue.value[0],e.target.id);
 	    	
 	    }
+	 
+
 	    //console.log(activities.value);
 	});
 
