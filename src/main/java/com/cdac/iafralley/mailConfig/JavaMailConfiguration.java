@@ -41,8 +41,8 @@ public class JavaMailConfiguration {
 		sender.setPort(587);
 		//sender.setHost("smtpb.pune.cdac.in");
 		//sender.setPort(25);
-		sender.setUsername("afcat@cdac.in");
-		sender.setPassword("afcat123@@");
+		sender.setUsername("casb@cdac.in");
+		sender.setPassword("casb123@@");
 
 		Properties props = new Properties();
 		props.put("mail.transport.protocol", "smtp");
@@ -70,6 +70,8 @@ public class JavaMailConfiguration {
 		
 		sender.setHost("smtpb.pune.cdac.in");
 		sender.setPort(25);
+		
+		
 		
 		
 		Properties props = new Properties();
