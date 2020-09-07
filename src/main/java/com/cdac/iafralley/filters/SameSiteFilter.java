@@ -25,7 +25,7 @@ public class SameSiteFilter extends GenericFilterBean {
 		Cookie[] allCookies = req.getCookies();
 
 		if (allCookies != null) {
-			Cookie session = Arrays.stream(allCookies).filter(x -> x.getName().equals("iaf_rally")).findFirst()
+			Cookie session = Arrays.stream(allCookies).filter(x -> x.getName().equals("JSESSIONID")).findFirst()
 					.orElse(null);
 
 			if (session != null) {

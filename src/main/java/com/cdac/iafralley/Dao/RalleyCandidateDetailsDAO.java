@@ -26,6 +26,9 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Query(nativeQuery = true,value ="select count(datetime_reporting) from candidate_details where datetime_reporting= :day_date")
 	public Long countofscheduledStudent(@Param("day_date")Date string);
 	
+	@Query("select r from RalleyCandidateDetails r where r.contactno= :mobile and r.rally_id= :rallyid")
+	public RalleyCandidateDetails findByContact_no(@Param("mobile")String mobile,@Param("rallyid")String rallyid);
+	
 	
 
 }

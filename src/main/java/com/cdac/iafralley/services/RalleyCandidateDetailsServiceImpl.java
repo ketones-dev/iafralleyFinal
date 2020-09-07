@@ -98,7 +98,8 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		logger.info("before genrating id checking registring emailid is already present in DB or not...");
 		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(candidate.getEmailid(),candidate.getRally_id());
 		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),candidate.getRally_id());
-		if(result != null && result2 != null)
+		RalleyCandidateDetails result3=ralleyCandidateDetailsRepo.findByContact_no(candidate.getContactno(), candidate.getRally_id());
+		if(result != null && result2 != null && result3 != null)
 		{
 			
 			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
@@ -112,6 +113,11 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		{
 			
 			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
+		}
+		if(result3 != null)
+		{
+			
+			throw new CandidateDuplicateEntry("Mobile no:"+candidate.getContactno()+" is already registered.Cannot register with same details.");
 		}
 		
 		logger.info("Registering emailid is not present in DB so proceeding further...");
