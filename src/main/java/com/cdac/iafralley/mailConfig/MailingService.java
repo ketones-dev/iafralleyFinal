@@ -79,7 +79,7 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 				       "<html>\n" + 
 				       "<body>\n" + 
 				       "<div style=\"margin: 0 auto;width: 70%;border: 1px solid;padding: 5px 18px;\">\n" + 
-				       "<p><h3>Dear candidate,</h3>\n" + 
+				       "<p><h3>Dear Candidate,</h3>\n" + 
 				       "<h4>1. You have successfully registered for "+saverd.getRalley_details()+"  at "+saverd.getCity_name().toUpperCase()+" and your registration number is "+ candidate.getRalleyregistrationNo() +"</h4>\n" + 
 				       "<h4>2. Provisional Admit Card would be mailed to the shortlisted candidates on their registered e-mail ID based on merit (Aggregate percentage obtained in Intermediate/10+2/Equivalent Exam/Diploma Courses as applicable).</h4>\n" + 
 				       "<h4>3. Only those candidates who would be issued with Provisional Admit Card will be allowed to appear in the said Recruitment Rally.</h4> \n" + 
@@ -90,14 +90,14 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 				       " </div>\n" + 
 				       " </div>\n" + 
 				       "  </p>\n" + 
-				       "<div><img src=\"cid:"+ contentId +"\" width=\"100%\" height=\"400\"></div>\n" + 
+				      
 				       " </div>\n" + 
 				       "</body>\n" + 
 				       "</html>";
-			 
+		// "<div><img src=\"cid:"+ contentId +"\" width=\"100%\" height=\"400\"></div>\n" + 	 
 			mimeMessageHelper.setText(message,true);
-			 ClassPathResource classPathResource = new ClassPathResource("static/vendor/image/banner.jpg");
-			 mimeMessageHelper.addInline(contentId, classPathResource);
+			// ClassPathResource classPathResource = new ClassPathResource("static/vendor/image/banner.jpg");
+			 //mimeMessageHelper.addInline(contentId, classPathResource);
 			//3) create MimeBodyPart object and set your message text        
 //            BodyPart messageBodyPart1 = new MimeBodyPart();     
 //            messageBodyPart1.setText(message);          
@@ -140,7 +140,7 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 				{
 					logger.info("error in sending mail via server with host:"+sender.getHost().toString()+"\n pepare alternate server to send mail");
 					ex.printStackTrace();
-					sender = (JavaMailSenderImpl) context.getBean(ALTERNATE_MAIL_SERVER2);
+					sender = (JavaMailSenderImpl) context.getBean(ALTERNATE_MAIL_SERVER1);
 					sender.send(mimeMessage);
 				}
 			

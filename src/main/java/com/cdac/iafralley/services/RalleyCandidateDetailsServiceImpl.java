@@ -104,6 +104,11 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			
 			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
 		}
+		if(result != null && result2 != null )
+		{
+			
+			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
+		}
 		if(result != null )
 		{
 			
@@ -114,11 +119,12 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			
 			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
 		}
-		if(result3 != null)
-		{
-			
-			throw new CandidateDuplicateEntry("Mobile no:"+candidate.getContactno()+" is already registered.Cannot register with same details.");
-		}
+		/*
+		 * if(result3 != null) {
+		 * 
+		 * throw new CandidateDuplicateEntry("Mobile no:"+candidate.getContactno()
+		 * +" is already registered.Cannot register with same details."); }
+		 */
 		
 		logger.info("Registering emailid is not present in DB so proceeding further...");
 		
