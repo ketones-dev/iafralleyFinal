@@ -66,8 +66,12 @@ public class AdminController {
 	
 	
 	@GetMapping("/home")
-	public String showDashboard() {
+	public String showDashboard(Model m) {
 		System.out.println("in dashboard");
+		m.addAttribute("ListCountOfCities", rdservice.getAllRalleyCount());
+		
+		
+		
 		return "Dashboard";
 		
 	}

@@ -4,7 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -197,6 +199,26 @@ List<Long> intList = citiesid.stream()
 		
 		return conductingrallyDetails;
 		
+	}
+
+	public Map<String,String> getAllRalleyCount() {
+		// TODO Auto-generated method stub
+		List<String> ls=ralleydetaildao.getAllRalleyCount();
+		
+		Map<String,String> m=new HashMap<String, String>();
+		logger.info("Dashboard show Records are empty:"+ls.isEmpty());
+		
+		for(String l:ls)
+		{
+			logger.info("v"+l);
+			String row[] =l.split(",");
+			m.put(row[0], row[1]);
+			
+		}
+		
+		
+		
+		return m;
 	}
 
 	

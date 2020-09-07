@@ -39,6 +39,9 @@ public interface RalleyDetailsDAO extends JpaRepository<RalleyDetails, Long> {
 	
 	@Query(nativeQuery = true,value = "select distinct on(city_id) * from ralley_details where active=true")
 	public List<RalleyDetails> findDistinctHeadingDetails();
+
+	@Query(nativeQuery = true,value = "select opt_state_name,count(opt_state_name) total from candidate_details group by opt_state_name;")
+	public List<String> getAllRalleyCount();
 	
 	
 

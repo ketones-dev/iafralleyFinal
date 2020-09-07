@@ -10,6 +10,7 @@
 <link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
 <link th:href="@{/vendor/css/datatables.min.css}" rel="stylesheet">
 <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+<link th:href="@{/css/Ddetails.css}" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
 	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
@@ -30,20 +31,22 @@
 	<div
 		class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 		<h1 class="h2">Welcome to Dashboard</h1>
+		<div id="userDetails">
+		<h5 class="userInfo">User: <span sec:authentication="name"></span> </h5>
+		<h5 class="userInfo"> Role(s): <span sec:authentication="principal.authorities"></span></h5>
+		</div>
 		
 	</div>
 	
-	<div class="container">
+	
 	<div>
-		User: <span sec:authentication="name"></span>
-		<br><br>
-		Role(s): <span sec:authentication="principal.authorities"></span>
-		<br><br>
+		
+		
 
 		<!-- Check for login error -->																	
-		<div th:if="${session.user}" >
+		<!-- <div th:if="${session.user}" >
 			<p th:text="'First name: ' + ${session.user.firstName} + ', Last name: ' + ${session.user.lastName} + ', Email: ' + ${session.user.email}"></p>
-		</div>		
+		</div>		 -->
 	</div>
 	
 	</div>
@@ -59,8 +62,53 @@
 	<a th:href="@{/Dashboard/ShowRegisteredStudentData}">ShowRegisterdStudentData</a> -->
 	
 	
-	
-	
+	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<div>
+	<div class="row">
+	<th:block th:if="${ListCountOfCities} != null">
+	<th:block th:each="map : ${ListCountOfCities}" >
+	 <th:block th:if="${map.key} != 'null'">
+    <div class="scorecount col-md-3" >
+    
+        <div class="card border-left-primary shadow h-100 py-2 " >
+       
+       <h3 th:text="${map.key}" ></h3>
+       <h4 th:text="${map.value}" ></h4>
+       
+        </div>
+        
+       
+    </div>
+    </th:block>
+    </th:block>
+    </th:block>
+
+</div></div>
+
+<table id="datatable" style="display:block;" class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Cities</th>
+            <th>Count</th>
+           
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="map : ${ListCountOfCities}">
+         <th:block th:if="${map.key} != 'null'">
+            <td th:text="${map.key}">
+            <td th:text="${map.value}">
+         </th:block>
+           
+        </tr>
+       
+    </tbody>
+</table>
+
+
+		
 	</main>
 	
 	<script type="text/javascript"
@@ -68,10 +116,43 @@
 	<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
 	<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
 	<script type="text/javascript" th:src="@{/vendor/js/datatables.min.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/highcharts.js}"></script>
+	<script type="text/javascript" th:src="@{/vendor/js/data.js}"></script>
+	<script src="http://code.highcharts.com/modules/no-data-to-display.js"></script>
 	 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace()
     </script>
+    
+    <script type="text/javascript">
+    
+
+Highcharts.chart('container', {
+    data: {
+        table: 'datatable'
+    },
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Rally Registration Count'
+    },
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'Total Count'
+        }
+    },
+    tooltip: {
+        formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' +
+               'Count: '+ this.point.y +'<br/>'+
+               this.point.name.toLowerCase();
+        }
+    }
+});
+		</script>
+	
 	
 </body>
 
