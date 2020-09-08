@@ -250,7 +250,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 	@Override
 	public Boolean getregisteredCount(Long cityid) {
 		// TODO Auto-generated method stub
-		Boolean avail=false;
+		Boolean avail=true;
 		//get ralley id list
 		List<Long> ralleyidsList=ralleyDetailsRepo.getRalleyByCitySelected(cityid);
 		//get  count of each slot on basis to ralleyid

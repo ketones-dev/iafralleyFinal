@@ -1,10 +1,13 @@
 package com.cdac.iafralley.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyDetailsDAO;
+import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
 
 @Component
 public class RalleyIdGenrator implements RalleyIdGenratorInterface{
@@ -17,8 +20,11 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 	@Autowired
 	RalleyCandidateDetailsDAO ralleyCandidateDetailsDAO;
 	
+	
 	@Autowired
 	RalleyDetailsDAO ralleyDetailsDAO;
+	
+	private static final Logger logger = LoggerFactory.getLogger(RalleyIdGenrator.class);
 	
 	
 	private String year_cycle="20";
@@ -26,12 +32,12 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 
 	//add param as of candidate pref city for ralley and check if count for such city is there if 0 then send error message
 	@Override
-	public String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
+	public synchronized  String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
 		String regno=null;
 		String prefix_venu=preFixValue;
 		//get count of value
 		String count=ralleyCandidateDetailsDAO.maxCount();
-		
+		logger.info("Db Max count value:"+count);
 		// checking it is first time registration number is genrated
 		if(count == null)
 		{
@@ -57,7 +63,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 	}
 
 	@Override
-	public String RalleyCustomId(String preFixValue) {
+	public synchronized  String RalleyCustomId(String preFixValue) {
 		String rregno=null;
 		
 		//get count of value

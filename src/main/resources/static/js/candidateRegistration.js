@@ -106,10 +106,10 @@ ralley_citySelectedValue.addEventListener("change", function(e) {
 		    console.log(cities);
 		    if(cities === false)
 		    	{
-		    	toogleshowmsg();
-		    	  let messagetag="Seems like registration for selected city is full";
+		    	//toogleshowmsg();
+		    	  //let messagetag="Seems like registration for selected city is full";
 		    	 
-		    	  document.getElementById("message").innerHTML = messagetag;
+		    	 // document.getElementById("message").innerHTML = messagetag;
 		    	}
 		    else
 		    	{

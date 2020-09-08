@@ -17,7 +17,7 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Query("select r from RalleyCandidateDetails r where r.aadhar_details= :aadhar and r.rally_id= :rallyid")
 	public RalleyCandidateDetails findByAadhar_details(@Param("aadhar")String aadhar_details,@Param("rallyid")String rallyid);
 	
-	@Query("select max(SUBSTRING(a.ralleyregistrationNo,10,5)) from RalleyCandidateDetails a")
+	@Query(nativeQuery = true, value="select max(right(ralley_regid,5)) from candidate_details")
 	public String maxCount();
 	
 	@Query("select count(r) from RalleyCandidateDetails r where r.opt_city = :cityid")
