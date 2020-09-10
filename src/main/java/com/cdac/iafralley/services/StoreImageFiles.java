@@ -43,8 +43,7 @@ public class StoreImageFiles {
 	public RalleyCandidateDetails storeImage(RalleyCandidateDetails c,MultipartFile XMarksheet,MultipartFile XIIMarksheet) throws InvalidImageException {
 		
 		try {
-			Files.createDirectories(Paths.get(FILE_PATH + "/"+c.getRalleyregistrationNo()));
-			logger.info("in after create f ");
+			
 		if (XMarksheet.isEmpty() || XIIMarksheet.isEmpty()) {
 	           logger.info("Please select a file to upload.");
 	       
@@ -95,14 +94,16 @@ public class StoreImageFiles {
 				
 				if(validtoCheck == true)
 				{
+					Files.createDirectories(Paths.get(FILE_PATH + "/"+c.getRalleyregistrationNo()));
+					logger.info("in after checking for image validation  created file dir..on disk");
 				
 				String fileName1 = StringUtils.cleanPath(XMarksheet.getOriginalFilename());
 				
 				String fileName2 = StringUtils.cleanPath(XIIMarksheet.getOriginalFilename());
 				logger.info("Renaming marksheet");
-				fileName1=c.getRalleyregistrationNo()+"_X_marksheet"+"."+fileName1.substring(XMarksheet.getOriginalFilename().lastIndexOf(".")+1);
+				fileName1=c.getRalleyregistrationNo()+"_X_marksheet_"+c.getEmailid()+"."+fileName1.substring(XMarksheet.getOriginalFilename().lastIndexOf(".")+1);
 				
-				fileName2=c.getRalleyregistrationNo()+"_XII_marksheet"+"."+fileName2.substring(XIIMarksheet.getOriginalFilename().lastIndexOf(".")+1);
+				fileName2=c.getRalleyregistrationNo()+"_XII_marksheet"+c.getEmailid()+"."+fileName2.substring(XIIMarksheet.getOriginalFilename().lastIndexOf(".")+1);
 				//set ralleycandidate path in object and sanitize it also...
 				//logger.info(XMarksheet.getContentType());
 				//boolean validimage=isValidImage(XMarksheet.getInputStream());

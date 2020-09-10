@@ -32,7 +32,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 
 	//add param as of candidate pref city for ralley and check if count for such city is there if 0 then send error message
 	@Override
-	public synchronized  String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
+	public   String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
 		String regno=null;
 		String prefix_venu=preFixValue;
 		//get count of value
@@ -63,7 +63,7 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 	}
 
 	@Override
-	public synchronized  String RalleyCustomId(String preFixValue) {
+	public   String RalleyCustomId(String preFixValue) {
 		String rregno=null;
 		
 		//get count of value

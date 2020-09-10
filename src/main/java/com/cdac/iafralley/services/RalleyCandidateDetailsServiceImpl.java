@@ -37,6 +37,7 @@ import com.cdac.iafralley.exception.CandidateAllocationSlotAreFull;
 import com.cdac.iafralley.exception.CandidateDuplicateEntry;
 import com.cdac.iafralley.exception.CandidateSelectedStateCitiesException;
 import com.cdac.iafralley.exception.InvalidImageException;
+import com.cdac.iafralley.util.ASingleton;
 import com.cdac.iafralley.util.RalleyIdGenrator;
 
 
@@ -85,7 +86,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		//before saving genrating and setting candidate ralley id
 		
 		
-		
+		synchronized (ASingleton.getInstance()) {
 		
 		logger.info("converting and getting candidate selected state and city name");
 		Map<String, String> values=getCandidateSelectedStateCityName(candidate.getState(),candidate.getCity());
@@ -142,14 +143,22 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			 VenuCode= (Character.toString(first) + Character.toString(last)).toUpperCase();
 		}
 		String ascvalue=ralleyDetailsRepo.findByRalley_cust_id(candidate.getRally_id()).getAscNumber();
-		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
-		candidate.setRalleyregistrationNo(regisrationid);
-		logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
-		logger.info("storing certificate paths in db and writing in disk");
-		candidate=storeimagefile.storeImage(candidate, x, xii);
 		
-		logger.info("Before saving Candidate filled values are :"+candidate.toString());
-		return ralleyCandidateDetailsRepo.save(candidate);
+		
+			String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
+			
+			candidate.setRalleyregistrationNo(regisrationid);
+			logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
+			logger.info("storing certificate paths in db and writing in disk");
+			candidate=storeimagefile.storeImage(candidate, x, xii);
+			
+			logger.info("Before saving Candidate filled values are :"+candidate.toString());
+			RalleyCandidateDetails savedD=ralleyCandidateDetailsRepo.save(candidate);
+			return savedD;
+		}
+		
+		
+		
 
 	}
 
