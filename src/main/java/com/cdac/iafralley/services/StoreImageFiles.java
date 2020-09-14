@@ -193,4 +193,63 @@ public class StoreImageFiles {
 	   
 	}
 
+	
+	public boolean checkImageValidation(MultipartFile XMarksheet, MultipartFile XIIMarksheet)
+			throws InvalidImageException {
+		boolean valid = false;
+		try {
+
+			if (XMarksheet.isEmpty() || XIIMarksheet.isEmpty()) {
+				logger.info("Please select a file to upload.");
+				throw new InvalidImageException(" can't Uploaded image is either invalid or corrupted...");
+
+			}
+
+			logger.info("checking X and XII  marksheet");
+
+			String mime1 = XMarksheet.getContentType();
+			String mime2 = XIIMarksheet.getContentType();
+			if ((mime1 != null && mime1.split("/")[0].equals("image"))
+					|| (mime2 != null && mime2.split("/")[0].equals("image"))) {
+				System.out.println("it is an image");
+				valid = true;
+			} else {
+				throw new InvalidImageException("Please upload Image file only...");
+			}
+			if (mime1 != null && ((mime1.split("/")[1].equals("jpeg")) || (mime1.split("/")[1].equals("jpg")))
+					|| (mime1.split("/")[1].equals("png"))) {
+				System.out.println("it is valid an image");
+				valid = true;
+			} else {
+				throw new InvalidImageException(" X marksheet should be jpg,jpeg or png  file only...");
+
+			}
+			if (mime2 != null && ((mime2.split("/")[1].equals("jpeg")) || (mime2.split("/")[1].equals("jpg")))
+					|| (mime2.split("/")[1].equals("png"))) {
+				System.out.println("it is an valid image");
+				valid = true;
+			} else {
+				throw new InvalidImageException(" XII marksheet should be jpg,jpeg or png  file only...");
+			}
+
+			try {
+				logger.info("Analyzing image for malicious code");
+				analyzeImage(XMarksheet.getInputStream());
+				analyzeImage(XIIMarksheet.getInputStream());
+				valid = true;
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				valid = false;
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new InvalidImageException(" can't Uploaded image is either invalid or corrupted...");
+		}
+
+		return valid;
+
+	}
+	
+	
 }

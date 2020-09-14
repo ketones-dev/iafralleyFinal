@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
@@ -42,6 +43,7 @@ import com.cdac.iafralley.util.RalleyIdGenrator;
 
 
 @Service
+@Transactional
 public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetailsService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RalleyCandidateDetailsServiceImpl.class);
@@ -86,7 +88,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		//before saving genrating and setting candidate ralley id
 		
 		
-		synchronized (ASingleton.getInstance()) {
+		//synchronized (ASingleton.getInstance()) {
 		
 		logger.info("converting and getting candidate selected state and city name");
 		Map<String, String> values=getCandidateSelectedStateCityName(candidate.getState(),candidate.getCity());
@@ -96,30 +98,39 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			candidate.setCity(values.get("cityname"));
 			logger.info("setting values");
 		}
-		logger.info("before genrating id checking registring emailid is already present in DB or not...");
+		logger.info("before genrating id checking registring emailid and aadhar is already present in DB or not...");
+		try {
 		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(candidate.getEmailid(),candidate.getRally_id());
 		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),candidate.getRally_id());
-		RalleyCandidateDetails result3=ralleyCandidateDetailsRepo.findByContact_no(candidate.getContactno(), candidate.getRally_id());
-		if(result != null && result2 != null && result3 != null)
-		{
-			
-			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
+		//RalleyCandidateDetails result3=ralleyCandidateDetailsRepo.findByContact_no(candidate.getContactno(), candidate.getRally_id());
+				if(result != null && result2 != null )
+				{
+					
+					throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
+				}
+				if(result != null && result2 != null )
+				{
+					
+					throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
+				}
+				if(result != null )
+				{
+					
+					throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered.Cannot register with same details.");
+				}
+				if(result2 != null)
+				{
+					
+					throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
+				}
 		}
-		if(result != null && result2 != null )
-		{
+		catch (Exception e){
 			
-			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
-		}
-		if(result != null )
-		{
+			throw new CandidateDuplicateEntry("Cannot Register with same Details...");
 			
-			throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered.Cannot register with same details.");
 		}
-		if(result2 != null)
-		{
-			
-			throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
-		}
+		
+		
 		/*
 		 * if(result3 != null) {
 		 * 
@@ -143,19 +154,32 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 			 VenuCode= (Character.toString(first) + Character.toString(last)).toUpperCase();
 		}
 		String ascvalue=ralleyDetailsRepo.findByRalley_cust_id(candidate.getRally_id()).getAscNumber();
+		logger.info("Checking image validation and for corruption..");
+	
 		
-		
-			String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
-			
-			candidate.setRalleyregistrationNo(regisrationid);
-			logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
-			logger.info("storing certificate paths in db and writing in disk");
-			candidate=storeimagefile.storeImage(candidate, x, xii);
-			
-			logger.info("Before saving Candidate filled values are :"+candidate.toString());
-			RalleyCandidateDetails savedD=ralleyCandidateDetailsRepo.save(candidate);
-			return savedD;
+		boolean imagevalid=storeimagefile.checkImageValidation(x,xii);
+		if(imagevalid == false)
+		{
+			throw new InvalidImageException("Cant' read uploaded images please try again...");
 		}
+		
+		logger.info("Before saving Candidate filled values are :"+candidate.toString());
+		
+		RalleyCandidateDetails savedD=ralleyCandidateDetailsRepo.save(candidate);
+		
+		//String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
+		//candidate.setRalleyregistrationNo(regisrationid);
+		//logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
+		
+		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenratorUpdate(VenuCode, ascvalue, savedD.getId());
+		savedD.setRalleyregistrationNo(regisrationid);
+			logger.info("storing certificate paths in db and writing in disk");
+		savedD=storeimagefile.storeImage(savedD, x, xii);
+			
+			
+			
+			return ralleyCandidateDetailsRepo.save(savedD);
+		//}
 		
 		
 		

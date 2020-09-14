@@ -4,12 +4,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyDetailsDAO;
 import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
 
 @Component
+@Transactional
 public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 	
 	//starting registration number suffix
@@ -82,6 +84,18 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 			String rid= ConvertLongToStringwithPaddedzero(Long.parseLong(rcount)+1,5);
 			rregno=preFixValue+rid;
 		}
+		
+		
+		return rregno;
+	}
+
+	@Override
+	public String RalleyRegistrationNumGenratorUpdate(String preFixValue, String asc_value, Long Count) {
+		// TODO Auto-generated method stub
+		String id= ConvertLongToStringwithPaddedzero(Count,5);
+		String rregno=preFixValue+year_cycle+asc_value+id;
+		
+		
 		
 		
 		return rregno;

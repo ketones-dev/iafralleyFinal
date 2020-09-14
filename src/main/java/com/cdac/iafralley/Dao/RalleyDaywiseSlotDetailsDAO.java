@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.cdac.iafralley.entity.RalleyDaywiseSlotDetails;
 import com.cdac.iafralley.entity.RalleyDetails;
+import com.cdac.iafralley.entity.RallySlotMaster;
 
 @Repository
 public interface RalleyDaywiseSlotDetailsDAO extends JpaRepository<RalleyDaywiseSlotDetails, Long> {
@@ -17,5 +18,8 @@ public interface RalleyDaywiseSlotDetailsDAO extends JpaRepository<RalleyDaywise
 	
 	@Query(nativeQuery = true,value="select * from ralley_daywise_details where ralley_id in (:ralleyids)")
 	public List<RalleyDaywiseSlotDetails> getSlot(@Param("ralleyids")List<Long> ralleyids);
+
+	
+	
 
 }

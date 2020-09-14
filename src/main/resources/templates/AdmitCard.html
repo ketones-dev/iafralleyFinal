@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="_csrf" th:content="${_csrf.token}" />
+<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+<title>Registered Student Data</title>
+
+<link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/datatables.min.css}" rel="stylesheet">
+<link th:href="@{/css/dashboard.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="fragments/header.html :: header"> </div>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">Admit Card Creation</h1>
+</div>
+<div class="container">
+<div class="row">
+
+<div class="col-md-6"><label>City</label><select id="citylist" class="form-control"><option value="">--Select City--</option></select></div>
+<div class="col-md-6"><label>Slot</label><select id="citylistslot" class="form-control"><option value="">--Select Slot--</option></select></div>
+</div>
+<div class="row" style="margin-top:2rem;">
+<div class="col-md-6">
+<h5 style="display:inline-block;">registration_count: </h5><h5 id="registration_count" style="display:inline-block;"> </h5>
+</div>
+
+<div class="col-md-6">
+<h5 style="display:inline-block;">Allocation Count: </h5><h5 id="allocation_count" style="display:inline-block;"></h5>
+</div>
+<div class="col-md-12">
+<h5>Date:<span id="date"></span></h5>
+</div>
+
+
+</div>
+<div class="row">
+<div class="m-4 btn btn-primary" id="allocate">Allocate</div>
+<div class="m-4 btn btn-primary" id="email">Send Email</div>
+
+</div>
+</div>
+</main>
+
+
+
+<script type="text/javascript" th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/datatables.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/dataTables.buttons.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/jszip.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/pdfmake.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/vfs_fonts.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/buttons.html5.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+ <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+<script>
+const http = new easyHTTP;
+var countData;
+
+
+$(document).ready(function() {
+// code
+http.get('getralleyallotCities', function(err, get) {
+		  if(err) {
+		    console.log(err);
+		  } else {
+		    console.log(get);
+		   myJson=JSON.parse(get);
+		    $.each(myJson, function (index, value) {
+		    	$("#citylist").append('<option value="'+value.ralley_id+'">'+value.city_name+'</option>');
+		    	});
+		    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
+		  }
+});
+
+$('#citylist').on('change', function () {
+	var value = $("#citylist option:selected").val();
+	
+	$('#citylistslot option:not(:first)').remove();
+	 document.getElementById('registration_count').innerHTML = '';
+		document.getElementById('allocation_count').innerHTML = '';
+		document.getElementById('date').innerHTML ='';
+	http.post('getralleyallotCitiesSlotDetails',{rallyid : value} ,function(err, post) {
+		  if(err) {
+		    console.log(err);
+		  } else {
+		    console.log(post);
+		   myJson=JSON.parse(post);
+		    countData=myJson;
+		    
+		    $.each(myJson, function (index, value) {
+		    	$("#citylistslot").append('<option value="'+value.slotId+'">'+value.slotName+'</option>');
+		    	});
+		   // console.log(myJson[0].ralleydaywiseSlot[0].day_date);
+		  }
+});
+	
+});
+	
+	
+	$('#citylistslot').on('change',function (){
+		
+		 document.getElementById('registration_count').innerHTML = '';
+			document.getElementById('allocation_count').innerHTML = '';
+			document.getElementById('date').innerHTML ='';
+		
+		var se = $("#citylistslot option:selected").val();
+		console.log(countData);
+		console.log(se);
+		 $.each(countData, function (index, value) {
+			 console.log(value.slotId);
+			 if(value.slotId == se)
+				 {
+				 console.log('true');
+				
+				 document.getElementById('registration_count').innerHTML = "<span style='margin-left:2px;'>"+value.rallyCount+"</span>";
+					document.getElementById('allocation_count').innerHTML = "<span style='margin-left:2px;'>"+value.allocationCount+"</span>";
+					document.getElementById('date').innerHTML = value.rallyDate;
+				 
+				 }
+		 });
+		
+	});
+	
+	
+	$('#allocate').on('click',function(){
+	
+		var rallyid= $("#citylist option:selected").val();
+		var slotid=  $("#citylistslot option:selected").val();
+		
+		console.log('loading...');
+		
+		http.post('genrateAdmitCard',{rallyid : rallyid,slotid : slotid} ,function(err, post) {
+			  if(err) {
+			    console.log(err);
+			  } else {
+			    
+				  console.log('compelted...');
+			   
+			    	console.log(post);
+			    
+			  }
+	
+	
+	});
+	});
+	
+	
+	$('#email').on('click',function(){
+		
+		var rallyid= $("#citylist option:selected").val();
+		var slotid=  $("#citylistslot option:selected").val();
+		
+		console.log('loading...');
+		
+		http.post('sendEmail',{rallyid : rallyid,slotid : slotid} ,function(err, post) {
+			  if(err) {
+			    console.log(err);
+			  } else {
+			    
+				  console.log('compelted...');
+			   
+			    	console.log(post);
+			    
+			  }
+	
+	
+	});
+	});
+	
+	
+	
+
+});
+
+</script>
+</body>
+</html>

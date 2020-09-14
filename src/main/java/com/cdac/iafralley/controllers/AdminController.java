@@ -35,6 +35,7 @@ import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyDaywiseSlotDetails;
 import com.cdac.iafralley.entity.RalleyDetails;
+import com.cdac.iafralley.entity.RallySlotMaster;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
 import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.user.RalleyDetailsDTO;
@@ -214,6 +215,16 @@ public class AdminController {
 	 }
 	 
 	 
+	 @GetMapping("/ShowAdmitCardCreationPage")
+	 public ModelAndView ShowAdmitCardCreationPage()
+	 {
+		 ModelAndView m= new ModelAndView("AdmitCard");
+		 //get distinct rally id details from slot 
+		 //m.addObject("studentdata", rd);
+		 return m;
+	 }
+	 
+	 
 	 
 	 @RequestMapping(value="/edit/getCitiesonbasisofStateSeclected", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody
@@ -255,6 +266,53 @@ public class AdminController {
 		   
 		    return new ResponseEntity<List<RalleyDetails>>(entityList, HttpStatus.OK);
 		}
+	 
+	 @RequestMapping(value="/getralleyallotCitiesSlotDetails", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<List<RallySlotMaster>>  getralleyallotCitiesSlotDetails(@RequestBody Map<String, Long>  rallyid) {
+		 
+			List<RallySlotMaster> entityList= rdservice.findSlotOnBasisOfRallyId(rallyid.get("rallyid"));
+			
+			
+			
+		    
+		   
+		    return new ResponseEntity<List<RallySlotMaster>>(entityList, HttpStatus.OK);
+		}
+	 
+	 
+	 @RequestMapping(value="/genrateAdmitCard", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<String>  genrateAdmitCard(@RequestBody Map<String, Long>  value) {
+		 
+		 rdservice.findDataInAllocationMapping(value.get("rallyid"),value.get("slotid"));
+			
+			
+			
+		    
+		   
+		    return new ResponseEntity<String>("Compeleted", HttpStatus.OK);
+		}
+	 
+	 
+	 @RequestMapping(value="/sendEmail", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<String>  sendEmail(@RequestBody Map<String, Long>  value) {
+		 
+		 rdservice.findDataForEmailAllocationMapping(value.get("rallyid"),value.get("slotid"));
+			
+			
+			
+		    
+		   
+		    return new ResponseEntity<String>("Compeleted", HttpStatus.OK);
+		}
+	 
+	 
+	 
+	
+	 
+	 
 	 
 	 public static String convertDateToString(Date strDate) {
 		    try {

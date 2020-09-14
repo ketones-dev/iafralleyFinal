@@ -1,0 +1,52 @@
+2020-09-10 13:04:17.991 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:55 - Starting IafralleyApplication on DESKTOP-0VP0BSJ with PID 19528 (C:\Users\Ketan\git\iafralleyFinalOrignal\target\classes started by Ketan in C:\Users\Ketan\git\iafralleyFinalOrignal)
+2020-09-10 13:04:18.025 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:655 - The following profiles are active: local
+2020-09-10 13:04:19.572 [restartedMain] INFO  o.a.catalina.core.StandardService:173 - Starting service [Tomcat]
+2020-09-10 13:04:19.572 [restartedMain] INFO  o.a.catalina.core.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-10 13:04:19.716 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2020-09-10 13:04:19.963 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-10 13:04:19.995 [restartedMain] INFO  org.hibernate.Version:44 - HHH000412: Hibernate ORM core version 5.4.18.Final
+2020-09-10 13:04:20.097 [restartedMain] INFO  o.h.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-10 13:04:21.707 [restartedMain] INFO  org.hibernate.dialect.Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-09-10 13:04:26.169 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-10 13:04:40.020 [restartedMain] INFO  c.c.i.a.c.StaticResourceConfiguration:26 - Serving static content from /casbUpload/IAFRalleyReport/applicantDetails/
+2020-09-10 13:04:42.662 [restartedMain] INFO  c.c.iafralley.IafralleyApplication:61 - Started IafralleyApplication in 25.086 seconds (JVM running for 26.143)
+2020-09-10 13:04:43.118 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-10 13:06:04.271 [http-nio-9091-exec-5] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:410 - <h3 class='p-contents'>IAF RECRUITMENT RALLY GROUP 'Y'-VADODARA</h3><h4 class='p-contents'>From 23 SEPTEMBER 2020 to 04 OCTOBER 2020</h4><!--<h4 class='p-contents'>AT KV AIR FORCE, MAKARPURA, VADODARA, GUJARAT</h4>--><input type='hidden' id='ralleyid_cust' name='rally_id' value=SEP2320VA00004>
+2020-09-10 13:06:04.454 [http-nio-9091-exec-10] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:460 - [9]
+2020-09-10 13:06:04.490 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:357 - in string2000-01-17
+2020-09-10 13:06:04.490 [http-nio-9091-exec-7] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:357 - in string2003-12-30
+2020-09-10 13:06:04.520 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:489 - obtained rallyid=SEP2320VA00004
+2020-09-10 13:06:04.533 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:532 - stateRalleyStates [state_id=7, state=UT OF DAMAN & DIU]
+2020-09-10 13:06:04.537 [http-nio-9091-exec-2] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:532 - stateRalleyStates [state_id=8, state=UT OF DADRA & NAGAR HAVELI]
+2020-09-10 13:06:50.762 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:173 - RalleyCandidateDetails [id=null, name=ketjakj, fathername=kjkj, emailid=awe@rty.com, dateOfBirth=Fri Oct 11 00:00:00 IST 2002, contactno=9763965896, passed_exam_detail=Vocational, otherDetailPassedDetail=jkjkj, aadhar_details=null, passed_exam_percentage=50, english_percentage=50, maritial_status=false, height=152.5, city=110, state=8, opt_city=106, opt_state=6, opt_city_name=VADODARA, opt_state_name=Gujarat,opt_group_id=9, venu_details=null, ximagePath=null, xiiimagePath=null, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=null]
+2020-09-10 13:06:50.764 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:174 - 8110
+2020-09-10 13:06:50.767 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:230 - candidate dob Fri Oct 11 00:00:00 IST 2002admin dob 2000-01-17 truetrueexma:50
+2020-09-10 13:06:50.767 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:263 - error:false
+2020-09-10 13:06:50.768 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:26 - singleton object value:com.cdac.iafralley.util.ASingleton@159e9db2
+2020-09-10 13:06:50.769 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:91 - converting and getting candidate selected state and city name
+2020-09-10 13:06:50.772 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:234 - state:UT OF DADRA & NAGAR HAVELI city:DADRA & NAGAR HAVELI
+2020-09-10 13:06:50.773 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:97 - setting values
+2020-09-10 13:06:50.773 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:99 - before genrating id checking registring emailid is already present in DB or not...
+2020-09-10 13:06:50.845 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:130 - Registering emailid is not present in DB so proceeding further...
+2020-09-10 13:06:50.887 [http-nio-9091-exec-1] INFO  c.c.iafralley.util.RalleyIdGenrator:40 - Db Max count value:88884
+2020-09-10 13:06:50.887 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:151 - for candidate with emailid:awe@rty.com Genrated Candidate registration ID:VA200688885
+2020-09-10 13:06:50.887 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:152 - storing certificate paths in db and writing in disk
+2020-09-10 13:06:50.890 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:52 - checking X and XII  marksheet
+2020-09-10 13:06:50.891 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:85 - Analyzing image for malicious code
+2020-09-10 13:06:51.193 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:178 - set truncated false valid image
+2020-09-10 13:06:51.194 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:181 - Image file is a non coruppted and vaid file
+2020-09-10 13:06:51.364 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:178 - set truncated false valid image
+2020-09-10 13:06:51.365 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:181 - Image file is a non coruppted and vaid file
+2020-09-10 13:06:51.473 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:98 - in after checking for image validation  created file dir..on disk
+2020-09-10 13:06:51.474 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:103 - Renaming marksheet
+2020-09-10 13:06:51.474 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:111 - file1:VA200688885_X_marksheet_awe@rty.com.jpeg file2:VA200688885_XII_marksheetawe@rty.com.jpeg
+2020-09-10 13:06:51.474 [http-nio-9091-exec-1] INFO  c.c.i.services.StoreImageFiles:114 - copying to Path...
+2020-09-10 13:06:51.505 [http-nio-9091-exec-1] INFO  c.c.i.s.RalleyCandidateDetailsServiceImpl:155 - Before saving Candidate filled values are :RalleyCandidateDetails [id=null, name=ketjakj, fathername=kjkj, emailid=awe@rty.com, dateOfBirth=Fri Oct 11 00:00:00 IST 2002, contactno=9763965896, passed_exam_detail=Vocational, otherDetailPassedDetail=jkjkj, aadhar_details=null, passed_exam_percentage=50, english_percentage=50, maritial_status=false, height=152.5, city=DADRA & NAGAR HAVELI, state=UT OF DADRA & NAGAR HAVELI, opt_city=106, opt_state=6, opt_city_name=VADODARA, opt_state_name=Gujarat,opt_group_id=9, venu_details=null, ximagePath=VA200688885/VA200688885_X_marksheet_awe@rty.com.jpeg, xiiimagePath=VA200688885/VA200688885_XII_marksheetawe@rty.com.jpeg, dateTimeOfReporting=null, subscirbed_on=null, ralleyregistrationNo=VA200688885]
+2020-09-10 13:06:51.898 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:298 - SEP2320VA00004
+2020-09-10 13:06:51.899 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:300 - VADODARA IAF RECRUITMENT RALLY GROUP 'Y'
+2020-09-10 13:06:51.910 [http-nio-9091-exec-1] INFO  c.c.i.mailConfig.MailingService:51 - Data saved for candidate+awe@rty.comprepraring for sending mail using server:smtpb.pune.cdac.in
+2020-09-10 13:06:51.911 [http-nio-9091-exec-1] INFO  c.c.i.mailConfig.MailingService:67 - Setting message in mimeMessage for candidate:awe@rty.com
+2020-09-10 13:06:52.838 [http-nio-9091-exec-1] INFO  c.c.i.mailConfig.MailingService:128 - sending mail via server with host:smtpb.pune.cdac.in
+2020-09-10 13:06:53.457 [http-nio-9091-exec-1] INFO  c.c.i.mailConfig.MailingService:132 - error in sending mail via server with host:smtpb.pune.cdac.in
+ pepare alternate server to send mail
+2020-09-10 13:06:58.486 [http-nio-9091-exec-1] INFO  c.c.i.c.RalleyRegistrationFormController:318 - Form submitted successfully.

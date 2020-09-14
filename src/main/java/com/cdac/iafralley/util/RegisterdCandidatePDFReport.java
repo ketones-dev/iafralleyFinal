@@ -13,6 +13,9 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
+import com.cdac.iafralley.entity.RalleyDetails;
+import com.cdac.iafralley.entity.RallyApplicantAllocation;
+import com.cdac.iafralley.entity.RallySlotMaster;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
@@ -53,15 +56,15 @@ public class RegisterdCandidatePDFReport
 	
 	
 	
-public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH) {
+public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,RallyApplicantAllocation rdata,RallySlotMaster slotdata,String FILE_PATH) {
     try
     {
     	Files.createDirectories(Paths.get("/IAFRalleyReport"));
-    	System.out.println(FILE_PATH+candidate.getRalleyregistrationNo()+".pdf");
+    	System.out.println(FILE_PATH+rdata.getCandidate_registration_no()+".pdf");
     	
     	Document document = new Document(PageSize.A4);
     	document.setMargins(50, 50, 50, 50); 
-       PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE_PATH+candidate.getRalleyregistrationNo()+".pdf"));
+       PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE_PATH+rdata.getCandidate_registration_no()+".pdf"));
        document.open();
        
        Rectangle rect= new Rectangle(577,825,18,15); // you can resize rectangle 
@@ -122,7 +125,7 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 	     
 	     
 	     PdfPCell cell = new PdfPCell (new Paragraph ("RALLY REGISTRATION NUMBER:"));
-	     PdfPCell regno = new PdfPCell (new Paragraph (candidate.getRalleyregistrationNo()));
+	     PdfPCell regno = new PdfPCell (new Paragraph (rdata.getCandidate_registration_no()));
 	     cell.setColspan (2);
 	     regno.setColspan(2);
 	      cell.setHorizontalAlignment (Element.ALIGN_LEFT);
@@ -176,14 +179,18 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 			table.addCell(convertDate(candidate.getDateOfBirth()));
 			table.addCell("Maritial Status");
 			Boolean status=candidate.isMaritial_status();
-			table.addCell(status.toString());
+			if(status == true)
+			table.addCell("Married");
+			else
+				table.addCell("UnMarried");
+				
 			table.addCell("Height:");
 			table.addCell(candidate.getHeight());
-			table.addCell("state");
+			table.addCell("Domicile-State");
 			
 			  table.addCell(candidate.getState());
 			
-			  table.addCell("city");
+			  table.addCell("Domicile-City");
 				
 		      table.addCell(candidate.getCity());
 		      table.addCell("");table.addCell("");
@@ -205,11 +212,11 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
 		      table.addCell(cell3);
 		      
 		      table.addCell("Date of Reporting");
-		     // table.addCell(convertDate(candidate.getDateTimeOfReporting()));
+		     table.addCell(convertDate(slotdata.getRallyDate()));
 		      table.addCell("Time of Reporting");
 		      
-		     // table.addCell(convertTimeStampDate(candidate.getDateTimeOfReporting()));
-		      PdfPCell venucell=new PdfPCell(new Phrase("Venu Details: "/*+candidate.getVenu_details()*/));
+		      table.addCell(slotdata.getRallyReportTime());
+		      PdfPCell venucell=new PdfPCell(new Phrase("Venu Details: "+rd.getVenue_details()));
 		      venucell.setColspan(4);
 		      venucell.setRowspan(2);
 		      table.addCell(venucell);
@@ -272,6 +279,11 @@ public static void createPDF(RalleyCandidateDetails candidate, String FILE_PATH)
        
        document.close();
        writer.close();
+       
+       
+       
+       
+       
     }
     catch(Exception ex){
     	ex.printStackTrace();

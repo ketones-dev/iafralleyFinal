@@ -13,23 +13,51 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.cdac.iafralley.Dao.RalleyAllocationDao;
+import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyCitiesDAO;
 import com.cdac.iafralley.Dao.RalleyDaywiseSlotDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyGroupDAO;
 import com.cdac.iafralley.Dao.RalleyStateDAO;
+import com.cdac.iafralley.Dao.RallySlotMasterDao;
+import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyDaywiseSlotDetails;
 import com.cdac.iafralley.entity.RalleyDetails;
 import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.entity.RalleyStates;
+import com.cdac.iafralley.entity.RallyApplicantAllocation;
+import com.cdac.iafralley.entity.RallySlotMaster;
+import com.cdac.iafralley.mailConfig.MailingService;
+import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
 
 @Service
+@Transactional
+@PropertySource({"classpath:mailserver.properties"})
+@PropertySource({"classpath:applicantfilepath.properties"})
 public class RalleyDetailsService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RalleyDetailsService.class);
+	
+	@Value("${config.mailserver}")
+    private String mailserver;
+ 
+    @Value("${config.from}")
+    private String from;
+ 
+    @Value("${config.password}")
+    private String password;
+    
+	 @Value("${applicant.filepath}")
+		private String FILE_PATH;
+	 
+	 private String subject="Rally Recrutment Provisional Admit-Card";
 	
 	@Autowired
 	RalleyDetailsDAO ralleydetaildao;
@@ -45,6 +73,15 @@ public class RalleyDetailsService {
 	
 	@Autowired
 	private RalleyGroupDAO ralley_grp;
+	
+	@Autowired
+	private RallySlotMasterDao rally_slot_master;
+	
+	@Autowired
+	private RalleyAllocationDao rally_allocate;
+	
+	@Autowired
+	private RalleyCandidateDetailsDAO rcdDao;
 	
 	
 	public String DateFormatter(Date d)
@@ -219,6 +256,101 @@ List<Long> intList = citiesid.stream()
 		
 		
 		return m;
+	}
+
+	public List<RallySlotMaster> findSlotOnBasisOfRallyId(Long rallyid) {
+		// TODO Auto-generated method stub
+		List<RallySlotMaster> rsm=rally_slot_master.findSlotOnBasisOfRallyIdFromSlotMaster(rallyid);
+		return rsm;
+	}
+
+	public void findDataInAllocationMapping(Long rallyid, Long slotid) {
+		// TODO Auto-generated method stu
+		try {
+		List<RallyApplicantAllocation> r=rally_allocate.findByRally_idAndSlot_id(rallyid, slotid);
+		RallySlotMaster slotd=rally_slot_master.findById(slotid).orElseThrow(() -> new IllegalArgumentException("Not found"));
+		if(r != null) {
+		int count=0;
+		for(RallyApplicantAllocation rdata : r)
+		{
+			RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
+			RalleyCandidateDetails candidate=rcdDao.findByEmailidAndRallyidAdmitCard(rdata.getEmailid(),rd.getRalley_cust_id(),rdata.getCandidate_registration_no());
+			if(candidate != null) {
+			RegisterdCandidatePDFReport.createPDF(candidate,rd,rdata,slotd,FILE_PATH);
+			logger.info("Admit card for candidate email:"+candidate.getEmailid()+"has been created successfull");
+			logger.info("setting value of allocation and admit card flag to true in db");
+			rcdDao.updateAllocationStatus(true,true,candidate.getId());
+			count++;
+			logger.info("Candidate's admit card genrated Count:"+count);
+			}
+			else
+			{
+				logger.info("No candidate detail email id or rallyregNo mismatch in tables"+rdata.getEmailid());
+			}
+			
+		}
+		}
+		else
+		{
+			logger.info("No data to create pdf");
+		}
+		}catch(Exception e)
+		{
+			logger.info("error"+e.getMessage());
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void findDataForEmailAllocationMapping(Long rallyid, Long slotid) {
+		// TODO Auto-generated method stub
+		try {
+			List<RallyApplicantAllocation> r=rally_allocate.findByRally_idAndSlot_id(rallyid, slotid);
+			
+			if(r != null)
+			{
+				int count=0;
+				for(RallyApplicantAllocation rdata : r)
+				{
+					RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
+					RalleyCandidateDetails mailcandidate=rcdDao.findByEmailidAndRallyidFormail(rdata.getEmailid(),rdata.getCandidate_registration_no(),rd.getRalley_cust_id());
+
+					if(mailcandidate !=null)
+					{
+					logger.info("Preparing to send to mail to emailid:"+rdata.getEmailid()+"with regno:"+rdata.getCandidate_registration_no());
+					
+					  try {
+						  
+						  MailingService.sendMailWithAttachments(mailserver, from, password, rdata.getEmailid(),rdata.getCandidate_registration_no(),
+						 subject,FILE_PATH); 
+						  
+						  logger.info("Mail successfully send to emailid:"+rdata.getEmailid());
+						  logger.info("updating send mail status for emailid:"+rdata.getEmailid());
+						  rcdDao.updateMailSendStauts(true,mailcandidate.getId());
+						  count++;
+						  logger.info("Total mail sent for City(Rally)"+rdata.getRally_id()+" is:"+count);
+						  
+					  } catch(Exception e) { 
+						  e.printStackTrace();
+						  
+						  }
+					}
+					else
+					{
+						logger.info("No Candidate seems to allocate for rallyid"+rd.getCity_name() +"with id:"+rd.getRalley_cust_id());
+					}
+				}
+			}
+			
+			
+		}
+		catch(Exception e)
+		{
+			logger.error("mail sending issue");
+			e.getMessage();
+			e.printStackTrace();
+		}
+		
 	}
 
 	
