@@ -16,16 +16,21 @@ public class RallyApplicantAllocation {
 	@Column(name="allocation_id")
 	private Long allocation_id;
 	
+	@Column(name="applicant_id")
+	private Long applicant_id;
+	
+	
+	
 	@Column(name="rally_id")
 	private Long rally_id;
 	
-	@Column(name="candidate_acknowledgement_no")
+	@Column(name="applicant_acknowledgement_no")
 	private String candidate_acknowledgement_no;
 	
-	@Column(name="email")
+	@Column(name="applicant_email")
 	private String emailid;
 	
-	@Column(name="candidate_registration_no")
+	@Column(name="applicant_registration_no")
 	private String candidate_registration_no;
 	
 	
@@ -40,15 +45,24 @@ public class RallyApplicantAllocation {
 
 	
 
-	public RallyApplicantAllocation(Long rally_id, String candidate_acknowledgement_no, String emailid,
-			String candidate_registration_no, Long slot_id) {
+	
+
+
+
+	public RallyApplicantAllocation(Long applicant_id, Long rally_id,
+			String candidate_acknowledgement_no, String emailid, String candidate_registration_no, Long slot_id) {
 		super();
+		this.applicant_id = applicant_id;
 		this.rally_id = rally_id;
 		this.candidate_acknowledgement_no = candidate_acknowledgement_no;
 		this.emailid = emailid;
 		this.candidate_registration_no = candidate_registration_no;
 		this.slot_id = slot_id;
 	}
+
+
+
+
 
 
 
@@ -116,14 +130,50 @@ public class RallyApplicantAllocation {
 	}
 
 
+	
+
+
+	public Long getApplicant_id() {
+		return applicant_id;
+	}
+
+
+
+
+
+
+
+
+	public void setApplicant_id(Long applicant_id) {
+		this.applicant_id = applicant_id;
+	}
+
+
+
+
+
+
+
+
+
 
 
 	@Override
 	public String toString() {
-		return "RallyApplicantAllocation [allocation_id=" + allocation_id + ", rally_id=" + rally_id
-				+ ", candidate_acknowledgement_no=" + candidate_acknowledgement_no + ", emailid=" + emailid
-				+ ", candidate_registration_no=" + candidate_registration_no + ", slot_id=" + slot_id + "]";
+		return "RallyApplicantAllocation [allocation_id=" + allocation_id + ", applicant_id=" + applicant_id
+				+ ", rally_id=" + rally_id + ", candidate_acknowledgement_no="
+				+ candidate_acknowledgement_no + ", emailid=" + emailid + ", candidate_registration_no="
+				+ candidate_registration_no + ", slot_id=" + slot_id + "]";
 	}
+
+
+
+
+
+
+
+
+	
 	
 	
 	

@@ -132,6 +132,15 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 	      cell.setPadding (8.0f);
 	      regno.setHorizontalAlignment (Element.ALIGN_CENTER);
 	      regno.setPadding (8.0f);
+	      
+	      PdfPCell cellA = new PdfPCell (new Paragraph ("ACKNOWLEDGEMENT NUMBER:"));
+		     PdfPCell regnoA = new PdfPCell (new Paragraph (rdata.getCandidate_acknowledgement_no()));
+		     cellA.setColspan (2);
+		     regnoA.setColspan(2);
+		      cellA.setHorizontalAlignment (Element.ALIGN_LEFT);
+		      cellA.setPadding (8.0f);
+		      regnoA.setHorizontalAlignment (Element.ALIGN_CENTER);
+		      regnoA.setPadding (8.0f);
 	     
 	     
                PdfPCell cell1 = new PdfPCell (new Paragraph ("PERSONAL DETAIL"));
@@ -156,6 +165,9 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		      table.addCell(cell);
 		      table.addCell(regno);
+		      
+		      table.addCell(cellA);
+		      table.addCell(regnoA);
 		      
 		      
 		      table.addCell(cell1);
