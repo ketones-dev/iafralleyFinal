@@ -274,7 +274,7 @@ List<Long> intList = citiesid.stream()
 		for(RallyApplicantAllocation rdata : r)
 		{
 			RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
-			RalleyCandidateDetails candidate=rcdDao.findByEmailidAndRallyidAdmitCard(rdata.getApplicant_id(),rdata.getEmailid(),rd.getRalley_cust_id(),rdata.getCandidate_acknowledgement_no());
+			RalleyCandidateDetails candidate=rcdDao.findByEmailidAndRallyidAdmitCard(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_acknowledgement_no());
 			if(candidate != null) {
 			RegisterdCandidatePDFReport.createPDF(candidate,rd,rdata,slotd,FILE_PATH);
 			logger.info("Admit card for candidate email:"+candidate.getEmailid()+"has been created successfull");

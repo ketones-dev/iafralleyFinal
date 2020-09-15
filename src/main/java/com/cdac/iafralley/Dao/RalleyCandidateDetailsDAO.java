@@ -50,8 +50,8 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Query(nativeQuery = true, value="update candidate_details set is_email_send =:b where id= :id")
 	public void updateMailSendStauts(boolean b, Long id);
 
-	@Query("select r from RalleyCandidateDetails r where r.id= :id and  r.emailid= :email and r.rally_id= :rallyid and r.ralleyregistrationNo=:rallyregno and r.isAdminCardGenrated=false and r.isAllocated=false")
-	public RalleyCandidateDetails findByEmailidAndRallyidAdmitCard(@Param("id")Long id, @Param("email")String email,@Param("rallyid")String rallyid,@Param("rallyregno")String ralleyregno);
+	@Query("select r from RalleyCandidateDetails r where r.id= :id and  r.emailid= :email  and r.ralleyregistrationNo=:rallyregno and r.isAdminCardGenrated=false and r.isAllocated=false")
+	public RalleyCandidateDetails findByEmailidAndRallyidAdmitCard(@Param("id")Long id, @Param("email")String email,@Param("rallyregno")String ralleyregno);
 	
 	
 

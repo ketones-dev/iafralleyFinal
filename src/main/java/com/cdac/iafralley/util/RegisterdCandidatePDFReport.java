@@ -79,7 +79,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        Font f = new Font();
        f.setStyle(Font.BOLD);
        f.setStyle(Font.UNDERLINE);
-       f.setSize(17);
+       f.setSize(15);
 		//Inserting Image in PDF
        Paragraph heading = new Paragraph("PROVISIONAL ADMIT CARD",f);
        
@@ -124,23 +124,23 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 	     table.setWidthPercentage(100f);
 	     
 	     
-	     PdfPCell cell = new PdfPCell (new Paragraph ("RALLY REGISTRATION NUMBER:"));
+	     PdfPCell cell = new PdfPCell (new Paragraph ("REGISTRATION NUMBER:"));
 	     PdfPCell regno = new PdfPCell (new Paragraph (rdata.getCandidate_registration_no()));
 	     cell.setColspan (2);
 	     regno.setColspan(2);
 	      cell.setHorizontalAlignment (Element.ALIGN_LEFT);
-	      cell.setPadding (8.0f);
+	      cell.setPadding (7.0f);
 	      regno.setHorizontalAlignment (Element.ALIGN_CENTER);
-	      regno.setPadding (8.0f);
+	      regno.setPadding (7.0f);
 	      
 	      PdfPCell cellA = new PdfPCell (new Paragraph ("ACKNOWLEDGEMENT NUMBER:"));
 		     PdfPCell regnoA = new PdfPCell (new Paragraph (rdata.getCandidate_acknowledgement_no()));
 		     cellA.setColspan (2);
 		     regnoA.setColspan(2);
 		      cellA.setHorizontalAlignment (Element.ALIGN_LEFT);
-		      cellA.setPadding (8.0f);
+		      cellA.setPadding (7.0f);
 		      regnoA.setHorizontalAlignment (Element.ALIGN_CENTER);
-		      regnoA.setPadding (8.0f);
+		      regnoA.setPadding (7.0f);
 	     
 	     
                PdfPCell cell1 = new PdfPCell (new Paragraph ("PERSONAL DETAIL"));
@@ -242,10 +242,10 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		      
 		      
-		      table.setSpacingBefore(30.0f);       // Space Before table starts, like margin-top in CSS
-		      table.setSpacingAfter(18.0f);        // Space After table starts, like margin-Bottom in CSS								          
+		      table.setSpacingBefore(26.0f);       // Space Before table starts, like margin-top in CSS
+		      table.setSpacingAfter(15.0f);        // Space After table starts, like margin-Bottom in CSS								          
 		      
-		      table2.setSpacingBefore(30.0f);       // Space Before table starts, like margin-top in CSS
+		      table2.setSpacingBefore(26.0f);       // Space Before table starts, like margin-top in CSS
 		      							          
 		      
 		      document.add(table2);
@@ -255,7 +255,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		       
 		       
 		      Instheading.setAlignment(Element.ALIGN_CENTER);
-		      Instheading.setSpacingAfter(15f);
+		      Instheading.setSpacingAfter(14f);
 		      
 		       
 		       document.add(Instheading);
