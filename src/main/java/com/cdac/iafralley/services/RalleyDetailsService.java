@@ -57,7 +57,7 @@ public class RalleyDetailsService {
 	 @Value("${applicant.filepath}")
 		private String FILE_PATH;
 	 
-	 private String subject="Rally Recrutment Provisional Admit-Card";
+	 private String subject="RALLY RECRUITMENT PROVISIONAL ADMIT-CARD";
 	
 	@Autowired
 	RalleyDetailsDAO ralleydetaildao;
