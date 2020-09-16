@@ -19,7 +19,8 @@ public class RallyApplicantAllocation {
 	@Column(name="applicant_id")
 	private Long applicant_id;
 	
-	
+	@Column(name="admit_card_path")
+	private String admitCardPath;
 	
 	@Column(name="rally_id")
 	private Long rally_id;
@@ -150,6 +151,28 @@ public class RallyApplicantAllocation {
 
 
 
+
+
+
+
+
+
+
+
+	public String getAdmitCardPath() {
+		return admitCardPath;
+	}
+
+
+
+
+
+
+
+
+	public void setAdmitCardPath(String admitCardPath) {
+		this.admitCardPath = admitCardPath;
+	}
 
 
 

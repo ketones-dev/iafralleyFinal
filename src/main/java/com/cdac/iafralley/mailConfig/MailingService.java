@@ -148,7 +148,7 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 	}
 	
 	
-	public static void sendMailWithAttachments(final String mailServer, final String from, final String password,String candidateEmail,String candidateRegno, final String subject,String FILE_PATH) {
+	public static void sendMailWithAttachments(final String mailServer, final String from, final String password,String candidateEmail,String candidateRegno,String city,String state, final String subject,String FILE_PATH) {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(JavaMailConfiguration.class);
 		
@@ -186,16 +186,17 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 			String message=""+
 				       "<html>\n" + 
 				       "<body>\n" + 
-				       "<div style=\"margin: 0 auto;width: 70%;border: 1px solid;padding: 5px 18px;\">\n" + 
+				       "<div style=\"margin: 0 auto;width: 80%;border: 1px solid;padding: 5px 18px;\">\n" + 
 				       "<p><h3>Dear Candidate,</h3>\n" + 
 				 //      "<h4>1. You have successfully registered for "+saverd.getRalley_details()+"  at "+saverd.getCity_name().toUpperCase()+" and your registration number is "+ candidate.getRalleyregistrationNo() +"</h4>\n" + 
 				   //    "<h4>2. Provisional Admit Card would be mailed to the shortlisted candidates on their registered e-mail ID based on merit (Aggregate percentage obtained in Intermediate/10+2/Equivalent Exam/Diploma Courses as applicable).</h4>\n" + 
 				    //   "<h4>3. Only those candidates who would be issued with Provisional Admit Card will be allowed to appear in the said Recruitment Rally.</h4> \n" + 
-				     "<h4>Please find and download the provisional admit card as given below</h4>"+  
-				    "<div>\n" + 
+				     "<h4>Provisional Admit Card for the Recruitment Rally at "+city+"("+state+")"+" is attached to this mail.The date,time and venue of the Rally along with important instructions is mentioned in the said attachment.</h4>"+  
+				   "<h4>You are required to take a print out of the provisional admit card and carry the same failing which you shall not be allowed to participate in the said Recruitment Rally.Additionally,you are required to carry all the relevant certificates and documents(in original) mentioned in the provisional admit card.</h4>"+
+				     "<div>\n" + 
 				       "<div>\n" + 
-				       "<h4 style=\"margin:0 auto;1\">Regards,</h4>\n" + 
-				       "<h4 style=\"margin:0 auto;1\">CASB , IAF</h4>\n" + 
+				       "<h4 style=\"margin:0 auto;1\">CASB</h4>\n" + 
+				       "<h4 style=\"margin:0 auto;1\">New Delhi</h4>\n" + 
 				       " </div>\n" + 
 				       " </div>\n" + 
 				       "  </p>\n" + 

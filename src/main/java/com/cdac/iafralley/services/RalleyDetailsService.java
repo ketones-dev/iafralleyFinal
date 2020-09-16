@@ -274,12 +274,14 @@ List<Long> intList = citiesid.stream()
 		for(RallyApplicantAllocation rdata : r)
 		{
 			RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
-			RalleyCandidateDetails candidate=rcdDao.findByEmailidAndRallyidAdmitCard(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_acknowledgement_no());
+			
+			RalleyCandidateDetails candidate=rcdDao.findByEmailidAndRallyidAdmitCard(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_registration_no());
 			if(candidate != null) {
 			RegisterdCandidatePDFReport.createPDF(candidate,rd,rdata,slotd,FILE_PATH);
 			logger.info("Admit card for candidate email:"+candidate.getEmailid()+"has been created successfull");
 			logger.info("setting value of allocation and admit card flag to true in db");
 			rcdDao.updateAllocationStatus(true,true,candidate.getId());
+			rcdDao.updatePath(rdata.getCandidate_registration_no()+"_"+candidate.getId()+".pdf",candidate.getId(),candidate.getEmailid());
 			count++;
 			logger.info("Candidate's admit card genrated Count:"+count);
 			}
@@ -313,7 +315,7 @@ List<Long> intList = citiesid.stream()
 				for(RallyApplicantAllocation rdata : r)
 				{
 					RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
-					RalleyCandidateDetails mailcandidate=rcdDao.findByEmailidAndRallyidFormail(rdata.getEmailid(),rdata.getCandidate_registration_no(),rd.getRalley_cust_id());
+					RalleyCandidateDetails mailcandidate=rcdDao.findByEmailidAndRallyidFormail(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_registration_no(),rd.getRalley_cust_id());
 
 					if(mailcandidate !=null)
 					{
@@ -322,7 +324,7 @@ List<Long> intList = citiesid.stream()
 					  try {
 						  
 						  MailingService.sendMailWithAttachments(mailserver, from, password, rdata.getEmailid(),rdata.getCandidate_registration_no(),
-						 subject,FILE_PATH); 
+						 rd.getCity_name(),rd.getState_name(),subject,FILE_PATH); 
 						  
 						  logger.info("Mail successfully send to emailid:"+rdata.getEmailid());
 						  logger.info("updating send mail status for emailid:"+rdata.getEmailid());

@@ -8,20 +8,27 @@ import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.stereotype.Service;
 
+import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
 import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyDetails;
 import com.cdac.iafralley.entity.RallyApplicantAllocation;
 import com.cdac.iafralley.entity.RallySlotMaster;
+import com.cdac.iafralley.services.RalleyDetailsService;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
+import com.itextpdf.text.Font.FontFamily;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.List;
@@ -34,9 +41,15 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+
 @PropertySource({"classpath:applicantfilepath.properties"})
 public class RegisterdCandidatePDFReport
 {
+	
+	
+	private static final Logger logger = LoggerFactory.getLogger(RegisterdCandidatePDFReport.class);
+	
+	
 	
 	public static String convertDate(Date d)
 	{
@@ -60,61 +73,92 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
     try
     {
     	Files.createDirectories(Paths.get("/IAFRalleyReport"));
-    	System.out.println(FILE_PATH+rdata.getCandidate_registration_no()+".pdf");
+    	System.out.println(FILE_PATH+rdata.getCandidate_registration_no()+"_"+candidate.getId()+".pdf");
     	
     	Document document = new Document(PageSize.A4);
-    	document.setMargins(50, 50, 50, 50); 
-       PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE_PATH+rdata.getCandidate_registration_no()+".pdf"));
+    	//document.setMargins(50, 50, 50, 50); 
+       PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE_PATH+rdata.getCandidate_registration_no()+"_"+candidate.getId()+".pdf"));
        document.open();
+       
+       Image waterMarkImage = Image.getInstance("src/main/resources/images/watermark.jpg");
+       
+       
+       
+       
+       
+       //Get width and height of whole page
+       float pdfPageWidth = document.getPageSize().getWidth();
+       float pdfPageHeight = document.getPageSize().getHeight();
+       
+       
+       System.out.println("w:"+pdfPageWidth+" h:"+pdfPageHeight);
+
+       //Set waterMarkImage on whole page
+       writer.getDirectContentUnder().addImage(waterMarkImage,
+                    400, 0, 0, 460, 100, 100);
        
        Rectangle rect= new Rectangle(577,825,18,15); // you can resize rectangle 
        rect.enableBorderSide(1);
        rect.enableBorderSide(2);
        rect.enableBorderSide(4);
        rect.enableBorderSide(8);
-       rect.setBorderColor(BaseColor.BLACK);
-       rect.setBorderWidth(1);
+      // rect.setBorderColor(BaseColor.BLACK);
+     //  rect.setBorderWidth(1);
        document.add(rect);
        
+       Image image1 = Image.getInstance ("src/main/resources/images/badge.png");
+	     image1.scaleAbsolute(100f, 100f);//image width,height	
+	     image1.setAlignment(Image.ALIGN_CENTER);
+	   
+	     document.add(image1);
+
+	   //heading
+//	     Font Hf = new Font(FontFamily.TIMES_ROMAN, 25.0f, Font.BOLD, BaseColor.WHITE);
+//	     Chunk Hc = new Chunk("CENTRAL AIRMEN SELECTION BOARD", Hf);
+//	    
+//	    // Hc.setBackground(BaseColor.BLUE);
+//	    Hc.setTextRise(-5f);
+//	     Hc.setBackground(BaseColor.BLUE);
+//	     Paragraph Hp = new Paragraph(Hc);
+//	     Hp.setAlignment(Element.ALIGN_CENTER);
+//	     
+//	     
+//	     Hp.setSpacingBefore(2f);
+	     Image Hp = Image.getInstance ("src/main/resources/images/Heading.JPG");
+	     Hp.scaleAbsolute(500f, 35f);//image width,height	
+	     Hp.setAlignment(Image.ALIGN_CENTER);
+	   
+	     document.add(Hp);
+      //provisional Title 
        Font f = new Font();
        f.setStyle(Font.BOLD);
        f.setStyle(Font.UNDERLINE);
        f.setSize(15);
-		//Inserting Image in PDF
-       Paragraph heading = new Paragraph("PROVISIONAL ADMIT CARD",f);
+       
+       Font Arialfont = FontFactory.getFont("src/main/resources/images/arialbd.ttf");
+      Arialfont.setStyle(Font.BOLD);
+      Arialfont.setStyle(Font.UNDERLINE);
+      Arialfont.setSize(15);
+	  
+       Paragraph heading = new Paragraph("PROVISIONAL ADMIT CARD",Arialfont);
        
        
        heading.setAlignment(Element.ALIGN_CENTER);
        
+       Paragraph Rheading=new Paragraph ("IAF RECRUITMENT RALLY "+rd.getCity_name(),Arialfont);
+       Rheading.setAlignment(Element.ALIGN_CENTER);
+       Rheading.setSpacingBefore(10f);
+       
+       Paragraph IntakeH=new Paragraph("INTAKE 01/2021",Arialfont);
+       IntakeH.setAlignment(Element.ALIGN_CENTER);
+       IntakeH.setSpacingBefore(5f);
        document.add(heading);
+       document.add(Rheading);
+       document.add(IntakeH);
        
 
-	     Image image1 = Image.getInstance ("src/main/resources/images/badge.png");
-	     image1.scaleAbsolute(50f, 50f);//image width,height	
-	     image1.setAlignment(Image.LEFT);
-	     
-	     Image image2 = Image.getInstance ("src/main/resources/images/index.png");
-	     image2.scaleAbsolute(50f, 50f);//image width,height	
-	     image2.setAlignment(image2.RIGHT);
-	     
-	     float[] columnWidths = {2, 5, 2};
-	     PdfPTable table2=new PdfPTable(columnWidths);
-	     table2.setWidthPercentage(100f);
-	     PdfPCell leftCell = new PdfPCell (image1);
-	     leftCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-	     
-	     table2.addCell(leftCell);
-
-	     Font myFonColor = FontFactory.getFont(FontFactory.TIMES_ROMAN, 18, BaseColor.WHITE);
-	     PdfPCell middleCell = new PdfPCell(new Paragraph("IAF RALLY RECRUITMENT ",myFonColor));
-	     middleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-	     middleCell.setPaddingTop(15.0f);
-	     middleCell.setBackgroundColor(new BaseColor (135,206,250));
-	     table2.addCell(middleCell);
-	     PdfPCell rightCell = new PdfPCell (image2);
-	     rightCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-	     
-	     table2.addCell(rightCell);
+	    
+	   
 	     
 	     
 
@@ -124,23 +168,23 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 	     table.setWidthPercentage(100f);
 	     
 	     
-	     PdfPCell cell = new PdfPCell (new Paragraph ("REGISTRATION NUMBER:"));
+	     PdfPCell cell = new PdfPCell (new Paragraph ("RALLY REGISTRATION NUMBER:"));
 	     PdfPCell regno = new PdfPCell (new Paragraph (rdata.getCandidate_registration_no()));
 	     cell.setColspan (2);
 	     regno.setColspan(2);
 	      cell.setHorizontalAlignment (Element.ALIGN_LEFT);
-	      cell.setPadding (7.0f);
+	      cell.setPadding (8.0f);
 	      regno.setHorizontalAlignment (Element.ALIGN_CENTER);
-	      regno.setPadding (7.0f);
+	      regno.setPadding (8.0f);
 	      
 	      PdfPCell cellA = new PdfPCell (new Paragraph ("ACKNOWLEDGEMENT NUMBER:"));
 		     PdfPCell regnoA = new PdfPCell (new Paragraph (rdata.getCandidate_acknowledgement_no()));
 		     cellA.setColspan (2);
 		     regnoA.setColspan(2);
 		      cellA.setHorizontalAlignment (Element.ALIGN_LEFT);
-		      cellA.setPadding (7.0f);
+		      cellA.setPadding (8.0f);
 		      regnoA.setHorizontalAlignment (Element.ALIGN_CENTER);
-		      regnoA.setPadding (7.0f);
+		      regnoA.setPadding (8.0f);
 	     
 	     
                PdfPCell cell1 = new PdfPCell (new Paragraph ("PERSONAL DETAIL"));
@@ -242,32 +286,88 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		      
 		      
-		      table.setSpacingBefore(26.0f);       // Space Before table starts, like margin-top in CSS
-		      table.setSpacingAfter(15.0f);        // Space After table starts, like margin-Bottom in CSS								          
+		      table.setSpacingBefore(30.0f);       // Space Before table starts, like margin-top in CSS
+		      table.setSpacingAfter(18.0f);        // Space After table starts, like margin-Bottom in CSS								          
 		      
-		      table2.setSpacingBefore(26.0f);       // Space Before table starts, like margin-top in CSS
+		     
 		      							          
 		      
-		      document.add(table2);
-		      document.add(table);
+		     
+		    //  document.add(table);
 		      
-		      Paragraph Instheading = new Paragraph("IMPORTANT INSTRUCTIONS FOR CANDIDATES",f);
+		   //List base Admit card
+		      List CDetails=new List(List.ORDERED,List.NUMERICAL);
+		      CDetails.setIndentationLeft(50);
+		     Font Df=new Font();
+		     Df.setStyle(Font.BOLD);
+		    
+		     Df.setSize(14);
+		     
+		      
+		      CDetails.add(new ListItem(" Registration Number: "+rdata.getCandidate_registration_no(),Df));
+		      Paragraph N=new Paragraph(" Name: "+candidate.getName(),Df);
+		      N.setSpacingAfter(6f);
+		      N.setSpacingBefore(6f);
+		      CDetails.add(new ListItem(N));
+		      Paragraph FN=new Paragraph(" Father's Name: "+candidate.getFathername(),Df);
+		      FN.setSpacingAfter(6f);
+		     
+		      CDetails.add(new ListItem(FN));
+		      Paragraph DOB=new Paragraph(" Date of Birth: "+convertDate(candidate.getDateOfBirth()),Df);
+		      DOB.setSpacingAfter(6f);
+		      
+		      CDetails.add(new ListItem(DOB));
+		      Paragraph StateCity=new Paragraph(" District & State: "+candidate.getCity()+" , "+candidate.getState().toUpperCase(),Df);
+		      StateCity.setSpacingAfter(6f);
+		      
+		      
+		      CDetails.add(new ListItem(StateCity));
+		      
+		      Paragraph RDT=new Paragraph(" Reporting Date & Time: "+convertDate(slotdata.getRallyDate())+", "+slotdata.getRallyReportTime(),Df);
+		      RDT.setSpacingAfter(6f);
+		      
+		      CDetails.add(new ListItem(RDT));
+		      
+		      Paragraph VD=new Paragraph(" Reporting Venue: "+rd.getVenue_details(),Df);
+		      VD.setSpacingAfter(6f);
+		      
+		      CDetails.add(new ListItem(VD));
+		      CDetails.setAlignindent(true);
+		      
+		      PdfPTable CDtable=new PdfPTable(1);
+		      PdfPCell CDtableCell=new PdfPCell();
+		      CDtableCell.addElement(CDetails);
+		      CDtableCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+		     CDtableCell.setBorderWidth(0);
+		      CDtable.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		      
+		      CDtable.setWidthPercentage(100f);
+			   CDtable.addCell(CDtableCell);
+			   CDtable.setSpacingBefore(18f);
+			   CDtable.setSpacingAfter(10f);
+			   
+		      
+		      document.add(CDtable);
+		    
+		      
+		      Paragraph Instheading = new Paragraph("IMPORTANT INSTRUCTIONS FOR CANDIDATES",Arialfont);
 		       
 		       
 		      Instheading.setAlignment(Element.ALIGN_CENTER);
-		      Instheading.setSpacingAfter(14f);
+		      Instheading.setSpacingAfter(15f);
 		      
 		       
 		       document.add(Instheading);
 		       
 		       Paragraph instruction = new Paragraph();
-		       instruction.add("Candidates are to mandatorily carry following documents in original while reporting at the venue of recruitment rally as per the date & time given below:-");
+		       instruction.add("Candidates are to mandatorily carry the following documents in original while reporting at the venue of recruitment rally as per the date & time mentioned above:-");
 		       instruction.setFirstLineIndent(40);
 		       document.add(instruction);
 		       
 		       List ordered=new List(List.ORDERED,List.ALPHABETICAL);
 		       ordered.setLowercase(List.LOWERCASE);
 		       ordered.setIndentationLeft(70);
+		       ordered.setAutoindent(true);
 		       ordered.add(new ListItem("Provisional Admit Card"));
 		       ordered.add(new ListItem("Domicile Certificate"));
 		       ordered.add(new ListItem("Mark sheets & Pass Certificate of Intermediate or equivalent"));
@@ -276,10 +376,16 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		       ordered.add(new ListItem("NCC / SOAFP / Service Certificate, if applicable "));
 		       
 		       document.add(ordered);
-		       
-		       document.add(new Chunk("Note:-"));
-		       document.add(new Phrase(" Failure to bring the above mentioned documents while reporting for the recruitment rally may result in cancellation of your candidature to appear in the selection test."));
-		       
+		       Font note=new Font();
+		       note.setStyle(Font.BOLD);
+		       note.setSize(12);
+		       document.add(new Paragraph("Note:-",note));
+		       Paragraph spp=new Paragraph();
+		      spp.setSpacingAfter(2f);
+		       document.add(spp);
+		       document.add(new Paragraph("(i) Failure to bring the above mentioned documents while reporting for the recruitment rally may result in cancellation of your candidature to appear in the selection test."));
+		       document.add(new Paragraph(""));
+		       document.add(new Paragraph("(ii)  Given the prevailing risk of COVID-19, candidates are to follow all COVID-19 protocols/ instructions/ preventive measures issued by Central/ State governments from time to time, throughout the duration of exam and during travel."));
 		       
 
 
@@ -291,6 +397,11 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        
        document.close();
        writer.close();
+       
+       logger.info("pdf genreated successfully for"+candidate.getEmailid()+" with app id:"+candidate.getId());
+       logger.info("update file name in DB");
+       
+      
        
        
        

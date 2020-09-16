@@ -35,8 +35,8 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Query(nativeQuery = true,value ="select count(datetime_reporting) from candidate_details where datetime_reporting= :day_date")
 	public Long countofscheduledStudent(@Param("day_date")Date string);
 	
-	@Query(nativeQuery = true,value ="select * from candidate_details where emailid=:email and ralley_regid=:rallyregid and rally_id=:rallycustid and is_admit_card_genrated=true and is_allocated=true")
-	public RalleyCandidateDetails findByEmailidAndRallyidFormail(@Param("email") String email,@Param("rallyregid")String rallyregid,@Param("rallycustid") String rallycustid);
+	@Query(nativeQuery = true,value ="select * from candidate_details where id=:id and emailid=:email and ralley_regid=:rallyregid and rally_id=:rallycustid and is_admit_card_genrated=true and is_allocated=true")
+	public RalleyCandidateDetails findByEmailidAndRallyidFormail(@Param("id")Long id,@Param("email") String email,@Param("rallyregid")String rallyregid,@Param("rallycustid") String rallycustid);
 	
 	
 	@Query("select r from RalleyCandidateDetails r where r.contactno= :mobile and r.rally_id= :rallyid")
@@ -52,7 +52,11 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 
 	@Query("select r from RalleyCandidateDetails r where r.id= :id and  r.emailid= :email  and r.ralleyregistrationNo=:rallyregno and r.isAdminCardGenrated=false and r.isAllocated=false")
 	public RalleyCandidateDetails findByEmailidAndRallyidAdmitCard(@Param("id")Long id, @Param("email")String email,@Param("rallyregno")String ralleyregno);
+
 	
+	@Modifying(clearAutomatically = true)
+	@Query(nativeQuery = true, value="update rally_applicant_allocation_mapping set admit_card_path =:name where applicant_id= :id and applicant_email=:emailid")
+	public void updatePath(@Param("name")String name,@Param("id") Long id, @Param("emailid")String emailid);
 	
 
 }
