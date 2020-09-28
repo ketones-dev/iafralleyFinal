@@ -25,6 +25,7 @@ public class StaticResourceConfiguration extends WebMvcConfigurerAdapter {
     if(FILE_PATH != null) {
         logger.info("Serving static content from " + FILE_PATH);
         registry.addResourceHandler("/upload/**").addResourceLocations("file:" + FILE_PATH);
+        registry.addResourceHandler("/Dashboard/**").addResourceLocations("file:"+FILE_PATH);
     }
  }
 

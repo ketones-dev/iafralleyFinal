@@ -1,18 +1,30 @@
 package com.cdac.iafralley.util;
 
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.imageio.ImageIO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
@@ -49,7 +61,8 @@ public class RegisterdCandidatePDFReport
 	
 	private static final Logger logger = LoggerFactory.getLogger(RegisterdCandidatePDFReport.class);
 	
-	
+	@Value("${applicant.filepath}")
+	private static String APPLICANT_IMAGE_PATH;
 	
 	public static String convertDate(Date d)
 	{
@@ -79,8 +92,13 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
     	//document.setMargins(50, 50, 50, 50); 
        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE_PATH+rdata.getCandidate_registration_no()+"_"+candidate.getId()+".pdf"));
        document.open();
-       
-       Image waterMarkImage = Image.getInstance("src/main/resources/images/watermark.jpg");
+      
+       InputStream resource= RegisterdCandidatePDFReport.class.getResourceAsStream("/images/watermark.jpg");
+
+      
+     logger.info(resource.toString());
+     
+       Image waterMarkImage = Image.getInstance(ImageIO.read(resource),null);
        
        
        
@@ -106,7 +124,12 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
      //  rect.setBorderWidth(1);
        document.add(rect);
        
-       Image image1 = Image.getInstance ("src/main/resources/images/badge.png");
+      
+       InputStream resource2= RegisterdCandidatePDFReport.class.getResourceAsStream("/images/badge.png");
+      
+     //  logger.info();
+       
+       Image image1 = Image.getInstance(ImageIO.read(resource2),null);
 	     image1.scaleAbsolute(100f, 100f);//image width,height	
 	     image1.setAlignment(Image.ALIGN_CENTER);
 	   
@@ -124,7 +147,11 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 //	     
 //	     
 //	     Hp.setSpacingBefore(2f);
-	     Image Hp = Image.getInstance ("src/main/resources/images/Heading.JPG");
+	    
+	      
+	       InputStream resource3= RegisterdCandidatePDFReport.class.getResourceAsStream("/images/Heading.JPG");
+	      
+	     Image Hp = Image.getInstance(ImageIO.read(resource3),null);
 	     Hp.scaleAbsolute(500f, 35f);//image width,height	
 	     Hp.setAlignment(Image.ALIGN_CENTER);
 	   
@@ -135,7 +162,10 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        f.setStyle(Font.UNDERLINE);
        f.setSize(15);
        
-       Font Arialfont = FontFactory.getFont("src/main/resources/images/arialbd.ttf");
+       
+       URL fontURL = RegisterdCandidatePDFReport.class.getResource("/images/arialbd.ttf");
+       FontFactory.register(fontURL.toString(), "test_font");
+       Font Arialfont = FontFactory.getFont("test_fon");
       Arialfont.setStyle(Font.BOLD);
       Arialfont.setStyle(Font.UNDERLINE);
       Arialfont.setSize(15);
@@ -297,7 +327,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		   //List base Admit card
 		      List CDetails=new List(List.ORDERED,List.NUMERICAL);
-		      CDetails.setIndentationLeft(50);
+		      CDetails.setIndentationLeft(10);
 		     Font Df=new Font();
 		     Df.setStyle(Font.BOLD);
 		    
@@ -336,18 +366,46 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		      PdfPTable CDtable=new PdfPTable(1);
 		      PdfPCell CDtableCell=new PdfPCell();
+		   // Creating an ImageData object   
+		      
+		      
+		     // File imgFile = new  File(FILE_PATH+candidate.getCandidate_photograph());
+		      Path file = Paths.get(FILE_PATH+"applicantDetails/"+candidate.getCandidate_photograph());
+		      logger.info(FILE_PATH+""+Files.exists(file));
+		      
+		      BufferedImage image = ImageIO.read(new FileInputStream(file.toString()));
+		    //  for(String fileNames : file.list()) System.out.println(fileNames);
+		     
+		      Image imgdata = Image.getInstance(image,null);
+		      imgdata.scaleAbsolute(100f, 110f);
+		      imgdata.setAbsolutePosition(435f,455f);
+		      imgdata.setBorder(Rectangle.BOX); 
+		      imgdata.setBorderColor(BaseColor.BLACK);
+		      imgdata.setBorderWidth(1f);
+		      
+            //  imgdata.BorderWidth = 3.0f;
+              //imgdata.BorderColor = Color.RED; 
+		   //   imgdata.setBorder(Rectangle.BOX);
+		    //  imgdata.setAbsolutePosition(500f, 650f);
+		                   
+		   
+		    //  PdfPCell imageCell=new PdfPCell();
+		     // imageCell.addElement(imgdata);
+		      //imageCell.disableBorderSide(Rectangle.BOX);
 		      CDtableCell.addElement(CDetails);
-		      CDtableCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+		     // CDtableCell.setHorizontalAlignment(Element.ALIGN_CENTER);
 		     CDtableCell.setBorderWidth(0);
-		      CDtable.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+		    //  CDtable.getDefaultCell().setBorder(Rectangle.NO_BORDER);
 		      
 		      CDtable.setWidthPercentage(100f);
 			   CDtable.addCell(CDtableCell);
+			 //  CDtable.addCell(imageCell);
 			   CDtable.setSpacingBefore(18f);
 			   CDtable.setSpacingAfter(10f);
 			   
 		      
 		      document.add(CDtable);
+		      document.add(imgdata);
 		    
 		      
 		      Paragraph Instheading = new Paragraph("IMPORTANT INSTRUCTIONS FOR CANDIDATES",Arialfont);

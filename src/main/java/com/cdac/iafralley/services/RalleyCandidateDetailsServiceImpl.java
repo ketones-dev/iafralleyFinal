@@ -14,10 +14,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -36,6 +39,7 @@ import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.entity.RalleyStates;
 import com.cdac.iafralley.exception.CandidateAllocationSlotAreFull;
 import com.cdac.iafralley.exception.CandidateDuplicateEntry;
+import com.cdac.iafralley.exception.CandidateInvalidInputAsPerCrietria;
 import com.cdac.iafralley.exception.CandidateSelectedStateCitiesException;
 import com.cdac.iafralley.exception.InvalidImageException;
 import com.cdac.iafralley.util.ASingleton;
@@ -43,7 +47,7 @@ import com.cdac.iafralley.util.RalleyIdGenrator;
 
 
 @Service
-@Transactional
+@Transactional(rollbackFor = {CandidateDuplicateEntry.class})
 public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetailsService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(RalleyCandidateDetailsServiceImpl.class);
@@ -79,7 +83,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 	}
 
 	@Override
-	public RalleyCandidateDetails save(RalleyCandidateDetails candidate,MultipartFile x,MultipartFile xii) throws CandidateSelectedStateCitiesException, CandidateDuplicateEntry, CandidateAllocationSlotAreFull, InvalidImageException {
+	public RalleyCandidateDetails save(RalleyCandidateDetails candidate,MultipartFile x,MultipartFile xii,MultipartFile cand_photo) throws CandidateSelectedStateCitiesException, CandidateDuplicateEntry, CandidateAllocationSlotAreFull, InvalidImageException {
 		// TODO Auto-generated method stub
 		//check for availability and get registration No id
 		
@@ -89,6 +93,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		
 		
 		//synchronized (ASingleton.getInstance()) {
+		
 		
 		logger.info("converting and getting candidate selected state and city name");
 		Map<String, String> values=getCandidateSelectedStateCityName(candidate.getState(),candidate.getCity());
@@ -100,7 +105,9 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		}
 		logger.info("before genrating id checking registring emailid and aadhar is already present in DB or not...");
 		try {
-		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(candidate.getEmailid(),candidate.getRally_id());
+		logger.info(candidate.getEmailid().toLowerCase().toString());
+		String cemailid=candidate.getEmailid().toLowerCase();
+		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(cemailid,candidate.getRally_id());
 		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),candidate.getRally_id());
 		//RalleyCandidateDetails result3=ralleyCandidateDetailsRepo.findByContact_no(candidate.getContactno(), candidate.getRally_id());
 				if(result != null && result2 != null )
@@ -126,7 +133,7 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		}
 		catch (Exception e){
 			
-			throw new CandidateDuplicateEntry("Cannot Register with same Details...");
+			throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
 			
 		}
 		
@@ -157,30 +164,56 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		logger.info("Checking image validation and for corruption..");
 	
 		
-		boolean imagevalid=storeimagefile.checkImageValidation(x,xii);
+		boolean imagevalid=storeimagefile.checkImageValidation(x,xii,cand_photo);
 		if(imagevalid == false)
 		{
 			throw new InvalidImageException("Cant' read uploaded images please try again...");
 		}
 		
+		RalleyDetails ForeignIdValue=ralleyDetailsRepo.findByRalley_cust_id(candidate.getRally_id());
+		candidate.setRallyDetails(ForeignIdValue);
+		
+		
 		logger.info("Before saving Candidate filled values are :"+candidate.toString());
 		
-		RalleyCandidateDetails savedD=ralleyCandidateDetailsRepo.save(candidate);
 		
-		//String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue);
-		//candidate.setRalleyregistrationNo(regisrationid);
-		//logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
+		try {
 		
-		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenratorUpdate(VenuCode, ascvalue, savedD.getId());
-		savedD.setRalleyregistrationNo(regisrationid);
+		
+		String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenrator(VenuCode,ascvalue,candidate);
+		candidate.setRalleyregistrationNo(regisrationid);
+		logger.info("for candidate with emailid:"+candidate.getEmailid()+" Genrated Candidate registration ID:"+regisrationid);
+			RalleyCandidateDetails savedD=ralleyCandidateDetailsRepo.save(candidate);
+		//String regisrationid=ralleyIdGenrator.RalleyRegistrationNumGenratorUpdate(VenuCode, ascvalue, savedD.getId());
+		//savedD.setRalleyregistrationNo(regisrationid);
 			logger.info("storing certificate paths in db and writing in disk");
-		savedD=storeimagefile.storeImage(savedD, x, xii);
+		savedD=storeimagefile.storeImage(savedD, x, xii,cand_photo);
 			
+			return savedD;
 			
+			//return ralleyCandidateDetailsRepo.save(savedD);
 			
-			return ralleyCandidateDetailsRepo.save(savedD);
 		//}
-		
+		}
+		catch(DataIntegrityViolationException e)
+		{
+			e.printStackTrace();
+			logger.info(e.getMessage());
+			throw new CandidateDuplicateEntry("Opps..Something went wrong please try again..");
+			
+		}
+		catch (ConstraintViolationException tse) {
+			tse.printStackTrace();
+
+			logger.info(tse.getMessage());
+			throw new CandidateDuplicateEntry("Opps..Something went wrong please try again..");
+
+		}
+		catch (Exception e) {
+			logger.info(e.getMessage());
+			e.printStackTrace();
+			throw new CandidateDuplicateEntry("Opps..Something went wrong please try again..");
+		}
 		
 		
 

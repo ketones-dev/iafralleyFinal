@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.cdac.iafralley.Dao.RalleyCandidateDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyDetailsDAO;
 import com.cdac.iafralley.controllers.RalleyRegistrationFormController;
+import com.cdac.iafralley.entity.RalleyCandidateDetails;
+import com.cdac.iafralley.exception.CandidateDuplicateEntry;
 
 @Component
 @Transactional
@@ -34,28 +36,49 @@ public class RalleyIdGenrator implements RalleyIdGenratorInterface{
 
 	//add param as of candidate pref city for ralley and check if count for such city is there if 0 then send error message
 	@Override
-	public   String RalleyRegistrationNumGenrator(String preFixValue,String asc) {
+	public   String RalleyRegistrationNumGenrator(String preFixValue,String asc,RalleyCandidateDetails rcd) throws CandidateDuplicateEntry {
 		String regno=null;
 		String prefix_venu=preFixValue;
+		try {
+			
+		synchronized (ASingleton.getInstance()) {
+			
+			String count=ralleyCandidateDetailsDAO.maxCount(rcd.getOpt_state(),rcd.getOpt_city());
+			
+			
+			logger.info("Db Max count value:"+count);
+			// checking it is first time registration number is genrated
+			if(count == null)
+			{
+				regno=prefix_venu+year_cycle+asc+R_NO_FIRST;
+			}
+			
+			// else get max count from db for such city and state of such day registerd count-acutal intake count
+			// =0 then alloted next day registration count and add 1 to its id
+			//FCFS
+			else {
+				String id= ConvertLongToStringwithPaddedzero(Long.parseLong(count)+1,5);
+				regno=prefix_venu+year_cycle+asc+id;
+			}
+			
+		}
 		//get count of value
-		String count=ralleyCandidateDetailsDAO.maxCount();
-		logger.info("Db Max count value:"+count);
-		// checking it is first time registration number is genrated
-		if(count == null)
+		
+		
+		
+		
+		}catch(Exception e)
 		{
-			regno=prefix_venu+year_cycle+asc+R_NO_FIRST;
+			e.printStackTrace();
+			logger.info("Problem in creating reg number of candidate with email id:"+rcd.getEmailid());
+			throw new CandidateDuplicateEntry("registration duplicay error");
 		}
-		
-		// else get max count from db for such city and state of such day registerd count-acutal intake count
-		// =0 then alloted next day registration count and add 1 to its id
-		//FCFS
-		else {
-			String id= ConvertLongToStringwithPaddedzero(Long.parseLong(count)+1,5);
-			regno=prefix_venu+year_cycle+asc+id;
-		}
-		
 		
 		return regno;
+		
+		
+		
+		
 	}
 	
 	public static String ConvertLongToStringwithPaddedzero(Long num, int digits) {

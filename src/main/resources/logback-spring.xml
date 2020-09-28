@@ -40,19 +40,17 @@
   </appender>
   
   <springProfile name="local | dev">
-    
-<logger name="org.springframework.transaction" level="DEBUG">
+    <logger name="org.springframework" level="INFO" additivity="false">
         <appender-ref ref="CONSOLE" />
-        </logger>
-   
-    <root level="DEBUG">
+    </logger>
+    <root level="INFO">
       <appender-ref ref="CONSOLE" />
       <appender-ref ref="FILE" />
     </root>
   </springProfile>
  
   <springProfile name="prod">
-    <root level="DEBUG">
+    <root level="INFO">
       <appender-ref ref="FILE" />
     </root>
   </springProfile>

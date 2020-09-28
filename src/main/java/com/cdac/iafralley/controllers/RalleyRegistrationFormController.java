@@ -164,7 +164,7 @@ public class RalleyRegistrationFormController {
 	}
 	 
 	@PostMapping("/registerCandidate")
-	public ModelAndView createUser(@ModelAttribute("ralleyCandidateDetails") @Valid RalleyCandidateDetails ralleyCandidateDetails, BindingResult result,@RequestParam("XMarksheet") MultipartFile  XMarksheet,@RequestParam("XIIMarksheet") MultipartFile  XIIMarksheet,RedirectAttributes redirectAttributes,HttpServletRequest request) {
+	public ModelAndView createUser(@ModelAttribute("ralleyCandidateDetails") @Valid RalleyCandidateDetails ralleyCandidateDetails, BindingResult result,@RequestParam("XMarksheet") MultipartFile  XMarksheet,@RequestParam("XIIMarksheet") MultipartFile  XIIMarksheet,@RequestParam("photograph") MultipartFile candidatePhoto,RedirectAttributes redirectAttributes,HttpServletRequest request) {
 		ModelAndView modelAndView = new ModelAndView();
 		
 		
@@ -211,9 +211,9 @@ public class RalleyRegistrationFormController {
 					}
 			
 			
-			if(XMarksheet.isEmpty() || XIIMarksheet.isEmpty())
+			if(XMarksheet.isEmpty() || XIIMarksheet.isEmpty() || candidatePhoto.isEmpty())
 			{
-				throw new CandidateInvalidInputAsPerCrietria("Uploaded Certificate or Markheet is not Valid");
+				throw new CandidateInvalidInputAsPerCrietria("Uploaded Certificate or Markheet or Photograph is not Valid");
 			}
 			else if(XMarksheet.getSize() < THIRTY_KB_IN_BYTES || XMarksheet.getSize() > FIFTY_KB_IN_BYTES)
 			{
@@ -222,6 +222,10 @@ public class RalleyRegistrationFormController {
 			else if(XIIMarksheet.getSize() < THIRTY_KB_IN_BYTES || XIIMarksheet.getSize() > FIFTY_KB_IN_BYTES)
 			{
 				throw new CandidateInvalidInputAsPerCrietria("Uploaded 12th/Voctional/Diploma Markseet size should in between be 30kb to 50kb ");
+			}
+			else if(candidatePhoto.getSize() < THIRTY_KB_IN_BYTES || candidatePhoto.getSize() > FIFTY_KB_IN_BYTES)
+			{
+				throw new CandidateInvalidInputAsPerCrietria("Uploaded Photograph size should in between be 30kb to 50kb ");
 			}
 			
 			
@@ -289,7 +293,7 @@ public class RalleyRegistrationFormController {
 		
 		
 		  try {
-			RalleyCandidateDetails candidateDetails = candidateService.save(ralleyCandidateDetails, XMarksheet,XIIMarksheet);
+			RalleyCandidateDetails candidateDetails = candidateService.save(ralleyCandidateDetails, XMarksheet,XIIMarksheet,candidatePhoto);
 			//PDF and mail genration code
 			// modelAndView.addObject("allUsers", userService.getAllUsers());
 		  //modelAndView.addObject("candidateDetails",candidateDetails );

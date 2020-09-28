@@ -19,7 +19,7 @@ public interface RalleyCandidateDetailsService {
 	
 	public List<RalleyCandidateDetails> findAll();
 	
-	public RalleyCandidateDetails save(RalleyCandidateDetails candidate, MultipartFile xMarksheet, MultipartFile xIIMarksheet) throws CandidateSelectedStateCitiesException, CandidateDuplicateEntry, CandidateAllocationSlotAreFull, InvalidImageException;
+	public RalleyCandidateDetails save(RalleyCandidateDetails candidate, MultipartFile xMarksheet, MultipartFile xIIMarksheet,MultipartFile cand_photo) throws CandidateSelectedStateCitiesException, CandidateDuplicateEntry, CandidateAllocationSlotAreFull, InvalidImageException;
 	
 	public RalleyCandidateDetails findById(Long id);
 	

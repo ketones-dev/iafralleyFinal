@@ -3,11 +3,15 @@ package com.cdac.iafralley.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,7 +41,7 @@ public class RalleyCandidateDetails implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "applicant_id")
 	private Long id;
 	
 	@NotBlank(message="is required")
@@ -105,11 +109,11 @@ public class RalleyCandidateDetails implements Serializable {
 	private String height;
 	
 	@NotEmpty
-	@Column(name="city")
+	@Column(name="domicile_city")
 	private String city;
 	
 	@NotEmpty
-	@Column(name="state")
+	@Column(name="domicile_state")
 	private String state;
 	
 	@NotNull
@@ -148,6 +152,9 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="xii_imagepath")
 	private String xiiimagePath;
 	
+	@Column(name="candidate_photograph")
+	private String candidate_photograph;
+	
 	@Column(name="opted_group_trade")
 	private String optedGroupTrade;
 	
@@ -161,7 +168,14 @@ public class RalleyCandidateDetails implements Serializable {
 	private Boolean isEmailSend=false;
 	
 	
+	@OneToOne(fetch= FetchType.LAZY,cascade=CascadeType.ALL)
+	@JoinColumn(name="rally_id")
+	private RalleyDetails rallyDetails;
 	
+	
+	@NotEmpty
+	@Column(name="nationality")
+	private String nationality;
 	
 	
 	
@@ -176,7 +190,7 @@ public class RalleyCandidateDetails implements Serializable {
 	
 	@NotEmpty
 	//@Pattern(regexp = "^[a-zA-Z0-9]$",message="Ralley Id cannot contain special characters")
-	@Column(name="rally_id")
+	@Column(name="rally_custom_id")
 	private String rally_id;
 	
 	@NotEmpty
@@ -192,7 +206,7 @@ public class RalleyCandidateDetails implements Serializable {
 //	            @Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "50"),
 //	            @Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "B_"),
 //	            @Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%05d") })
-	 @Column(name="ralley_regid")
+	 @Column(name="ralley_regid",unique = true)
 	private String ralleyregistrationNo;
 	 
 	 public RalleyCandidateDetails() {
@@ -577,6 +591,45 @@ public class RalleyCandidateDetails implements Serializable {
 
 	public void setCaptcha(String captcha) {
 		this.captcha = captcha;
+	}
+
+
+	
+
+	public String getCandidate_photograph() {
+		return candidate_photograph;
+	}
+
+
+
+	public void setCandidate_photograph(String candidate_photograph) {
+		this.candidate_photograph = candidate_photograph;
+	}
+
+
+	
+
+	public RalleyDetails getRallyDetails() {
+		return rallyDetails;
+	}
+
+
+
+	public void setRallyDetails(RalleyDetails rallyDetails) {
+		this.rallyDetails = rallyDetails;
+	}
+
+
+	
+
+	public String getNationality() {
+		return nationality;
+	}
+
+
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
 	}
 
 

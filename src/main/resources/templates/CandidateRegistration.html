@@ -229,7 +229,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							<div>
 								<a class="logo pull-right"
 									href="http://www.careerindianairforce.cdac.in"><img
-									th:src="@{/vendor/image/iafanimatelogo.gif}"
+									th:src="@{/vendor/image/iafanimatelogo.png}"
 									style="height: 61px; margin-top: 5px;"></a> <span
 									class="name pull-right">
 									<h4 class="txt"
@@ -476,7 +476,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 							
 							</div>
 							<div class="row">
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 								<label for="height" class="col-form-label">Height <span style="font-style:italic;font-size:14px;">(in cm)</span><span class="compulsory">*</span>:<span style="font-style:italic;display:flex;font-size:14px;">(Not less than 152.5 Cms)</span></label>
 								<input type="number" th:field="*{height}" 
 									class="form-control" id="height" step="0.1" placeholder="Enter height" data-error="please enter valid height" required>
@@ -484,8 +484,19 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<span th:if="${#fields.hasErrors('height')}"    th:errors="*{height}" class="text-danger"></span>
 								<p id="verrorh"></p>
 							</div>
+							
+							<div class=" col-md-6" style="padding-top: 15px;">
+									<label for="nationality" class="col-form-label" style="padding-bottom: 0.89rem;">Select Nationality:</label>
+									<select th:field="*{nationality}" id="nationality" class="form-control" required="true" >
+									<option th:value="''">---Select Nationality----</option>
+									<option th:value="Indian">Indian</option>
+									<option th:value="Nepalese">Nepalese</option>
+									
+									</select>
+									
+									</div>
 								
-							<div class="form-group col-md-4">
+							<div class="form-group col-md-6">
 									<label for="martital" class="col-form-label">Maritial Status<span class="compulsory">*</span>:</label>
 									<div style="padding:5% 1%;">
 									<div class="form-check form-check-inline col-6" style="display:inline-flex;">
@@ -506,7 +517,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 									</div>
 
 								</div>
-									<div class="form-group col-md-4" style="padding-top:1%;">
+									<div class="form-group col-md-6" style="padding-top:1%;">
 									<label class="label-col">Gender</label>
 									<div class="custom-control custom-radio custom-control">
 										<input type="radio" id="customRadioInline1"
@@ -520,6 +531,14 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 											for="customRadioInline2">Female</label>
 									</div>
 									</div>
+									
+									
+									
+									
+									
+									
+									
+									
 
 									<div class="form-group col-md-4" style="display: flex;justify-content: center;align-content: center;flex-direction: column;">
 							<label>I am a Domicile of (<span style="font-style:italic;font-size:14px;">State</span>)</label>
@@ -595,7 +614,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="row">
 								<div class="form-group col-md-8" >
 								<label class="col-form-label">
-								<h6 style="color:black;padding-bottom:1%;">Upload<span class="compulsory">*</span>: 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"   class="form-control"  required>
+								<h6 style="color:black;padding-bottom:1%;font-weight:bold;">Upload<span class="compulsory">*</span>: 10th  Passing Certificate:</h6><input type="file" name="XMarksheet" id="X_marksheet" accept="image/*"   class="form-control"  required>
 								</label>
 								<label>File size should be 30kb to  100kb with jpg/jpeg/png format</label>
 								</div>
@@ -703,7 +722,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								
 								<div class="col-md-12">
 								<h5><b><u>UPLOAD SECTION:</u></b></h5>
-								<label>Upload<span class="compulsory">*</span>:12th Marksheet</label><span id="diploma" style="display:none;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;">/Marksheet of 02 years vocational course</span><span id="othercourse" >/Other</span>
+								<label style="font-weight:bold;">Upload<span class="compulsory">*</span>:12th Marksheet</label><span id="diploma" style="display:none;font-weight:bold;">/Marksheet for 03 years diploma course in Engineering</span><span id="vocational" style="display:none;font-weight:bold;">/Marksheet of 02 years vocational course</span><span id="othercourse" style="font-weight:bold;">/Other</span>
 								</div>
 								<div class="form-group col-md-8" style="padding-top: 1%;">
 								<label class="col-form-label">
@@ -714,6 +733,22 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="form-group col-md-4" style="margin-top:2rem;">
 								<p style="margin-bottom: 0;text-align: center;"><label for="file" style="cursor: pointer;" id="label-mark">Upload Marksheet</label></p>
 								<p style="text-align: center;"><img id="output2"  width="125px" src="https://hotpot.ai/images/site/graphicIcon.svg"/></p>
+								</div>
+								
+								
+								
+								<div class="col-md-12">
+								<!-- <h5><b><u>UPLOAD SECTION:</u></b></h5> -->
+								<label style="font-weight:bold;"><span class="compulsory">*</span><b>Please Upload Recent Coloured Passport Size Photograph</b></label></div>
+								<div class="form-group col-md-8" style="padding-top: 1%;">
+								<label class="col-form-label">
+								<input type="file" name="photograph" accept="image/*" id="cand_photo"  class="form-control" required>
+								</label><label>File size should be 30kb to  100kb with jpg/jpeg/png format</label>
+								</div>
+								
+								<div class="form-group col-md-4" style="margin-top:2rem;">
+								<p style="margin-bottom: 0;text-align: center;"><label for="file" style="cursor: pointer;" id="label-mark-p">Upload Photograph</label></p>
+								<p style="text-align: center;"><img id="output3"  width="125px" src="https://hotpot.ai/images/site/graphicIcon.svg"/></p>
 								</div>
 								
 								</div>
@@ -729,7 +764,9 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 								<div class="col-md-6">
 								<label>Enter Captcha:</label>
 								<span style="display:inline-block;"><img style="display:inline-block;" th:src="@{'data:image/png;base64,'+${captchaEncode}}" alt="" id="captcha_image"/>
+								
 								</span>
+								
 								<span style="display:inline-block;">
 								<input type="button" value="refresh"   id="refresh_captcha" onclick="reloadCaptcha()" />
 								</span>
@@ -945,6 +982,7 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	function reloadCaptcha(){
         var d = new Date();
         $("#captcha_image").attr("src","getNewCapthcha?"+d.getTime());
+     //   $('#captchahid').attr("value","getNewCapthcha?"+d.getTime());
         
     }
 	</script>
@@ -1026,6 +1064,20 @@ style="font-size: 13px;font-style: oblique;color: #6c6c6c;font-weight: bold;"
 	    	}
 	    	else{
 	    		loadFile("XII_marksheet");
+	    	}
+        });
+	    
+	    $('#cand_photo').bind('change', function() {
+	    	var sizeInKB = this.files[0].size/1024; //Normally files are in bytes but for KB divide by 1024 and so on
+	    	var sizeLimitmin = 30;
+			var sizeLimitmax = 100;
+	    	if (sizeInKB > sizeLimitmax || sizeInKB < sizeLimitmin ) {
+	    	    alert("Max file size 30KB to 100KB");
+	    	    $('#cand_photo').val('');
+	    	    return false;
+	    	}
+	    	else{
+	    		loadFile("cand_photo");
 	    	}
         });
 	    
@@ -1115,16 +1167,23 @@ var loadFile = function(id) {
 	var image2 = document.getElementById('output2');
 	var lblpc = document.getElementById('label-pass');
 	var lblm = document.getElementById('label-mark');
-	
+	var image3= document.getElementById('output3');
+	var lblcp= document.getElementById('label-mark-p');
+	console.log(id);
     if(id === "X_marksheet"){
        image.src = URL.createObjectURL(event.target.files[0]);
        lblpc.style.display = 'none';
     }
     
-    else{
+    else if(id === "XII_marksheet"){
     	 image2.src = URL.createObjectURL(event.target.files[0]);
     	 lblm.style.display = 'none';
     }
+    else if(id === "cand_photo")
+    	{
+    	image3.src = URL.createObjectURL(event.target.files[0]);
+   	 lblcp.style.display = 'none';
+    	}
     	
 };
 

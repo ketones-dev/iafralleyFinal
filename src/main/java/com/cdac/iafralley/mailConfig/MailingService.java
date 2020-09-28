@@ -148,7 +148,7 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 	}
 	
 	
-	public static void sendMailWithAttachments(final String mailServer, final String from, final String password,String candidateEmail,String candidateRegno,String city,String state, final String subject,String FILE_PATH) {
+	public static void sendMailWithAttachments(final String mailServer, final String from, final String password,String candidateEmail,String candidateRegno,Long candidateId,String city,String state, final String subject,String FILE_PATH) {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new AnnotationConfigApplicationContext(JavaMailConfiguration.class);
 		
@@ -206,9 +206,9 @@ private static final Logger logger = LoggerFactory.getLogger(MailingService.clas
 				       "</html>";
 		// "<div><img src=\"cid:"+ contentId +"\" width=\"100%\" height=\"400\"></div>\n" + 	 
 			mimeMessageHelper.setText(message,true);
-			String filepath = FILE_PATH+candidateRegno+".pdf";//change accordingly     
+			String filepath = FILE_PATH+candidateRegno+"_"+candidateId+".pdf";//change accordingly     
           DataSource source = new FileDataSource(filepath); 
-			mimeMessageHelper.addAttachment(candidateRegno+".pdf", source);
+			mimeMessageHelper.addAttachment(candidateRegno+"_"+candidateId+".pdf", source);
 			// ClassPathResource classPathResource = new ClassPathResource("static/vendor/image/banner.jpg");
 			 //mimeMessageHelper.addInline(contentId, classPathResource);
 			//3) create MimeBodyPart object and set your message text        

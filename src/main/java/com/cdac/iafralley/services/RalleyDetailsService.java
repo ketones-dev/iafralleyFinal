@@ -315,7 +315,7 @@ List<Long> intList = citiesid.stream()
 				for(RallyApplicantAllocation rdata : r)
 				{
 					RalleyDetails rd=ralleydetaildao.findById(rdata.getRally_id()).orElseThrow(() -> new IllegalArgumentException("Not found"));
-					RalleyCandidateDetails mailcandidate=rcdDao.findByEmailidAndRallyidFormail(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_registration_no(),rd.getRalley_cust_id());
+					RalleyCandidateDetails mailcandidate=rcdDao.findByEmailidAndRallyidFormail(rdata.getApplicant_id(),rdata.getEmailid(),rdata.getCandidate_registration_no(),rd.getRalley_id());
 
 					if(mailcandidate !=null)
 					{
@@ -323,12 +323,12 @@ List<Long> intList = citiesid.stream()
 					
 					  try {
 						  
-						  MailingService.sendMailWithAttachments(mailserver, from, password, rdata.getEmailid(),rdata.getCandidate_registration_no(),
+						  MailingService.sendMailWithAttachments(mailserver, from, password, rdata.getEmailid(),rdata.getCandidate_registration_no(),rdata.getApplicant_id(),
 						 rd.getCity_name(),rd.getState_name(),subject,FILE_PATH); 
 						  
 						  logger.info("Mail successfully send to emailid:"+rdata.getEmailid());
 						  logger.info("updating send mail status for emailid:"+rdata.getEmailid());
-						  rcdDao.updateMailSendStauts(true,mailcandidate.getId());
+						  rcdDao.updateMailSendStauts(true,mailcandidate.getId(),rd.getVenue_details(),rdata.getSlot_id());
 						  count++;
 						  logger.info("Total mail sent for City(Rally)"+rdata.getRally_id()+" is:"+count);
 						  
