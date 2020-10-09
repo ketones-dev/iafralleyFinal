@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="ISO-8859-1">
+<meta name="_csrf" th:content="${_csrf.token}" />
+<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+<title>Registered Student Data</title>
+
+<link th:href="@{/vendor/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/datatables.min.css}" rel="stylesheet">
+<link th:href="@{/css/dashboard.css}" rel="stylesheet">
+<style>
+.notShow
+{
+visibility: hidden;
+}
+.pagination > li > a
+{
+    background-color: white;
+    color: #5A4181;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #5A4181 !Important;
+    border: solid 1px #5A4181 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #5A4181 !Important;
+    border: solid 1px #5A4181;
+}
+.wrapper {
+    
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+   
+    transition: all 0.1s;
+}
+
+.content
+{
+transition: all 0.3s;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div th:replace="fragments/header.html :: header"> </div>
+
+<main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 content" id="content">
+ 
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              
+                <span>Toggle Sidebar</span>
+            </button>
+
+       
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+			</div>
+
+
+
+<div class="container" id="removecontainer">
+<!-- display section -->
+<!--  <button id="btn-show-all-children" type="button">Expand All</button>
+<button id="btn-hide-all-children" type="button">Collapse All</button>-->
+
+<table cellspacing="5" cellpadding="5" border="0">
+        <tbody>
+        <form action="#">
+        <tr class="notShow">
+		<td>Date of Calculation: </td>
+		<td><input type="date" id="dob" name="dob"></td>
+        <td><span>Total Count:<span id="totalcount"></span>    </span></td>
+       <td><span>Filtered Count:<span id="count"></span></span></td>
+        </tr>
+        
+        <tr class="notShow">
+         <td>Minimum Age:</td>
+        <td><input type="text" id="min" name="min"></td>
+            <td>Maximum Age:</td>
+            <td><input type="text" id="max" name="max"></td>
+        
+        </tr>
+         <tr >
+         <td>Minimum Percentage:</td>
+        <td><input type="text" id="minPercentage" name="minPercentage"></td>
+            <td class="notShow">Maximum Percentage:</td>
+            <td class="notShow"><input type="text" id="maxPercentage" name="maxPercentage"></td> 
+        
+        </tr> 
+         <tr>
+         <td>Intake:</td>
+        <td><input type="text" id="intake" name="intake"></td>
+           
+        </tr>
+        <!-- <th:block th:if="${cities} != null">
+         <tr><td>City</td><td><select id="citylist" name="city" >
+         <option  value="">--Select City--</option>
+         <th:block th:each="i: ${cities}">
+         <option th:value="${i.city_id}" th:text="${i.city_name}"></option>
+         
+         </th:block>
+         </select></td></tr>
+        </th:block> -->
+        <!-- <th:block th:if="${cities} == null"> -->
+        <tr><td>City</td><td><select id="citylist" name="city" ><option value="0">--Select City--</option></select></td></tr>
+       <!--  </th:block> -->
+        <tr><td>Slot</td><td><select id="citylistslot" ><option value="">--Select Slot--</option></select></td></tr>
+        <input type="hidden" id="hcityid" name="cityid" th:with="cityid=${cityid}" th:value="${cityid}" />
+         <input type="hidden" id="hintake" name="intake" th:with="intake=${intake}" th:value="${intake}" />
+          <input type="hidden" id="hminpercentage" name="minpercentage" th:with="minpercentage=${minpercentage}" th:value="${minpercentage}" />
+        
+          <tr>
+		
+		
+		
+		
+       <td><span>Total Count:<span id="totalcount"></span>    </span></td>
+       <td><span>Filtered Count:<span id="count"></span></span></td>
+        </tr>
+				<tr>
+				<td>Find Duplicate By:</td>
+					<td>
+					
+					<input type="checkbox" class="" id="maxTemp27">
+					<label class="form-check-label" style="margin: 0px 5px 0 0;">Name</label>
+					
+					<input type="checkbox" class="" id="byfname">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> Father Name</label>
+					<input type="checkbox" class="" id="byemailid">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> Email id
+					</label>
+					<input type="checkbox" class="" id="bydateofb">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> DOB
+					</label>
+					<input type="checkbox" class="" id="byaadhar">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> aadhar</label></td>
+					
+				</tr>
+				<tr>
+        <td><input type="reset" id="resetb" value="Reset">
+     	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Fetch Filtered Values" onclick="intakeAllocate()"/>
+      	
+      
+      </td></tr>
+        </form>
+    </tbody>
+        
+    </tbody></table>
+ <div th:if = "${totalPages > 1}">
+<div class="row">
+         <div class = "col-3">
+					<span>Total Rows: [[${totalItems}]] </span><span style="margin:0 5px;font-weight:18px;">    Total Pages: [[${totalPages}]]</span>
+				</div> 
+        <div class="offset-md-2 col-md-10 mt-3">
+ 		<input type="hidden" id="pageSelected" name="pageNo" th:value="${currentPage}">
+          
+ 
+                         <!-- Handling the case where the number of pages is greater than 7 -->
+            <ul th:if="${totalPages gt 7}" class="pagination">
+                                 <li th:if="${currentPage eq 1}" class="page-item disabled"><a class="page-link" href="#">Previous page</a></li>
+                <li th:if="${currentPage gt 1}" class="page-item">
+                                         <a class="page-link" th:href="@{'/Dashboard/page/' + ${currentPage - 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid='}">Previous page</a>
+                </li>
+ 
+                                 <!-- Home -->
+               <!--  <li th:classappend="${currentPage eq 1}?'active'" class="page-item">
+                    <a class="page-link" th:href="@{'/Dashboard/page/' + 1 + '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid='}">1</a>
+                </li> -->
+ 
+                                 <!-- The current page is less than or equal to 4 -->
+                
+                                 
+                <li th:if="${currentPage le 5}" th:each="index:${#numbers.sequence(1,5)}" th:classappend="${index eq currentPage}?'active'" class="page-item">
+                    <a th:href="@{'/Dashboard/page/' + ${index}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid} }" class="page-link"  th:text="${index}"></a>
+                </li>
+                <li th:if="${currentPage le 4}" class="page-item">
+                    <a  class="page-link" th:href="@{'/Dashboard/page/' +6+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">...</a>
+                </li>
+ 
+                                 <!-- The difference between the last page and the current page is less than or equal to 3 -->
+                <li th:if="${totalPages-currentPage le 3}" class="page-item">
+                    <a  class="page-link" th:href="@{'/Dashboard/page/' + ${totalPages-5}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">...</a>
+                </li>
+                <li th:if="${totalPages-currentPage le 3}" th:each="index:${#numbers.sequence(totalPages-4,totalPages-1)}" th:classappend="${index eq currentPage}?'active'" class="page-item">
+                    <a th:href="@{'/Dashboard/page/' + ${index}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}" class="page-link"  th:text="${index}"></a>
+                </li>
+ 
+                                 <!-- The difference between the last page and the current page is greater than 3 and the current page is greater than 4 -->
+                <li th:if="${(currentPage gt 4) && (totalPages-currentPage gt 3)}" class="page-item">
+                    <a class="page-link" th:href="@{'/Dashboard/page/' + ${currentPage-2}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">...</a>
+                </li>
+                <li th:if="${(currentPage gt 4) && (totalPages-currentPage gt 3)}" th:each="index:${#numbers.sequence(currentPage-1,currentPage+1)}" th:classappend="${index eq currentPage}?'active'" class="page-item">
+                    <a class="page-link" th:href="@{'/Dashboard/page/' + ${index}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}" th:text="${index}"></a>
+                </li>
+                <li th:if="${(currentPage gt 4) && (totalPages-currentPage gt 3)}" class="page-item">
+                    <a class="page-link" th:href="@{'/Dashboard/page/' + ${currentPage+2}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">...</a>
+                </li>
+ 
+                                 <!-- Last page -->
+                <li th:classappend="${currentPage eq totalPages}?'active'" class="page-item">
+                                         <a class="page-link" th:href="@{'/Dashboard/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}" th:text="${totalPages}">Last page</a>
+                </li>
+ 
+                                 <li th:if="${currentPage eq totalPages}" class="page-item disabled"><a class="page-link" href="#">Next page</a></li>
+                <li th:if="${currentPage lt totalPages}" class="page-item">
+                                         <a class="page-link" th:href="@{'/Dashboard/page/' + ${currentPage+1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">Next page</a>
+                </li>
+ 
+                <div class="input-group" style="height: 38px;width: 150px;margin-left:50px;">
+                    <input type="number" min="1" th:max="${totalPages}"  class="form-control toPage">
+                    <div class="input-group-append">
+                 <a class="btn btn-primary page-link" id="paginationJumpLink" th:href="@{'/Dashboard/page/' + ${currentPage}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir} +'&cityid=' + ${cityid}}">Jump</a>
+                    </div>
+                </div>
+ 
+            </ul>
+        </div>
+    </div>
+</div>
+<table id="example" class="display table"> 
+
+<thead style="display: table-row-group;">
+
+<th></th>
+<th>Id</th>
+<th>Rally Registration</th>
+<th>Candidate Name</th>
+<th>Father's Name</th>
+<th>Email-ID</th>
+<th>DOB</th>
+<th>aadhar no</th>
+
+<th class="none">Mobile No</th>
+<th class="none">time of reporting</th>
+<th class="none">Opted State</th>
+<th>Opted City</th>
+
+<th class="none">Married</th>
+<th class="none">Height</th>
+<th class="none">Passed Exam </th>
+<th class="none">Other Details</th>
+<th >Passed Exam Percentage</th>
+<th class="none">English Exam Percentage</th>
+<th class="none">Candidate's State</th>
+<th class="none">Candidate's City</th>
+<th class="none">Subcribed On</th>
+<th><input name="select_all" value="1" id="example-select-all" type="checkbox" /></th>
+
+
+
+</thead>
+<tbody>
+
+<tr th:each="student : ${studentdata}">
+<td></td>
+ <td th:text="${student.id}"> </td> 
+<td th:text="${student.ralleyregistrationNo}"> </td>
+<td th:text="${student.name}"> </td>
+<td th:text="${student.fathername}"> </td>
+<td th:text="${student.emailid}"> </td>
+<td th:text="${student.dateOfBirth}"> </td>
+<td th:text="${student.aadhar_details}"></td>
+<td th:text="${student.contactno}"> </td>
+<td th:text="${student.dateTimeOfReporting}"> </td>
+<td th:text="${student.opt_state_name}"> </td>
+<td th:text="${student.opt_city_name}"> </td>
+<td th:text="${student.maritial_status}"> </td>
+<td th:text="${student.height}"> </td>
+<td th:text="${student.passed_exam_detail}"> </td>
+<td th:text="${student.otherDetailPassedDetail}"> </td>
+<td th:text="${student.passed_exam_percentage}"> </td>
+<td th:text="${student.english_percentage}"> </td>
+<td th:text="${student.state}"> </td>
+<td th:text="${student.city}"> </td>
+<td th:text="${student.subscirbed_on}"> </td>
+<td><input type="checkbox" name="id[]" value=""></td>
+
+</tr>
+
+
+
+
+</tbody>
+
+<tfoot style="display:table-header-group;">
+
+<th></th>
+<th>Id</th>
+<th><!-- EmailID --></th>
+<th><!-- Candidate Name --></th>
+<th><!-- Father's Name --></th>
+<th><!-- DOB --></th>
+<th>aadhar no</th>
+<th class="none">Mobile No</th>
+<th>Ralley Registration</th>
+<th class="none">time of reporting</th>
+<th class="none">Opted State</th>
+<th>Opted City</th>
+
+<th class="none">Married</th>
+<th class="none">Height</th>
+<th class="none">Passed Exam </th>
+<th class="none">Other Details</th>
+<th >Passed Exam Percentage</th>
+<th class="none">English Exam Percentage</th>
+<th class="none">Candidate's State</th>
+<th class="none">Candidate's City</th>
+<th class="none">Subcribed On</th>
+<th></th>
+</tfoot>
+
+
+
+
+
+</table> 
+
+    
+
+<!-- <div th:if = "${totalPages > 1}">
+			<div class = "row col-lg-12">
+				<div class = "col-2">
+					Total Rows: [[${totalItems}]] 
+				</div>
+				<div class="col-lg-10">
+				<ul class="pagination flex-wrap">
+					<th:block th:each="i: ${#numbers.sequence(1, totalPages)}">
+						<li class="page-item " ><a class="page-link active" th:if="${currentPage != i}" th:href="@{'/Dashboard/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+						</li>
+						<li class="page-item active" >
+						<a class="page-link " th:unless="${currentPage != i}">[[${i}]]</a>  &nbsp; &nbsp;
+						
+					</li>
+					
+					
+					
+					
+					</th:block>
+					
+					<li class="page-item disabled" >
+            <a class="page-link svg-icon" href="#">
+                <span data-feather="more-horizontal" width="20" height="20"></span>
+            </a>
+        </li>
+					
+					<li class="page-item " ><a class="page-link"><span>...</span></a></li>
+					
+					
+				
+				<li class="page-item ">
+					<a class="page-link"  th:if="${currentPage < totalPages}" th:href="@{'/Dashboard/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+					<span th:unless="${currentPage < totalPages}">Next</span>
+					</li>
+				
+				
+				<li class="page-item">
+    				<a class="page-link" th:if="${currentPage < totalPages}" th:href="@{'/Dashboard/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+					<span th:unless="${currentPage < totalPages}">Last</span>
+					
+   				</li>
+   				</ul>
+   				</div>
+			</div>
+		</div> -->
+
+<!-- display section -->
+
+</div>
+
+</main>
+</div>
+<script type="text/javascript" th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/datatables.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/dataTables.buttons.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/jszip.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/pdfmake.min.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/vfs_fonts.js}"></script>
+<script type="text/javascript" th:src="@{/vendor/js/buttons.html5.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/easyhttp.js}"></script>
+ <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+   
+<script>
+const http = new easyHTTP;
+
+function paginationJumpLink()
+{
+let  s=document.getElementById("paginationJumpLink");	
+console.log(s.href);
+
+}
+
+function intakeAllocate()
+{
+	console.log("in allocate");
+	var intake = parseInt($("#intake").val());
+	 var minpercentage=parseInt($("#minPercentage").val());
+	 var hcityid=$("#hcityid").val();
+	console.log("total intake : "+intake);
+	 let currentlocation=window.location.pathname;
+	    let splitedvalue=currentlocation.split('/');
+	    let getIndex=splitedvalue.indexOf("Dashboard");
+	    window.location.href="/"+splitedvalue[getIndex]+"/getFilteredData/"+intake+"/"+minpercentage+"/"+hcityid;
+	//call ajax with filter param 
+	 // code
+   /*  http.get("/"+splitedvalue[getIndex]+"/getFilteredData/{intake}/{minpercentage}", function(err, get) {
+			  if(err) {
+			    console.log(err);
+			  } else {
+			  //  console.log(get);
+			   myJson=JSON.parse(get);
+			  
+			  }
+    }); */
+	
+	
+}
+
+
+$(document).ready(function() {
+	
+	$(document).ready(function (){
+	    var table = $('#example').DataTable({
+	    	 initComplete: function () {
+	             this.api().columns([5,6,7,8,9,10,11]).every( function () {
+	                 var column = this;
+	                 var select = $('<select><option value=""></option></select>')
+	                     .appendTo( $(column.footer()).empty() )
+	                     .on( 'change', function () {
+	                         var val = $.fn.dataTable.util.escapeRegex(
+	                             $(this).val()
+	                         );
+	  
+	                         column
+	                             .search( val ? '^'+val+'$' : '', true, false )
+	                             .draw();
+	                     } );
+	  
+	                 column.data().unique().sort().each( function ( d, j ) {
+	                     select.append( '<option value="'+d+'">'+d+'</option>' )
+	                 } );
+	             } );
+	         },
+	       
+	         "autoWidth": false,
+	        'responsive': true,
+	        "iDisplayStart ": 100,
+	        "iDisplayLength": 100,
+	       
+	       
+	       
+	        dom: 'lBfrtip',
+	        "dom": '<"top"ipfBrl>t<"bottom"><"clear">',
+	        buttons: [
+	        	
+	            'copyHtml5',
+	            'excelHtml5',
+	            'csvHtml5',
+	            'print'
+	           /*  {
+	                extend: 'pdfHtml5',
+	                orientation: 'potrait',
+	                pageSize: 'A2',
+	                exportOptions: {
+	                    columns: [ 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 ]
+	               }
+	            } */
+	        ],
+	       
+	    });
+	    
+	    
+	    
+	    
+	    
+	    $.fn.dataTable.ext.search.push(
+	    	    function( settings, data, dataIndex ) {
+	    	        var min = parseInt( $('#min').val(), 10 );
+	    	        var max = parseInt( $('#max').val(), 10 );
+	    	        var calculate= $('#dob').val();
+	    	        var age =  getAge(data[5],calculate);
+	    	        console.log(age);
+	    	        
+	    	        var minPercentage = parseInt( $('#minPercentage').val(), 10 );
+	    	        var maxPercentage = parseInt( $('#maxPercentage').val(), 10 );
+	    	        var candidatePercentage = data[14];
+	    	      //  console.log("minPercentage :"+minPercentage +" "+ "maxPercentage: "+maxPercentage);
+	    	       // console.log("candidate percentage : "+candidatePercentage);
+	    	        
+	    	        if ( (
+	    	        		( isNaN( min ) && isNaN( max ) ) || 
+	    	                ( isNaN( min ) && age <= max ) ||
+	    	                ( min <= age   && isNaN( max ) ) ||
+	    	                ( min <= age   && age <= max ) 
+	    	             ) /*|| 
+	    	             (
+	    	            		( isNaN( minPercentage ) && isNaN( maxPercentage ) ) ||
+	    	                    ( isNaN( minPercentage ) && candidatePercentage <= maxPercentage ) ||
+	    	                    ( minPercentage <= candidatePercentage   && isNaN( maxPercentage ) ) ||
+	    	                    ( minPercentage <= candidatePercentage   && candidatePercentage <= maxPercentage ) 
+	    	             )*/
+	    	           )
+	    	        {
+	    	            return true;
+	    	        }
+	    	        
+	    	       
+	    	        
+	    	        
+	    	        return false;
+	    	        
+	    	    }
+	    	);
+	    	 
+	    	 $('#min, #max').keyup( function() {
+	    		 if($('#min').val() === "" && $('#max').val() === "")
+    			 {
+    			 table.columns('').search('').draw();c();
+    			 }
+	    		 else if(document.getElementById('dob').value === "")
+	    			 {
+	    			 alert("please set base count first");
+	    			 document.getElementById('min').value ="";
+	    			 document.getElementById('max').value ="";
+	    			 
+	    			 }
+	    		 else{
+	    	        table.draw();
+	    	        c();
+	    		 }
+	    		 
+	    	    } );
+	    	 
+	    	 $('#maxTemp27').on('change', function() {
+	    		  if ($(this).is(':checked')) {
+	    			  
+	    			  var name = [];
+	    			  
+	    			    table
+	    			    .column( 3 )
+	    			    .data()
+	    			    .each( function ( value, index ) {
+	    			        name.push(value);
+	    			 
+	    			    } );
+	    			  
+	    		    $.fn.dataTable.ext.search.push(
+	    		      function(settings, data, dataIndex) {  
+	    		    	  let count = name.reduce(function(n, val,idx) {
+	    		    		  if(val === data[3]){
+	    		    		//  console.log( n +''+ val+' '+data[3]);
+	    		    		
+	    		    		//  $(table.row(idx).node()).css('background-color', '#ff8080');
+	    		    		  }
+			    	             return n + (val === data[3]);
+			    	        }, 0);
+			    	 
+			    	            if(count >= 2)
+			    	            {
+			    	            	
+			    	                  
+			    	                  return true;
+			    	            }
+			    	            return false
+			    	        
+	    		      });
+	    		  } else {
+	    			 
+	    		    $.fn.dataTable.ext.search.pop();
+	    		  }
+	    		 
+	    		  table.draw()
+	    		});
+	    	 
+	    	 $('#byfname').on('change', function() {
+	    		  if ($(this).is(':checked')) {
+	    			  
+	    			  var fname = [];
+	    			  
+	    			    table
+	    			    .column( 4 )
+	    			    .data()
+	    			    .each( function ( value, index ) {
+	    			        fname.push(value);
+	    			 
+	    			    } );
+	    			  
+	    		    $.fn.dataTable.ext.search.push(
+	    		      function(settings, data, dataIndex) {  
+	    		    	  let count = fname.reduce(function(n, val) {
+			    	             return n + (val === data[4]);
+			    	        }, 0);
+			    	 
+			    	            if(count >= 2)
+			    	            {
+			    	            	
+			    	                return true
+			    	            }
+			    	            return false
+			    	        
+	    		      });
+	    		  } else {
+	    		    $.fn.dataTable.ext.search.pop()
+	    		  }
+	    		  table.draw()
+	    		});
+	    	 
+	    	 $('#byemailid').on('change', function() {
+	    		  if ($(this).is(':checked')) {
+	    			  
+	    			  var email = [];
+	    			  
+	    			    table
+	    			    .column( 5 )
+	    			    .data()
+	    			    .each( function ( value, index ) {
+	    			        email.push(value);
+	    			 
+	    			    } );
+	    			  
+	    		    $.fn.dataTable.ext.search.push(
+	    		      function(settings, data, dataIndex) {  
+	    		    	  let count = email.reduce(function(n, val) {
+			    	             return n + (val === data[5]);
+			    	        }, 0);
+			    	 
+			    	            if(count >= 2)
+			    	            {
+			    	                return true
+			    	            }
+			    	            return false
+			    	        
+	    		      });
+	    		  } else {
+	    		    $.fn.dataTable.ext.search.pop()
+	    		  }
+	    		  table.draw()
+	    		});
+	    	 
+	    	 $('#bydateofb').on('change', function() {
+	    		  if ($(this).is(':checked')) {
+	    			  
+	    			  var dob = [];
+	    			  
+	    			    table
+	    			    .column( 6 )
+	    			    .data()
+	    			    .each( function ( value, index ) {
+	    			        dob.push(value);
+	    			 
+	    			    } );
+	    			  
+	    		    $.fn.dataTable.ext.search.push(
+	    		      function(settings, data, dataIndex) {  
+	    		    	  let count = dob.reduce(function(n, val) {
+	    		    		  if(val === data[6]){
+	  	    		    		  console.log( n +''+ val+' '+data[6]);
+	    		    		  }
+			    	             return n + (val === data[6]);
+			    	        }, 0);
+			    	 
+			    	            if(count >= 2)
+			    	            {
+			    	                return true
+			    	            }
+			    	            return false
+			    	        
+	    		      });
+	    		  } else {
+	    		    $.fn.dataTable.ext.search.pop()
+	    		  }
+	    		  table.draw()
+	    		});
+	    	 
+	    	 $('#byaadhar').on('change', function() {
+	    		  if ($(this).is(':checked')) {
+	    			  
+	    			  var aadhar = [];
+	    			  
+	    			    table
+	    			    .column( 7 )
+	    			    .data()
+	    			    .each( function ( value, index ) {
+	    			        aadhar.push(value);
+	    			 
+	    			    } );
+	    			  
+	    		    $.fn.dataTable.ext.search.push(
+	    		      function(settings, data, dataIndex) {  
+	    		    	  let count = aadhar.reduce(function(n, val) {
+			    	             return n + (val === data[7]);
+			    	        }, 0);
+			    	 
+			    	            if(count >= 2)
+			    	            {
+			    	                return true
+			    	            }
+			    	            return false
+			    	        
+	    		      });
+	    		  } else {
+	    		    $.fn.dataTable.ext.search.pop()
+	    		  }
+	    		  table.draw()
+	    		});
+	    	    
+	    	/*  $('#minPercentage, #maxPercentage').keyup( function() {
+	    		 if($('#minPercentage').val() === "" && $('#maxPercentage').val() === "")
+    			 {
+    			 table.columns('').search('').draw();c();
+    			 }
+	             else{
+	    	        table.draw();
+	    	        c();
+	    		 }
+	    		 
+	    		 $.fn.dataTable.ext.search.push(
+	    		    	    function( settings, data, dataIndex ) {
+	    		    	      
+	    		    	        var minPercentage = parseInt( $('#minPercentage').val(), 10 );
+	    		    	        var maxPercentage = parseInt( $('#maxPercentage').val(), 10 );
+	    		    	        var candidatePercentage = data[14];
+	    		    	        console.log("minPercentage :"+minPercentage +" "+ "maxPercentage: "+maxPercentage);
+	    		    	        console.log("candidate percentage : "+candidatePercentage);
+	    		    	        
+	    		    	        if ( /*(
+	    		    	        		( isNaN( min ) && isNaN( max ) ) || 
+	    		    	                ( isNaN( min ) && age <= max ) ||
+	    		    	                ( min <= age   && isNaN( max ) ) ||
+	    		    	                ( min <= age   && age <= max ) 
+	    		    	             ) || */
+	    		    	       /*      (
+	    		    	            		( isNaN( minPercentage ) && isNaN( maxPercentage ) ) ||
+	    		    	                    ( isNaN( minPercentage ) && candidatePercentage <= maxPercentage ) ||
+	    		    	                    ( minPercentage <= candidatePercentage   && isNaN( maxPercentage ) ) ||
+	    		    	                    ( minPercentage <= candidatePercentage   && candidatePercentage <= maxPercentage ) 
+	    		    	             )
+	    		    	           )
+	    		    	        {
+	    		    	            return true;
+	    		    	        }
+	    		    	        
+	    		    	       
+	    		    	        
+	    		    	        
+	    		    	        return false;
+	    		    	        
+	    		    	    }
+	    		    	);
+	    		 
+	    	    } );
+	    	    */
+	    	 
+	    	  function c(){
+	    	// var total_row_count = table.Settings().RecordsTotal();
+	    	 //var filtered_row_count = table.Settings().RecordsDisplay();
+	    	 //console.log(total_row_count + " total rows filtered down to " + filtered_row_count);
+	    	 document.getElementById('count').innerText = table.page.info().recordsDisplay;
+	    	 } 
+
+	    	  document.getElementById('totalcount').innerText = table.page.info().recordsTotal;
+	   
+	    
+	     $('#citylist').on('change', function () {
+	    	console.log(this.value === "");
+	    	if(this.value === "")
+	    	{
+	    		table.columns('').search('').draw();
+	    		 c();
+	    	}
+	    	else{
+	        table.columns(9).search($(this).find("option:selected").text()).draw();
+	        c();
+	    	}
+	} );  
+
+	$('#citylistslot').on('change', function () {
+		
+	       table.columns(7).search( this.value).draw();
+	       c();
+	} ); 
+	    
+	$('#resetb').on('click',function(){
+		console.log("in");
+		table.columns('').search('').draw();
+		c();
+		$('#citylistslot option:not(:first)').remove();
+		 
+	});
+	    
+
+	    // Handle click on "Expand All" button
+	    $('#btn-show-all-children').on('click', function(){
+	        // Expand row details
+	        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+	    });
+
+	    // Handle click on "Collapse All" button
+	    $('#btn-hide-all-children').on('click', function(){
+	        // Collapse row details
+	        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+	    });
+	    
+	    var myJson;
+	    var currentlocation=window.location.pathname;
+	    var splitedvalue=currentlocation.split('/');
+	    var getIndex=splitedvalue.indexOf("Dashboard");
+	    var newUrl="/"+splitedvalue[getIndex]+"/getralleyallotCitiesOnSelect";
+	    
+	    
+	    // code
+	     http.get("/"+splitedvalue[getIndex]+"/getralleyallotCities", function(err, get) {
+				  if(err) {
+				    console.log(err);
+				  } else {
+				  //  console.log(get);
+				   myJson=JSON.parse(get);
+				    $.each(myJson, function (index, value) {
+				    	$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
+				    	//$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
+				    	});
+				    
+				    let cityidhidden=document.getElementById('hcityid').value;
+				    console.log(cityidhidden);
+				    	if(cityidhidden != '')
+				    		{
+				    		$("#citylist").val(cityidhidden);
+				    		}
+				    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
+				  }
+	     });
+	    
+	     $('#sidebarCollapse').on('click', function () {
+	         $('#sidebar').toggleClass('active');
+	         $('#content').toggleClass('col-lg-10');
+	         $('#content').toggleClass('content');
+	        $('#removecontainer').toggleClass('container');
+	        $("#thOptCity").toggleClass('none');
+	        $("#example").DataTable().columns.adjust().draw();
+	        
+	     });
+	   
+	     // Handle click on "Select all" control
+	     $('#example-select-all').on('click', function(){
+	        // Check/uncheck all checkboxes in the table
+	        var rows = table.rows({ 'search': 'applied' }).nodes();
+	        
+	        $('input[type="checkbox"]', rows).prop('checked', this.checked);
+	     });
+
+	     // Handle click on checkbox to set state of "Select all" control
+	     $('#example tbody').on('change', 'input[type="checkbox"]', function(){
+	        // If checkbox is not checked
+	        if(!this.checked){
+	           var el = $('#example-select-all').get(0);
+	           // If "Select all" control is checked and has 'indeterminate' property
+	           if(el && el.checked && ('indeterminate' in el)){
+	              // Set visual state of "Select all" control 
+	              // as 'indeterminate'
+	              el.indeterminate = true;
+	           }
+	        }
+	     });
+	    
+	    
+	     $('#example tbody').on('click', 'input[type="checkbox"]', function(){
+	    	 
+	    	
+	    		
+	    		
+	    	    	 if(this.checked==true)
+	    	    	 {
+	    	    	 console.log( table.row( this.closest('tr') ).data() );
+	    	    	 }
+	    	    	
+	    			 
+	    		 
+	    		 
+	    	
+	    	 
+	    	 
+	     });
+	     
+	    
+	    $('#citylist').on('change', function(){
+	    	console.log($(this).val());
+	    	console.log(myJson.length);
+	    	//$('#hcityid').val($(this).val());
+	    	var getallLinks=document.getElementsByClassName('page-link');
+	    	for(let i=0;i< getallLinks.length;i++)
+	    		{
+	    		console.log(getallLinks[i].href);
+	    		getallLinks[i].href = getallLinks[i].href+$(this).val();
+	    		}
+	    
+	    	if(window.location.href.indexOf('page') > -1 )
+	    		{
+	    		window.location.replace("1?sortField=name&sortDir=asc&cityid="+$(this).val());
+	    		}
+	    	else{
+	    	window.location.replace("page/1?sortField=name&sortDir=asc&cityid="+$(this).val());
+	    	}
+	    	  /* http.get("page/"+$('#pageSelected').val()+"?sortField=name&sortDir=asc&cityid="+$(this).val(), function(err, get) {
+				  if(err) {
+				    console.log(err);
+				  } else {
+				   // console.log(get);
+					document.getElementById("hcityid").value = $('#citylist').val();
+				    myJson=JSON.parse(get);
+				    $.each(myJson, function (index, value) {
+				    	$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
+				    	//$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
+				    	
+				    	}); 
+				   
+				    
+				    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
+				  } 
+	     });*/
+	    	
+	    	
+	    	$('#citylistslot option:not(:first)').remove();
+	    	
+	    	
+	   
+	    /*	for(var i=0 ; i < myJson.length ; i++)
+	    		{
+	    		var s=myJson[i];
+	    		 console.log(s.ralleydaywiseSlot.length);
+	    		console.log(s.ralleydaywiseSlot);
+	    		console.log(s.city_id == $(this).val()); 
+	    		
+	    		/*  for(var j=0;j < s.ralleydaywiseSlot.length;j++)
+	    			{
+	    			var t=s.ralleydaywiseSlot;
+	    		if(s.city_id == $(this).val())
+	    			{
+	    			console.log(t[j].day_date);
+	    			var d=t[j];
+	    			console.log(d);
+	    			
+	    			var date=d.day_date;
+	    			var time=d.time_of_reporting;
+	    			console.log(date+" "+time+":00.0");
+	    			var rep=date+" "+time+":00.0";
+                  console.log(j);
+                	 $("#citylistslot").append('<option value="'+rep+'">'+rep+'<option>');
+                	 $('#citylistslot option').filter(function(){
+                	        return ($(this).val()=="" && $(this).text()=="");
+                	    }).remove();
+	                      
+	                  
+	                }
+	    			}  
+	    		
+	    		}*/
+	    	
+	    	
+	    	
+	    	
+	    });
+	    
+	    
+	});
+});
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
+
+
+function getAge(DOB,calculate) {
+    var today = new Date(calculate);
+    var birthDate = new Date(DOB);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age = age - 1;
+    }
+
+console.log(age);
+    return age;
+}
+
+window.onload = function() {
+
+	var hminpercentage=document.getElementById("hminpercentage");
+	console.log(hminpercentage.value);
+	var hintake=document.getElementById("hintake");
+	if(hminpercentage.value != '' || hintake.value !='')
+		{
+		
+		document.getElementById('intake').value = hintake.value;
+		document.getElementById('minPercentage').value = hminpercentage.value;
+		
+ 		
+		}
+
+
+	
+	
+};
+
+
+
+</script> 
+
+</body>
+</html>

@@ -3,6 +3,7 @@ package com.cdac.iafralley.services;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.data.domain.Page;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
@@ -44,6 +45,10 @@ public interface RalleyCandidateDetailsService {
 	public Map<String, List<Object>> getralleyStateandCities(String rallyid);
 
 	public List<String> getDuplicateValidation(String string, String string2, String string3);
+
+	public Page<RalleyCandidateDetails> findPaginated(int pageNo, int pageSize, String sortField, String sortDir,Long id);
+
+	public List<RalleyCandidateDetails> getintakebaseFilteredData(int intake, int passPercentage, Long cityid);
 	
 	
 	

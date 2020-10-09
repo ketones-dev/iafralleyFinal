@@ -3,6 +3,9 @@ package com.cdac.iafralley.Dao;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -16,12 +19,12 @@ import com.cdac.iafralley.entity.RalleyCandidateDetails;
 public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidateDetails, Long> {
 
 	@Transactional
-	@Query("select r from RalleyCandidateDetails r where r.emailid= :email and r.rally_id= :rallyid")
-	public RalleyCandidateDetails findByEmailidAndRallyid(@Param("email")String email,@Param("rallyid")String rallyid);
+	@Query(nativeQuery=true,value="select * from candidate_details where emailid= :email and rally_id= :rallyid")
+	public RalleyCandidateDetails findByEmailidAndRallyid(@Param("email")String email,@Param("rallyid")Long rallyid);
 	
 	@Transactional
-	@Query("select r from RalleyCandidateDetails r where r.aadhar_details= :aadhar and r.rally_id= :rallyid")
-	public RalleyCandidateDetails findByAadhar_details(@Param("aadhar")String aadhar_details,@Param("rallyid")String rallyid);
+	@Query(nativeQuery=true,value="select * from candidate_details  where aadhar_details= :aadhar and rally_id= :rallyid")
+	public RalleyCandidateDetails findByAadhar_details(@Param("aadhar")String aadhar_details,@Param("rallyid")Long rallyid);
 	
 	@Transactional
 	@Query(nativeQuery = true, value="select max(right(ralley_regid,5)) from candidate_details where opt_state=:optstateid and opt_city=:optcityid")
@@ -30,6 +33,12 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	
 	@Query("select count(r) from RalleyCandidateDetails r where r.opt_city = :cityid")
 	public Long RegisteredCandidateCount(@Param("cityid") Long cityid);
+	
+	
+	@Query(value = "SELECT r FROM RalleyCandidateDetails r   WHERE r.opt_city = :cityid ",
+		       countQuery = "SELECT count(r) FROM RalleyCandidateDetails r  WHERE r.opt_city = :cityid")
+		      
+	public Page<RalleyCandidateDetails> findByCityid(@Param("cityid")Long cityid,Pageable pageable);
 
 	
 	@Query(nativeQuery = true,value ="select count(datetime_reporting) from candidate_details where datetime_reporting= :day_date")
@@ -57,6 +66,9 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Modifying(clearAutomatically = true)
 	@Query(nativeQuery = true, value="update rally_applicant_allocation_mapping set admit_card_path =:name where applicant_id= :id and applicant_email=:emailid")
 	public void updatePath(@Param("name")String name,@Param("id") Long id, @Param("emailid")String emailid);
+
+	@Query(value="select * from candidate_details where opt_city=:cityid and passed_exam_percentage >= :per order by applicant_id asc LIMIT :intake",nativeQuery = true)
+	public List<RalleyCandidateDetails> getintakebaseFilteredData(@Param("intake")int intake,@Param("per") Integer passPercentage,@Param("cityid") Long cityid);
 	
 
 }

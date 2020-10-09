@@ -11,8 +11,11 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +40,7 @@ import com.cdac.iafralley.entity.RalleyDaywiseSlotDetails;
 import com.cdac.iafralley.entity.RalleyDetails;
 import com.cdac.iafralley.entity.RallySlotMaster;
 import com.cdac.iafralley.services.RalleyCandidateDetailsService;
+import com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl;
 import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.user.RalleyDetailsDTO;
 import com.cdac.iafralley.util.RalleyIdGenrator;
@@ -54,7 +58,7 @@ public class AdminController {
 	
 	private final SimpleDateFormat DATE_TIME_FORMAT = new SimpleDateFormat("hh:mm:ss");
 	
-	
+	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 	
 	
 	private java.util.Date parseTimestamp(String timestamp) {
@@ -206,12 +210,83 @@ public class AdminController {
 	 
 	 
 	 @GetMapping("/ShowRegisteredStudentDataForAllocation")
-	 public ModelAndView ShowRegisteredStudentDataForAllocation()
+	 public String ShowRegisteredStudentDataForAllocation(Model m)
 	 {
-		 ModelAndView m= new ModelAndView("RegisteredStudentDataForAllocation");
-		 List<RalleyCandidateDetails> rd=candidateService.findAll();
-		 m.addObject("studentdata", rd);
-		 return m;
+		// ModelAndView m= new ModelAndView("RegisteredStudentDataForAllocation");
+		 
+		// List<RalleyCandidateDetails> rd=candidateService.findAll();
+		m.addAttribute("cityid", (long)0);
+		return findPaginated(1, "name", "asc",(long) 0, m);
+		
+		
+		
+	 }
+	 
+	 @GetMapping("/getralleyallotCitiesOnSelect/{cityid}/{pageNo}")
+	 public String ShowRegisteredStudentDataForAllocationCityWise(Model m,@PathVariable (value = "cityid") Long cityid,@PathVariable (value = "pageNo") int pageNo)
+	 {
+		// ModelAndView m= new ModelAndView("RegisteredStudentDataForAllocation");
+		 
+		// List<RalleyCandidateDetails> rd=candidateService.findAll();
+		// m.addAttribute("cityid", cityid);
+		 
+		return findPaginated(pageNo, "name", "asc",cityid, m);
+		
+		
+		
+	 }
+	 
+	 
+	 @GetMapping("/page/{pageNo}")
+		public String findPaginated(@PathVariable (value = "pageNo") int pageNo, 
+				@RequestParam("sortField") String sortField,
+				@RequestParam("sortDir") String sortDir,@RequestParam("cityid") Long cityid,
+				Model model) {
+			int pageSize = 200;
+			Page<RalleyCandidateDetails> page= null;
+			logger.info("cityid value="+cityid);
+			if (cityid != 0) {
+			 page = candidateService.findPaginated(pageNo, pageSize, sortField, sortDir,cityid);}
+			else {
+				 page = candidateService.findPaginated(pageNo, pageSize, sortField, sortDir,(long) 0);
+				 }
+			List<RalleyCandidateDetails> listEmployees = page.getContent();
+			logger.info(""+listEmployees.size());
+			
+			model.addAttribute("currentPage", pageNo);
+			model.addAttribute("totalPages", page.getTotalPages());
+			model.addAttribute("totalItems", page.getTotalElements());
+			
+			
+			model.addAttribute("sortField", sortField);
+			model.addAttribute("sortDir", sortDir);
+			model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
+		//	List<RalleyDetails> entityList= rdservice.findDistinctCity_id();
+			
+		//	model.addAttribute("cities",entityList);
+			
+			model.addAttribute("cityid", cityid);
+			model.addAttribute("studentdata", listEmployees);
+			return "RegisteredStudentDataForAllocation";
+		}
+	 
+	 @GetMapping("/getFilteredData/{intake}/{minpercentage}/{cityid}")
+	 public String getFilteredData(Model model,@PathVariable (value = "intake") int intake,@PathVariable (value = "minpercentage") int passPercentage,@PathVariable (value = "cityid") Long cityid)
+	 {
+		
+		 logger.info("intake count to fileter:"+intake+" for min percentage:"+passPercentage+" city:"+cityid);
+		 //getlist of intake wise filtered data
+		 List<RalleyCandidateDetails> studentdata=candidateService.getintakebaseFilteredData(intake,passPercentage,cityid);
+//		/*
+//		 * for(RalleyCandidateDetails s: studentdata) {
+//		 * System.out.println(s.toString()); }
+//		 */
+		// System.out.println(m.getAttribute("totalItems"));
+		 model.addAttribute("cityid", cityid);
+		 model.addAttribute("intake", intake);
+		 model.addAttribute("minpercentage",passPercentage);
+		 model.addAttribute("studentdata", studentdata);
+		 return "TempRegisteredStudentDataForAllocation";
 	 }
 	 
 	 
@@ -266,6 +341,8 @@ public class AdminController {
 		   
 		    return new ResponseEntity<List<RalleyDetails>>(entityList, HttpStatus.OK);
 		}
+	 
+	
 	 
 	 @RequestMapping(value="/getralleyallotCitiesSlotDetails", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody

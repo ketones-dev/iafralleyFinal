@@ -303,6 +303,12 @@ List<Long> intList = citiesid.stream()
 		}
 		
 	}
+	
+	public List<RalleyCandidateDetails> getCandidateDataOnBasisOfCity(Long cityid)
+	{
+		return null;
+		
+	}
 
 	public void findDataForEmailAllocationMapping(Long rallyid, Long slotid) {
 		// TODO Auto-generated method stub

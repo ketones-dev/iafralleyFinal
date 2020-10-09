@@ -115,7 +115,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        writer.getDirectContentUnder().addImage(waterMarkImage,
                     400, 0, 0, 460, 100, 100);
        
-       Rectangle rect= new Rectangle(577,825,18,15); // you can resize rectangle 
+       Rectangle rect= new Rectangle(577,800,18,10); // you can resize rectangle 
        rect.enableBorderSide(1);
        rect.enableBorderSide(2);
        rect.enableBorderSide(4);
@@ -165,7 +165,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        
        URL fontURL = RegisterdCandidatePDFReport.class.getResource("/images/arialbd.ttf");
        FontFactory.register(fontURL.toString(), "test_font");
-       Font Arialfont = FontFactory.getFont("test_fon");
+       Font Arialfont = FontFactory.getFont("test_font");
       Arialfont.setStyle(Font.BOLD);
       Arialfont.setStyle(Font.UNDERLINE);
       Arialfont.setSize(15);
@@ -175,7 +175,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
        
        heading.setAlignment(Element.ALIGN_CENTER);
        
-       Paragraph Rheading=new Paragraph ("IAF RECRUITMENT RALLY "+rd.getCity_name(),Arialfont);
+       Paragraph Rheading=new Paragraph (rd.getRalley_details()+" - "+rd.getCity_name(),Arialfont);
        Rheading.setAlignment(Element.ALIGN_CENTER);
        Rheading.setSpacingBefore(10f);
        
@@ -327,7 +327,7 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      
 		   //List base Admit card
 		      List CDetails=new List(List.ORDERED,List.NUMERICAL);
-		      CDetails.setIndentationLeft(10);
+		      CDetails.setIndentationLeft(70);
 		     Font Df=new Font();
 		     Df.setStyle(Font.BOLD);
 		    
@@ -400,19 +400,19 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		      CDtable.setWidthPercentage(100f);
 			   CDtable.addCell(CDtableCell);
 			 //  CDtable.addCell(imageCell);
-			   CDtable.setSpacingBefore(18f);
+			   CDtable.setSpacingBefore(10f);
 			   CDtable.setSpacingAfter(10f);
 			   
 		      
 		      document.add(CDtable);
-		      document.add(imgdata);
+		   //   document.add(imgdata);
 		    
 		      
 		      Paragraph Instheading = new Paragraph("IMPORTANT INSTRUCTIONS FOR CANDIDATES",Arialfont);
 		       
 		       
 		      Instheading.setAlignment(Element.ALIGN_CENTER);
-		      Instheading.setSpacingAfter(15f);
+		      Instheading.setSpacingAfter(10f);
 		      
 		       
 		       document.add(Instheading);
@@ -429,9 +429,10 @@ public static void createPDF(RalleyCandidateDetails candidate,RalleyDetails rd,R
 		       ordered.add(new ListItem("Provisional Admit Card"));
 		       ordered.add(new ListItem("Domicile Certificate"));
 		       ordered.add(new ListItem("Mark sheets & Pass Certificate of Intermediate or equivalent"));
-		       ordered.add(new ListItem("Pass Certificate of Martric"));
+		       ordered.add(new ListItem("Pass Certificate of Matric"));
 		       ordered.add(new ListItem("Valid Photo ID"));
 		       ordered.add(new ListItem("NCC / SOAFP / Service Certificate, if applicable "));
+		       ordered.add(new ListItem("Seven Recent Coloured Passport Size Photographs"));
 		       
 		       document.add(ordered);
 		       Font note=new Font();

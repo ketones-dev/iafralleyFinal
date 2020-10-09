@@ -19,6 +19,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionSystemException;
 import org.springframework.transaction.annotation.Transactional;
@@ -106,30 +110,30 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		logger.info("before genrating id checking registring emailid and aadhar is already present in DB or not...");
 		try {
 		logger.info(candidate.getEmailid().toLowerCase().toString());
+		RalleyDetails ForeignIdValue1=ralleyDetailsRepo.findByRalley_cust_id(candidate.getRally_id());
 		String cemailid=candidate.getEmailid().toLowerCase();
-		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(cemailid,candidate.getRally_id());
-		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),candidate.getRally_id());
+		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(cemailid,ForeignIdValue1.getRalley_id());
+		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(candidate.getAadhar_details(),ForeignIdValue1.getRalley_id());
 		//RalleyCandidateDetails result3=ralleyCandidateDetailsRepo.findByContact_no(candidate.getContactno(), candidate.getRally_id());
-				if(result != null && result2 != null )
-				{
-					
-					throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
-				}
-				if(result != null && result2 != null )
-				{
-					
-					throw new CandidateDuplicateEntry("Registration with given details is already done.Cannot register with same  details.");
-				}
-				if(result != null )
-				{
-					
-					throw new CandidateDuplicateEntry("emailid:"+candidate.getEmailid()+" is already registered.Cannot register with same details.");
-				}
-				if(result2 != null)
-				{
-					
-					throw new CandidateDuplicateEntry("Aadhar No:"+candidate.getAadhar_details()+" is already registered.Cannot register with same details.");
-				}
+		if (result != null && result2 != null) {
+
+			throw new CandidateDuplicateEntry(
+					"Registration with given details is already done.Cannot register with same  details.");
+		}	
+		
+		if (result != null) {
+
+				throw new CandidateDuplicateEntry("emailid:" + candidate.getEmailid()
+						+ " is already registered.Cannot register with same details.");
+			}
+			if (result2 != null) {
+
+				throw new CandidateDuplicateEntry("Aadhar No:" + candidate.getAadhar_details()
+						+ " is already registered.Cannot register with same details.");
+			}
+			
+			
+				
 		}
 		catch (Exception e){
 			
@@ -629,26 +633,49 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 	public List<String> getDuplicateValidation(String email, String aadhar, String id) {
 		// TODO Auto-generated method stub
 		List<String> ls=new ArrayList<String>();
-		RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(email,id);
-		RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(aadhar,id);
-		if(result !=null && result2 !=null)
-		{
-			ls.add("both");
-			return ls;
-		}
-		else if(result != null)
-		{
-			ls.add("email");
-			return ls;
-		}
-		else if(result2 !=null)
-		{
-			ls.add("aadhar");
-			return ls;
-		}
-		
-		ls.add("");
+		//RalleyCandidateDetails result=ralleyCandidateDetailsRepo.findByEmailidAndRallyid(email,id);
+		//RalleyCandidateDetails result2=ralleyCandidateDetailsRepo.findByAadhar_details(aadhar,id);
+//		if(result !=null && result2 !=null)
+//		{
+//			ls.add("both");
+//			return ls;
+//		}
+//		else if(result != null)
+//		{
+//			ls.add("email");
+//			return ls;
+//		}
+//		else if(result2 !=null)
+//		{
+//			ls.add("aadhar");
+//			return ls;
+//		}
+//		
+//		ls.add("");
 		return ls;
+	}
+
+	@Override
+	public Page<RalleyCandidateDetails> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection,Long cityid) {
+		Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
+			Sort.by(sortField).descending();
+		
+		Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort);
+		if(cityid != 0) {
+			logger.info(""+cityid);
+		return this.ralleyCandidateDetailsRepo.findByCityid(cityid,pageable);
+		}
+		else
+		{
+		return this.ralleyCandidateDetailsRepo.findAll(pageable);
+		}
+	}
+
+	@Override
+	public List<RalleyCandidateDetails> getintakebaseFilteredData(int intake, int passPercentage, Long cityid) {
+		// TODO Auto-generated method stub
+		return ralleyCandidateDetailsRepo.getintakebaseFilteredData(intake,passPercentage,cityid);
+		
 	}
 	
 	
