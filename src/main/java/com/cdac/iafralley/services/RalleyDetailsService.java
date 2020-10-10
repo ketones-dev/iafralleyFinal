@@ -26,6 +26,7 @@ import com.cdac.iafralley.Dao.RalleyDetailsDAO;
 import com.cdac.iafralley.Dao.RalleyGroupDAO;
 import com.cdac.iafralley.Dao.RalleyStateDAO;
 import com.cdac.iafralley.Dao.RallySlotMasterDao;
+import com.cdac.iafralley.Dao.TempAllocation;
 import com.cdac.iafralley.entity.RalleyCandidateDetails;
 import com.cdac.iafralley.entity.RalleyCities;
 import com.cdac.iafralley.entity.RalleyDaywiseSlotDetails;
@@ -34,6 +35,7 @@ import com.cdac.iafralley.entity.RalleyGroup_trade;
 import com.cdac.iafralley.entity.RalleyStates;
 import com.cdac.iafralley.entity.RallyApplicantAllocation;
 import com.cdac.iafralley.entity.RallySlotMaster;
+import com.cdac.iafralley.entity.TempRallyApplicantAllocation;
 import com.cdac.iafralley.mailConfig.MailingService;
 import com.cdac.iafralley.util.RegisterdCandidatePDFReport;
 
@@ -82,6 +84,9 @@ public class RalleyDetailsService {
 	
 	@Autowired
 	private RalleyCandidateDetailsDAO rcdDao;
+	
+	@Autowired
+	private TempAllocation tempAllocationDao;
 	
 	
 	public String DateFormatter(Date d)
@@ -358,6 +363,40 @@ List<Long> intList = citiesid.stream()
 			e.getMessage();
 			e.printStackTrace();
 		}
+		
+	}
+
+	public void addDuplicateEntry(List<Long> list) {
+		// TODO Auto-generated method stub
+		List<RalleyCandidateDetails> r=rcdDao.getDetailsOnBasisOfIds(list);
+		
+		//insert in temp allocation table
+		for(RalleyCandidateDetails details : r)
+		{
+			TempRallyApplicantAllocation tempdata=new TempRallyApplicantAllocation(details.getId(),details.getRallyDetails().getRalley_id(), details.getEmailid(),details.getRalleyregistrationNo(),true,true,false,(long)1);
+			tempAllocationDao.save(tempdata);
+			rcdDao.updateDuplicateFlag(details.getId());
+		}
+		
+		//update in candidate details table
+		
+		
+	}
+	
+	public void addOnlyRejectEntry(List<Long> list) {
+		// TODO Auto-generated method stub
+		List<RalleyCandidateDetails> r=rcdDao.getDetailsOnBasisOfIds(list);
+		
+		//insert in temp allocation table
+		for(RalleyCandidateDetails details : r)
+		{
+			TempRallyApplicantAllocation tempdata=new TempRallyApplicantAllocation(details.getId(),details.getRallyDetails().getRalley_id(), details.getEmailid(),details.getRalleyregistrationNo(),false,true,false,(long)1);
+			tempAllocationDao.save(tempdata);
+			rcdDao.updateDuplicateFlag(details.getId());
+		}
+		
+		//update in candidate details table
+		
 		
 	}
 

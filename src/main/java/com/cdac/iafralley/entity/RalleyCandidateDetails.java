@@ -164,6 +164,9 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="is_admit_card_genrated")
 	private Boolean isAdminCardGenrated=false;
 	
+	@Column(name="is_rejected")
+	private Boolean isRejected=false;
+	
 	@Column(name="is_email_send")
 	private Boolean isEmailSend=false;
 	
@@ -630,6 +633,19 @@ public class RalleyCandidateDetails implements Serializable {
 
 	public void setNationality(String nationality) {
 		this.nationality = nationality;
+	}
+
+
+	
+
+	public Boolean getIsRejected() {
+		return isRejected;
+	}
+
+
+
+	public void setIsRejected(Boolean isRejected) {
+		this.isRejected = isRejected;
 	}
 
 

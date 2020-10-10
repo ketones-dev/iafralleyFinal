@@ -6,6 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name="temp_rally_allocation")
@@ -42,6 +46,11 @@ public class TempRallyApplicantAllocation {
 	
 	@Column(name="tmp_slot_id")
 	private Long tmpslot_id;
+	
+	@Column(name = "record_tracking")
+	@Temporal(TemporalType.TIMESTAMP)
+	@CreationTimestamp
+	private java.util.Date record_tracking;
 
 	public TempRallyApplicantAllocation()
 	{
@@ -50,11 +59,10 @@ public class TempRallyApplicantAllocation {
 
 	
 
-	public TempRallyApplicantAllocation(Long allocation_id, Long applicant_id, Long rally_id, String emailid,
+	public TempRallyApplicantAllocation( Long applicant_id, Long rally_id, String emailid,
 			String candidate_registration_no, Boolean isDuplicate, Boolean isRejected, Boolean isFinalAllocated,
 			Long tmpslot_id) {
 		super();
-		this.allocation_id = allocation_id;
 		this.applicant_id = applicant_id;
 		this.rally_id = rally_id;
 		this.emailid = emailid;
@@ -171,6 +179,19 @@ public class TempRallyApplicantAllocation {
 
 	public void setTmpslot_id(Long tmpslot_id) {
 		this.tmpslot_id = tmpslot_id;
+	}
+
+
+	
+
+	public java.util.Date getRecord_tracking() {
+		return record_tracking;
+	}
+
+
+
+	public void setRecord_tracking(java.util.Date record_tracking) {
+		this.record_tracking = record_tracking;
 	}
 
 

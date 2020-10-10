@@ -172,13 +172,23 @@ transition: all 0.3s;
 				<tr>
         <td><input type="reset" id="resetb" value="Reset">
      	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Fetch Filtered Values" onclick="intakeAllocate()"/>
+     	 
       	
       
       </td></tr>
+      <tr>
+      <td>
+       <input type="button" id="duplicate"  name="duplicate" value="Mark Check as Duplicate" />
+     	   <input type="button" id="reject" name="reject" value="Mark Check as reject" />
+     	   <input type="button" id="tempAllocate" name="tempAllocate" value="Temperory Allocate" />
+      </td>
+      </tr>
+      
         </form>
     </tbody>
         
     </tbody></table>
+   
  <div th:if = "${totalPages > 1}">
 <div class="row">
          <div class = "col-3">
@@ -427,6 +437,8 @@ let  s=document.getElementById("paginationJumpLink");
 console.log(s.href);
 
 }
+
+
 
 function intakeAllocate()
 {
@@ -877,47 +889,186 @@ $(document).ready(function() {
 	        $("#example").DataTable().columns.adjust().draw();
 	        
 	     });
-	   
-	     // Handle click on "Select all" control
-	     $('#example-select-all').on('click', function(){
-	        // Check/uncheck all checkboxes in the table
-	        var rows = table.rows({ 'search': 'applied' }).nodes();
-	        
-	        $('input[type="checkbox"]', rows).prop('checked', this.checked);
-	     });
+	     
+	     
+	     //
+	  // Updates "Select all" control in a data table
+	  //
+	  function updateDataTableSelectAllCtrl(table){
+	     var $table             = table.table().node();
+	     var $chkbox_all        = $('tbody input[type="checkbox"]', $table);
+	     var $chkbox_checked    = $('tbody input[type="checkbox"]:checked', $table);
+	     var chkbox_select_all  = $('thead input[name="select_all"]', $table).get(0);
 
-	     // Handle click on checkbox to set state of "Select all" control
-	     $('#example tbody').on('change', 'input[type="checkbox"]', function(){
-	        // If checkbox is not checked
-	        if(!this.checked){
-	           var el = $('#example-select-all').get(0);
-	           // If "Select all" control is checked and has 'indeterminate' property
-	           if(el && el.checked && ('indeterminate' in el)){
-	              // Set visual state of "Select all" control 
-	              // as 'indeterminate'
-	              el.indeterminate = true;
-	           }
+	     // If none of the checkboxes are checked
+	     if($chkbox_checked.length === 0){
+	        chkbox_select_all.checked = false;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = false;
 	        }
-	     });
-	    
-	    
-	     $('#example tbody').on('click', 'input[type="checkbox"]', function(){
+
+	     // If all of the checkboxes are checked
+	     } else if ($chkbox_checked.length === $chkbox_all.length){
+	        chkbox_select_all.checked = true;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = false;
+	        }
+
+	     // If some of the checkboxes are checked
+	     } else {
+	        chkbox_select_all.checked = true;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = true;
+	        }
+	     }
+	  }
+	     
+	   
+	 
+	     
+	    var  rows_selected= [];
+	     $('#example tbody').on('click', 'input[type="checkbox"]', function(e){
 	    	 
 	    	
-	    		
+	    	/*  var duplicateorrejectsids_arr = [];
 	    		
 	    	    	 if(this.checked==true)
 	    	    	 {
 	    	    	 console.log( table.row( this.closest('tr') ).data() );
 	    	    	 }
 	    	    	
-	    			 
+	    			  */
 	    		 
-	    		 
+	    	 var $row = $(this).closest('tr');
+
+	         // Get row data
+	         var data = table.row($row).data();
+			
+	         // Get row ID
+	         var rowId = data[1];
+
+	         // Determine whether row ID is in the list of selected row IDs 
+	         var index = $.inArray(rowId, rows_selected);
+
+	         // If checkbox is checked and row ID is not in list of selected row IDs
+	         if(this.checked && index === -1){
+	            rows_selected.push(rowId);
+
+	         // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+	         } else if (!this.checked && index !== -1){
+	            rows_selected.splice(index, 1);
+	         }
+
+	         if(this.checked){
+	            $row.addClass('selected');
+	         } else {
+	            $row.removeClass('selected');
+	         }
+	   	console.log(rows_selected);
+	         // Update state of "Select all" control
+	         updateDataTableSelectAllCtrl(table);
+
+	         // Prevent click event from propagating to parent
+	         e.stopPropagation(); 
 	    	
 	    	 
 	    	 
 	     });
+	     
+	  // Handle click on table cells with checkboxes
+	     $('#example').on('click', 'tbody td, thead th:first-child', function(e){
+	        $(this).parent().find('input[type="checkbox"]').trigger('click');
+	     });
+
+	     // Handle click on "Select all" control
+	     $('thead input[name="select_all"]', table.table().container()).on('click', function(e){
+	        if(this.checked){
+	           $('#example tbody input[type="checkbox"]:not(:checked)').trigger('click');
+	        } else {
+	           $('#example tbody input[type="checkbox"]:checked').trigger('click');
+	        }
+
+	        // Prevent click event from propagating to parent
+	        e.stopPropagation();
+	     });
+
+	     // Handle table draw event
+	     table.on('draw', function(){
+	        // Update state of "Select all" control
+	        updateDataTableSelectAllCtrl(table);
+	     });
+	     
+	     
+	     $('#duplicate').on('click',function(e){
+	    	 
+	    	 
+	 	     	console.log(rows_selected);
+	 	     	
+	 	     	 http.post("/Dashboard/updateDuplicate",{ ids : rows_selected }, function(err, post) {
+	 	     		if(err)
+	 	     			{
+	 	     			console.log(err);
+	 	     			}
+	 	     		else
+	 	     			{
+	 	     			console.log(post);
+	 	     			
+	 	     			
+	 	     			}
+	 	     	 });
+	 	     	table.rows('.selected').remove().draw( false );
+	 	     rows_selected=[];
+	    	 
+	     });
+	     
+	     
+	     $('#reject').on('click',function(e){
+	    	 
+	    	 
+	 	     	console.log(rows_selected);
+	 	     	 http.post("/Dashboard/rejected",{ ids : rows_selected }, function(err, post) {
+		 	     		if(err)
+		 	     			{
+		 	     			console.log(err);
+		 	     			}
+		 	     		else
+		 	     			{
+		 	     			console.log(post);
+		 	     			
+		 	     			}
+		 	     	 });
+	 	     	 
+	 	     	table.rows('.selected').remove().draw( false );
+	 	     	rows_selected=[];
+	    	 
+	     });
+	     
+	     $('#tempAllocate').on('click',function(e){
+	    	 
+	    	 
+	 	     	console.log(rows_selected);
+	 	     	 http.post("/Dashboard/tempAllocation",{ ids : rows_selected }, function(err, post) {
+		 	     		if(err)
+		 	     			{
+		 	     			console.log(err);
+		 	     			}
+		 	     		else
+		 	     			{
+		 	     			console.log(post);
+		 	     			
+		 	     			}
+		 	     	 });
+	 	     	 
+	 	     	table.rows('.selected').remove().draw( false );
+	 	     	rows_selected=[];
+	    	 
+	     });
+	     
+	     
+	     
+	     
+	     
+	     
 	     
 	    
 	    $('#citylist').on('change', function(){
@@ -1026,7 +1177,7 @@ function getAge(DOB,calculate) {
         age = age - 1;
     }
 
-console.log(age);
+//console.log(age);
     return age;
 }
 

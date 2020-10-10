@@ -289,6 +289,45 @@ public class AdminController {
 		 return "TempRegisteredStudentDataForAllocation";
 	 }
 	 
+	 @RequestMapping(value="/updateDuplicate", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<String> updateDuplicate(@RequestBody Map<String, List<Long>>  ids) {
+			
+			ids.get("ids").stream().forEach(System.out::println);
+			//insert in tempallocation and update in candidate details
+			rdservice.addDuplicateEntry(ids.get("ids"));
+		   String entityList = "Updated";
+			//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+		    
+		   
+		    return new ResponseEntity<String>(entityList, HttpStatus.OK);
+		}
+	 
+	 @RequestMapping(value="/rejected", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<String> updateRejected(@RequestBody Map<String, List<Long>>  ids) {
+			
+			ids.get("ids").stream().forEach(System.out::println);
+			rdservice.addOnlyRejectEntry(ids.get("ids"));
+		   String entityList = "rejected";
+			//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+		    
+		   
+		    return new ResponseEntity<String>(entityList, HttpStatus.OK);
+		}
+	 
+	 
+	 @RequestMapping(value="/tempAllocation", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<String> tempAllocation(@RequestBody Map<String, List<Long>>  ids) {
+			
+			ids.get("ids").stream().forEach(System.out::println);
+		   String entityList = "temp allocation successful";
+			//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+		    
+		   
+		    return new ResponseEntity<String>(entityList, HttpStatus.OK);
+		}
 	 
 	 @GetMapping("/ShowAdmitCardCreationPage")
 	 public ModelAndView ShowAdmitCardCreationPage()
