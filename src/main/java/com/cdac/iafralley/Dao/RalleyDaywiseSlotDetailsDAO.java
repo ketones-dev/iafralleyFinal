@@ -18,6 +18,8 @@ public interface RalleyDaywiseSlotDetailsDAO extends JpaRepository<RalleyDaywise
 	
 	@Query(nativeQuery = true,value="select * from ralley_daywise_details where ralley_id in (:ralleyids)")
 	public List<RalleyDaywiseSlotDetails> getSlot(@Param("ralleyids")List<Long> ralleyids);
+	
+	
 
 	
 	

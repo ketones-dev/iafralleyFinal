@@ -74,7 +74,7 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	public List<RalleyCandidateDetails> getDetailsOnBasisOfIds(@Param("list")List<Long> list);
 
 	@Modifying(clearAutomatically = true)
-	@Query(value="update candiate_details set is_rejected=true where applicant_id=:id",nativeQuery = true)
+	@Query(value="update candidate_details set is_rejected=true where applicant_id=:id",nativeQuery = true)
 	public void updateDuplicateFlag(@Param("id")Long id);
 	
 

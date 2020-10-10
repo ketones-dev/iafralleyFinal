@@ -400,5 +400,21 @@ List<Long> intList = citiesid.stream()
 		
 	}
 
+	public List<RallySlotMaster> getSlotOnBasisOfId(Long cityid) {
+		// TODO Auto-generated method stub
+		List<Long> rds=ralleydetaildao.getRalleyByCitySelected(cityid);
+		List<RallySlotMaster> slotdetails=new ArrayList<RallySlotMaster>();
+		if(!rds.isEmpty())
+		{
+			slotdetails=rally_slot_master.getSlotOnSingleId(rds.get(0));
+		}
+		return slotdetails;
+	}
+
+	public RallySlotMaster getSlotdata(Long cityid, Long slotid) {
+		// TODO Auto-generated method stub
+		return rally_slot_master.getSlotDetails(slotid);
+	}
+
 	
 }

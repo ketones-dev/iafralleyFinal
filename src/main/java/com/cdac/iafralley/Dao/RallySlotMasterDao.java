@@ -14,5 +14,13 @@ public interface  RallySlotMasterDao extends JpaRepository<RallySlotMaster,Long>
 	
 	@Query(nativeQuery = true,value="select * from rally_slot_master where rally_id= :ralleyid order by rally_date asc")
 	public List<RallySlotMaster> findSlotOnBasisOfRallyIdFromSlotMaster(@Param("ralleyid")Long rallyid);
+	
+	@Query(nativeQuery = true,value="select * from rally_slot_master where rally_id=:ralleyid")
+	public List<RallySlotMaster> getSlotOnSingleId(@Param("ralleyid")Long ralleyid);
+
+	@Query(nativeQuery = true,value="select * from rally_slot_master where slot_id=:slotid")
+	public RallySlotMaster getSlotDetails(@Param("slotid")Long slotid);
+
+	
 
 }

@@ -38,7 +38,7 @@ public class RallySlotMaster {
 	@Column(name="rally_report_time")
 	private String rallyReportTime;
 	
-	@Column(name="registration_count")
+	@Column(name="intake_count")
 	private Long rallyCount;
 	
 	@Column(name="allocation_count")

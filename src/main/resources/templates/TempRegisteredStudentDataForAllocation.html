@@ -70,6 +70,15 @@ visibility: hidden;
 transition: all 0.3s;
 }
 
+.basecolor{
+background-color : white;
+}
+.redcolor
+{
+background:#9b0c0c;
+color:white;
+
+}
 </style>
 </head>
 <body>
@@ -96,7 +105,7 @@ transition: all 0.3s;
 <!--  <button id="btn-show-all-children" type="button">Expand All</button>
 <button id="btn-hide-all-children" type="button">Collapse All</button>-->
 
-<table cellspacing="5" cellpadding="5" border="0">
+<table id="filterform" cellspacing="5" cellpadding="5" border="0">
         <tbody>
         <form action="#">
         <tr class="notShow">
@@ -137,7 +146,22 @@ transition: all 0.3s;
         <!-- <th:block th:if="${cities} == null"> -->
         <tr><td>City</td><td><select id="citylist" name="city" ><option value="0">--Select City--</option></select></td></tr>
        <!--  </th:block> -->
-        <tr><td>Slot</td><td><select id="citylistslot" ><option value="">--Select Slot--</option></select></td></tr>
+        <tr><td>Slot</td><td>
+        <select id="citylistslot" >
+        <option value="">--Select Slot--</option>
+        <th:block th:each="slots : ${slotdetails}">
+        <option th:value="${slots.slotId}" th:text="${slots.slotName}"></option>
+        </th:block>
+        </select>
+        </td>
+        <td>
+        
+        </td>
+        
+        </tr>
+        
+        
+        
         <input type="hidden" id="hcityid" name="cityid" th:with="cityid=${cityid}" th:value="${cityid}" />
          <input type="hidden" id="hintake" name="intake" th:with="intake=${intake}" th:value="${intake}" />
           <input type="hidden" id="hminpercentage" name="minpercentage" th:with="minpercentage=${minpercentage}" th:value="${minpercentage}" />
@@ -147,9 +171,10 @@ transition: all 0.3s;
 		
 		
 		
-       <td><span>Total Count:<span id="totalcount"></span>    </span></td>
-       <td><span>Filtered Count:<span id="count"></span></span></td>
+       <td><span>Intake Count:<span id="intakeCount"></span>    </span></td>
+       <td><span>Allocation Count:<span id="allocatedCount"></span></span></td>
         </tr>
+       <tr><td>Allocate Value:</td><td><input type='number' id='counttoAllocate'></td></tr>
 				<tr>
 				<td>Find Duplicate By:</td>
 					<td>
@@ -293,10 +318,10 @@ transition: all 0.3s;
 
 </thead>
 <tbody>
-
-<tr th:each="student : ${studentdata}">
+<th:block th:each="student : ${studentdata}">
+<tr class="tablerow" th:classappend="${student.isRejected == false} ? basecolor : redcolor">
 <td></td>
- <td th:text="${student.id}"> </td> 
+ <td th:text="${student.id}" class="ids"> </td> 
 <td th:text="${student.ralleyregistrationNo}"> </td>
 <td th:text="${student.name}"> </td>
 <td th:text="${student.fathername}"> </td>
@@ -316,11 +341,14 @@ transition: all 0.3s;
 <td th:text="${student.state}"> </td>
 <td th:text="${student.city}"> </td>
 <td th:text="${student.subscirbed_on}"> </td>
-<td><input type="checkbox" name="id[]" value=""></td>
-
+<td>
+<th:block th:if="${student.isRejected == false}">
+<input type="checkbox" name="id[]" value="">
+</th:block>
+</td>
 </tr>
 
-
+</th:block>
 
 
 </tbody>
@@ -529,7 +557,7 @@ $(document).ready(function() {
 	    	        var max = parseInt( $('#max').val(), 10 );
 	    	        var calculate= $('#dob').val();
 	    	        var age =  getAge(data[5],calculate);
-	    	        console.log(age);
+	    	       // console.log(age);
 	    	        
 	    	        var minPercentage = parseInt( $('#minPercentage').val(), 10 );
 	    	        var maxPercentage = parseInt( $('#maxPercentage').val(), 10 );
@@ -824,11 +852,7 @@ $(document).ready(function() {
 	    	}
 	} );  
 
-	$('#citylistslot').on('change', function () {
-		
-	       table.columns(7).search( this.value).draw();
-	       c();
-	} ); 
+	
 	    
 	$('#resetb').on('click',function(){
 		console.log("in");
@@ -1047,7 +1071,23 @@ $(document).ready(function() {
 	    	 
 	    	 
 	 	     	console.log(rows_selected);
-	 	     	 http.post("/Dashboard/tempAllocation",{ ids : rows_selected }, function(err, post) {
+	 	     	var data_toAllocate = [];
+	 	     	var data = table.rows().data();
+	 	     	var cityid=document.getElementById('hcityid').value;
+	 	     	var e = document.getElementById("citylistslot");
+	 	     	var value = e.options[e.selectedIndex].value;
+		    	var citySelectSlot=value;
+		    	console.log(citySelectSlot);
+	 	     	console.log(data[0][1]);
+	 	     	for(let i=0;i<150;i++)
+	 	     		{
+	 	     		data_toAllocate.push(data[i][1]);
+	 	     		}
+	 	     	console.log(data_toAllocate);
+	 	     	
+	 	     	var object={ ids : data_toAllocate,slotid : citySelectSlot,cityid: cityid  }
+	 	     	
+	 	     	 http.post("/Dashboard/tempAllocation",object, function(err, post) {
 		 	     		if(err)
 		 	     			{
 		 	     			console.log(err);
@@ -1056,9 +1096,15 @@ $(document).ready(function() {
 		 	     			{
 		 	     			console.log(post);
 		 	     			
+		 	     			
 		 	     			}
 		 	     	 });
 	 	     	 
+	 	     	
+	 	     	 
+	 	     		
+	 	     		
+ 	     		
 	 	     	table.rows('.selected').remove().draw( false );
 	 	     	rows_selected=[];
 	    	 
@@ -1089,65 +1135,41 @@ $(document).ready(function() {
 	    	else{
 	    	window.location.replace("page/1?sortField=name&sortDir=asc&cityid="+$(this).val());
 	    	}
-	    	  /* http.get("page/"+$('#pageSelected').val()+"?sortField=name&sortDir=asc&cityid="+$(this).val(), function(err, get) {
-				  if(err) {
-				    console.log(err);
-				  } else {
-				   // console.log(get);
-					document.getElementById("hcityid").value = $('#citylist').val();
-				    myJson=JSON.parse(get);
-				    $.each(myJson, function (index, value) {
-				    	$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
-				    	//$("#citylist").append('<option value="'+value.city_id+'">'+value.city_name+'</option>');
-				    	
-				    	}); 
-				   
-				    
-				    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
-				  } 
-	     });*/
 	    	
-	    	
-	    	$('#citylistslot option:not(:first)').remove();
-	    	
-	    	
-	   
-	    /*	for(var i=0 ; i < myJson.length ; i++)
-	    		{
-	    		var s=myJson[i];
-	    		 console.log(s.ralleydaywiseSlot.length);
-	    		console.log(s.ralleydaywiseSlot);
-	    		console.log(s.city_id == $(this).val()); 
-	    		
-	    		/*  for(var j=0;j < s.ralleydaywiseSlot.length;j++)
-	    			{
-	    			var t=s.ralleydaywiseSlot;
-	    		if(s.city_id == $(this).val())
-	    			{
-	    			console.log(t[j].day_date);
-	    			var d=t[j];
-	    			console.log(d);
-	    			
-	    			var date=d.day_date;
-	    			var time=d.time_of_reporting;
-	    			console.log(date+" "+time+":00.0");
-	    			var rep=date+" "+time+":00.0";
-                  console.log(j);
-                	 $("#citylistslot").append('<option value="'+rep+'">'+rep+'<option>');
-                	 $('#citylistslot option').filter(function(){
-                	        return ($(this).val()=="" && $(this).text()=="");
-                	    }).remove();
-	                      
-	                  
-	                }
-	    			}  
-	    		
-	    		}*/
-	    	
-	    	
+	    	//$('#citylistslot option:not(:first)').remove();
 	    	
 	    	
 	    });
+	    
+	    $('#citylistslot').on('change', function () {
+			
+	    	var cityid=document.getElementById('hcityid').value;
+	    	var citySelectSlot=$(this).val();
+	    	
+	    	//console.log(citySelectSlot +' '+cityid);
+	    	//call get additional data
+	    	 http.post("/Dashboard/getSlotData",{ cid : cityid, slotid : citySelectSlot}, function(err, post) {
+	 	     		if(err)
+	 	     			{
+	 	     			console.log(err);
+	 	     			}
+	 	     		else
+	 	     			{
+	 	     			console.log(post);
+	 	     			var data=JSON.parse(post);
+	 	     			document.getElementById("intakeCount").innerHTML = data.rallyCount;
+	 	     			document.getElementById("allocatedCount").innerHTML= data.allocationCount;
+	 	     			
+	 	     			console.log("Intake count:"+data.rallyCount+" TotalAllocated:"+data.allocationCount);
+	 	     			
+	 	     			
+	 	     			}
+	 	     	 });
+		     
+		} ); 
+	    
+	    
+	    
 	    
 	    
 	});
