@@ -108,45 +108,12 @@ color:white;
 <table id="filterform" cellspacing="5" cellpadding="5" border="0">
         <tbody>
         <form action="#">
-        <tr class="notShow">
-		<td>Date of Calculation: </td>
-		<td><input type="date" id="dob" name="dob"></td>
-        <td><span>Total Count:<span id="totalcount"></span>    </span></td>
-       <td><span>Filtered Count:<span id="count"></span></span></td>
-        </tr>
-        
-        <tr class="notShow">
-         <td>Minimum Age:</td>
-        <td><input type="text" id="min" name="min"></td>
-            <td>Maximum Age:</td>
-            <td><input type="text" id="max" name="max"></td>
-        
-        </tr>
-         <tr >
-         <td>Minimum Percentage:</td>
-        <td><input type="text" id="minPercentage" name="minPercentage"></td>
-            <td class="notShow">Maximum Percentage:</td>
-            <td class="notShow"><input type="text" id="maxPercentage" name="maxPercentage"></td> 
-        
-        </tr> 
-         <tr>
-         <td>Intake:</td>
-        <td><input type="text" id="intake" name="intake"></td>
-           
-        </tr>
-        <!-- <th:block th:if="${cities} != null">
-         <tr><td>City</td><td><select id="citylist" name="city" >
-         <option  value="">--Select City--</option>
-         <th:block th:each="i: ${cities}">
-         <option th:value="${i.city_id}" th:text="${i.city_name}"></option>
+       
          
-         </th:block>
-         </select></td></tr>
-        </th:block> -->
-        <!-- <th:block th:if="${cities} == null"> -->
+       
+      
         <tr><td>City</td><td><select id="citylist" name="city" ><option value="0">--Select City--</option></select></td></tr>
-       <!--  </th:block> -->
-        <tr><td>Slot</td><td>
+         <tr><td>Slot</td><td>
         <select id="citylistslot" >
         <option value="">--Select Slot--</option>
         <th:block th:each="slots : ${slotdetails}">
@@ -159,22 +126,18 @@ color:white;
         </td>
         
         </tr>
+      
+       
         
         
         
         <input type="hidden" id="hcityid" name="cityid" th:with="cityid=${cityid}" th:value="${cityid}" />
+        <input type="hidden" id="hslotid" name="slotid" th:with="slotid=${slotid}" th:value="${slotid}" />
          <input type="hidden" id="hintake" name="intake" th:with="intake=${intake}" th:value="${intake}" />
           <input type="hidden" id="hminpercentage" name="minpercentage" th:with="minpercentage=${minpercentage}" th:value="${minpercentage}" />
         
-          <tr>
-		
-		
-		
-		
-       <td><span>Intake Count:<span id="intakeCount"></span>    </span></td>
-       <td><span>Allocation Count:<span id="allocatedCount"></span></span></td>
-        </tr>
-       <tr><td>Allocate Value:</td><td><input type='number' id='counttoAllocate'></td></tr>
+         
+       <tr class="notShow"><td>Allocate Value:</td><td><input type='number' id='counttoAllocate'></td></tr>
 				<tr>
 				<td>Find Duplicate By:</td>
 					<td>
@@ -194,20 +157,8 @@ color:white;
 					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> aadhar</label></td>
 					
 				</tr>
-				<tr>
-        <td><input type="reset" id="resetb" value="Reset">
-     	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Fetch Filtered Values" onclick="intakeAllocate()"/>
-     	 
-      	
-      
-      </td></tr>
-      <tr>
-      <td>
-       <input type="button" id="duplicate"  name="duplicate" value="Mark Check as Duplicate" />
-     	   <input type="button" id="reject" name="reject" value="Mark Check as reject" />
-     	   <input type="button" id="tempAllocate" name="tempAllocate" value="Temperory Allocate" />
-      </td>
-      </tr>
+				
+    
       
         </form>
     </tbody>
@@ -342,7 +293,7 @@ color:white;
 <td th:text="${student.city}"> </td>
 <td th:text="${student.subscirbed_on}"> </td>
 <td>
-<th:block th:if="${student.isRejected == false}">
+<th:block th:if="${student.isRejected == true}">
 <input type="checkbox" name="id[]" value="">
 </th:block>
 </td>
@@ -836,10 +787,10 @@ $(document).ready(function() {
 	    	 document.getElementById('count').innerText = table.page.info().recordsDisplay;
 	    	 } 
 
-	    	  document.getElementById('totalcount').innerText = table.page.info().recordsTotal;
+	    	//  document.getElementById('totalcount').innerText = table.page.info().recordsTotal;
 	   
 	    
-	     $('#citylist').on('change', function () {
+	   /*   $('#citylist').on('change', function () {
 	    	console.log(this.value === "");
 	    	if(this.value === "")
 	    	{
@@ -850,7 +801,7 @@ $(document).ready(function() {
 	        table.columns(9).search($(this).find("option:selected").text()).draw();
 	        c();
 	    	}
-	} );  
+	} );   */
 
 	
 	    
@@ -895,11 +846,16 @@ $(document).ready(function() {
 				    	});
 				    
 				    let cityidhidden=document.getElementById('hcityid').value;
+				    let cityslotidhidden=document.getElementById('hslotid').value;
 				    console.log(cityidhidden);
 				    	if(cityidhidden != '')
 				    		{
 				    		$("#citylist").val(cityidhidden);
 				    		}
+				    	if(cityslotidhidden != '')
+			    		{
+			    		$("#citylistslot").val(cityslotidhidden);
+			    		}
 				    console.log(myJson[0].ralleydaywiseSlot[0].day_date);
 				  }
 	     });
@@ -1122,23 +1078,12 @@ $(document).ready(function() {
 	    $('#citylist').on('change', function(){
 	    	console.log($(this).val());
 	    	console.log(myJson.length);
-	    	//$('#hcityid').val($(this).val());
-	    	var getallLinks=document.getElementsByClassName('page-link');
-	    	for(let i=0;i< getallLinks.length;i++)
-	    		{
-	    		console.log(getallLinks[i].href);
-	    		getallLinks[i].href = getallLinks[i].href+$(this).val();
-	    		}
-	    
-	    	if(window.location.href.indexOf('page') > -1 )
-	    		{
-	    		window.location.replace("1?sortField=name&sortDir=asc&cityid="+$(this).val());
-	    		}
-	    	else{
-	    	window.location.replace("page/1?sortField=name&sortDir=asc&cityid="+$(this).val());
-	    	}
+	    	var e = document.getElementById("citylist");
+ 	     	var value = e.options[e.selectedIndex].value;
+ 	     	window.location.href="/Dashboard/AllocateCityData/"+value;
+		     
 	    	
-	    	//$('#citylistslot option:not(:first)').remove();
+	    	
 	    	
 	    	
 	    });
@@ -1148,25 +1093,8 @@ $(document).ready(function() {
 	    	var cityid=document.getElementById('hcityid').value;
 	    	var citySelectSlot=$(this).val();
 	    	
-	    	//console.log(citySelectSlot +' '+cityid);
-	    	//call get additional data
-	    	 http.post("/Dashboard/getSlotData",{ cid : cityid, slotid : citySelectSlot}, function(err, post) {
-	 	     		if(err)
-	 	     			{
-	 	     			console.log(err);
-	 	     			}
-	 	     		else
-	 	     			{
-	 	     			console.log(post);
-	 	     			var data=JSON.parse(post);
-	 	     			document.getElementById("intakeCount").innerHTML = data[0];
-	 	     			document.getElementById("allocatedCount").innerHTML= data[1];
-	 	     			
-	 	     			console.log("Intake count:"+data.rallyCount+" TotalAllocated:"+data.allocationCount);
-	 	     			
-	 	     			
-	 	     			}
-	 	     	 });
+	    	window.location.href="/Dashboard/AllocateCityDataWithSlot/"+cityid+"/"+citySelectSlot;
+	    	
 		     
 		} ); 
 	    

@@ -54,6 +54,11 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Modifying(clearAutomatically = true)
 	@Query(nativeQuery = true, value="update candidate_details set is_admit_card_genrated=:b,is_allocated=:c where applicant_id= :id")
 	public void updateAllocationStatus(boolean b, boolean c,Long id);
+	
+	@Modifying(clearAutomatically = true)
+	@Query(nativeQuery = true, value="update candidate_details set is_temp_allocated=true where applicant_id= :id")
+	public void updateTempAllocationStatus(Long id);
+	
 
 	@Modifying(clearAutomatically = true)
 	@Query(nativeQuery = true, value="update candidate_details set is_email_send =:b,allot_venu_details=:venue,datetime_reporting=(select rally_date from rally_slot_master where slot_id=:Slotid) where applicant_id= :id")

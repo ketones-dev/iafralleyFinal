@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -43,6 +45,7 @@ import com.cdac.iafralley.services.RalleyCandidateDetailsService;
 import com.cdac.iafralley.services.RalleyCandidateDetailsServiceImpl;
 import com.cdac.iafralley.services.RalleyDetailsService;
 import com.cdac.iafralley.user.RalleyDetailsDTO;
+import com.cdac.iafralley.user.TempAllocationDto;
 import com.cdac.iafralley.util.RalleyIdGenrator;
 
 @Controller
@@ -277,17 +280,40 @@ public class AdminController {
 		 logger.info("intake count to fileter:"+intake+" for min percentage:"+passPercentage+" city:"+cityid);
 		 //getlist of intake wise filtered data
 		 List<RalleyCandidateDetails> studentdata=candidateService.getintakebaseFilteredData(intake,passPercentage,cityid);
+		 List<RallySlotMaster> slotdetails =rdservice.getSlotOnBasisOfId(cityid);
+		List<RalleyCandidateDetails> result = studentdata.stream().filter(sd -> (sd.getIsRejected() == false )).filter(sd -> sd.getIsTempAllocated() == false).collect(Collectors.toList());
 //		/*
 //		 * for(RalleyCandidateDetails s: studentdata) {
 //		 * System.out.println(s.toString()); }
 //		 */
 		// System.out.println(m.getAttribute("totalItems"));
 		 model.addAttribute("cityid", cityid);
+		 model.addAttribute("slotdetails", slotdetails);
 		 model.addAttribute("intake", intake);
 		 model.addAttribute("minpercentage",passPercentage);
-		 model.addAttribute("studentdata", studentdata);
+		 model.addAttribute("studentdata", result);
 		 return "TempRegisteredStudentDataForAllocation";
 	 }
+	 
+	 
+	 @RequestMapping(value="/getSlotData", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+		public  ResponseEntity<List<Long>> getSlotData(@RequestBody Map<String, Long>  ids) {
+			
+			
+			
+		 RallySlotMaster details= rdservice.getSlotdata(ids.get("cid"),ids.get("slotid"));
+		 Long allocatedSlotCount=rdservice.getAlreadyAllocatedSlotCount(ids.get("slotid"));
+			//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+		 List<Long> data=new ArrayList<Long>();
+		 data.add(details.getRallyCount());
+		 data.add(allocatedSlotCount);
+		 
+		    
+		   
+		    return new ResponseEntity<List<Long>>(data, HttpStatus.OK);
+		}
+	 
 	 
 	 @RequestMapping(value="/updateDuplicate", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody
@@ -319,11 +345,15 @@ public class AdminController {
 	 
 	 @RequestMapping(value="/tempAllocation", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
 		@ResponseBody
-		public  ResponseEntity<String> tempAllocation(@RequestBody Map<String, List<Long>>  ids) {
-			
-			ids.get("ids").stream().forEach(System.out::println);
+		public  ResponseEntity<String> tempAllocation(@RequestBody TempAllocationDto object) {
+			System.out.println(object.getCityid()+":"+object.getSlotid());
+			//log size of allocation list
+			logger.info("For Slot id:"+object.getSlotid()+"and cityid:"+object.getCityid()+" Total Allocation count:"+object.getIds().size());
+			//save data of allocation id in temp allocation table with candidate details updation
+		 rdservice.allocateTempData(object.getCityid(),object.getSlotid(),object.getIds());
+		//send response to reload the page
 		   String entityList = "temp allocation successful";
-			//List<RalleyCities> entityList=Collections.EMPTY_LIST;
+			
 		    
 		   
 		    return new ResponseEntity<String>(entityList, HttpStatus.OK);
@@ -335,6 +365,60 @@ public class AdminController {
 		 ModelAndView m= new ModelAndView("AdmitCard");
 		 //get distinct rally id details from slot 
 		 //m.addObject("studentdata", rd);
+		 return m;
+	 }
+	 
+	 @GetMapping("/showDuplicateData")
+	 public ModelAndView showDuplicateData()
+	 {
+		 ModelAndView m= new ModelAndView("ShowDuplicateStudentData");
+		 //get distinct rally id details from slot 
+		 //m.addObject("studentdata", rd);
+		 
+		 return m;
+	 }
+	 
+	 @GetMapping("/DuplicateData/{cityid}")
+	 public String getDuplicateData(Model model,@PathVariable (value = "cityid") Long cityid)
+	 {
+		 List<RalleyCandidateDetails> result = rdservice.getDuplicateCandidateDetails(cityid);
+		 model.addAttribute("cityid", cityid);
+		
+		 model.addAttribute("studentdata", result);
+		 return "ShowDuplicateStudentData";
+	 }
+	 
+	 @GetMapping("/AllocateCityData/{cityid}")
+	 public String AllocateCityData(Model model,@PathVariable (value = "cityid") Long cityid)
+	 {
+		 List<RalleyCandidateDetails> result = rdservice.getAllocateCandidateDetails(cityid);
+		 List<RallySlotMaster> slotdetails =rdservice.getSlotOnBasisOfId(cityid);
+		 model.addAttribute("cityid", cityid);
+		model.addAttribute("slotdetails", slotdetails);
+		 model.addAttribute("studentdata", result);
+		 return "AllocatedStudentData";
+	 }
+	 
+	 @GetMapping("/AllocateCityDataWithSlot/{cityid}/{slotid}")
+	 public String AllocateCityDataWithSlot(Model model,@PathVariable (value = "cityid") Long cityid,@PathVariable (value = "slotid") Long slotid)
+	 {
+		 List<RalleyCandidateDetails> result = rdservice.getAllocateCandidateDetailsWithSlot(cityid,slotid);
+		 List<RallySlotMaster> slotdetails =rdservice.getSlotOnBasisOfId(cityid);
+		 model.addAttribute("cityid", cityid);
+		 model.addAttribute("slotid",slotid);
+		model.addAttribute("slotdetails", slotdetails);
+		 model.addAttribute("studentdata", result);
+		 return "AllocatedStudentData";
+	 }
+	 
+	 
+	 @GetMapping("/showAlreadyAllocatedData")
+	 public ModelAndView showAlreadyAllocatedData()
+	 {
+		 ModelAndView m= new ModelAndView("AllocatedStudentData");
+		 //get distinct rally id details from slot 
+		 //m.addObject("studentdata", rd);
+		 
 		 return m;
 	 }
 	 

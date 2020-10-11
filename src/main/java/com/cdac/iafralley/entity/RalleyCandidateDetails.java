@@ -167,6 +167,9 @@ public class RalleyCandidateDetails implements Serializable {
 	@Column(name="is_rejected")
 	private Boolean isRejected=false;
 	
+	@Column(name="is_temp_allocated")
+	private Boolean isTempAllocated=false;
+	
 	@Column(name="is_email_send")
 	private Boolean isEmailSend=false;
 	
@@ -646,6 +649,19 @@ public class RalleyCandidateDetails implements Serializable {
 
 	public void setIsRejected(Boolean isRejected) {
 		this.isRejected = isRejected;
+	}
+
+
+	
+
+	public Boolean getIsTempAllocated() {
+		return isTempAllocated;
+	}
+
+
+
+	public void setIsTempAllocated(Boolean isTempAllocated) {
+		this.isTempAllocated = isTempAllocated;
 	}
 
 

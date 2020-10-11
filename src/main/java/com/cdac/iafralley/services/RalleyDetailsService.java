@@ -416,5 +416,49 @@ List<Long> intList = citiesid.stream()
 		return rally_slot_master.getSlotDetails(slotid);
 	}
 
+	public void allocateTempData(Long cityid, Long slotid, List<Long> applicantids) {
+		// TODO Auto-generated method stub
+		for(Long id: applicantids)
+		{
+			RalleyCandidateDetails cd=rcdDao.getOne(id);
+			if(cd !=null)
+			{
+				TempRallyApplicantAllocation data= new TempRallyApplicantAllocation(cd.getId(), cd.getRallyDetails().getRalley_id(), cd.getEmailid(),
+						cd.getRalleyregistrationNo(), false, false, false, slotid);
+				tempAllocationDao.save(data);
+				//update in candidate table is_temp_allocation status
+				rcdDao.updateTempAllocationStatus(cd.getId());			}
+		}
+		
+	}
+
+	public Long getAlreadyAllocatedSlotCount(Long long1) {
+		// TODO Auto-generated method stub
+		return tempAllocationDao.getAllotedSlotCount(long1);
+	}
+
+	public List<RalleyCandidateDetails> getDuplicateCandidateDetails(Long cityid) {
+		// TODO Auto-generated method stub
+		List<RalleyDetails> rd=ralleydetaildao.getRalleyDetailsByCitySelected(cityid);
+		List<Long> result=tempAllocationDao.getApplicantIds(rd.get(0).getRalley_id());
+		List<RalleyCandidateDetails> data=rcdDao.getDetailsOnBasisOfIds(result);
+		return data;
+	}
+
+	public List<RalleyCandidateDetails> getAllocateCandidateDetails(Long cityid) {
+		// TODO Auto-generated method stub
+		List<RalleyDetails> rd=ralleydetaildao.getRalleyDetailsByCitySelected(cityid);
+		List<Long> result=tempAllocationDao.getAllAllocatedApplicantIds(rd.get(0).getRalley_id());
+		List<RalleyCandidateDetails> data=rcdDao.getDetailsOnBasisOfIds(result);
+		return data;
+	}
+
+	public List<RalleyCandidateDetails> getAllocateCandidateDetailsWithSlot(Long cityid, Long slotid) {
+		List<RalleyDetails> rd=ralleydetaildao.getRalleyDetailsByCitySelected(cityid);
+		List<Long> result=tempAllocationDao.getAllAllocatedApplicantIdsWithSlot(rd.get(0).getRalley_id(),slotid);
+		List<RalleyCandidateDetails> data=rcdDao.getDetailsOnBasisOfIds(result);
+		return data;
+	}
+
 	
 }
