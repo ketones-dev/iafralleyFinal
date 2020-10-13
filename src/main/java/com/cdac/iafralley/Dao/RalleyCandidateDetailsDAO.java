@@ -36,8 +36,7 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	
 	
 	@Query(value = "SELECT r FROM RalleyCandidateDetails r   WHERE r.opt_city = :cityid ",
-		       countQuery = "SELECT count(r) FROM RalleyCandidateDetails r  WHERE r.opt_city = :cityid")
-		      
+		       countQuery = "SELECT count(r) FROM RalleyCandidateDetails r  WHERE r.opt_city = :cityid")	      
 	public Page<RalleyCandidateDetails> findByCityid(@Param("cityid")Long cityid,Pageable pageable);
 
 	
@@ -72,15 +71,49 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 	@Query(nativeQuery = true, value="update rally_applicant_allocation_mapping set admit_card_path =:name where applicant_id= :id and applicant_email=:emailid")
 	public void updatePath(@Param("name")String name,@Param("id") Long id, @Param("emailid")String emailid);
 
-	@Query(value="select * from candidate_details where opt_city=:cityid and passed_exam_percentage >= :per order by applicant_id asc LIMIT :intake",nativeQuery = true)
+	@Query(value="select * from candidate_details where opt_city=:cityid and passed_exam_percentage >= :per and is_temp_allocated=false and is_rejected=false  order by passed_exam_percentage asc LIMIT :intake",nativeQuery = true)
 	public List<RalleyCandidateDetails> getintakebaseFilteredData(@Param("intake")int intake,@Param("per") Integer passPercentage,@Param("cityid") Long cityid);
 
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedD(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name,emailid) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedEmailAndOther(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY emailid) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedEmailOnly(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name,email) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedEmailAndMobile(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedMobile(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name,emailid,aadhar_details) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedaadharandOther(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name,aadhar_details) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedAadharandName(Long value);
+	
+	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY emailid,aadhar_details) AS count FROM candidate_details where opt_city=?1) tableWithCount"
+			 +" WHERE tableWithCount.count > 1",nativeQuery = true)
+	public List<RalleyCandidateDetails> getDuplicatesAsPerCheckedEmailAndaadhar(Long cityid);
+	
 	@Query(value="select * from candidate_details where applicant_id in (:list)",nativeQuery = true)
 	public List<RalleyCandidateDetails> getDetailsOnBasisOfIds(@Param("list")List<Long> list);
 
 	@Modifying(clearAutomatically = true)
 	@Query(value="update candidate_details set is_rejected=true where applicant_id=:id",nativeQuery = true)
 	public void updateDuplicateFlag(@Param("id")Long id);
+
+	
 	
 
 }

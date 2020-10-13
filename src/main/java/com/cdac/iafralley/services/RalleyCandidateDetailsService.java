@@ -49,6 +49,8 @@ public interface RalleyCandidateDetailsService {
 	public Page<RalleyCandidateDetails> findPaginated(int pageNo, int pageSize, String sortField, String sortDir,Long id);
 
 	public List<RalleyCandidateDetails> getintakebaseFilteredData(int intake, int passPercentage, Long cityid);
+
+	public  List<RalleyCandidateDetails> getDuplicationList(String value,Long city_id);
 	
 	
 	

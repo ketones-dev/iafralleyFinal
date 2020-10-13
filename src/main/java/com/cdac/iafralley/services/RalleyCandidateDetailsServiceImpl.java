@@ -677,6 +677,37 @@ public class RalleyCandidateDetailsServiceImpl implements RalleyCandidateDetails
 		return ralleyCandidateDetailsRepo.getintakebaseFilteredData(intake,passPercentage,cityid);
 		
 	}
+
+	@Override
+	public  List<RalleyCandidateDetails> getDuplicationList(String value,Long cityid) {
+		// TODO Auto-generated method stub
+		logger.info(value);
+		List<RalleyCandidateDetails> result=new ArrayList<RalleyCandidateDetails>();
+		switch(value)
+		{
+		case "name&father":
+		result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedD(cityid);
+		break;
+		case "name&father&email":
+			result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedEmailAndOther(cityid);
+		break;
+		case "name&father&email&mobile":
+			result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedEmailAndMobile(cityid);
+		break;
+		case "name&father&email&aadhar":
+			result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedaadharandOther(cityid);
+		break;
+		case "email":
+			result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedEmailOnly(cityid);
+		break;
+		case "name&father&aadhar":
+			result= ralleyCandidateDetailsRepo.getDuplicatesAsPerCheckedAadharandName(cityid);
+		break;
+		
+		}
+		
+		return result;
+	}
 	
 	
 	

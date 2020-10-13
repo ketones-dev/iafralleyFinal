@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="ISO-8859-1">
 <meta name="_csrf" th:content="${_csrf.token}" />
 <meta name="_csrf_header" th:content="${_csrf.headerName}" />
@@ -39,20 +41,60 @@
     border: solid 1px #5A4181;
 }
 
+.wrapper {
+    
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+   
+    transition: all 0.1s;
+}
+
+.content
+{
+transition: all 0.3s;
+}
+.basecolor{
+background-color : white;
+}
+.redcolor
+{
+background:#9b0c0c;
+color:white;
+
+}
 </style>
 </head>
 <body>
-
+<div class="wrapper">
 <div th:replace="fragments/header.html :: header"> </div>
 
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+<main role="main" class="ml-sm-auto col-lg-10 pt-3 px-4 content" id="content">
+
+ <button type="button" id="sidebarCollapse" class="btn btn-info">
+              
+                <span>Toggle Sidebar</span>
+            </button>
+            
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
 </div>
 
 
 
-<div class="container">
+<div class="container" id="removecontainer">
 <!-- display section -->
 <!--  <button id="btn-show-all-children" type="button">Expand All</button>
 <button id="btn-hide-all-children" type="button">Collapse All</button>-->
@@ -60,11 +102,11 @@
 <table cellspacing="5" cellpadding="5" border="0">
         <tbody>
         <form action="#">
-        <tr>
+       <!--  <tr>
 		<td>Date of Calculation: </td>
 		<td><input type="date" id="dob" name="dob"></td>
-       <!--  <td><span>Total Count:<span id="totalcount"></span>    </span></td>
-       <td><span>Filtered Count:<span id="count"></span></span></td>-->
+        <td><span>Total Count:<span id="totalcount"></span>    </span></td>
+       <td><span>Filtered Count:<span id="count"></span></span></td>
         </tr>
         
         <tr>
@@ -73,14 +115,14 @@
             <td>Maximum Age:</td>
             <td><input type="text" id="max" name="max"></td>
         
-        </tr>
+        </tr>-->
          <tr>
          <td>Minimum Percentage:</td>
         <td><input type="text" id="minPercentage" name="minPercentage"></td>
-            <td>Maximum Percentage:</td>
+           <!--  <td>Maximum Percentage:</td>
             <td><input type="text" id="maxPercentage" name="maxPercentage"></td>
-        
-        </tr>
+         -->
+        </tr> 
          <tr>
          <td>Intake:</td>
         <td><input type="text" id="intake" name="intake"></td>
@@ -98,11 +140,29 @@
         <!-- <th:block th:if="${cities} == null"> -->
         <tr><td>City</td><td><select id="citylist" name="city" ><option value="0">--Select City--</option></select></td></tr>
        <!--  </th:block> -->
-        <tr><td>Slot</td><td><select id="citylistslot" ><option value="">--Select Slot--</option></select></td></tr>
+       <!--  <tr><td>Slot</td><td><select id="citylistslot" ><option value="">--Select Slot--</option></select></td></tr> -->
         <input type="hidden" id="hcityid" name="cityid" th:with="cityid=${cityid}" th:value="${cityid}" />
+         <input type="hidden" id="hchecked" name="hchecked" th:with="checkedvalues=${checkedvalues}" th:value="${checkedvalues}" />
         
           <tr>
-		
+		<tr>
+				<td>Find Duplicate By:</td>
+					<td>
+					
+					<input type="checkbox" class="" id="maxTemp27">
+					<label class="form-check-label" style="margin: 0px 5px 0 0;">Name & Father Name</label>
+					
+					
+					<input type="checkbox" class="" id="byemailid">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> Email id
+					</label>
+					<!-- <input type="checkbox" class="" id="bydateofb">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> DOB
+					</label> -->
+					<input type="checkbox" class="" id="byaadhar">
+					<label class="form-check-label"  style="margin: 0px 5px 0 0;"> aadhar</label></td>
+					
+				</tr>
 		
 		
 		
@@ -113,7 +173,8 @@
         <tr>
         <td><input type="reset" id="resetb" value="Reset">
      	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Fetch Filtered Values" onclick="intakeAllocate()"/>
-      	
+      
+       <input type="button" id="duplicate"  name="duplicate" value="Mark Check as Duplicate" />
       
       </td></tr>
         </form>
@@ -196,7 +257,7 @@
 <thead style="display: table-row-group;">
 
 <th></th>
-<!-- <th>Id</th> -->
+<th>Id</th>
 <th>Rally Registration</th>
 <th>Candidate Name</th>
 <th>Father's Name</th>
@@ -204,28 +265,29 @@
 <th>DOB</th>
 <th class="none">Mobile No</th>
 <th class="none">time of reporting</th>
-<th>Opted State</th>
+<th class="none">Opted State</th>
 <th>Opted City</th>
 
 <th class="none">Married</th>
 <th class="none">Height</th>
-<th class="none">Passed Exam </th>
+<th >Passed Exam </th>
 <th class="none">Other Details</th>
-<th class="none">Passed Exam Percentage</th>
+<th>Passed Exam Percentage</th>
 <th class="none">English Exam Percentage</th>
 <th class="none">Candidate's State</th>
 <th class="none">Candidate's City</th>
 <th class="none">Subcribed On</th>
 
-
+<th><input name="select_all" value="1" id="example-select-all" type="checkbox" /></th>
 
 
 </thead>
 <tbody>
 
-<tr th:each="student : ${studentdata}">
+<th:block th:each="student : ${studentdata}">
+<tr class="tablerow" th:classappend="${student.isRejected == false} ? basecolor : redcolor">
 <td></td>
-<!-- <td th:text="${student.id}"> </td> -->
+ <td th:text="${student.id}"> </td>
 <td th:text="${student.ralleyregistrationNo}"> </td>
 <td th:text="${student.name}"> </td>
 <td th:text="${student.fathername}"> </td>
@@ -244,9 +306,13 @@
 <td th:text="${student.state}"> </td>
 <td th:text="${student.city}"> </td>
 <td th:text="${student.subscirbed_on}"> </td>
-
+<td>
+<th:block th:if="${student.isRejected == false}">
+<input type="checkbox" name="id[]" value="">
+</th:block>
+</td>
 </tr>
-
+</th:block>
 
 
 
@@ -255,7 +321,7 @@
 <tfoot style="display:table-header-group;">
 
 <th></th>
-<!-- <th>Id</th> -->
+ <th>Id</th> 
 <th><!-- EmailID --></th>
 <th><!-- Candidate Name --></th>
 <th><!-- Father's Name --></th>
@@ -263,18 +329,19 @@
 <th class="none">Mobile No</th>
 <th>Ralley Registration</th>
 <th class="none">time of reporting</th>
-<th>Opted State</th>
+<th class="none">Opted State</th>
 <th>Opted City</th>
 
 <th class="none">Married</th>
 <th class="none">Height</th>
-<th class="none">Passed Exam </th>
+<th >Passed Exam </th>
 <th class="none">Other Details</th>
-<th class="none">Passed Exam Percentage</th>
+<th >Passed Exam Percentage</th>
 <th class="none">English Exam Percentage</th>
 <th class="none">Candidate's State</th>
 <th class="none">Candidate's City</th>
 <th class="none">Subcribed On</th>
+<th></th>
 
 </tfoot>
 
@@ -337,7 +404,7 @@
 </div>
 
 </main>
-
+</div>
 <script type="text/javascript" th:src="@{/vendor/js/jquery-3.3.1.min.js}"></script>
 <script type="text/javascript" th:src="@{/vendor/js/popper.min.js}"></script>
 <script type="text/javascript" th:src="@{/vendor/js/bootstrap.min.js}"></script>
@@ -437,7 +504,7 @@ $(document).ready(function() {
 	    
 	    
 	    
-	    $.fn.dataTable.ext.search.push(
+	  /*   $.fn.dataTable.ext.search.push(
 	    	    function( settings, data, dataIndex ) {
 	    	        var min = parseInt( $('#min').val(), 10 );
 	    	        var max = parseInt( $('#max').val(), 10 );
@@ -456,13 +523,13 @@ $(document).ready(function() {
 	    	                ( isNaN( min ) && age <= max ) ||
 	    	                ( min <= age   && isNaN( max ) ) ||
 	    	                ( min <= age   && age <= max ) 
-	    	             ) /*|| 
+	    	             ) || 
 	    	             (
 	    	            		( isNaN( minPercentage ) && isNaN( maxPercentage ) ) ||
 	    	                    ( isNaN( minPercentage ) && candidatePercentage <= maxPercentage ) ||
 	    	                    ( minPercentage <= candidatePercentage   && isNaN( maxPercentage ) ) ||
 	    	                    ( minPercentage <= candidatePercentage   && candidatePercentage <= maxPercentage ) 
-	    	             )*/
+	    	             )
 	    	           )
 	    	        {
 	    	            return true;
@@ -503,9 +570,9 @@ $(document).ready(function() {
 	             else{
 	    	        table.draw();
 	    	        c();
-	    		 }
+	    		 } */
 	    		 
-	    		 $.fn.dataTable.ext.search.push(
+	    		/*  $.fn.dataTable.ext.search.push(
 	    		    	    function( settings, data, dataIndex ) {
 	    		    	      
 	    		    	        var minPercentage = parseInt( $('#minPercentage').val(), 10 );
@@ -514,12 +581,12 @@ $(document).ready(function() {
 	    		    	        console.log("minPercentage :"+minPercentage +" "+ "maxPercentage: "+maxPercentage);
 	    		    	        console.log("candidate percentage : "+candidatePercentage);
 	    		    	        
-	    		    	        if ( /*(
+	    		    	        if ( (
 	    		    	        		( isNaN( min ) && isNaN( max ) ) || 
 	    		    	                ( isNaN( min ) && age <= max ) ||
 	    		    	                ( min <= age   && isNaN( max ) ) ||
 	    		    	                ( min <= age   && age <= max ) 
-	    		    	             ) || */
+	    		    	             ) || 
 	    		    	             (
 	    		    	            		( isNaN( minPercentage ) && isNaN( maxPercentage ) ) ||
 	    		    	                    ( isNaN( minPercentage ) && candidatePercentage <= maxPercentage ) ||
@@ -539,7 +606,7 @@ $(document).ready(function() {
 	    		    	    }
 	    		    	);
 	    		 
-	    	    } );
+	    	    } ); */
 	    	 
 	    	  function c(){
 	    	// var total_row_count = table.Settings().RecordsTotal();
@@ -621,8 +688,266 @@ $(document).ready(function() {
 	     });
 	    
 	    
-	   
 	    
+	     $('#maxTemp27').on('change', function() {
+   		  if ($(this).is(':checked')) {
+   			 
+   			if ($(this).is(':checked') &&  $('#byemailid').is(':checked') && $('#byaadhar').is(':checked')) {
+    			 console.log("in email checked");
+    			 
+    			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email&aadhar"+"/"+$('#hcityid').val();
+    			  
+    		  }
+      		 else if ($(this).is(':checked') &&  $('#byemailid').is(':checked')) {
+     			 console.log("in email checked");
+     			 
+     			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email"+"/"+$('#hcityid').val();
+     			  
+     		  }
+      		else if ($(this).is(':checked')) {
+      			 console.log("in email checked");
+      			 
+      			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father"+"/"+$('#hcityid').val();
+      			  
+      		  }
+   		  }
+   		});
+   	 
+   	
+   	 $('#byemailid').on('change', function() {
+   		 console.log("in email checkr");
+   		 
+   		if ($(this).is(':checked') &&  $('#MaxTemp27').is(':checked') && $('#byaadhar').is(':checked')) {
+ 			 console.log("in email checked");
+ 			 
+ 			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email&aadhar"+"/"+$('#hcityid').val();
+ 			  
+ 		  }
+   		else if($(this).is(':checked') && $('#byaadhar').is(':checked')) {
+			 console.log("in email & aadhar checked"+$('#byaadhar').is(':checked'));
+			 
+			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email&aadhar"+"/"+$('#hcityid').val();
+			  
+		  }
+   		 else if ($(this).is(':checked') &&  $('#MaxTemp27').is(':checked')) {
+  			 console.log("in email checked");
+  			 
+  			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email"+"/"+$('#hcityid').val();
+  			  
+  		  }
+   		else if ($(this).is(':checked')) {
+   			 console.log("in email checked");
+   			 
+   			  window.location.href = "/Dashboard/getDuplicateList/"+"email"+"/"+$('#hcityid').val();
+   			  
+   		  }
+   	 
+   			  
+   			
+   		});
+   	 
+   	
+   	 
+   	 /* $('#bydateofb').on('change', function() {
+   		  if ($(this).is(':checked')) {
+   			  
+   			 
+   		}); */
+   	 
+   	 $('#byaadhar').on('change', function() {
+   		  if ($(this).is(':checked')) {
+   			
+   			if ($(this).is(':checked')  && $('#byemailid').is(':checked') && $('#maxTemp27').is(':checked')) {
+    			 console.log("in all checked");
+    			 
+    			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email&aadhar"+"/"+$('#hcityid').val();
+    			  
+    		  }
+      		 else if ($(this).is(':checked') && $('#maxTemp27').is(':checked')) {
+     			 console.log("in email checked");
+     			 
+     			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&aadhar"+"/"+$('#hcityid').val();
+     			  
+     		  }
+      		else if ($(this).is(':checked') && $('#byemailid').is(':checked')) {
+      			 console.log("in email checked");
+      			 
+      			  window.location.href = "/Dashboard/getDuplicateList/"+"email&aadhar"+"/"+$('#hcityid').val();
+      			  
+      		  }
+      		else if ($(this).is(':checked') ) {
+     			 console.log("in email checked");
+     			 
+     			 alert("Can't filter on Single aadhar value pair it another fields");
+     			  
+     		  }
+   		  }
+   		  else if(!$(this).is(':checked')){
+   			  console.log("ncheck");
+   			  
+   			if ($('#byemailid').is(':checked') && $('#maxTemp27').is(':checked')) {
+   			 console.log("in email checked");
+   			 
+   			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father&email"+"/"+$('#hcityid').val();
+   			  
+   		  }
+     		/*  else if ($('#MaxTemp27').is(':checked')) {
+    			 console.log("in email checked");
+    			 
+    			  window.location.href = "/Dashboard/getDuplicateList/"+"name&father"+"/"+$('#hcityid').val();
+    			  
+    		  }
+     		else if ($('#byemailid').is(':checked')) {
+     			 console.log("in email checked");
+     			 
+     			  window.location.href = "/Dashboard/getDuplicateList/"+"email"+"/"+$('#hcityid').val();
+     			  
+     		  } */
+   			  
+   		  }
+   			
+   			 
+   		});
+	    
+   	  $('#sidebarCollapse').on('click', function () {
+	         $('#sidebar').toggleClass('active');
+	         $('#content').toggleClass('col-lg-10');
+	         $('#content').toggleClass('content');
+	        $('#removecontainer').toggleClass('container');
+	        $("#thOptCity").toggleClass('none');
+	        $("#example").DataTable().columns.adjust().draw();
+	        
+	     });
+	   
+     //
+	  // Updates "Select all" control in a data table
+	  //
+	  function updateDataTableSelectAllCtrl(table){
+	     var $table             = table.table().node();
+	     var $chkbox_all        = $('tbody input[type="checkbox"]', $table);
+	     var $chkbox_checked    = $('tbody input[type="checkbox"]:checked', $table);
+	     var chkbox_select_all  = $('thead input[name="select_all"]', $table).get(0);
+
+	     // If none of the checkboxes are checked
+	     if($chkbox_checked.length === 0){
+	        chkbox_select_all.checked = false;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = false;
+	        }
+
+	     // If all of the checkboxes are checked
+	     } else if ($chkbox_checked.length === $chkbox_all.length){
+	        chkbox_select_all.checked = true;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = false;
+	        }
+
+	     // If some of the checkboxes are checked
+	     } else {
+	        chkbox_select_all.checked = true;
+	        if('indeterminate' in chkbox_select_all){
+	           chkbox_select_all.indeterminate = true;
+	        }
+	     }
+	  }
+	     
+	   
+	 
+	     
+	    var  rows_selected= [];
+	     $('#example tbody').on('click', 'input[type="checkbox"]', function(e){
+	    	 
+	    	
+	    	/*  var duplicateorrejectsids_arr = [];
+	    		
+	    	    	 if(this.checked==true)
+	    	    	 {
+	    	    	 console.log( table.row( this.closest('tr') ).data() );
+	    	    	 }
+	    	    	
+	    			  */
+	    		 
+	    	 var $row = $(this).closest('tr');
+
+	         // Get row data
+	         var data = table.row($row).data();
+			
+	         // Get row ID
+	         var rowId = data[1];
+
+	         // Determine whether row ID is in the list of selected row IDs 
+	         var index = $.inArray(rowId, rows_selected);
+
+	         // If checkbox is checked and row ID is not in list of selected row IDs
+	         if(this.checked && index === -1){
+	            rows_selected.push(rowId);
+
+	         // Otherwise, if checkbox is not checked and row ID is in list of selected row IDs
+	         } else if (!this.checked && index !== -1){
+	            rows_selected.splice(index, 1);
+	         }
+
+	         if(this.checked){
+	            $row.addClass('selected');
+	         } else {
+	            $row.removeClass('selected');
+	         }
+	   	console.log(rows_selected);
+	         // Update state of "Select all" control
+	         updateDataTableSelectAllCtrl(table);
+
+	         // Prevent click event from propagating to parent
+	         e.stopPropagation(); 
+	    	
+	    	 
+	    	 
+	     });
+	     
+	  // Handle click on table cells with checkboxes
+	     $('#example').on('click', 'tbody td, thead th:first-child', function(e){
+	        $(this).parent().find('input[type="checkbox"]').trigger('click');
+	     });
+
+	     // Handle click on "Select all" control
+	     $('thead input[name="select_all"]', table.table().container()).on('click', function(e){
+	        if(this.checked){
+	           $('#example tbody input[type="checkbox"]:not(:checked)').trigger('click');
+	        } else {
+	           $('#example tbody input[type="checkbox"]:checked').trigger('click');
+	        }
+
+	        // Prevent click event from propagating to parent
+	        e.stopPropagation();
+	     });
+
+	     // Handle table draw event
+	     table.on('draw', function(){
+	        // Update state of "Select all" control
+	        updateDataTableSelectAllCtrl(table);
+	     });
+	     
+	     
+	     $('#duplicate').on('click',function(e){
+	    	 
+	    	 
+	 	     	console.log(rows_selected);
+	 	     	
+	 	     	 http.post("/Dashboard/updateDuplicate",{ ids : rows_selected }, function(err, post) {
+	 	     		if(err)
+	 	     			{
+	 	     			console.log(err);
+	 	     			}
+	 	     		else
+	 	     			{
+	 	     			console.log(post);
+	 	     			
+	 	     			
+	 	     			}
+	 	     	 });
+	 	     	table.rows('.selected').remove().draw( false );
+	 	     rows_selected=[];
+	    	 
+	     });
 	    
 	    
 	    $('#citylist').on('change', function(){
@@ -737,7 +1062,28 @@ console.log(age);
 
 window.onload = function() {
 	
-
+var c=document.getElementById('hchecked').value;
+var arr=c.split('&');
+console.log(arr);
+console.log(c);
+for(var i=0;i<arr.length;i++)
+	{
+	if(arr[i] == "name")
+		{
+		document.getElementById("maxTemp27").checked = true;
+		}
+		
+	else if(arr[i] == "email"){
+		document.getElementById("byemailid").checked = true;
+		
+	}
+	
+	else if(arr[i] == "aadhar")
+	{document.getElementById("byaadhar").checked = true;}
+	
+	}
+	
+	
 	
 	
 };

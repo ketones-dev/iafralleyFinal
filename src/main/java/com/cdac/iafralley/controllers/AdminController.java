@@ -368,6 +368,31 @@ public class AdminController {
 		 return m;
 	 }
 	 
+	 @GetMapping("/Allocation")
+	 public ModelAndView Allocation()
+	 {
+		 ModelAndView m= new ModelAndView("Allocation");
+		 //get distinct rally id details from slot 
+		 m.addObject("ralleyDetails", rdservice.getAllRalleyDetails());
+		 //m.addObject("studentdata", rd);
+		 return m;
+	 }
+	 
+	 @GetMapping("/getDuplicateList/{value}/{cityid}")
+	 public String getDuplicateList(@PathVariable("value") String value,@PathVariable("cityid") Long cityid,Model m)
+	 {
+		 
+		 //page it with filter
+		List<RalleyCandidateDetails> c=candidateService.getDuplicationList(value,cityid);
+		System.out.println(c.size());
+		 m.addAttribute("studentdata",c);
+		 m.addAttribute("checkedvalues", value);
+		 
+		 return "RegisteredStudentDataForAllocation";
+	 }
+	 
+	 
+	 
 	 @GetMapping("/showDuplicateData")
 	 public ModelAndView showDuplicateData()
 	 {
@@ -377,6 +402,11 @@ public class AdminController {
 		 
 		 return m;
 	 }
+	 
+	 
+	 
+	 
+	 
 	 
 	 @GetMapping("/DuplicateData/{cityid}")
 	 public String getDuplicateData(Model model,@PathVariable (value = "cityid") Long cityid)
