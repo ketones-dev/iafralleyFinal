@@ -73,6 +73,11 @@ public interface RalleyCandidateDetailsDAO extends JpaRepository<RalleyCandidate
 
 	@Query(value="select * from candidate_details where opt_city=:cityid and passed_exam_percentage >= :per and is_temp_allocated=false and is_rejected=false  order by passed_exam_percentage asc LIMIT :intake",nativeQuery = true)
 	public List<RalleyCandidateDetails> getintakebaseFilteredData(@Param("intake")int intake,@Param("per") Integer passPercentage,@Param("cityid") Long cityid);
+	
+	@Query(value="select * from candidate_details where opt_city=:cityid and passed_exam_percentage >= :per and is_temp_allocated=false and is_rejected=false",nativeQuery = true)
+	public List<RalleyCandidateDetails> getFilteredData(@Param("per") Long passPercentage,@Param("cityid") Long cityid);
+	
+	
 
 	@Query(value="SELECT * FROM (SELECT *, count(*) OVER (PARTITION BY name,father_name) AS count FROM candidate_details where opt_city=?1) tableWithCount"
 			 +" WHERE tableWithCount.count > 1",nativeQuery = true)

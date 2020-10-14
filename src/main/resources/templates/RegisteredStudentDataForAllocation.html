@@ -123,10 +123,20 @@ color:white;
             <td><input type="text" id="maxPercentage" name="maxPercentage"></td>
          -->
         </tr> 
+      
          <tr>
          <td>Intake:</td>
         <td><input type="text" id="intake" name="intake"></td>
            
+        </tr>
+          <tr><td>
+        Difference In Count
+        </td>
+        <td><label id="showDifference"></label></td>
+        </tr>
+        <tr>
+        <td> <input type="button" id="showCount" name="showCount" value="Fetch Total Students" /></td>
+        <td></td>
         </tr>
         <!-- <th:block th:if="${cities} != null">
          <tr><td>City</td><td><select id="citylist" name="city" >
@@ -172,7 +182,9 @@ color:white;
         
         <tr>
         <td><input type="reset" id="resetb" value="Reset">
-     	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Fetch Filtered Values" onclick="intakeAllocate()"/>
+     	 <input type="button" id="intakeallocateBtn" name="intakeallocateBtn" value="Lock and Proceed" onclick="intakeAllocate()"/>
+     	 
+     	 
       
        <input type="button" id="duplicate"  name="duplicate" value="Mark Check as Duplicate" />
       
@@ -431,6 +443,8 @@ console.log(s.href);
 
 }
 
+
+
 function intakeAllocate()
 {
 	console.log("in allocate");
@@ -644,6 +658,52 @@ $(document).ready(function() {
 		$('#citylistslot option:not(:first)').remove();
 		 
 	});
+	
+	var dfcount;
+	
+	$('#showCount').on('click',function(){
+	
+		//call ajax for display count
+		 // code
+		 if($('#minPercentage').val() >= "50" && $('#intake').val() !== ""){
+	    http.get("/Dashboard/getDifferenceCount/"+$('#minPercentage').val()+"/"+$('#hcityid').val(), function(err, get) {
+				  if(err) {
+				    console.log(err);
+				  } else {
+				  //  console.log(get);
+				   var myJson=get;
+				   dfcount=myJson;
+				   var intakecount=document.getElementById("intake").value;
+				   if(intakecount === "0")
+					   {
+					   alert("please provide intake count");
+					   return;
+					   }
+				   var diff=  parseInt(myJson)-parseInt(intakecount);
+				   document.getElementById("showDifference").innerHTML = diff;
+				   
+				  }
+	    });
+	    
+		 }
+		
+	});
+	
+	$('#intake').on('blur',function(){
+		
+		var diff=document.getElementById("showDifference").innerHTML;
+		var intakec=document.getElementById("intake").value;
+		if(diff !== "")
+			{
+			
+			 document.getElementById("showDifference").innerHTML= parseInt(dfcount) - parseInt(intakec);
+			
+			}
+			
+		
+		
+	});
+	
 	    
 
 	    // Handle click on "Expand All" button

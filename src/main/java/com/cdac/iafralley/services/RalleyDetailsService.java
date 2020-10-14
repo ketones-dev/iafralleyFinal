@@ -460,5 +460,15 @@ List<Long> intList = citiesid.stream()
 		return data;
 	}
 
+	public Long getDifferenceCount(Long value, Long cityid) {
+		// TODO Auto-generated method stub
+		logger.info(value+":"+cityid);
+		List<RalleyCandidateDetails> withOutIntakeLimit= rcdDao.getFilteredData(value,cityid);
+		
+		logger.info(""+withOutIntakeLimit.size()+""+withOutIntakeLimit.isEmpty());
+		
+		return (long) withOutIntakeLimit.size();
+	}
+
 	
 }

@@ -378,6 +378,17 @@ public class AdminController {
 		 return m;
 	 }
 	 
+	 @RequestMapping(value="/getDifferenceCount/{percent}/{cityid}", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+		@ResponseBody
+	 public ResponseEntity<String> getDifferenceCount(@PathVariable("percent") Long value,@PathVariable("cityid") Long cityid,Model m)
+	 {
+		
+		Long difference=rdservice.getDifferenceCount(value,cityid); 
+		logger.info("count:"+difference);
+		 
+		 return new ResponseEntity<String>(String.valueOf(difference),HttpStatus.OK);
+	 }
+	 
 	 @GetMapping("/getDuplicateList/{value}/{cityid}")
 	 public String getDuplicateList(@PathVariable("value") String value,@PathVariable("cityid") Long cityid,Model m)
 	 {
